@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+    {{ partial "head.html" . }}
+    <body>
+        {{ partial "navigation/navigation.html" . }}
+        <div id="top" class="container">
+            <div class="row" id="content-main">
+                <div class="col-md-8">
+                    {{ .Render "single.content" }}
+                    {{ partial "disqus.html" . }}
+                </div>
+                <div class="col-md-4">
+                    {{ partial "widgets/sidebar/search.html" . }}
+                    {{ partial "widgets/sidebar/recent.html" . }}
+                    {{ partial "widgets/sidebar/adsense.html" . }}
+                    {{ partial "widgets/sidebar/categories.html" . }}
+                    {{ partial "widgets/sidebar/donate.html" . }}
+                </div>
+            </div>
+        </div>
+        {{ partial "footer.html" . }}
+        {{ partial "foot.html" . }}
+    </body>
+</html>

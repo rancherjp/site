@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+    {{ partial "head.html" . }}
+    <body>
+        {{ partial "navigation/navigation.html" . }}
+        <div id="top" class="container">
+            <div class="row" id="content-main">
+                <div class="col-md-8">
+                    {{ $paginator := .Paginate (where .Data.Pages "Type" "post") }}
+                    {{ range $paginator.Pages }}
+                        <div class="row">
+                            <div class="col-md-12 content-card">
+                                <h1><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
+                                <ul class="list-inline">
+                                    <li><i class="fa fa-calendar"></i>{{ .Date.Format "January 2, 2006" }}</li>
+                                    <li><i class="fa fa-user"></i>{{ .Params.author }}</li>
+                                </ul>
+                                {{ .Summary }}
+                                <a class="btn btn-custom" href="{{ .Permalink }}" role="button">Read More</a>
+                            </div>
+                        </div>
+                    {{ end }}
+                    {{ partial "pagination.html" . }}
+                </div>
+                <div class="col-md-4">
+                    {{ partial "widgets/sidebar/search.html" . }}
+                    {{ partial "widgets/sidebar/recent.html" . }}
+                    {{ partial "widgets/sidebar/adsense.html" . }}
+                    {{ partial "widgets/sidebar/categories.html" . }}
+                    {{ partial "widgets/sidebar/donate.html" . }}
+                </div>
+            </div>
+        </div>
+        {{ partial "footer.html" . }}
+        {{ partial "foot.html" . }}
+    </body>
+</html>

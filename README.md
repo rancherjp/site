@@ -1,25 +1,19 @@
-hugoBasicExample
-==========
+# Rancher Japan Site Project
+---
+## 成果
+### Date
++ 2016-10-28
+    + `theme` 本体を弄る方向から変更部分をサイトトップディレクトリに記載する方向へ変更
+    + `adsense`, `donate` のサイドバー表示を廃止
+    + `Copyright` を `.Site.Params.author` 参照するように変更
+    + シェアボタン `reddit`, `linkedin`, `stumbleupon` の廃止
+    + footerのソーシャルボタン `Facebook`, `Twitter` 連携
+    + 画像表示用にショートコードを作成 `{{<images "DSC_0070.JPG" >}} `  
+        このコードを使用するために、`/static/images/YYYY-MM` フォルダーに画像ファイルを置く必要があります。
 
-This is an example site for [Hugo](http://gohugo.io/).
 
-It is intended to be a demo site for the various [Hugo themes][].
-
-# Using
-
-1. First, [install Hugo](http://gohugo.io/overview/installing/);
-2. Then, clone this repository;
-3. Clone the [Hugo themes][];
-4. Run Hugo and select the theme of your choosing.
-
-In other words:
-
-<pre><code>git clone https://github.com/spf13/HugoBasicExample.git
-cd HugoBasicExample
-git clone --recursive https://github.com/spf13/hugoThemes.git themes
-hugo server -t <em>themename</em>
-</code></pre>
-
-Enjoy!
-
-[Hugo themes]: https://github.com/spf13/hugoThemes
+## 実装予定
++ アーカイブ
++ footにFacebookのいいねボタン
++ サイドバーにTwitter
++ tag一覧

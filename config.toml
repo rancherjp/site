@@ -1,7 +1,7 @@
 baseurl                 = "http://localhost/"
 languageCode            = "ja-jp"
 title                   = "Rancher Japan"
-theme                   = "rancherjp-theme"
+theme                   = "hugo-phlat-theme"
 hasCJKLanguage          = true
 
 [permalinks]
@@ -24,8 +24,11 @@ hasCJKLanguage          = true
     url                 = "/about"
 
 [params]
+    author              = "Rancher Japan"
     keywords            = ["default", "keywords", "if", "no", "front", "matter"]
     description         = "A description that will appear as a default if front matter does not exist"
+
+
 
 # Social media icons and links that appear in the footer
 [social]

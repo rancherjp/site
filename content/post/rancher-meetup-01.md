@@ -12,8 +12,6 @@ title          = "Rancher Meetup #1"
 Rancher もくもく勉強会 #1 - connpass
 http://connpass.com/event/41997/
 
-
-
 挨拶
 
 
@@ -25,8 +23,8 @@ http://connpass.com/event/41997/
 ・初心者向けチーム
 ・もくもくチーム
 に分かれて開始しました。
+{{<images "DSC_0070.JPG" >}}
 
-{{< figure src="/static/images/2016-10-27/DSC_0070.JPG.jpeg" title="Steve Francia" >}}
 
 新藤さんが初心者向けチームにRancherの概要説明中
 
@@ -37,7 +35,7 @@ chiba go さんがRancherとDockerの解説
 ・AWSにあるRancherOSのイメージを使えば、ホストの追加もOK。
 
 ＃Chiba goさんの深い話がつづく
-![DSC_0071.JPG](https://qiita-image-store.s3.amazonaws.com/0/15176/6e1d59b9-ded0-2997-a57e-78d6c0bc1248.jpeg)
+{{<images "DSC_0071.JPG" >}}
 
 ネットワークとかスケジューリングとかは、K8sとかが担当するべき範囲
 　docker-compose.ymlは、Dockerのコンテナの関係性を示す。
@@ -54,8 +52,7 @@ Kubernetesと、Cattleでのインフラの大きいので、カタログでも�
 Rancherのいいところは、Dockerのコマンドラインではちょっとお。と言う人向けにDockerの民主化の為に必要
 
 @cyberblack28 さんのDocker解説
-
-![DSC_0072.JPG](https://qiita-image-store.s3.amazonaws.com/0/15176/e254dfde-a1da-2ed4-59ff-44b07ddcb033.jpeg)
+{{<images "DSC_0072.JPG" >}}
 
 Dockerの手順は、自分の手で打つと勉強になるよ。
 VMで動かす場合は、ネットワークが注意
@@ -102,7 +99,8 @@ Rancherでのモニタリングとか、シェルとかもGUIから接続でき�
 新藤さんが、今日の本題 3行でDocker+Rancherを解説
 
 @ynott が DockerとRancherの関係を図で解説
-![DSC_0075.JPG](https://qiita-image-store.s3.amazonaws.com/0/15176/bf4df587-1154-1502-c363-ae6191bf16e3.jpeg)
+{{<images "DSC_0075.JPG" >}}
+
 
 
 「次回は、12月ぐらいに Meetup しましょう。Google のIan Lewis と会話中」
