@@ -1,0 +1,34 @@
+baseurl                 = "http://localhost/"
+languageCode            = "ja-jp"
+title                   = "Rancher Japan"
+theme                   = "rancherjp-theme"
+hasCJKLanguage          = true
+
+[permalinks]
+    post                = "/:year/:month/:slug/"
+    page                = "/:slug/"
+
+[taxonomies]
+    tag                 = "tags"
+    category            = "categories"
+
+
+# The header menu will appear as an inline-list at the top right of the page
+[[menu.header]]
+    name                = "Home"
+    weight              = 1
+    url                 = "/"
+[[menu.header]]
+    name                = "About"
+    weight              = 3
+    url                 = "/about"
+
+[params]
+    keywords            = ["default", "keywords", "if", "no", "front", "matter"]
+    description         = "A description that will appear as a default if front matter does not exist"
+
+# Social media icons and links that appear in the footer
+[social]
+    twitter             = "https://twitter.com/rancherjp/"
+    facebook            = "https://www.facebook.com/rancherjp/"
+    slack               = "https://rancherjp.herokuapp.com/slackin.js"

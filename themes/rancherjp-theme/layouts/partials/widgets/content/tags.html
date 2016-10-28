@@ -1,0 +1,7 @@
+{{ if eq .Type "post" }}
+    <ul class="list-inline tags" style="margin-top: 15px; margin-left: 0px">
+        {{ range .Params.tags }}
+            <li style=""><a href="{{ "/tags/" | absURL }}{{ . | urlize }}">{{ . }}</a></li>
+        {{ end }}
+    </ul>
+{{ end }}
