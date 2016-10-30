@@ -1,4 +1,4 @@
-baseurl                 = "http://localhost/"
+baseurl                 = "https://rancherjp.github.io/"
 languageCode            = "ja-jp"
 title                   = "Rancher Japan"
 theme                   = "hugo-phlat-theme"
