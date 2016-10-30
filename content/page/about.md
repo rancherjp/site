@@ -1,6 +1,6 @@
 +++
 author = "Go Chiba"
-description = "Explaination for this page"
+description = "Explanation for this page"
 draft = false
 title = "About"
 +++
