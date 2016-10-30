@@ -33,5 +33,8 @@
         {{ with .Site.Social.reddit }}
             <li><a target="_blank" href="{{ . }}"><i class="fa fa-reddit fa-lg"></i></a></li>
         {{ end }}
+        {{ with .Site.Social.slack }}
+            <li><a target="_blank" href="{{ . }}"><i class="fa fa-slack fa-lg"></i></a></li>
+        {{ end }}
     </ul>
 </div>
