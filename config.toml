@@ -34,4 +34,4 @@ hasCJKLanguage          = true
 [social]
     twitter             = "https://twitter.com/rancherjp/"
     facebook            = "https://www.facebook.com/rancherjp/"
-    slack               = "https://rancherjp.herokuapp.com/slackin.js"
+    slack               = "https://rancherjp.herokuapp.com"
