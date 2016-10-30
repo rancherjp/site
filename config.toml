@@ -5,7 +5,7 @@ theme                   = "hugo-phlat-theme"
 hasCJKLanguage          = true
 
 [permalinks]
-    post                = "/:year/:month/:slug/"
+    post                = "/content/:year/:month/:slug/"
     page                = "/:slug/"
 
 [taxonomies]
