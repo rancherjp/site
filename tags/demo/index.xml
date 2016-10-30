@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Rancher Japan</title>
-    <link>http://localhost/tags/demo/index.xml</link>
+    <link>https://rancherjp.github.io/tags/demo/index.xml</link>
     <description>Recent content on Rancher Japan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <atom:link href="http://localhost/tags/demo/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://rancherjp.github.io/tags/demo/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>My Second Post</title>
-      <link>http://localhost/2016/03/my-second-post/</link>
+      <link>https://rancherjp.github.io/2016/03/my-second-post/</link>
       <pubDate>Tue, 15 Mar 2016 18:17:56 -0700</pubDate>
       
-      <guid>http://localhost/2016/03/my-second-post/</guid>
+      <guid>https://rancherjp.github.io/2016/03/my-second-post/</guid>
       <description>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;

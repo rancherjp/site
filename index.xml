@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Rancher Japan</title>
-    <link>http://localhost/index.xml</link>
+    <link>https://rancherjp.github.io/index.xml</link>
     <description>Recent content on Rancher Japan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
     <lastBuildDate>Thu, 27 Oct 2016 22:31:00 -0900</lastBuildDate>
-    <atom:link href="http://localhost/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://rancherjp.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Rancher Meetup #1</title>
-      <link>http://localhost/2016/10/rancher-meetup-01/</link>
+      <link>https://rancherjp.github.io/2016/10/rancher-meetup-01/</link>
       <pubDate>Thu, 27 Oct 2016 22:31:00 -0900</pubDate>
       
-      <guid>http://localhost/2016/10/rancher-meetup-01/</guid>
+      <guid>https://rancherjp.github.io/2016/10/rancher-meetup-01/</guid>
       <description>&lt;p&gt;Rancher もくもく勉強会 #1 - connpass
 &lt;a href=&#34;http://connpass.com/event/41997/&#34;&gt;http://connpass.com/event/41997/&lt;/a&gt;&lt;/p&gt;
 
@@ -27,7 +27,7 @@
 &lt;p&gt;・初心者向けチーム
 ・もくもくチーム
 に分かれて開始しました。
-&lt;img src=&#34;http://localhost/images/2016-10/DSC_0070.JPG&#34; alt=&#34;&#34;&gt;&lt;/img&gt;&lt;/p&gt;
+&lt;img src=&#34;https://rancherjp.github.io/images/2016-10/DSC_0070.JPG&#34; alt=&#34;&#34;&gt;&lt;/img&gt;&lt;/p&gt;
 
 &lt;p&gt;新藤さんが初心者向けチームにRancherの概要説明中&lt;/p&gt;
 
@@ -38,7 +38,7 @@
 ・AWSにあるRancherOSのイメージを使えば、ホストの追加もOK。&lt;/p&gt;
 
 &lt;p&gt;＃Chiba goさんの深い話がつづく
-&lt;img src=&#34;http://localhost/images/2016-10/DSC_0071.JPG&#34; alt=&#34;&#34;&gt;&lt;/img&gt;&lt;/p&gt;
+&lt;img src=&#34;https://rancherjp.github.io/images/2016-10/DSC_0071.JPG&#34; alt=&#34;&#34;&gt;&lt;/img&gt;&lt;/p&gt;
 
 &lt;p&gt;ネットワークとかスケジューリングとかは、K8sとかが担当するべき範囲
 　docker-compose.ymlは、Dockerのコンテナの関係性を示す。
@@ -55,7 +55,7 @@ CIツールは、別途必要になる。&lt;/p&gt;
 &lt;p&gt;Rancherのいいところは、Dockerのコマンドラインではちょっとお。と言う人向けにDockerの民主化の為に必要&lt;/p&gt;
 
 &lt;p&gt;@cyberblack28 さんのDocker解説
-&lt;img src=&#34;http://localhost/images/2016-10/DSC_0072.JPG&#34; alt=&#34;&#34;&gt;&lt;/img&gt;&lt;/p&gt;
+&lt;img src=&#34;https://rancherjp.github.io/images/2016-10/DSC_0072.JPG&#34; alt=&#34;&#34;&gt;&lt;/img&gt;&lt;/p&gt;
 
 &lt;p&gt;Dockerの手順は、自分の手で打つと勉強になるよ。
 VMで動かす場合は、ネットワークが注意&lt;/p&gt;
@@ -103,7 +103,7 @@ VMで動かす場合は、ネットワークが注意&lt;/p&gt;
 &lt;p&gt;新藤さんが、今日の本題 3行でDocker+Rancherを解説&lt;/p&gt;
 
 &lt;p&gt;@ynott が DockerとRancherの関係を図で解説
-&lt;img src=&#34;http://localhost/images/2016-10/DSC_0075.JPG&#34; alt=&#34;&#34;&gt;&lt;/img&gt;&lt;/p&gt;
+&lt;img src=&#34;https://rancherjp.github.io/images/2016-10/DSC_0075.JPG&#34; alt=&#34;&#34;&gt;&lt;/img&gt;&lt;/p&gt;
 
 &lt;p&gt;「次回は、12月ぐらいに Meetup しましょう。Google のIan Lewis と会話中」&lt;/p&gt;
 </description>
@@ -111,30 +111,30 @@ VMで動かす場合は、ネットワークが注意&lt;/p&gt;
     
     <item>
       <title>Privacy Policy</title>
-      <link>http://localhost/privacy-policy/</link>
+      <link>https://rancherjp.github.io/privacy-policy/</link>
       <pubDate>Tue, 15 Mar 2016 18:21:33 -0700</pubDate>
       
-      <guid>http://localhost/privacy-policy/</guid>
+      <guid>https://rancherjp.github.io/privacy-policy/</guid>
       <description>&lt;p&gt;Privacy policy here.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>About</title>
-      <link>http://localhost/about/</link>
+      <link>https://rancherjp.github.io/about/</link>
       <pubDate>Tue, 15 Mar 2016 18:18:41 -0700</pubDate>
       
-      <guid>http://localhost/about/</guid>
+      <guid>https://rancherjp.github.io/about/</guid>
       <description>&lt;p&gt;About this website&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>My Second Post</title>
-      <link>http://localhost/2016/03/my-second-post/</link>
+      <link>https://rancherjp.github.io/2016/03/my-second-post/</link>
       <pubDate>Tue, 15 Mar 2016 18:17:56 -0700</pubDate>
       
-      <guid>http://localhost/2016/03/my-second-post/</guid>
+      <guid>https://rancherjp.github.io/2016/03/my-second-post/</guid>
       <description>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;
@@ -162,10 +162,10 @@ VMで動かす場合は、ネットワークが注意&lt;/p&gt;
     
     <item>
       <title>My First Post</title>
-      <link>http://localhost/2016/03/my-first-post/</link>
+      <link>https://rancherjp.github.io/2016/03/my-first-post/</link>
       <pubDate>Tue, 15 Mar 2016 18:17:52 -0700</pubDate>
       
-      <guid>http://localhost/2016/03/my-first-post/</guid>
+      <guid>https://rancherjp.github.io/2016/03/my-first-post/</guid>
       <description>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;
