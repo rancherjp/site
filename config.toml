@@ -11,6 +11,7 @@ hasCJKLanguage          = true
 [taxonomies]
     tag                 = "tags"
     category            = "categories"
+    archive             = "archives"
 
 
 # The header menu will appear as an inline-list at the top right of the page
@@ -27,6 +28,7 @@ hasCJKLanguage          = true
     author              = "Rancher Japan"
     keywords            = ["default", "keywords", "if", "no", "front", "matter"]
     description         = "A description that will appear as a default if front matter does not exist"
+    
 
 
 
