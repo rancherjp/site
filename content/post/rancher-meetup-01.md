@@ -1,13 +1,15 @@
-+++
-author         = "Rancher Japan"
-categories     = ["Meetup"]
-tags           = ["Meetup"]
-date           = "2016-10-27T22:31:00-09:00"
-draft          = false
-description    = "Rancher もくもく勉強会 #1 - connpass"
-slug           = "rancher-meetup-01" 
-title          = "Rancher Meetup #1" 
-+++
+---
+date: "2016-10-27"
+title: "Rancher Meetup #1"
+slug: "rancher-meetup-01" 
+author: "Rancher Japan"
+description: "Rancher もくもく勉強会 #1 - connpass"
+draft: false
+tags:
+  - "Meetup"
+categories:
+  - "Meetup"
+---
 
 Rancher もくもく勉強会 #1 - connpass
 http://connpass.com/event/41997/

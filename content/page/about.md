@@ -1,9 +1,13 @@
-+++
-author = "Go Chiba"
-description = "Explanation for this page"
-draft = false
-title = "About"
-+++
+---
+title:
+  - "About"
+author:
+  - "Go Chiba"
+description:
+  - "Explanation for this page"
+draft:
+  - false
+---
 
 ## このページについて
 本ページは Rancher JP による情報発信のためのページです。
