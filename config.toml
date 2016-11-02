@@ -1,6 +1,6 @@
 baseurl                 = "https://rancherjp.github.io/"
 languageCode            = "ja-jp"
-title                   = "Rancher Japan"
+title                   = "Rancher JP"
 theme                   = "hugo-phlat-theme"
 hasCJKLanguage          = true
 
@@ -25,7 +25,7 @@ hasCJKLanguage          = true
     url                 = "/about"
 
 [params]
-    author              = "Rancher Japan"
+    author              = "Rancher JP"
     keywords            = ["default", "keywords", "if", "no", "front", "matter"]
     description         = "A description that will appear as a default if front matter does not exist"
     

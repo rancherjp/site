@@ -1,4 +1,4 @@
-# Rancher Japan Site Project
+# Rancher JP Site Project
 ---
 ## 成果
 ### Date
