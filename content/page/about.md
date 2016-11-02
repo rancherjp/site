@@ -1,6 +1,7 @@
 ---
 title:
   - "About"
+slug: "about"
 author:
   - "Go Chiba"
 description:
