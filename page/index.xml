@@ -1,30 +1,43 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Page-rsses on Rancher Japan</title>
+    <title>Page-rsses on Rancher JP</title>
     <link>https://rancherjp.github.io/page/index.xml</link>
-    <description>Recent content in Page-rsses on Rancher Japan</description>
+    <description>Recent content in Page-rsses on Rancher JP</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
     <atom:link href="https://rancherjp.github.io/page/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title></title>
-      <link>https://rancherjp.github.io/</link>
+      <link>https://rancherjp.github.io/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://rancherjp.github.io/</guid>
+      <guid>https://rancherjp.github.io/about/</guid>
       <description>
 
 &lt;h2 id=&#34;このページについて&#34;&gt;このページについて&lt;/h2&gt;
 
-&lt;p&gt;本ページは Rancher JP による情報発信のためのページです。
-関連勉強会のレポート、ソースコードの案内、SNSの案内などを記載しています。&lt;/p&gt;
+&lt;p&gt;本ページは Rancher JP による &lt;strong&gt;Rancher&lt;/strong&gt; 及び関連するコンテナ技術に関する情報発信ページです。&lt;br /&gt;
+日本語による &lt;strong&gt;Rancher&lt;/strong&gt; のリリース情報、新機能解説、ユーザーによるBlog情報、勉強会レポートといった
+各種情報を本ページに集約することで日本のユーザーが簡単に情報収集できることを目的としています。&lt;/p&gt;
 
 &lt;h2 id=&#34;rancher-とは&#34;&gt;Rancher とは?&lt;/h2&gt;
 
-&lt;p&gt;&lt;strong&gt;Rancher&lt;/strong&gt; とは商用環境でのコンテナ管理のためのオープンソースソフトウェアであり、&lt;strong&gt;Rancher&lt;/strong&gt; を利用することにより様々なオープンソーステクノロジーを使い0からコンテナサービスプラットフォームを構築する必要がありません。
-&lt;strong&gt;Rancher&lt;/strong&gt; は商用環境においてコンテナを管理するために必要な全てのソフトェアスタックを備えています。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Rancher&lt;/strong&gt; とは米国 &lt;a href=&#34;http://rancher.com&#34;&gt;Rancher Labs 社&lt;/a&gt;が主体として開発しているオープンソースのコンテナ管理プラットフォームです。&lt;br /&gt;
+商用環境を想定し複数ホストから構成されるクラスタの管理、稼働するコンテナのライフサイクル管理、
+様々なアプリケーションのテンプレート管理といった機能を有しています。&lt;br /&gt;
+また、既存のコンテナオーケストレーションツールである &lt;a href=&#34;https://docs.docker.com/swarm/&#34;&gt;Docker Swarm&lt;/a&gt;,
+ &lt;a href=&#34;http://kubernetes.io/&#34;&gt;Kubernetes&lt;/a&gt;, &lt;a href=&#34;http://mesos.apache.org/&#34;&gt;Mesos&lt;/a&gt; などをサポートしており
+&lt;strong&gt;Rancher&lt;/strong&gt; を利用することでコンテナサービスにおけるインフラストラクチャ〜アプリケーションといった
+幅広いスタックを容易に管理することが可能になります。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://docs.rancher.com&#34;&gt;Rancher ドキュメントページ&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;rancher-jp-とは&#34;&gt;Rancher JP とは?&lt;/h2&gt;
+
+&lt;p&gt;オープンソースのコンテナ管理プラットフォームである &lt;strong&gt;Rancher&lt;/strong&gt; の日本国内での普及を目的としたコミュニティです。&lt;br /&gt;
+本ページや勉強会、SNS などを通じて &lt;strong&gt;Rancher&lt;/strong&gt; や関連するコンテナ技術に関する情報を日本語により発信し、各種コンテナ技術の普及と人材育成に貢献します。&lt;/p&gt;
 </description>
     </item>
     
