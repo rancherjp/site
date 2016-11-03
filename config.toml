@@ -3,9 +3,12 @@ languageCode            = "ja-jp"
 title                   = "Rancher JP"
 theme                   = "hugo-phlat-theme-custom"
 hasCJKLanguage          = true
+copyright               = "© 2016 Rancher JP"
 
 [permalinks]
-    post                = "/content/:year/:month/:slug/"
+    blog                = "/blog/:year/:month/:day/:slug/"
+    post                = "/content/:year/:month/:day/:slug/"
+    release-announce    = "/release-announce:year/:month/:day/:slug/"
     page                = "/:slug/"
 
 [taxonomies]
@@ -20,8 +23,18 @@ hasCJKLanguage          = true
     weight              = 1
     url                 = "/"
 [[menu.header]]
-    name                = "About"
+    name                = "Blog"
+    weight              = 2
+    url                 = "/blog"
+[[menu.header]]
+    name                = "Release Announce"
     weight              = 3
+    url                 = "/release-announce"
+
+
+[[menu.header]]
+    name                = "About"
+    weight              = 5
     url                 = "/about"
 
 [params]
