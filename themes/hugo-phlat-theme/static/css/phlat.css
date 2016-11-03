@@ -1,0 +1,300 @@
+body {
+    background-color: #f2f2f2;
+    padding-top: 100px;
+}
+
+/*
+ * START NAVIGATION
+ */
+.navbar-default {
+    background-color: #ffffff;
+    padding: 15px 0;
+    text-transform: uppercase;
+}
+
+.navbar-default .navbar-brand {
+    color: #555555;
+    font-weight: 700;
+    font-size: 22px;
+}
+
+.nav>li:hover {
+    border-top: 4px solid #cc4444;
+}
+
+.nav>li {
+    border-top: 4px solid transparent;
+    font-weight: 700;
+    margin: 0 20px;
+}
+
+.nav>li.active {
+    border-top: 4px solid #cc4444;
+}
+
+.navbar-nav>li>a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+    background-color: transparent;
+    color: #555555;
+}
+/*
+ * END NAVIGATION
+ */
+
+ #content-main {
+     padding-left: 10px;
+     padding-right: 10px;
+ }
+
+ #content-main .row {
+     margin-bottom: 15px;
+ }
+
+.content-card {
+    background-color: #ffffff;
+    border: 1px solid #e9e9e9;
+    padding: 40px;
+    border-top: 3px solid #337ab7;
+}
+
+.content-card .meta a {
+    color: #000000;
+}
+
+.content-card .share li {
+    padding-left: 0px;
+    padding-right: 0px;
+    font-size: 12px;
+}
+
+.content-card .share a {
+    padding: 7px 10px;
+    margin-bottom: 5px;
+    display: block;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.content-card .share a:hover {
+    text-decoration: none;
+}
+
+.content-card .facebook-share a { background-color: #425F9C; }
+.content-card .googleplus-share a { background-color: #DB4437; }
+.content-card .twitter-share a { background-color: #1da1f2; }
+.content-card .reddit-share a { background-color: #FF4602; }
+.content-card .linkedin-share a { background-color: #1B86BC; }
+.content-card .stumbleupon-share a { background-color: #EB4924; }
+
+.content-card .facebook-share a:hover { background-color: #2d4373; }
+.content-card .googleplus-share a:hover { background-color: #c63224; }
+.content-card .twitter-share a:hover { background-color: #0085be; }
+.content-card .reddit-share a:hover { background-color: #cc3700; }
+.content-card .linkedin-share a:hover { background-color: #005983; }
+.content-card .stumbleupon-share a:hover { background-color: #ca3412; }
+
+.content-card h1 {
+    margin-bottom: 20px;
+    margin-top: 0px;
+    font-size: 30px;
+}
+
+.content-card h1 a {
+    color: inherit;
+}
+
+.content-card h2 {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    font-size: 24px
+}
+
+.content-card h3 {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    font-size: 18px
+}
+
+.content-card img {
+    width: 100%;
+}
+
+.content-card .list-inline {
+    margin-bottom: 20px;
+}
+
+.content-card .btn {
+    border-radius: 0;
+    margin-top: 15px;
+}
+
+.content-card .tags li {
+    padding-left: 0px;
+    padding-right: 0px;
+    font-size: 12px;
+}
+
+.content-card .tags a {
+    background-color: #dddddd;
+    padding: 3px 10px;
+    margin-bottom: 5px;
+    display: block;
+    color: #ffffff;
+}
+
+.content-card .tags a:hover {
+    background-color: #337ab7;
+    text-decoration: none;
+}
+
+.btn-custom {
+    color: #ffffff;
+    background-color: #cc4444;
+    border: 1px solid #B90B00;
+}
+
+.btn-custom.focus, .btn-custom:focus, .btn-custom:hover {
+    color: #ffffff;
+    background-color: #B90B00;
+    transition: background-color 0.3s linear;
+}
+
+.card {
+    background-color: #ffffff;
+    border: 1px solid #e9e9e9;
+    padding: 20px;
+    border-top: 3px solid #337ab7;
+}
+
+.card h2 {
+    margin-bottom: 15px;
+    margin-top: 0px;
+}
+
+.card h5 {
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    margin-top: 0px;
+    font-size: 16px;
+}
+
+.posts-recent li {
+    padding-bottom: 10px;
+    padding-top: 10px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.posts-recent li:last-of-type {
+    border-bottom: none;
+}
+
+.posts-recent li a {
+    color: #333333;
+}
+
+.posts-recent li a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background-color: #dddddd;
+    margin-top: 20px;
+    padding-top: 15px;
+    padding-bottom: 0px;
+}
+
+footer .container .row:not(:last-of-type) {
+    margin-bottom: 10px;
+}
+
+footer .list-inline li {
+    margin-right: 15px;
+}
+
+footer .links li {
+    margin-bottom: 10px;
+}
+
+footer .links a {
+    display: block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+footer .social-media {
+    text-align: left;
+}
+
+footer .social-media li {
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    border: 1px solid #cccccc;
+    width: 42px;
+    height: 42px;
+    text-align: center;
+    display: inline;
+    float: right;
+}
+
+footer .social-media li:not(:last-of-type) {
+    border-left: none;
+}
+
+footer .social-media a {
+    background-color: #f2f2f2;
+    display: block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+footer .social-media a:hover {
+    background-color: #ffffff;
+}
+
+footer .social-media .fa {
+    padding-right: 0px;
+}
+
+footer a {
+    color: #333333;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: #333333;
+}
+
+.fa {
+    padding-right: 5px;
+}
+
+#back-to-top.affix-top {
+    position: absolute; /* allows it to "slide" up into view */
+    bottom: -82px;
+    right: 10px;
+}
+#back-to-top.affix {
+    position: fixed; /* keeps it on the bottom once in view */
+    bottom: 18px;
+    right: 10px;
+}
+
+pre {
+    border-radius: 0px;
+    padding: 10px;
+    border: none;
+    background-color: #282b2e;
+}
+
+pre code {
+    white-space: pre;
+}

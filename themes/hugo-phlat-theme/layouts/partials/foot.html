@@ -1,0 +1,31 @@
+<div id="back-to-top" class="hidden">
+    <a href="#top" class="well well-sm" onclick="$('html,body').animate({scrollTop:0},'slow');return false;">
+        <i class="glyphicon glyphicon-chevron-up"></i> Back to Top
+    </a>
+</div>
+<script src="{{ .Site.BaseURL }}js/jquery-2.2.1.min.js"></script>
+<script src="{{ .Site.BaseURL }}js/bootstrap.min.js"></script>
+<script src="{{ .Site.BaseURL }}js/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script>
+    if(($(window).height() + 100) < $(document).height()) {
+        $('#back-to-top').removeClass('hidden').affix({
+            offset: {
+                top: 100
+            }
+        });
+    }
+</script>
+{{ if not (in (printf "%#v" .Site.BaseURL) "localhost") }}
+    {{ with .Site.Params.google_adsense }}
+        <script>
+            //$(".content-card p:nth-of-type(2)").after('<p><ins class="adsbygoogle" style="display:inline-block;width:100%;min-height:50px;" data-ad-client="{{ . }}" data-ad-slot="6765288764"></ins></p>');
+            [].forEach.call(document.querySelectorAll('.adsbygoogle'), function() {
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            });
+        </script>
+    {{ end }}
+{{ end }}
+{{ if not (in (printf "%#v" .Site.BaseURL) "localhost") }}
+    {{ partial "googleanalytics.html" . }}
+{{ end }}

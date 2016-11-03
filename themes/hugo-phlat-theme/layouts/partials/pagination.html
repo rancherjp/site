@@ -1,0 +1,18 @@
+{{ if gt $.Paginator.TotalPages 1 }}
+    <div class="row">
+        <div class="col-md-12">
+            <div class="row">
+                <div class="col-md-4" style="text-align: left; padding-left: 0px">
+                    {{ if .Paginator.HasPrev }}
+                        <a class="btn btn-default" href="{{ .Paginator.Prev.URL }}" role="button" style="border-radius: 0px; display: block">Newer</a>
+                    {{ end }}
+                </div>
+                <div class="col-md-4 col-md-offset-4" style="text-align: right; padding-right: 0px">
+                    {{ if .Paginator.HasNext }}
+                        <a class="btn btn-default" href="{{ .Paginator.Next.URL }}" role="button" style="border-radius: 0px; display: block">Older</a>
+                    {{ end }}
+                </div>
+            </div>
+        </div>
+    </div>
+{{ end }}

@@ -1,0 +1,21 @@
+# theme.toml template for a Hugo theme
+# See https://github.com/spf13/hugoThemes#themetoml for an example
+
+name = "Phlat Theme"
+license = "MIT"
+licenselink = "https://github.com/nraboy/hugo-phlat-theme/blob/master/LICENSE.md"
+description = "A flat theme for the Hugo static website engine"
+homepage = "https://www.nraboy.com/"
+tags = ["flat", "bootstrap", "font-awesome"]
+features = ["responsive", "mobile-friendly"]
+min_version = 0.14
+
+[author]
+  name = "Nic Raboy"
+  homepage = "https://www.nraboy.com"
+
+# If porting an existing theme
+[original]
+  name = ""
+  homepage = ""
+  repo = ""

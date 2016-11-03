@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    {{ partial "head.html" . }}
+    <body>
+        {{ partial "navigation/navigation.html" . }}
+        <div id="top" class="container">
+            <div class="row" id="content-main">
+                <div class="col-md-8">
+                    <div class="row">
+                        <div class="col-md-12 content-card">
+                            <h2>{{ .Title | pluralize }}</h2>
+                            <table class="table">
+                                {{ $data := .Data }}
+                                {{ range $key, $value := .Data.Terms.ByCount }}
+                                    <tr>
+                                        <td><a href="{{ $.Site.BaseURL}}{{$data.Plural}}/{{ $value.Name | urlize }}">{{ $value.Name }}</a></td>
+                                        <td>{{ $value.Count }}</td>
+                                    </tr>
+                                {{ end }}
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    {{ partial "widgets/sidebar/search.html" . }}
+                    {{ partial "widgets/sidebar/recent.html" . }}
+                    {{ partial "widgets/sidebar/adsense.html" . }}
+                    {{ partial "widgets/sidebar/categories.html" . }}
+                    {{ partial "widgets/sidebar/donate.html" . }}
+                </div>
+            </div>
+        </div>
+        {{ partial "footer.html" . }}
+        {{ partial "foot.html" . }}
+    </body>
+</html>
