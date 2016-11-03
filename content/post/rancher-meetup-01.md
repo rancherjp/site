@@ -1,14 +1,14 @@
 ---
 date: "2016-10-27"
-title: "Rancher Meetup #1"
-slug: "rancher-meetup-01" 
+title: "Rancher もくもく勉強会 #1"
+slug: "rancher-Workshop-01" 
 author: "Rancher JP"
 description: "Rancher もくもく勉強会 #1 - connpass"
 draft: false
 tags:
-  - "Meetup"
+  - "Workshop"
 categories:
-  - "Meetup"
+  - "Workshop"
 ---
 
 Rancher もくもく勉強会 #1 - connpass
