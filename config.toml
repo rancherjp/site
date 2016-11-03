@@ -1,7 +1,7 @@
 baseurl                 = "https://rancherjp.github.io/"
 languageCode            = "ja-jp"
 title                   = "Rancher JP"
-theme                   = "hugo-phlat-theme"
+theme                   = "hugo-phlat-theme-custom"
 hasCJKLanguage          = true
 
 [permalinks]
