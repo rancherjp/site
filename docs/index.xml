@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Rancher JP</title>
+    <link>https://rancherjp.github.io/index.xml</link>
+    <description>Recent content on Rancher JP</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <copyright>© 2016 Rancher JP</copyright>
+    <lastBuildDate>Thu, 27 Oct 2016 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://rancherjp.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Rancher Blog</title>
+      <link>https://rancherjp.github.io/blog/2016/10/27/01/</link>
+      <pubDate>Thu, 27 Oct 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://rancherjp.github.io/blog/2016/10/27/01/</guid>
+      <description>&lt;p&gt;ブログテスト&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Rancher もくもく勉強会 #1</title>
+      <link>https://rancherjp.github.io/content/2016/10/27/rancher-workshop-01/</link>
+      <pubDate>Thu, 27 Oct 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://rancherjp.github.io/content/2016/10/27/rancher-workshop-01/</guid>
+      <description>&lt;p&gt;Rancher もくもく勉強会 #1 - connpass
+&lt;a href=&#34;http://connpass.com/event/41997/&#34;&gt;http://connpass.com/event/41997/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;挨拶&lt;/p&gt;
+
+&lt;p&gt;自己紹介&lt;/p&gt;
+
+&lt;p&gt;自己紹介のつもりが、名刺交換会から開始になってしまいました。&lt;/p&gt;
+
+&lt;p&gt;・初心者向けチーム
+・もくもくチーム
+に分かれて開始しました。
+&lt;img src=&#34;https://rancherjp.github.io/images/2016/10/27/DSC_0070.JPG&#34; alt=&#34;&#34;&gt;&lt;/img&gt;&lt;/p&gt;
+
+&lt;p&gt;新藤さんが初心者向けチームにRancherの概要説明中&lt;/p&gt;
+
+&lt;p&gt;chiba go さんがRancherとDockerの解説
+・Rancherの日本語訳は、Chibaさんがされた
+・Rancherのインストールは、コマンド一発 以上　とても簡単
+・クラウドのサポートも楽ちん。
+・AWSにあるRancherOSのイメージを使えば、ホストの追加もOK。&lt;/p&gt;
+
+&lt;p&gt;＃Chiba goさんの深い話がつづく
+&lt;img src=&#34;https://rancherjp.github.io/images/2016/10/27/DSC_0071.JPG&#34; alt=&#34;&#34;&gt;&lt;/img&gt;&lt;/p&gt;
+
+&lt;p&gt;ネットワークとかスケジューリングとかは、K8sとかが担当するべき範囲
+　docker-compose.ymlは、Dockerのコンテナの関係性を示す。
+　rancher-compose.ymlは、Rancherのスケールするとかの設定を示す。&lt;/p&gt;
+
+&lt;p&gt;コンテナイメージは、どこからか取ってくるしかない。
+CIツールは、別途必要になる。&lt;/p&gt;
+
+&lt;p&gt;yo コマンドでRancherのCatalogテンプレートを作ってくれる。&lt;/p&gt;
+
+&lt;p&gt;Kubernetesと、Cattleでのインフラの大きいので、カタログでも動く、動かないというのが実はある。
+越えられない壁があって。。&lt;/p&gt;
+
+&lt;p&gt;Rancherのいいところは、Dockerのコマンドラインではちょっとお。と言う人向けにDockerの民主化の為に必要&lt;/p&gt;
+
+&lt;p&gt;@cyberblack28 さんのDocker解説
+&lt;img src=&#34;https://rancherjp.github.io/images/2016/10/27/DSC_0072.JPG&#34; alt=&#34;&#34;&gt;&lt;/img&gt;&lt;/p&gt;
+
+&lt;p&gt;Dockerの手順は、自分の手で打つと勉強になるよ。
+VMで動かす場合は、ネットワークが注意&lt;/p&gt;
+
+&lt;p&gt;@Cyberduck28 さんが解説してくれたDockerの資料は、以下です。
+「Docker～WordPress環境を作ってみる ハンズオン編」
+&lt;a href=&#34;http://www.slideshare.net/cyberblackvoom/linaction-theme-docker&#34;&gt;http://www.slideshare.net/cyberblackvoom/linaction-theme-docker&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Dockerのいいところ
+1. オーバーヘッドが少ない。
+2. OSの部分まで入っているのでデプロイが簡単。
+3. インフラ環境によらずに管理が楽になりました。&lt;/p&gt;
+
+&lt;p&gt;Docker勉強会になりつつありｗ。&lt;/p&gt;
+
+&lt;p&gt;Dockerのダメなところ。&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;ステートレスな形で構成しないとダメです。&lt;/li&gt;
+&lt;li&gt;トラブルをちゃんと解析しない。&lt;/li&gt;
+&lt;li&gt;それなりにマッチする環境や方法を踏まえないとダメです。&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Dockerをエンタープライズに適用することの難しさ。
+&amp;mdash;&amp;gt;発想が変わらないとなかなか難しい。&lt;/p&gt;
+
+&lt;p&gt;Googleとかとかと日本の環境との違いが大きすぎる。&lt;/p&gt;
+
+&lt;p&gt;業務系の開発からでは、コンテナの発想が大きくちがうのでワケワカ&lt;/p&gt;
+
+&lt;p&gt;IoT などの場合では、サーバーが何万台とある全てのIoTデバイスをコントロールするのは現実的ではないのではと思う。途中IoTのデバイスを中継する中継基地サーバーが必要なのではないだろうか。コンテナーはそういう用途に非常に向いていると思う。&lt;/p&gt;
+
+&lt;p&gt;それを受けて、Chiba go さんのIoT 関連話。Resin.io でのドローン内でコンテナが動いている話を紹介。参加者一同驚嘆&lt;/p&gt;
+
+&lt;p&gt;Home | Resin.io
+&lt;a href=&#34;https://resin.io/&#34;&gt;https://resin.io/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Rancherでコンテナが100台とかになったら画面がどうなるか気になる。
+「そのうちグルーピングできるようになるんじゃないだろうか？」
+「検索インターフェースも必要だよね」
+「画面は、レスポンシブ対応もありますよ。」&lt;/p&gt;
+
+&lt;p&gt;Rancherでのモニタリングとか、シェルとかもGUIから接続できますよ。&lt;/p&gt;
+
+&lt;p&gt;新藤さんが、今日の本題 3行でDocker+Rancherを解説&lt;/p&gt;
+
+&lt;p&gt;@ynott が DockerとRancherの関係を図で解説
+&lt;img src=&#34;https://rancherjp.github.io/images/2016/10/27/DSC_0075.JPG&#34; alt=&#34;&#34;&gt;&lt;/img&gt;&lt;/p&gt;
+
+&lt;p&gt;「次回は、12月ぐらいに Meetup しましょう。Google のIan Lewis と会話中」&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Release Announce</title>
+      <link>https://rancherjp.github.io/release-announce2016/10/27/release-announce-01/</link>
+      <pubDate>Thu, 27 Oct 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://rancherjp.github.io/release-announce2016/10/27/release-announce-01/</guid>
+      <description>&lt;p&gt;リリースアナウンス テスト&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://rancherjp.github.io/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://rancherjp.github.io/about/</guid>
+      <description>
+
+&lt;h2 id=&#34;このページについて&#34;&gt;このページについて&lt;/h2&gt;
+
+&lt;p&gt;本ページは Rancher JP による &lt;strong&gt;Rancher&lt;/strong&gt; 及び関連するコンテナ技術に関する情報発信ページです。&lt;br /&gt;
+日本語による &lt;strong&gt;Rancher&lt;/strong&gt; のリリース情報、新機能解説、ユーザーによるBlog情報、勉強会レポートといった
+各種情報を本ページに集約することで日本のユーザーが簡単に情報収集できることを目的としています。&lt;/p&gt;
+
+&lt;h2 id=&#34;rancher-とは&#34;&gt;Rancher とは?&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Rancher&lt;/strong&gt; とは米国 &lt;a href=&#34;http://rancher.com&#34;&gt;Rancher Labs 社&lt;/a&gt;が主体として開発しているオープンソースのコンテナ管理プラットフォームです。&lt;br /&gt;
+商用環境を想定し複数ホストから構成されるクラスタの管理、稼働するコンテナのライフサイクル管理、
+様々なアプリケーションのテンプレート管理といった機能を有しています。&lt;br /&gt;
+また、既存のコンテナオーケストレーションツールである &lt;a href=&#34;https://docs.docker.com/swarm/&#34;&gt;Docker Swarm&lt;/a&gt;,
+ &lt;a href=&#34;http://kubernetes.io/&#34;&gt;Kubernetes&lt;/a&gt;, &lt;a href=&#34;http://mesos.apache.org/&#34;&gt;Mesos&lt;/a&gt; などをサポートしており
+&lt;strong&gt;Rancher&lt;/strong&gt; を利用することでコンテナサービスにおけるインフラストラクチャ〜アプリケーションといった
+幅広いスタックを容易に管理することが可能になります。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://docs.rancher.com&#34;&gt;Rancher ドキュメントページ&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;rancher-jp-とは&#34;&gt;Rancher JP とは?&lt;/h2&gt;
+
+&lt;p&gt;オープンソースのコンテナ管理プラットフォームである &lt;strong&gt;Rancher&lt;/strong&gt; の日本国内での普及を目的としたコミュニティです。&lt;br /&gt;
+本ページや勉強会、SNS などを通じて &lt;strong&gt;Rancher&lt;/strong&gt; や関連するコンテナ技術に関する情報を日本語により発信し、各種コンテナ技術の普及と人材育成に貢献します。&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
