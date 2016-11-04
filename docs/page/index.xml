@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Page-rsses on Rancher JP</title>
-    <link>https://rancherjp.github.io/page/index.xml</link>
+    <link>https://rancherjp.github.io/site/page/index.xml</link>
     <description>Recent content in Page-rsses on Rancher JP</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
     <copyright>© 2016 Rancher JP</copyright>
-    <atom:link href="https://rancherjp.github.io/page/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://rancherjp.github.io/site/page/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title></title>
-      <link>https://rancherjp.github.io/about/</link>
+      <link>https://rancherjp.github.io/site/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://rancherjp.github.io/about/</guid>
+      <guid>https://rancherjp.github.io/site/about/</guid>
       <description>
 
 &lt;h2 id=&#34;このページについて&#34;&gt;このページについて&lt;/h2&gt;

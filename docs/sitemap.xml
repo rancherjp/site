@@ -2,27 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://rancherjp.github.io/</loc>
+    <loc>https://rancherjp.github.io/site/</loc>
     <lastmod>2016-10-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://rancherjp.github.io/blog/2016/10/27/01/</loc>
+    <loc>https://rancherjp.github.io/site/blog/2016/10/27/01/</loc>
     <lastmod>2016-10-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://rancherjp.github.io/content/2016/10/27/rancher-workshop-01/</loc>
+    <loc>https://rancherjp.github.io/site/content/2016/10/27/rancher-workshop-01/</loc>
     <lastmod>2016-10-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://rancherjp.github.io/release-announce2016/10/27/release-announce-01/</loc>
+    <loc>https://rancherjp.github.io/site/release-announce2016/10/27/release-announce-01/</loc>
     <lastmod>2016-10-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://rancherjp.github.io/about/</loc>
+    <loc>https://rancherjp.github.io/site/about/</loc>
   </url>
   
 </urlset>

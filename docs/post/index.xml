@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Post-rsses on Rancher JP</title>
-    <link>https://rancherjp.github.io/post/index.xml</link>
+    <link>https://rancherjp.github.io/site/post/index.xml</link>
     <description>Recent content in Post-rsses on Rancher JP</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
     <copyright>© 2016 Rancher JP</copyright>
     <lastBuildDate>Thu, 27 Oct 2016 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://rancherjp.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://rancherjp.github.io/site/post/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Rancher もくもく勉強会 #1</title>
-      <link>https://rancherjp.github.io/content/2016/10/27/rancher-workshop-01/</link>
+      <link>https://rancherjp.github.io/site/content/2016/10/27/rancher-workshop-01/</link>
       <pubDate>Thu, 27 Oct 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://rancherjp.github.io/content/2016/10/27/rancher-workshop-01/</guid>
+      <guid>https://rancherjp.github.io/site/content/2016/10/27/rancher-workshop-01/</guid>
       <description>&lt;p&gt;Rancher もくもく勉強会 #1 - connpass
 &lt;a href=&#34;http://connpass.com/event/41997/&#34;&gt;http://connpass.com/event/41997/&lt;/a&gt;&lt;/p&gt;
 
@@ -28,7 +28,7 @@
 &lt;p&gt;・初心者向けチーム
 ・もくもくチーム
 に分かれて開始しました。
-&lt;img src=&#34;https://rancherjp.github.io/images/2016/10/27/DSC_0070.JPG&#34; alt=&#34;&#34;&gt;&lt;/img&gt;&lt;/p&gt;
+&lt;img src=&#34;https://rancherjp.github.io/site/images/2016/10/27/DSC_0070.JPG&#34; alt=&#34;&#34;&gt;&lt;/img&gt;&lt;/p&gt;
 
 &lt;p&gt;新藤さんが初心者向けチームにRancherの概要説明中&lt;/p&gt;
 
@@ -39,7 +39,7 @@
 ・AWSにあるRancherOSのイメージを使えば、ホストの追加もOK。&lt;/p&gt;
 
 &lt;p&gt;＃Chiba goさんの深い話がつづく
-&lt;img src=&#34;https://rancherjp.github.io/images/2016/10/27/DSC_0071.JPG&#34; alt=&#34;&#34;&gt;&lt;/img&gt;&lt;/p&gt;
+&lt;img src=&#34;https://rancherjp.github.io/site/images/2016/10/27/DSC_0071.JPG&#34; alt=&#34;&#34;&gt;&lt;/img&gt;&lt;/p&gt;
 
 &lt;p&gt;ネットワークとかスケジューリングとかは、K8sとかが担当するべき範囲
 　docker-compose.ymlは、Dockerのコンテナの関係性を示す。
@@ -56,7 +56,7 @@ CIツールは、別途必要になる。&lt;/p&gt;
 &lt;p&gt;Rancherのいいところは、Dockerのコマンドラインではちょっとお。と言う人向けにDockerの民主化の為に必要&lt;/p&gt;
 
 &lt;p&gt;@cyberblack28 さんのDocker解説
-&lt;img src=&#34;https://rancherjp.github.io/images/2016/10/27/DSC_0072.JPG&#34; alt=&#34;&#34;&gt;&lt;/img&gt;&lt;/p&gt;
+&lt;img src=&#34;https://rancherjp.github.io/site/images/2016/10/27/DSC_0072.JPG&#34; alt=&#34;&#34;&gt;&lt;/img&gt;&lt;/p&gt;
 
 &lt;p&gt;Dockerの手順は、自分の手で打つと勉強になるよ。
 VMで動かす場合は、ネットワークが注意&lt;/p&gt;
@@ -104,7 +104,7 @@ VMで動かす場合は、ネットワークが注意&lt;/p&gt;
 &lt;p&gt;新藤さんが、今日の本題 3行でDocker+Rancherを解説&lt;/p&gt;
 
 &lt;p&gt;@ynott が DockerとRancherの関係を図で解説
-&lt;img src=&#34;https://rancherjp.github.io/images/2016/10/27/DSC_0075.JPG&#34; alt=&#34;&#34;&gt;&lt;/img&gt;&lt;/p&gt;
+&lt;img src=&#34;https://rancherjp.github.io/site/images/2016/10/27/DSC_0075.JPG&#34; alt=&#34;&#34;&gt;&lt;/img&gt;&lt;/p&gt;
 
 &lt;p&gt;「次回は、12月ぐらいに Meetup しましょう。Google のIan Lewis と会話中」&lt;/p&gt;
 </description>
