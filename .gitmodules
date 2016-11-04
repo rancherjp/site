@@ -1,0 +1,3 @@
+[submodule "themes/hugo-phlat-theme-custom"]
+	path = themes/hugo-phlat-theme-custom
+	url = https://github.com/FoxBoxsnet/hugo-phlat-theme-custom.git
