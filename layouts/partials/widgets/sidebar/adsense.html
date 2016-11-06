@@ -1,0 +1,20 @@
+{{ if not (in (printf "%#v" .Site.BaseURL) "localhost") }}
+    {{ with .Site.Params.google_adsense }}
+        <div class="row">
+            <div class="col-md-11 col-md-offset-1 card">
+                <ins class="adsbygoogle"
+                    style="display:block"
+                    data-ad-client="{{ . }}"
+                    data-ad-slot="9997956765"
+                    data-ad-format="auto">
+                </ins>
+            </div>
+        </div>
+    {{ end }}
+{{ else }}
+    <div class="row">
+        <div class="col-md-11 col-md-offset-1 card">
+            <p>Adsense is unavailable while serving on localhost or 127.0.0.1</p>
+        </div>
+    </div>
+{{ end }}

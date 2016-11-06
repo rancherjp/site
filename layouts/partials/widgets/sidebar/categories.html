@@ -1,0 +1,14 @@
+{{ range $key, $value := .Site.Taxonomies }}
+    {{ if eq $key "categories" }}
+        <div class="row">
+            <div class="col-md-11 col-md-offset-1 card">
+                <h5>{{ $key | pluralize }}</h5>
+                <ul class="list-unstyled posts-recent">
+                    {{ range first 5 $value.ByCount }}
+                        <li><a href="{{ $.Site.BaseURL}}{{ $key | pluralize }}/{{ .Name | urlize }}">{{ .Name }}</a></li>
+                    {{ end }}
+                </ul>
+            </div>
+        </div>
+    {{ end }}
+{{ end }}
