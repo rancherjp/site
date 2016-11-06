@@ -46,6 +46,6 @@ copyright               = "© 2016 Rancher JP"
 
 # Social media icons and links that appear in the footer
 [social]
-    twitter             = "https://twitter.com/rancherjp/"
-    facebook            = "https://www.facebook.com/rancherjp/"
+    twitter             = "https://twitter.com/rancherjp"
+    facebook            = "https://www.facebook.com/rancherjp"
     slack               = "https://rancherjp.herokuapp.com"
