@@ -110,5 +110,87 @@ VMで動かす場合は、ネットワークが注意&lt;/p&gt;
 </description>
     </item>
     
+    <item>
+      <title>Rancher Meetup Tokyo #1</title>
+      <link>https://rancherjp.github.io/site/content/2016/10/07/rancher-meetup-01/</link>
+      <pubDate>Fri, 07 Oct 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://rancherjp.github.io/site/content/2016/10/07/rancher-meetup-01/</guid>
+      <description>
+
+&lt;h2 id=&#34;今熱い盛り上がりを見せているrancherの勉強会-rancher-meetup-tokyo-1-参加レポート&#34;&gt;今熱い盛り上がりを見せているRANCHERの勉強会「Rancher Meetup Tokyo #1」参加レポート！&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://snickerjp.blogspot.jp/2016/10/rancher-meetup-tokyo-vol1.html&#34;&gt;http://snickerjp.blogspot.jp/2016/10/rancher-meetup-tokyo-vol1.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;img src=&#34;https://rancherjp.github.io/site/images/2016/10/07/20161007_184910.jpg&#34; alt=&#34;&#34;&gt;&lt;/img&gt;
+
+&lt;p&gt;コンテナオーケストレーション管理ツールとして、以前から注目が高かった「RANCHER」&lt;br /&gt;
+初のMeetupが開催されたので、かんたんなレポートです！&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;もくじ&#34;&gt;もくじ&lt;/h3&gt;
+
+&lt;p&gt;-「Rancher Overview (DEMO)」（Bill Maxwell 氏）(#「Rancher Overview (DEMO)」（Bill Maxwell 氏）)&lt;br /&gt;
+-「Rancher CLI + Jenkins で実現するCI/CD」(#「Rancher CLI + Jenkins で実現するCI/CD」)&lt;br /&gt;
+- RANCHERのCEO (Sheng Liang 氏)のメッセージビデオ(#RANCHERのCEO (Sheng Liang 氏)のメッセージビデオ)&lt;br /&gt;
+- LT(#LT)&lt;br /&gt;
+- 参加者プレゼントで「RANCHER」のTシャツ(#参加者プレゼントで「RANCHER」のTシャツ)&lt;br /&gt;
+- 感想(#感想)&lt;br /&gt;
+- 参考サイト(#参考サイト)&lt;/p&gt;
+
+&lt;h2 id=&#34;rancher-overview-demo-bill-maxwell-氏&#34;&gt;「Rancher Overview (DEMO)」（Bill Maxwell 氏）&lt;/h2&gt;
+
+&lt;img src=&#34;https://rancherjp.github.io/site/images/2016/10/07/20161007_185051.jpg&#34; alt=&#34;&#34;&gt;&lt;/img&gt;
+
+&lt;p&gt;全編英語で、スライド見ているしかなかった発表&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://rancherjp.github.io/site/images/2016/10/07/DSC02584.JPG&#34; alt=&#34;&#34;&gt;&lt;/img&gt;
+&lt;img src=&#34;https://rancherjp.github.io/site/images/2016/10/07/DSC02586.JPG&#34; alt=&#34;&#34;&gt;&lt;/img&gt;
+&lt;img src=&#34;https://rancherjp.github.io/site/images/2016/10/07/DSC02587.JPG&#34; alt=&#34;&#34;&gt;&lt;/img&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;rancher-cli-jenkins-で実現するci-cd&#34;&gt;「Rancher CLI + Jenkins で実現するCI/CD」&lt;/h2&gt;
+
+&lt;p&gt;最近出てきたという「Rancher CLI」の紹介とJenkinsを絡めた
+「継続的インテグレーションとデリバリ」  かなりかっこよかったんですが、そんなことできるかな？？&lt;/p&gt;
+
+&lt;img src=&#34;https://rancherjp.github.io/site/images/2016/10/07/20161007_194116.jpg&#34; alt=&#34;&#34;&gt;&lt;/img&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/rancher/cli&#34;&gt;https://github.com/rancher/cli&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;rancherのceo-sheng-liang-氏-のメッセージビデオ&#34;&gt;RANCHERのCEO (Sheng Liang 氏)のメッセージビデオ&lt;/h2&gt;
+
+&lt;p&gt;ちょっと日本語、その後英語なメッセージビデオ&lt;/p&gt;
+
+&lt;img src=&#34;https://rancherjp.github.io/site/images/2016/10/07/20161007_200700_001.jpg&#34; alt=&#34;&#34;&gt;&lt;/img&gt;
+
+&lt;h2 id=&#34;lt&#34;&gt;LT&lt;/h2&gt;
+
+&lt;p&gt;LTの内容も濃くて、すごかった！&lt;/p&gt;
+
+&lt;img src=&#34;https://rancherjp.github.io/site/images/2016/10/07/20161007_210045.jpg&#34; alt=&#34;&#34;&gt;&lt;/img&gt;
+
+&lt;p&gt;(&lt;a href=&#34;http://qiita.com/cyberblack28/items/d1c6259c137c7c71703b&#34;&gt;http://qiita.com/cyberblack28/items/d1c6259c137c7c71703b&lt;/a&gt;)&lt;/p&gt;
+
+&lt;h2 id=&#34;参加者プレゼントで-rancher-のtシャツ&#34;&gt;参加者プレゼントで「RANCHER」のTシャツ&lt;/h2&gt;
+
+&lt;p&gt;来場者全員にTシャツがプレゼントされました！豪華！&lt;/p&gt;
+
+&lt;img src=&#34;https://rancherjp.github.io/site/images/2016/10/07/20161007_184910.jpg&#34; alt=&#34;&#34;&gt;&lt;/img&gt;
+
+&lt;h2 id=&#34;感想&#34;&gt;感想&lt;/h2&gt;
+
+&lt;p&gt;RANCHERって結構サクッと動いちゃって、なんかうまいことやってくれるUIツールだなー！&lt;br /&gt;
+と、思っていたけど。&lt;br /&gt;
+エンタープライズ向けに設計されているし、なんか色々使ってうまく出来ないかな？？&lt;/p&gt;
+
+&lt;p&gt;dockerのSwarm modeへの対応待たれますねー！&lt;/p&gt;
+
+&lt;h2 id=&#34;参考サイト&#34;&gt;参考サイト&lt;/h2&gt;
+
+&lt;p&gt;(&lt;a href=&#34;http://connpass.com/event/40326/&#34;&gt;http://connpass.com/event/40326/&lt;/a&gt;)&lt;/p&gt;
+</description>
+    </item>
+    
   </channel>
 </rss>
