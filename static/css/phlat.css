@@ -104,6 +104,9 @@ body {
     margin-bottom: 20px;
     margin-top: 0px;
     font-size: 30px;
+    border-left: 8px solid #337ab7;
+    padding: 7px;
+    border-bottom: 2px solid #337ab7;
 }
 
 .content-card h1 a {
@@ -112,14 +115,20 @@ body {
 
 .content-card h2 {
     margin-bottom: 15px;
-    margin-top: 15px;
-    font-size: 24px
+    margin-top: 24px;
+    font-size: 24px;
+    border-left: 8px solid #337ab7;
+    padding: 7px;
+    border-bottom: 2px solid #337ab7;
 }
 
 .content-card h3 {
     margin-bottom: 15px;
     margin-top: 15px;
-    font-size: 18px
+    font-size: 18px;
+    border-left: 8px solid #337ab7;
+    padding: 7px;
+    border-bottom: 2px solid #337ab7;
 }
 
 .content-card img {
