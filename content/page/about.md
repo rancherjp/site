@@ -1,13 +1,9 @@
 ---
-title:
-  - "About"
+title: "About"
 slug: "about"
-author:
-  - "Go Chiba"
-description:
-  - "Explanation for this page"
-draft:
-  - false
+author: "Go Chiba"
+description: "Explanation for this page"
+draft: false
 ---
 
 ## このページについて
