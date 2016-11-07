@@ -10,4 +10,4 @@ tags:
 categories:
   - "Release"
 ---
-リリースアナウンス テスト
+準備中 ...
