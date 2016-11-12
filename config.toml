@@ -41,6 +41,7 @@ copyright               = "© 2016 Rancher JP"
     keywords            = ["default", "keywords", "if", "no", "front", "matter"]
     description         = "A description that will appear as a default if front matter does not exist"
     favicon             = "favicon.ico"
+    noindex             = "noindex"
 
 
 
