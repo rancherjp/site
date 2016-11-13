@@ -29,11 +29,14 @@ copyright               = "© 2016 Rancher JP"
     name                = "Release Announce"
     weight              = 3
     url                 = "/release-announce"
-
+[[menu.header]]
+    name                = "Archives"
+    weight              = 4
+    url                 = "/archives"
 
 [[menu.header]]
     name                = "About"
-    weight              = 5
+    weight              = 6
     url                 = "/about"
 
 [params]
