@@ -6,9 +6,10 @@ author: "Rancher JP"
 description: "初めて Rancher を触る方向けのクイックスタートガイド"
 draft: false
 lang: ja
-redirect_from:
-  - /rancher/quick-start-guide/
-  - /rancher/latest/en/quick-start-guide/
+tags:
+  - "docs"
+categories:
+  - "docs"
 ---
 
 ## クイック スタート ガイド ##
