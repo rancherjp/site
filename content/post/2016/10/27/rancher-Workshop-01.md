@@ -12,7 +12,6 @@ categories:
 archives:
   - 2016
   - 2016/10
-  - 2016/10/27
 ---
 
 Rancher もくもく勉強会 #1 - connpass
