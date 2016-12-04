@@ -6,8 +6,8 @@
         <div id="top" class="container">
             <div class="row" id="content-main">
                 <div class="col-md-8">
-                    {{ $paginator := .Paginate (where .Data.Pages "Type" "post") }}
-                    {{ range $paginator.Pages }}
+                    {{ range .Data.Pages.GroupByDate "2006-01" }}
+                    {{ range .Pages }}
                         <div class="row">
                             <div class="col-md-12 content-card">
                                 <h1><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
@@ -19,6 +19,7 @@
                                 <a class="btn btn-custom" href="{{ .Permalink }}" role="button">Read More</a>
                             </div>
                         </div>
+                        {{ end }}
                     {{ end }}
                     {{ partial "pagination.html" . }}
                 </div>
