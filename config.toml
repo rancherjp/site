@@ -10,7 +10,7 @@ pygmentsstyle           = "borland"
     blog                = "/blog/:year/:month/:day/:slug/"
     docs                = "/docs/:slug/"
     post                = "/content/:year/:month/:day/:slug/"
-    release-announce    = "/release-announce:year/:month/:day/:slug/"
+    release-announce    = "/release-announce/:slug/"
     page                = "/:slug/"
 
 [taxonomies]
