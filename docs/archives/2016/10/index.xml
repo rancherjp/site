@@ -10,6 +10,16 @@
     <atom:link href="https://rancherjp.github.io/site/archives/2016/10/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Rancher Blog</title>
+      <link>https://rancherjp.github.io/site/blog/2016/10/27/01/</link>
+      <pubDate>Thu, 27 Oct 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://rancherjp.github.io/site/blog/2016/10/27/01/</guid>
+      <description>&lt;p&gt;準備中 &amp;hellip;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Rancher もくもく勉強会 #1</title>
       <link>https://rancherjp.github.io/site/content/2016/10/27/rancher-workshop-01/</link>
       <pubDate>Thu, 27 Oct 2016 00:00:00 +0000</pubDate>

@@ -7,8 +7,119 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
     <copyright>© 2016 Rancher JP</copyright>
-    <lastBuildDate>Wed, 30 Nov 2016 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 04 Dec 2016 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://rancherjp.github.io/site/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>リリース v1.2.0</title>
+      <link>https://rancherjp.github.io/site/release-announce/v.1.2.0/</link>
+      <pubDate>Sun, 04 Dec 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://rancherjp.github.io/site/release-announce/v.1.2.0/</guid>
+      <description>
+
+&lt;h2 id=&#34;バージョン&#34;&gt;バージョン&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;rancher/server:v1.2.0&lt;/li&gt;
+&lt;li&gt;rancher/agent:v1.1.0&lt;/li&gt;
+&lt;li&gt;rancher/lb-service-haproxy:v0.4.2&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/rancher/rancher-compose/releases/tag/v0.12.0&#34;&gt;rancher-compose-v0.12.0&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/rancher/cli/releases/tag/v0.4.0&#34;&gt;rancher-v0.4.0&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;注意:&lt;/em&gt; 新しい&lt;a href=&#34;http://docs.rancher.com/rancher/v1.2/en/rancher-services/&#34;&gt;infrastructure services&lt;/a&gt;では、ロードバランサの機能を指定のHAProxyイメージに変更し、ネットワークエージェントが起動されなくなりました。 したがって、rancher/agent-instanceが必要なくなりました。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&#34;新機能-v1-1-4からの変更点&#34;&gt;新機能 (v1.1.4からの変更点)&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Kubernetes 1.4.6 に対応&lt;/strong&gt; - 最新のk8sに対応することに加えて、Rancherは以下の機能が提供されます:
+
+&lt;ul&gt;
+&lt;li&gt;既定のRancherオプションに加えて、ユーザーがAWSをKubernetesのクラウドプロバイダーとして選択できるようになりました。&lt;/li&gt;
+&lt;li&gt;kubectl exec、logs、attachがサポートされました。&lt;/li&gt;
+&lt;li&gt;k8sノード にラベル付けがサポートされました。&lt;/li&gt;
+&lt;li&gt;PetSetオブジェクトを使用してステートフルアプリケーションの管理がサポートされました。&lt;/li&gt;
+&lt;li&gt;環境内でのk8sクラスタアップグレードがサポートされました。&lt;/li&gt;
+&lt;li&gt;Added Rancher UI support for the concept of a Stack to manage k8s templates as individual applications.  Stacks can be upgraded and deleted as an application.&lt;/li&gt;
+&lt;li&gt;Rancher UIで、k8sテンプレートを個々のアプリケーションとして管理するスタックをサポートしました。 スタックは、アプリケーションとしてアップグレード、削除することができます。&lt;/li&gt;
+&lt;li&gt;Rancher UIでk8sの展開とレプリカセットをサポーターしました。&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Docker 1.12.x サポート [&lt;a href=&#34;https://github.com/rancher/rancher/issues/5179&#34;&gt;#5179&lt;/a&gt;]&lt;/strong&gt; - Docker 1.12.xがRancherでサポートされ、いくつかの機能が強化されました。
+
+&lt;ul&gt;
+&lt;li&gt;Docker Swarmモードは、環境作成時にオーケストレーションフレームワークのオプションとして利用できるようになりました。&lt;/li&gt;
+&lt;li&gt;CattleはDocker 1.12.3以降のすべてのdocker runオプションをサポートするようになりました。更新された実行オプションの詳細については、&lt;a href=&#34;https://github.com/rancher/rancher/issues/4708&#34;&gt;#4708&lt;/a&gt;を参照してください。&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;改善 &lt;a href=&#34;http://docs.rancher.com/rancher/v1.2/en/rancher-services/networking&#34;&gt;Network&lt;/a&gt; サポート [&lt;a href=&#34;https://github.com/rancher/rancher/issues/5256&#34;&gt;#5256&lt;/a&gt;, &lt;a href=&#34;https://github.com/rancher/rancher/issues/5276&#34;&gt;#5276&lt;/a&gt;]&lt;/strong&gt; - Container Network Interface(CNI)仕様用に作成されたカスタムネットワークプラグインのライフサイクル、配布、および更新管理を管理する機能が追加されました。
+
+&lt;ul&gt;
+&lt;li&gt;現在のRancher IPSec管理ネットワークオプションがCNIプラグインとして完全に書き直されて、Cattleとk8sオーケストレーションフレームワークの両方で利用できます。&lt;/li&gt;
+&lt;li&gt;Rancherは、暗号化されていない(その為に性能の良い)クロスホスト用の管理ネットワークの代替オプションとして、VXLAN CNIプラグインが提供されるようになりました。&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;改善 &lt;a href=&#34;http://docs.rancher.com/rancher/v1.2/en/cattle/adding-load-balancers/&#34;&gt;Load Balancer v2&lt;/a&gt; のサポート [&lt;a href=&#34;https://github.com/rancher/rancher/issues/2179&#34;&gt;#2179&lt;/a&gt;]&lt;/strong&gt; - RancherのLBサービスは、以下のサポートを受けて完全に書き直されました。
+
+&lt;ul&gt;
+&lt;li&gt;SNIルーティングがLB v2で利用可能になりました。&lt;/li&gt;
+&lt;li&gt;HAProxyロギングがLB v2で利用可能になりました。[&lt;a href=&#34;https://github.com/rancher/rancher/issues/2414&#34;&gt;#2414&lt;/a&gt;]&lt;/li&gt;
+&lt;li&gt;既にサポートされているグローバルセクションとデフォルトセクションに加えて、フロントエンドとバックエンドのカスタム構成をHAProxy構成に追加できるようになりました。[&lt;a href=&#34;https://github.com/rancher/rancher/issues/2171&#34;&gt;#2171&lt;/a&gt;, &lt;a href=&#34;https://github.com/rancher/rancher/issues/1871&#34;&gt;#1871&lt;/a&gt;]&lt;/li&gt;
+&lt;li&gt;ユーザはホスト名ルーティングルールを持つセレクタを追加できるようになりました。[&lt;a href=&#34;https://github.com/rancher/rancher/issues/2288&#34;&gt;#2288&lt;/a&gt;]&lt;/li&gt;
+&lt;li&gt;v2ではポートからサービスへのマッピングをより柔軟に定義できるようになりました。 v1では、ポートをすべてのサービスに対応づける必要がありました。&lt;/li&gt;
+&lt;li&gt;好きなLBエンジン(nginxなど)を使って独自のカスタムLBサービスを実装し、Rancherのメタデータサービスと統合して、コンテナがLBに登録することをリクエストするタイミングを判断できるようになりました。&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;改善 &lt;a href=&#34;http://docs.rancher.com/rancher/v1.2/en/rancher-services/storage-service/&#34;&gt;Storage Support&lt;/a&gt;&lt;/strong&gt; - カスタムk8sのflexvolumeとDockerボリュームプラグインのライフサイクル、配布、および更新管理を管理する機能が追加されました。
+
+&lt;ul&gt;
+&lt;li&gt;CattleでNFSボリュームプラグインがサポートされました。 &lt;em&gt;&lt;strong&gt;1.2からRancherNFSはNFS Dockerプラグインソリューションをサポートするようになります。Convoy-NFSは1.2からオプションとして利用できなくなり、1.3以上では利用できなくなります。&lt;/strong&gt;&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;[実験的機能]&lt;/strong&gt;&lt;/em&gt; EC2のEBSとAWS EFSがサポートされました。&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;認証サポートの改善 [[&lt;a href=&#34;https://github.com/rancher/rancher/issues/5265&#34;&gt;#5265&lt;/a&gt;]]&lt;/strong&gt; - 認証のフレームワークをリライトすることでRancherに新しい認証・認可サービスを加えるためのより高い柔軟性を実現しました。
+
+&lt;ul&gt;
+&lt;li&gt;Shibboleth v3がRancherにおけるSAML 2.0サポートの認証プロバイダとしてくわえられました。&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;全体的なパフォーマンス/スケーラビリティの改善&lt;/strong&gt; - Rancherにおけるパフォーマンスとスケーラビリティを改善するために様々な機能強化が行なわれました。
+
+&lt;ul&gt;
+&lt;li&gt;インフラストラクチャビューのUIがより環境あたりより多くのホストとコンテナを表示できるよう変更されました。&lt;/li&gt;
+&lt;li&gt;スケジューリングの改善と、コンテナの並列起動を実現することでコンテナのデプロイ性能を改善しました。&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;[Rancher CLI]&lt;a href=&#34;https://github.com/rancher/rancher/issues/5265&#34;&gt;#5265&lt;/a&gt;&lt;/strong&gt; - Rancherは下に示す機能をサポートしたRancher CLIが同梱されています。
+
+&lt;ul&gt;
+&lt;li&gt;管理ホストに対するネイティブなDocker CLI操作のサポート&lt;/li&gt;
+&lt;li&gt;環境管理&lt;/li&gt;
+&lt;li&gt;スタック管理&lt;/li&gt;
+&lt;li&gt;サービス管理&lt;/li&gt;
+&lt;li&gt;ホスト管理&lt;/li&gt;
+&lt;li&gt;管理ホストに対するSSHアクセス&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;リソーススケジューリング&lt;/strong&gt; - CattleではCPUとメモリのリソース制約に応じてコンテナ配置のスケジューリングをサポートしていました。管理者も同様にホストあたりのCPU/メモリのリソース制限を設定することができるようになりました。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;http://docs.rancher.com/rancher/v1.2/en/environments/#what-is-an-environment-template&#34;&gt;環境テンプレート&lt;/a&gt;&lt;/strong&gt; - Rancehrではユーザが必要なインフラストラクチャサービス(LBやネットワークなど)を記述したテンプレートを作成できるようになりました。また、このテンプレートに基づいた環境の立ち上げをサポートするようになりました。
+
+&lt;ul&gt;
+&lt;li&gt;Rancherではユーザが環境を立ち上げ、利用することができるようデフォルトのテンプレートを継続して提供しています。&lt;/li&gt;
+&lt;li&gt;環境テンプレートの作成と管理をユーザが行えるようになりました。環境テンプレートでは、環境の作成に先立ってデプロイするインフラストラクチャサービスを記述することができます。&lt;/li&gt;
+&lt;li&gt;ユーザはRancherによって、コミュニティに提供されたサービスおよび地震で作成したサービスの両方を活用することができるようになりました。&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;HAサポートの改善(&lt;a href=&#34;http://docs.rancher.com/rancher/v1.2/en/installing-rancher/installing-server/#launching-rancher-server---full-activeactive-ha&#34;&gt;http://docs.rancher.com/rancher/v1.2/en/installing-rancher/installing-server/#launching-rancher-server---full-activeactive-ha&lt;/a&gt;)&lt;/strong&gt; - Rancher HAの設定と管理が劇的にシンプルになりました。 複数ノードへのRancherのデプロイに際して、RedisとZookeeperが不要になりました。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;さらに&amp;hellip;&lt;/strong&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Rancherのデプロイにおいて利用可能なDocker Registryのみを含んだホワイトリストの作成を管理者権限を用いてできるようになりました。&lt;/li&gt;
+&lt;li&gt;イメージにprefixがなかった場合に利用するデフォルトのDockerレジストリをadminが指定できるようになりました。&lt;/li&gt;
+&lt;li&gt;カタログのポートおよびラベルへのバインディングが可能になりました。&lt;/li&gt;
+&lt;li&gt;gitブランチを取り扱うためのカタログサポートがくわえられました。&lt;/li&gt;
+&lt;li&gt;Rancher AgentをGo言語でリライトしました。&lt;/li&gt;
+&lt;li&gt;Docker Machineがアップデートされ、新しくアップデートされたUIとともにAzureが新しいホストドライバに加えられました。&lt;/li&gt;
+&lt;li&gt;RancherOS 0.6.0以降がサポートされました。&lt;/li&gt;
+&lt;li&gt;サービスが適切に起動しなかった際、ユーザにより良いロギングを提供することを目的として、サービスログのジャーナリング機能を追加しました。&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
     <item>
       <title>クイックスタートガイド</title>
@@ -41,7 +152,7 @@
 &lt;h3 id=&#34;rancherサーバーを動かす&#34;&gt;Rancherサーバーを動かす&lt;/h3&gt;
 
 &lt;p&gt;Rancherサーバーを起動するコマンドは1つだけです。コンテナを起動したら、コンテナのログを調べて、サーバが起動して動いているかを確認します。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34; style=&#34;background: #ffffff&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;$ sudo docker run -d --restart=unless-stopped -p 8080:8080 rancher/server
+&lt;div class=&#34;highlight&#34; style=&#34;background: #ffffff&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;$ sudo docker run -d --restart=unless-stopped -p 8080:8080 rancher/server
 &lt;span style=&#34;color: #008800; font-style: italic&#34;&gt;# Rancherのログを表示&lt;/span&gt;
 $ sudo docker logs -f &amp;lt;CONTAINER_ID&amp;gt;
 &lt;/pre&gt;&lt;/div&gt;
@@ -85,7 +196,7 @@ $ sudo docker logs -f &amp;lt;CONTAINER_ID&amp;gt;
 &lt;h3 id=&#34;dockerのcliを直接使ってコンテナを作成する&#34;&gt;DockerのCLIを直接使ってコンテナを作成する&lt;/h3&gt;
 
 &lt;p&gt;Rancherは、コンテナがUIの外で作成されていてもホスト上のコンテナを表示できます。ホストのシェル端末からコンテナを作成してみます。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34; style=&#34;background: #ffffff&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;$ docker run -d -it --name=second-container ubuntu:14.04.2
+&lt;div class=&#34;highlight&#34; style=&#34;background: #ffffff&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;$ docker run -d -it --name=second-container ubuntu:14.04.2
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;UI上では、 &lt;strong&gt;&lt;em&gt;second-container&lt;/em&gt;&lt;/strong&gt; がホスト上にポップアップ表示されます。&lt;/p&gt;
@@ -95,7 +206,7 @@ $ sudo docker logs -f &amp;lt;CONTAINER_ID&amp;gt;
 &lt;p&gt;&lt;strong&gt;&lt;em&gt;second-container&lt;/em&gt;&lt;/strong&gt; のIPアドレスを見ると、&lt;code&gt;10.42.*.*&lt;/code&gt; の範囲には&lt;strong&gt;ない&lt;/strong&gt;ことがわかります。 これは、Dockerデーモンによって割り当てられた通常のIPアドレスです。 CLIを使用してDockerコンテナを作成するとこのようになります。&lt;/p&gt;
 
 &lt;p&gt;CLIを使用してRancherのオバーレイネットワークからIPアドレスのDockerコンテナを作成するにはどうすればよいでしょうか？ しなければならないこと、コマンドにラベル(i.e. &lt;code&gt;io.rancher.container.network=true&lt;/code&gt;)を追加するだけで、Rancherは、このコンテナが&lt;code&gt;管理&lt;/code&gt;ネットワークに属しなければならないと認識します。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34; style=&#34;background: #ffffff&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;$ docker run -d -it --label io.rancher.container.network=true ubuntu:14.04.2
+&lt;div class=&#34;highlight&#34; style=&#34;background: #ffffff&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;$ docker run -d -it --label io.rancher.container.network=true ubuntu:14.04.2
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;h3 id=&#34;マルチコンテナアプリケーションの作成&#34;&gt;マルチコンテナアプリケーションの作成&lt;/h3&gt;
@@ -131,7 +242,7 @@ $ sudo docker logs -f &amp;lt;CONTAINER_ID&amp;gt;
 &lt;p&gt;前のセクションでは、ロードバランサを備えたLetsChatアプリケーションを作成しました。 Rancherで作成していた場合、スタックのドロップダウンメニューから &lt;strong&gt;Export Config&lt;/strong&gt; を選択して、UIから直接ファイルをダウンロードできます。 &lt;code&gt;docker-compose.yml&lt;/code&gt; と &lt;code&gt;rancher-compose.yml&lt;/code&gt; ファイルは次のようになります。&lt;/p&gt;
 
 &lt;h4 id=&#34;example-docker-compose-yml&#34;&gt;Example docker-compose.yml&lt;/h4&gt;
-&lt;div class=&#34;highlight&#34; style=&#34;background: #ffffff&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;version: &lt;span style=&#34;color: #0000FF&#34;&gt;&amp;#39;2&amp;#39;&lt;/span&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #ffffff&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;version: &lt;span style=&#34;color: #0000FF&#34;&gt;&amp;#39;2&amp;#39;&lt;/span&gt;
 services:
   letschatapplb:
     &lt;span style=&#34;color: #008800; font-style: italic&#34;&gt;#If you only have 1 host and also created the host in the UI,&lt;/span&gt;
@@ -159,7 +270,7 @@ services:
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;h4 id=&#34;example-rancher-compose-yml&#34;&gt;Example rancher-compose.yml&lt;/h4&gt;
-&lt;div class=&#34;highlight&#34; style=&#34;background: #ffffff&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;vversion: &lt;span style=&#34;color: #0000FF&#34;&gt;&amp;#39;2&amp;#39;&lt;/span&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #ffffff&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;vversion: &lt;span style=&#34;color: #0000FF&#34;&gt;&amp;#39;2&amp;#39;&lt;/span&gt;
 services:
   letschatapplb:
     scale: 1
@@ -189,7 +300,7 @@ services:
 フッター右側にある &lt;strong&gt;Download CLI&lt;/strong&gt; をクリックして、RancherのUIからRancher CLIバイナリをダウンロードします。 Windows、Mac、Linux用のバイナリを提供しています。&lt;/p&gt;
 
 &lt;p&gt;Rancher CLIを使用してRancherでサービスを開始するには、いくつか環境変数を設定する必要があります。 Rancher UIで&lt;a href=&#34;{{site.baseurl}}/rancher/{{page.version}}/{{page.lang}}/api/api-keys/&#34;&gt;account API Key&lt;/a&gt;を作成します。 &lt;strong&gt;API&lt;/strong&gt; をクリックし、&lt;strong&gt;Add Account API Key&lt;/strong&gt; をクリックします。 ユーザー名 (アクセスキー) とパスワード (秘密キー) を保存します。 Rancher CLIに必要な次の環境変数を設定します: &lt;code&gt;RANCHER_URL&lt;/code&gt;、&lt;code&gt;RANCHER_ACCESS_KEY&lt;/code&gt; と &lt;code&gt;RANCHER_SECRET_KEY&lt;/code&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34; style=&#34;background: #ffffff&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #008800; font-style: italic&#34;&gt;# Set the url that Rancher is on&lt;/span&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #ffffff&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #008800; font-style: italic&#34;&gt;# Set the url that Rancher is on&lt;/span&gt;
 $ export RANCHER_URL=http://server_ip:8080/
 &lt;span style=&#34;color: #008800; font-style: italic&#34;&gt;# Set the access key, i.e. username&lt;/span&gt;
 $ export RANCHER_ACCESS_KEY=&amp;lt;username_of_key&amp;gt;
@@ -199,7 +310,7 @@ $ export RANCHER_SECRET_KEY=&amp;lt;password_of_key&amp;gt;
 
 &lt;p&gt;&lt;br&gt;
 &lt;code&gt;docker-compose.yml&lt;/code&gt; と &lt;code&gt;rancher-compose.yml&lt;/code&gt; を保存したディレクトリに移動し、コマンドを実行します。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34; style=&#34;background: #ffffff&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;$ rancher -p NewLetsChatApp up -d
+&lt;div class=&#34;highlight&#34; style=&#34;background: #ffffff&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;$ rancher -p NewLetsChatApp up -d
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Rancherで &lt;strong&gt;NewLetsChatApp&lt;/strong&gt; という新しいスタックが作成され、サービスがすべて起動します&lt;/p&gt;
@@ -317,16 +428,6 @@ VMで動かす場合は、ネットワークが注意&lt;/p&gt;
     </item>
     
     <item>
-      <title>Release Announce</title>
-      <link>https://rancherjp.github.io/site/release-announce2016/10/27/release-announce-01/</link>
-      <pubDate>Thu, 27 Oct 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://rancherjp.github.io/site/release-announce2016/10/27/release-announce-01/</guid>
-      <description>&lt;p&gt;準備中 &amp;hellip;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
       <title>Rancher Meetup Tokyo #1</title>
       <link>https://rancherjp.github.io/site/content/2016/10/07/rancher-meetup-01/</link>
       <pubDate>Fri, 07 Oct 2016 00:00:00 +0000</pubDate>
@@ -405,39 +506,6 @@ VMで動かす場合は、ネットワークが注意&lt;/p&gt;
 &lt;h2 id=&#34;参考サイト&#34;&gt;参考サイト&lt;/h2&gt;
 
 &lt;p&gt;(&lt;a href=&#34;http://connpass.com/event/40326/&#34;&gt;http://connpass.com/event/40326/&lt;/a&gt;)&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>About</title>
-      <link>https://rancherjp.github.io/site/about/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://rancherjp.github.io/site/about/</guid>
-      <description>
-
-&lt;h2 id=&#34;このページについて&#34;&gt;このページについて&lt;/h2&gt;
-
-&lt;p&gt;本ページは Rancher JP による &lt;strong&gt;Rancher&lt;/strong&gt; 及び関連するコンテナ技術に関する情報発信ページです。&lt;br /&gt;
-日本語による &lt;strong&gt;Rancher&lt;/strong&gt; のリリース情報、新機能解説、ユーザーによるBlog情報、勉強会レポートといった
-各種情報を本ページに集約することで日本のユーザーが簡単に情報収集できることを目的としています。&lt;/p&gt;
-
-&lt;h2 id=&#34;rancher-とは&#34;&gt;Rancher とは?&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;Rancher&lt;/strong&gt; とは米国 &lt;a href=&#34;http://rancher.com&#34;&gt;Rancher Labs 社&lt;/a&gt;が主体として開発しているオープンソースのコンテナ管理プラットフォームです。&lt;br /&gt;
-商用環境を想定し複数ホストから構成されるクラスタの管理、稼働するコンテナのライフサイクル管理、
-様々なアプリケーションのテンプレート管理といった機能を有しています。&lt;br /&gt;
-また、既存のコンテナオーケストレーションツールである &lt;a href=&#34;https://docs.docker.com/swarm/&#34;&gt;Docker Swarm&lt;/a&gt;,
- &lt;a href=&#34;http://kubernetes.io/&#34;&gt;Kubernetes&lt;/a&gt;, &lt;a href=&#34;http://mesos.apache.org/&#34;&gt;Mesos&lt;/a&gt; などをサポートしており
-&lt;strong&gt;Rancher&lt;/strong&gt; を利用することでコンテナサービスにおけるインフラストラクチャ〜アプリケーションといった
-幅広いスタックを容易に管理することが可能になります。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://docs.rancher.com&#34;&gt;Rancher ドキュメントページ&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;rancher-jp-とは&#34;&gt;Rancher JP とは?&lt;/h2&gt;
-
-&lt;p&gt;オープンソースのコンテナ管理プラットフォームである &lt;strong&gt;Rancher&lt;/strong&gt; の日本国内での普及を目的としたコミュニティです。&lt;br /&gt;
-本ページや勉強会、SNS などを通じて &lt;strong&gt;Rancher&lt;/strong&gt; や関連するコンテナ技術に関する情報を日本語により発信し、各種コンテナ技術の普及と人材育成に貢献します。&lt;/p&gt;
 </description>
     </item>
     

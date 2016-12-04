@@ -3,7 +3,12 @@
   
   <url>
     <loc>https://rancherjp.github.io/site/</loc>
-    <lastmod>2016-11-30T00:00:00+00:00</lastmod>
+    <lastmod>2016-12-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://rancherjp.github.io/site/release-announce/v.1.2.0/</loc>
+    <lastmod>2016-12-04T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -22,17 +27,8 @@
   </url>
   
   <url>
-    <loc>https://rancherjp.github.io/site/release-announce2016/10/27/release-announce-01/</loc>
-    <lastmod>2016-10-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://rancherjp.github.io/site/content/2016/10/07/rancher-meetup-01/</loc>
     <lastmod>2016-10-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://rancherjp.github.io/site/about/</loc>
   </url>
   
 </urlset>
