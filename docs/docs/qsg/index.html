@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="ja-jp">
+    <head>
+    
+        <meta name=”robots” content="noindex">
+    
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="Hugo 0.18-DEV" />
+    <title>クイックスタートガイド</title>
+    
+    
+    
+    <meta name="description" content="初めて Rancher を触る方向けのクイックスタートガイド" />
+    <meta name="keywords" content='docs' />
+    
+        <meta name="author" content="Rancher JP" />
+    
+    
+        <link rel="icon" type="image/png" href="favicon.ico" sizes="196x196" />
+    
+    <link href="" rel="alternate" type="application/rss+xml" title="Rancher JP" />
+    <link rel="stylesheet" href="https://rancherjp.github.io/site/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://rancherjp.github.io/site/css/highlightjs-themes/androidstudio.css" />
+    <link rel="stylesheet" href="https://rancherjp.github.io/site/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://rancherjp.github.io/site/css/phlat.css" />
+    
+        
+    
+</head>
+
+    <body>
+        <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="https://rancherjp.github.io/site/">Rancher JP</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/site/">
+                            Home
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/site/docs">
+                            Docs
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/site/blog">
+                            Blog
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/site/release-announce">
+                            Release Announce
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/site/archives">
+                            Archives
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/site/about">
+                            About
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+</nav>
+
+        <div id="top" class="container">
+            <div class="row" id="content-main">
+                <div class="col-md-8">
+                    <div class="row">
+    <div class="col-md-12 content-card">
+        <h1>クイックスタートガイド</h1>
+            
+            <ul class="list-inline meta">
+                <li><i class="fa fa-calendar"></i>November 30, 2016</li>
+                <li><i class="fa fa-user"></i>Rancher JP</li>
+                
+                    
+                    <li><i class="fa fa-folder"></i><a href="https://rancherjp.github.io/categories/docs">docs</a></li>
+                
+            </ul>
+            <ul class="list-inline share" style="margin-top: 15px; margin-left: 0px">
+        <li class="facebook-share"><a target="_blank" href="http://www.facebook.com/sharer.php?u=https%3a%2f%2francherjp.github.io%2fsite%2fdocs%2fqsg%2f"><i class="fa fa-facebook fa-lg"></i>Facebook</a></li>
+        <li class="googleplus-share"><a target="_blank" href="https://plus.google.com/share?url=https%3a%2f%2francherjp.github.io%2fsite%2fdocs%2fqsg%2f"><i class="fa fa-google-plus fa-lg"></i>Google+</a></li>
+        <li class="twitter-share"><a target="_blank" href="https://twitter.com/share?url=https%3a%2f%2francherjp.github.io%2fsite%2fdocs%2fqsg%2f&amp;text=%e3%82%af%e3%82%a4%e3%83%83%e3%82%af%e3%82%b9%e3%82%bf%e3%83%bc%e3%83%88%e3%82%ac%e3%82%a4%e3%83%89"><i class="fa fa-twitter fa-lg"></i>Twitter</a></li>
+    </ul>
+        
+
+<h2 id="クイック-スタート-ガイド">クイック スタート ガイド</h2>
+
+<p>このガイドでは、1台のLinuxサーバーに全てインストールして動く、最も簡単なRancherをインストールしてみます。</p>
+
+<h3 id="linuxホストを準備する">Linuxホストを準備する</h3>
+
+<p>3.10 + のカーネルが最低限入っている64 ビット Ubuntu 16.04 と Linux ホストを準備します。 ノートパソコンでも、仮想環境でも、物理サーバーも利用可能です。 Linux ホストには少なくとも <strong>1GB</strong> のメモリがあることを確認してください。 <a href="https://www.docker.com/">Docker</a> をホストにインストールします。</p>
+
+<p>サーバーにDockerをインストールするには、 <a href="https://docs.docker.com/engine/installation/linux/ubuntulinux/">Docker</a> 社の手引きを参照してください。</p>
+
+<blockquote>
+<p><strong>注:</strong> 現在、Windows と Mac のDockerはサポートされていません。</p>
+</blockquote>
+
+<h3 id="rancher-サーバータグ">Rancher サーバータグ</h3>
+
+<p><code>rancher/server:latest</code> タグはRancherの安定版ビルドにつけられます。Rancher社が推奨している本番環境展開用です。 各マイナーリリースタグに対して、それぞれのバージョンでのドキュメントを提供します。</p>
+
+<p>もし、CI自動化フレームワークで検証済の最新開発版のビルドに興味があれば、最新の開発版のリリースタグが付いた<a href="https://github.com/rancher/rancher/releases">リリースページ</a> を確認してください。 このリリースは本番環境デプロイ用ではありません。 開発ビルドには、全て開発リリースであることを示す<code>*-pre{n}</code> という接尾辞が付加されます。 <code>rc{n}</code> サフィックスの付いているリリースはいずれも使用しないでください。 <code>rc</code> ビルドは、Rancherチームが開発版ビルドをテストするためのものです。</p>
+
+<h3 id="rancherサーバーを動かす">Rancherサーバーを動かす</h3>
+
+<p>Rancherサーバーを起動するコマンドは1つだけです。コンテナを起動したら、コンテナのログを調べて、サーバが起動して動いているかを確認します。</p>
+<div class="highlight" style="background: #ffffff"><pre style="line-height: 125%"><span></span>$ sudo docker run -d --restart=unless-stopped -p 8080:8080 rancher/server
+<span style="color: #008800; font-style: italic"># Rancherのログを表示</span>
+$ sudo docker logs -f &lt;CONTAINER_ID&gt;
+</pre></div>
+
+<p>Rancherサーバーの起動に数分おまちください。 <code>.... Startup Succeeded, Listening on port....</code> が表示されたら、RancherのUIは起動して稼働中です。 ログのこの行が表示されたら、ほとんど設定は終了です。 この出力の後に追加のログが出力される可能性があるので、これが初期起動時のログの最後の行であるとは限りません。</p>
+
+<p>UIは <code>8080</code> ポートで動いているので、表示するには <code>http://&lt;SERVER_IP&gt;:8080</code> をブラウザーで開いてください。 Rancherサーバーとブラウザーが同じホストで動いている場合は、<code>http://192.168.1.100:8080</code> のように実IPを使ってください。<code>http://localhost:8080</code> や <code>http://127.0.0.1:8080</code> としないようにしてください。</p>
+
+<blockquote>
+<p><strong>注:</strong> Rancherサーバーにはアクセス制限が設定されておらず、このIPアドレスにアクセスできる誰でもこのUIとAPIを利用できます。 <a href="{{site.baseurl}}/rancher/{{page.version}}/{{page.lang}}/configuration/access-control/">アクセス制限</a>を設定することをお勧めします。</p>
+</blockquote>
+
+<h3 id="ホストを追加">ホストを追加</h3>
+
+<p>わかりやすくするためにRancherサーバーを実行しているサーバーをRancherのホストとして追加します。実際の運用では、専用のRancherを実行するホストを動かすことをお勧めします。</p>
+
+<p>ホストを追加するには、UIから <strong>Infrastructure</strong> をクリックして、<strong>Hosts</strong> ページを表示してください。 <strong>Add Host</strong> をクリックします。 Rancherで利用するURLを選択するように指示されます。 このURLは、Rancherサーバーが動いているURLになり、これから追加するRancherホストから接続可能なものでなくてはなりません。 この設定は、RancherサーバーがファイヤウォールでNATされたり、ロードバランサーを介してインターネットに公開される場合に便利です。 ホストに<code>192.168.*.*</code>のようなプライベートやローカルIPなアドレスがついていた場合、Rancherサーバーにホストが本当にURLにアクセスできるかどうかを尋ねる警告が表示されます。</p>
+
+<p>今のところ、これらの警告は無視してRancherサーバーホスト自体を追加することができます。 <strong>Save</strong> をクリックします。 デフォルトでは、Rackherエージェントコンテナを起動するDockerコマンドを提供する <strong>Custom</strong> オプションが選択されます。 RancherがDocker Machineを使用してホストを起動するクラウドプロバイダ向けのオプションもあります。</p>
+
+<p>UIでホスト上でオープンにするポートの指示とオプションの設定項目が表示されます。Rancherサーバーも稼動しているホストを追加するので、このホストで使用するパブリックIPを追加する必要があります。 このオプションで入力されたIPにより、カスタムコマンドでの環境変数が自動的に変更されます。</p>
+
+<p>Rancherサーバーを実行しているホストでこのコマンドを実行します。</p>
+
+<p>Rancher UIで <strong>Close</strong> をクリックすると、<strong>Infrastructure</strong> -&gt; <strong>Hosts</strong> 表示に戻ります。 数分後にホストが自動的に表示されます。</p>
+
+<h3 id="インフラストラクチャーサービス">インフラストラクチャーサービス</h3>
+
+<p>最初にRancherにログインすると自動的に <a href="{{site.baseurl}}/rancher/{{page.version}}/{{page.lang}}/environments/">environment</a>になります。この<a href="{{site.baseurl}}/rancher/{{page.version}}/{{page.lang}}/rancher-services/">infrastructure services</a>を開始するためにデフォルトのcattle <a href="{{site.baseurl}}/rancher/{{page.version}}/{{page.lang}}/environments/#what-is-an-environment-template">environment template</a>が選択されます。この[infrastructure services]は、Rancherの持っている<a href="{{site.baseurl}}/rancher/{{page.version}}/{{page.lang}}/rancher-services/dns-service/">dns</a>や<a href="{{site.baseurl}}/rancher/{{page.version}}/{{page.lang}}/rancher-services/metadata-service">metadata</a>、<a href="{{site.baseurl}}/rancher/{{page.version}}/{{page.lang}}/rancher-services/networking">networking</a>そして<a href="{{site.baseurl}}/rancher/{{page.version}}/{{page.lang}}/cattle/health-checks/">health checks</a>のような機能の利点を活用するため有利なものです。これらのインフラストラクチャスタックは、<strong>Stacks</strong> -&gt; <strong>Infrastructure</strong> にあります。これらのスタックは、ホストがRancherに完全に追加されるまで、<code>不健全な</code> 状態です。ホストを追加した後は、サービスを追加する前にすべてのインフラストラクチャスタックが <code>active</code> になるまで待つことをお勧めします。</p>
+
+<p>ホストでは、<strong>Show System</strong> チェックボックスをクリックしない限り、インフラストラクチャサービスのコンテナは非表示になります。</p>
+
+<h3 id="uiを使用してコンテナを作成する">UIを使用してコンテナを作成する</h3>
+
+<p><strong>Stacks</strong> 画面に移動して、まだサービスがない場合は、Welcome画面の <strong>Define a service</strong> ボタンをクリックします。 Rancherに既にサービスが存在する場合は、既存のスタックの <strong>Add Service</strong> をクリックするか、新しいスタックを作成してサービスを追加できます。 新しいスタックを作成する必要がある場合は、 <strong>Add Stack</strong> をクリックし、名前と説明を入力して <strong>Create</strong> をクリックします。 次に新規スタックで <strong>Add Service</strong> をクリックします。</p>
+
+<p>&ldquo;first-container&rdquo;のような名前でサービスを追加します。 デフォルトの設定を使用して <strong>Create</strong> をクリックするだけです。 Rancherは、ホスト上でコンテナの起動を開始します。ホストのIPアドレスにかかわらず、Rancherがipsecインフラストラクチャサービスで管理オーバーレイネットワークを作成したため、最初のコンテナのIPアドレスは <code>10.42 *.*</code> の範囲になります。管理オーバーレイネットワークで、コンテナが異なるホスト間で相互に通信できるように管理しています。</p>
+
+<p><strong><em>first-container</em></strong> のドロップダウンをクリックすると、コンテナの停止、ログの表示、コンテナコンソールへのアクセスなどの管理アクションを実行できます。</p>
+
+<h3 id="dockerのcliを直接使ってコンテナを作成する">DockerのCLIを直接使ってコンテナを作成する</h3>
+
+<p>Rancherは、コンテナがUIの外で作成されていてもホスト上のコンテナを表示できます。ホストのシェル端末からコンテナを作成してみます。</p>
+<div class="highlight" style="background: #ffffff"><pre style="line-height: 125%"><span></span>$ docker run -d -it --name=second-container ubuntu:14.04.2
+</pre></div>
+
+<p>UI上では、 <strong><em>second-container</em></strong> がホスト上にポップアップ表示されます。</p>
+
+<p>RancherはDockerデーモンで発生するイベントに反応し、実際の動作状況とRancherでの状況を調整します。 <a href="{{site.baseurl}}/rancher/{{page.version}}/{{page.lang}}/native-docker/">native docker CLI</a>を使用してRancherを利用する方法の詳細を読むことができます。</p>
+
+<p><strong><em>second-container</em></strong> のIPアドレスを見ると、<code>10.42.*.*</code> の範囲には<strong>ない</strong>ことがわかります。 これは、Dockerデーモンによって割り当てられた通常のIPアドレスです。 CLIを使用してDockerコンテナを作成するとこのようになります。</p>
+
+<p>CLIを使用してRancherのオバーレイネットワークからIPアドレスのDockerコンテナを作成するにはどうすればよいでしょうか？ しなければならないこと、コマンドにラベル(i.e. <code>io.rancher.container.network=true</code>)を追加するだけで、Rancherは、このコンテナが<code>管理</code>ネットワークに属しなければならないと認識します。</p>
+<div class="highlight" style="background: #ffffff"><pre style="line-height: 125%"><span></span>$ docker run -d -it --label io.rancher.container.network=true ubuntu:14.04.2
+</pre></div>
+
+<h3 id="マルチコンテナアプリケーションの作成">マルチコンテナアプリケーションの作成</h3>
+
+<p>個別のコンテナを作成する方法と、ホスト間ネットワークでそれらがどのように接続されるかを説明しました。 しかし、実際のアプリケーションのほとんどは複数のサービスで構成されており、各サービスは複数のコンテナで構成されています。 たとえば、<a href="http://sdelements.github.io/lets-chat/">LetsChat</a>アプリケーションは、次のようなサービスで構成されます。</p>
+
+<ol>
+<li>ロードバランサー ロードバランサーはインターネットからのリクエストを&rdquo; LetsChat&rdquo; アプリケーションに中継します。</li>
+<li><em>ウェブ</em> サービス &ldquo;LetsChat&rdquo; コンテナ2つで構成されます。</li>
+<li><em>データーベース</em> サービス &ldquo;Mongo&rdquo; コンテナ1つで構成されます。</li>
+</ol>
+
+<p>ロードバランサーは<em>ウェブ</em> サービス(例 LetsChat) に接続し、<em>ウェブ</em> サービスは<em>データーベース</em> サービス(例 Mongo)にリンクします。</p>
+
+<p>このセクションでは、Rancherに <a href="http://sdelements.github.io/lets-chat/">LetsChat</a> アプリケーションのコンテナを作成して展開する方法を説明します。</p>
+
+<p><strong>Stacks</strong> 画面に移動します。まだサービスがない場合は、Welcome画面の <strong>Define a Service</strong> ボタンをクリックします。 Rancherに既にサービスが存在する場合は、既存のスタックの <strong>Add Service</strong> をクリックするか、新しいスタックを作成してサービスを追加できます。 新しいスタックを作成する必要がある場合は、 <strong>Add Stack</strong> をクリックし、名前と説明を入力して <strong>Create</strong> をクリックします。 次に新規スタックで <strong>Add Service</strong> をクリックします。</p>
+
+<p>まず、<code>mongo</code> イメージを使い <em>データベース</em> というサービスを作成します。 <strong>Create</strong> をクリックします。<em>データーベース</em> サービスが含まれるスタックページがすぐに表示されます。</p>
+
+<p>次に、もう一度 <strong>Add Service</strong> をクリックして、別のサービスを追加します。 LetsChatサービスと<em>データーベース</em> サービスとをリンクをさせます。 <code>sdelements/lets-chat</code>イメージを使用して、<code>web</code> 名前を付けます。UI上でスライダを動かして、サービスのスケールをコンテナ2つにします。 <strong>Service Links</strong> に<code>mongo</code> という名前の <em>データベース</em> サービスを追加します。 Dockerの場合と同様に、Rancherは、<code>mongo</code> の名前を選択すると、リンクされたデータベースとして <code>letschat</code> イメージに必要な環境変数をリンクします。 <strong>Create</strong> をクリックします。</p>
+
+<p>最後にロードバランサーを作成します。 <strong>Add Service</strong> ボタンの横にあるドロップダウンメニューアイコンをクリックします。 <strong>Add Load Balancer</strong> を選択します。 <code>letschatapplb</code> のような名前を入力し、接続先アプリケーションにアクセスするために使用するホスト上のソースポート(例 <code>80</code>)とターゲットサービス(例 <em>web</em>)とターゲットポート(例 <code>8080</code>) を選択します。 この場合、<em>ウェブ</em> サービスで <code>8080</code>番ポートを使用します。</p>
+
+<p>LetsChatアプリケーションが完成しました！ <strong>Stacks</strong>画面で、ロードバランサが公開しているポートをリンクとして見つけることができます。 そのリンクをクリックすると、新しいブラウザが開き、LetsChatアプリケーションが表示されます。</p>
+
+<h3 id="rancher-cli-を使用して複数コンテナアプリケーションを作成する">Rancher CLI を使用して複数コンテナアプリケーションを作成する</h3>
+
+<p>このセクションでは、<a href="{{site.baseurl}}/rancher/{{page.version}}/{{page.lang}}/cli/">Rancher CLI</a> というコマンドラインツールを使用して前のセクションで作成したと同じ<a href="http://sdelements.github.io/lets-chat/">LetsChat</a>アプリケーションを作成して展開する方法を説明します。</p>
+
+<p>Rancherサービスが起動したときに、Rancher CLIツールは一般的なDocker Composeツールと同じように機能します。 これは、同じように <code>docker-compose.yml</code> ファイルを読み込んでRancherにアプリケーションをデプロイします。 <code>rancher-compose.yml</code> ファイルを利用すると <code>docker-compose.yml</code> ファイルを拡張して上書きする追加の属性を指定することができます。</p>
+
+<p>前のセクションでは、ロードバランサを備えたLetsChatアプリケーションを作成しました。 Rancherで作成していた場合、スタックのドロップダウンメニューから <strong>Export Config</strong> を選択して、UIから直接ファイルをダウンロードできます。 <code>docker-compose.yml</code> と <code>rancher-compose.yml</code> ファイルは次のようになります。</p>
+
+<h4 id="example-docker-compose-yml">Example docker-compose.yml</h4>
+<div class="highlight" style="background: #ffffff"><pre style="line-height: 125%"><span></span>version: <span style="color: #0000FF">&#39;2&#39;</span>
+services:
+  letschatapplb:
+    <span style="color: #008800; font-style: italic">#If you only have 1 host and also created the host in the UI,</span>
+    <span style="color: #008800; font-style: italic"># you may have to change the port exposed on the host.</span>
+    ports:
+    - 80:80/tcp
+    labels:
+      io.rancher.container.create_agent: <span style="color: #0000FF">&#39;true&#39;</span>
+      io.rancher.container.agent.role: environmentAdmin
+    image: rancher/lb-service-haproxy:v0.4.2
+  web:
+    labels:
+      io.rancher.container.pull_image: always
+    tty: true
+    image: sdelements/lets-chat
+    links:
+    - database:mongo
+    stdin_open: true
+  database:
+    labels:
+      io.rancher.container.pull_image: always
+    tty: true
+    image: mongo
+    stdin_open: true
+</pre></div>
+
+<h4 id="example-rancher-compose-yml">Example rancher-compose.yml</h4>
+<div class="highlight" style="background: #ffffff"><pre style="line-height: 125%"><span></span>vversion: <span style="color: #0000FF">&#39;2&#39;</span>
+services:
+  letschatapplb:
+    scale: 1
+    lb_config:
+      certs: []
+      port_rules:
+      - hostname: <span style="color: #0000FF">&#39;&#39;</span>
+        path: <span style="color: #0000FF">&#39;&#39;</span>
+        priority: 1
+        protocol: http
+        service: quickstartguide/web
+        source_port: 80
+        target_port: 8080
+    health_check:
+      port: 42
+      interval: 2000
+      unhealthy_threshold: 3
+      healthy_threshold: 2
+      response_timeout: 2000
+  web:
+    scale: 2
+  database:
+    scale: 1
+</pre></div>
+
+<p><br>
+フッター右側にある <strong>Download CLI</strong> をクリックして、RancherのUIからRancher CLIバイナリをダウンロードします。 Windows、Mac、Linux用のバイナリを提供しています。</p>
+
+<p>Rancher CLIを使用してRancherでサービスを開始するには、いくつか環境変数を設定する必要があります。 Rancher UIで<a href="{{site.baseurl}}/rancher/{{page.version}}/{{page.lang}}/api/api-keys/">account API Key</a>を作成します。 <strong>API</strong> をクリックし、<strong>Add Account API Key</strong> をクリックします。 ユーザー名 (アクセスキー) とパスワード (秘密キー) を保存します。 Rancher CLIに必要な次の環境変数を設定します: <code>RANCHER_URL</code>、<code>RANCHER_ACCESS_KEY</code> と <code>RANCHER_SECRET_KEY</code></p>
+<div class="highlight" style="background: #ffffff"><pre style="line-height: 125%"><span></span><span style="color: #008800; font-style: italic"># Set the url that Rancher is on</span>
+$ export RANCHER_URL=http://server_ip:8080/
+<span style="color: #008800; font-style: italic"># Set the access key, i.e. username</span>
+$ export RANCHER_ACCESS_KEY=&lt;username_of_key&gt;
+<span style="color: #008800; font-style: italic"># Set the secret key, i.e. password</span>
+$ export RANCHER_SECRET_KEY=&lt;password_of_key&gt;
+</pre></div>
+
+<p><br>
+<code>docker-compose.yml</code> と <code>rancher-compose.yml</code> を保存したディレクトリに移動し、コマンドを実行します。</p>
+<div class="highlight" style="background: #ffffff"><pre style="line-height: 125%"><span></span>$ rancher -p NewLetsChatApp up -d
+</pre></div>
+
+<p>Rancherで <strong>NewLetsChatApp</strong> という新しいスタックが作成され、サービスがすべて起動します</p>
+
+        
+
+    </div>
+</div>
+
+                    
+
+                </div>
+                <div class="col-md-4">
+                                        <div class="row">
+    <div class="col-md-11 col-md-offset-1 card">
+        <h5>Search</h5>
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form">
+            <div class="input-group">
+                <input class="form-control" type="search" name="q" />
+                <span class="input-group-btn">
+                    <button class="btn btn-custom" type="submit"><span class="glyphicon glyphicon-search"></span></button>
+                </span>
+            </div>
+            <input type="hidden" name="q" value="site:https://rancherjp.github.io/site/">
+        </form>
+    </div>
+</div>
+
+                    <div class="row">
+    <div class="col-md-11 col-md-offset-1 card">
+        <h5>Recent Posts</h5>
+        <ul class="list-unstyled posts-recent">
+            
+                <li><a href="https://rancherjp.github.io/site/content/2016/10/27/rancher-workshop-01/">Rancher もくもく勉強会 #1</a></li>
+            
+                <li><a href="https://rancherjp.github.io/site/content/2016/10/07/rancher-meetup-01/">Rancher Meetup Tokyo #1</a></li>
+            
+        </ul>
+    </div>
+</div>
+
+                    
+    
+
+    
+        <div class="row">
+            <div class="col-md-11 col-md-offset-1 card">
+                <h5>categories</h5>
+                <ul class="list-unstyled posts-recent">
+                    
+                        <li><a href="https://rancherjp.github.io/site/categories/blog">blog</a></li>
+                    
+                        <li><a href="https://rancherjp.github.io/site/categories/docs">docs</a></li>
+                    
+                        <li><a href="https://rancherjp.github.io/site/categories/meetup">meetup</a></li>
+                    
+                        <li><a href="https://rancherjp.github.io/site/categories/release-announce">release-announce</a></li>
+                    
+                        <li><a href="https://rancherjp.github.io/site/categories/workshop">workshop</a></li>
+                    
+                </ul>
+            </div>
+        </div>
+    
+
+    
+
+
+                    <div class="row">
+    <div class="col-md-11 col-md-offset-1 card">
+        <div class="sidebar-twitter">
+            <a class="twitter-timeline" height="500" href="https://twitter.com/rancherjp"></a>
+            <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
+    </div>
+</div>
+
+
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-xs-6">
+    <ul class="list-inline links">
+        
+    </ul>
+</div>
+
+            <div class="col-md-4 col-xs-6">
+    <ul class="list-inline social-media">
+        
+            <li><a target="_blank" href="https://twitter.com/rancherjp"><i class="fa fa-twitter fa-lg"></i></a></li>
+        
+        
+        
+            <li><a target="_blank" href="https://www.facebook.com/rancherjp"><i class="fa fa-facebook fa-lg"></i></a></li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+            <li><a target="_blank" href="https://rancherjp.herokuapp.com"><i class="fa fa-slack fa-lg"></i></a></li>
+        
+    </ul>
+</div>
+
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <p>
+                    <p>Copyright © 2016 Rancher JP. All Rights Reserved.</P>
+                    <p>Powered by <a href="//gohugo.io">Hugo</a></p>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+        <div id="back-to-top" class="hidden">
+    <a href="#top" class="well well-sm" onclick="$('html,body').animate({scrollTop:0},'slow');return false;">
+        <i class="glyphicon glyphicon-chevron-up"></i> Back to Top
+    </a>
+</div>
+<script src="https://rancherjp.github.io/site/js/jquery-2.2.1.min.js"></script>
+<script src="https://rancherjp.github.io/site/js/bootstrap.min.js"></script>
+<script src="https://rancherjp.github.io/site/js/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script>
+    if(($(window).height() + 100) < $(document).height()) {
+        $('#back-to-top').removeClass('hidden').affix({
+            offset: {
+                top: 100
+            }
+        });
+    }
+</script>
+
+    
+
+
+    
+
+
+
+    </body>
+</html>

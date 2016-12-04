@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Rancher JP</title>
+    <link>https://rancherjp.github.io/site/archives/2016/10/27/index.xml</link>
+    <description>Recent content on Rancher JP</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <copyright>© 2016 Rancher JP</copyright>
+    <atom:link href="https://rancherjp.github.io/site/archives/2016/10/27/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Rancher Blog</title>
+      <link>https://rancherjp.github.io/site/blog/2016/10/27/01/</link>
+      <pubDate>Thu, 27 Oct 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://rancherjp.github.io/site/blog/2016/10/27/01/</guid>
+      <description>&lt;p&gt;準備中 &amp;hellip;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Rancher もくもく勉強会 #1</title>
+      <link>https://rancherjp.github.io/site/content/2016/10/27/rancher-workshop-01/</link>
+      <pubDate>Thu, 27 Oct 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://rancherjp.github.io/site/content/2016/10/27/rancher-workshop-01/</guid>
+      <description>&lt;p&gt;Rancher もくもく勉強会 #1 - connpass
+&lt;a href=&#34;http://connpass.com/event/41997/&#34;&gt;http://connpass.com/event/41997/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;挨拶&lt;/p&gt;
+
+&lt;p&gt;自己紹介&lt;/p&gt;
+
+&lt;p&gt;自己紹介のつもりが、名刺交換会から開始になってしまいました。&lt;/p&gt;
+
+&lt;p&gt;・初心者向けチーム
+・もくもくチーム
+に分かれて開始しました。
+&lt;img src=&#34;https://rancherjp.github.io/site/images/2016/10/27/DSC_0070.JPG&#34; alt=&#34;&#34;&gt;&lt;/img&gt;&lt;/p&gt;
+
+&lt;p&gt;新藤さんが初心者向けチームにRancherの概要説明中&lt;/p&gt;
+
+&lt;p&gt;chiba go さんがRancherとDockerの解説
+・Rancherの日本語訳は、Chibaさんがされた
+・Rancherのインストールは、コマンド一発 以上　とても簡単
+・クラウドのサポートも楽ちん。
+・AWSにあるRancherOSのイメージを使えば、ホストの追加もOK。&lt;/p&gt;
+
+&lt;p&gt;＃Chiba goさんの深い話がつづく
+&lt;img src=&#34;https://rancherjp.github.io/site/images/2016/10/27/DSC_0071.JPG&#34; alt=&#34;&#34;&gt;&lt;/img&gt;&lt;/p&gt;
+
+&lt;p&gt;ネットワークとかスケジューリングとかは、K8sとかが担当するべき範囲
+　docker-compose.ymlは、Dockerのコンテナの関係性を示す。
+　rancher-compose.ymlは、Rancherのスケールするとかの設定を示す。&lt;/p&gt;
+
+&lt;p&gt;コンテナイメージは、どこからか取ってくるしかない。
+CIツールは、別途必要になる。&lt;/p&gt;
+
+&lt;p&gt;yo コマンドでRancherのCatalogテンプレートを作ってくれる。&lt;/p&gt;
+
+&lt;p&gt;Kubernetesと、Cattleでのインフラの大きいので、カタログでも動く、動かないというのが実はある。
+越えられない壁があって。。&lt;/p&gt;
+
+&lt;p&gt;Rancherのいいところは、Dockerのコマンドラインではちょっとお。と言う人向けにDockerの民主化の為に必要&lt;/p&gt;
+
+&lt;p&gt;@cyberblack28 さんのDocker解説
+&lt;img src=&#34;https://rancherjp.github.io/site/images/2016/10/27/DSC_0072.JPG&#34; alt=&#34;&#34;&gt;&lt;/img&gt;&lt;/p&gt;
+
+&lt;p&gt;Dockerの手順は、自分の手で打つと勉強になるよ。
+VMで動かす場合は、ネットワークが注意&lt;/p&gt;
+
+&lt;p&gt;@Cyberduck28 さんが解説してくれたDockerの資料は、以下です。
+「Docker～WordPress環境を作ってみる ハンズオン編」
+&lt;a href=&#34;http://www.slideshare.net/cyberblackvoom/linaction-theme-docker&#34;&gt;http://www.slideshare.net/cyberblackvoom/linaction-theme-docker&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Dockerのいいところ
+1. オーバーヘッドが少ない。
+2. OSの部分まで入っているのでデプロイが簡単。
+3. インフラ環境によらずに管理が楽になりました。&lt;/p&gt;
+
+&lt;p&gt;Docker勉強会になりつつありｗ。&lt;/p&gt;
+
+&lt;p&gt;Dockerのダメなところ。&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;ステートレスな形で構成しないとダメです。&lt;/li&gt;
+&lt;li&gt;トラブルをちゃんと解析しない。&lt;/li&gt;
+&lt;li&gt;それなりにマッチする環境や方法を踏まえないとダメです。&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Dockerをエンタープライズに適用することの難しさ。
+&amp;mdash;&amp;gt;発想が変わらないとなかなか難しい。&lt;/p&gt;
+
+&lt;p&gt;Googleとかとかと日本の環境との違いが大きすぎる。&lt;/p&gt;
+
+&lt;p&gt;業務系の開発からでは、コンテナの発想が大きくちがうのでワケワカ&lt;/p&gt;
+
+&lt;p&gt;IoT などの場合では、サーバーが何万台とある全てのIoTデバイスをコントロールするのは現実的ではないのではと思う。途中IoTのデバイスを中継する中継基地サーバーが必要なのではないだろうか。コンテナーはそういう用途に非常に向いていると思う。&lt;/p&gt;
+
+&lt;p&gt;それを受けて、Chiba go さんのIoT 関連話。Resin.io でのドローン内でコンテナが動いている話を紹介。参加者一同驚嘆&lt;/p&gt;
+
+&lt;p&gt;Home | Resin.io
+&lt;a href=&#34;https://resin.io/&#34;&gt;https://resin.io/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Rancherでコンテナが100台とかになったら画面がどうなるか気になる。
+「そのうちグルーピングできるようになるんじゃないだろうか？」
+「検索インターフェースも必要だよね」
+「画面は、レスポンシブ対応もありますよ。」&lt;/p&gt;
+
+&lt;p&gt;Rancherでのモニタリングとか、シェルとかもGUIから接続できますよ。&lt;/p&gt;
+
+&lt;p&gt;新藤さんが、今日の本題 3行でDocker+Rancherを解説&lt;/p&gt;
+
+&lt;p&gt;@ynott が DockerとRancherの関係を図で解説
+&lt;img src=&#34;https://rancherjp.github.io/site/images/2016/10/27/DSC_0075.JPG&#34; alt=&#34;&#34;&gt;&lt;/img&gt;&lt;/p&gt;
+
+&lt;p&gt;「次回は、12月ぐらいに Meetup しましょう。Google のIan Lewis と会話中」&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="ja-jp">
+    <head>
+    
+        <meta name=”robots” content="noindex">
+    
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="Hugo 0.18-DEV" />
+    <title>リリース v1.2.0</title>
+    
+    
+    
+    <meta name="description" content="リリース v1.2.0" />
+    <meta name="keywords" content='release-announce' />
+    
+        <meta name="author" content="Rancher JP" />
+    
+    
+        <link rel="icon" type="image/png" href="favicon.ico" sizes="196x196" />
+    
+    <link href="" rel="alternate" type="application/rss+xml" title="Rancher JP" />
+    <link rel="stylesheet" href="https://rancherjp.github.io/site/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://rancherjp.github.io/site/css/highlightjs-themes/androidstudio.css" />
+    <link rel="stylesheet" href="https://rancherjp.github.io/site/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://rancherjp.github.io/site/css/phlat.css" />
+    
+        
+    
+</head>
+
+    <body>
+        <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="https://rancherjp.github.io/site/">Rancher JP</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/site/">
+                            Home
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/site/docs">
+                            Docs
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/site/blog">
+                            Blog
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/site/release-announce">
+                            Release Announce
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/site/archives">
+                            Archives
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/site/about">
+                            About
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+</nav>
+
+        <div id="top" class="container">
+            <div class="row" id="content-main">
+                <div class="col-md-8">
+                    <div class="row">
+    <div class="col-md-12 content-card">
+        <h1>リリース v1.2.0</h1>
+            
+            <ul class="list-inline meta">
+                <li><i class="fa fa-calendar"></i>December 4, 2016</li>
+                <li><i class="fa fa-user"></i>Rancher JP</li>
+                
+                    
+                    <li><i class="fa fa-folder"></i><a href="https://rancherjp.github.io/categories/release-announce">release-announce</a></li>
+                
+            </ul>
+            <ul class="list-inline share" style="margin-top: 15px; margin-left: 0px">
+        <li class="facebook-share"><a target="_blank" href="http://www.facebook.com/sharer.php?u=https%3a%2f%2francherjp.github.io%2fsite%2frelease-announce%2fv.1.2.0%2f"><i class="fa fa-facebook fa-lg"></i>Facebook</a></li>
+        <li class="googleplus-share"><a target="_blank" href="https://plus.google.com/share?url=https%3a%2f%2francherjp.github.io%2fsite%2frelease-announce%2fv.1.2.0%2f"><i class="fa fa-google-plus fa-lg"></i>Google+</a></li>
+        <li class="twitter-share"><a target="_blank" href="https://twitter.com/share?url=https%3a%2f%2francherjp.github.io%2fsite%2frelease-announce%2fv.1.2.0%2f&amp;text=%e3%83%aa%e3%83%aa%e3%83%bc%e3%82%b9%20v1.2.0"><i class="fa fa-twitter fa-lg"></i>Twitter</a></li>
+    </ul>
+        
+
+<h2 id="バージョン">バージョン</h2>
+
+<ul>
+<li>rancher/server:v1.2.0</li>
+<li>rancher/agent:v1.1.0</li>
+<li>rancher/lb-service-haproxy:v0.4.2</li>
+<li><a href="https://github.com/rancher/rancher-compose/releases/tag/v0.12.0">rancher-compose-v0.12.0</a></li>
+<li><a href="https://github.com/rancher/cli/releases/tag/v0.4.0">rancher-v0.4.0</a></li>
+</ul>
+
+<blockquote>
+<p><em>注意:</em> 新しい<a href="http://docs.rancher.com/rancher/v1.2/en/rancher-services/">infrastructure services</a>では、ロードバランサの機能を指定のHAProxyイメージに変更し、ネットワークエージェントが起動されなくなりました。 したがって、rancher/agent-instanceが必要なくなりました。</p>
+</blockquote>
+
+<h2 id="新機能-v1-1-4からの変更点">新機能 (v1.1.4からの変更点)</h2>
+
+<ul>
+<li><strong>Kubernetes 1.4.6 に対応</strong> - 最新のk8sに対応することに加えて、Rancherは以下の機能が提供されます:
+
+<ul>
+<li>既定のRancherオプションに加えて、ユーザーがAWSをKubernetesのクラウドプロバイダーとして選択できるようになりました。</li>
+<li>kubectl exec、logs、attachがサポートされました。</li>
+<li>k8sノード にラベル付けがサポートされました。</li>
+<li>PetSetオブジェクトを使用してステートフルアプリケーションの管理がサポートされました。</li>
+<li>環境内でのk8sクラスタアップグレードがサポートされました。</li>
+<li>Added Rancher UI support for the concept of a Stack to manage k8s templates as individual applications.  Stacks can be upgraded and deleted as an application.</li>
+<li>Rancher UIで、k8sテンプレートを個々のアプリケーションとして管理するスタックをサポートしました。 スタックは、アプリケーションとしてアップグレード、削除することができます。</li>
+<li>Rancher UIでk8sの展開とレプリカセットをサポーターしました。</li>
+</ul></li>
+<li><strong>Docker 1.12.x サポート [<a href="https://github.com/rancher/rancher/issues/5179">#5179</a>]</strong> - Docker 1.12.xがRancherでサポートされ、いくつかの機能が強化されました。
+
+<ul>
+<li>Docker Swarmモードは、環境作成時にオーケストレーションフレームワークのオプションとして利用できるようになりました。</li>
+<li>CattleはDocker 1.12.3以降のすべてのdocker runオプションをサポートするようになりました。更新された実行オプションの詳細については、<a href="https://github.com/rancher/rancher/issues/4708">#4708</a>を参照してください。</li>
+</ul></li>
+<li><strong>改善 <a href="http://docs.rancher.com/rancher/v1.2/en/rancher-services/networking">Network</a> サポート [<a href="https://github.com/rancher/rancher/issues/5256">#5256</a>, <a href="https://github.com/rancher/rancher/issues/5276">#5276</a>]</strong> - Container Network Interface(CNI)仕様用に作成されたカスタムネットワークプラグインのライフサイクル、配布、および更新管理を管理する機能が追加されました。
+
+<ul>
+<li>現在のRancher IPSec管理ネットワークオプションがCNIプラグインとして完全に書き直されて、Cattleとk8sオーケストレーションフレームワークの両方で利用できます。</li>
+<li>Rancherは、暗号化されていない(その為に性能の良い)クロスホスト用の管理ネットワークの代替オプションとして、VXLAN CNIプラグインが提供されるようになりました。</li>
+</ul></li>
+<li><strong>改善 <a href="http://docs.rancher.com/rancher/v1.2/en/cattle/adding-load-balancers/">Load Balancer v2</a> のサポート [<a href="https://github.com/rancher/rancher/issues/2179">#2179</a>]</strong> - RancherのLBサービスは、以下のサポートを受けて完全に書き直されました。
+
+<ul>
+<li>SNIルーティングがLB v2で利用可能になりました。</li>
+<li>HAProxyロギングがLB v2で利用可能になりました。[<a href="https://github.com/rancher/rancher/issues/2414">#2414</a>]</li>
+<li>既にサポートされているグローバルセクションとデフォルトセクションに加えて、フロントエンドとバックエンドのカスタム構成をHAProxy構成に追加できるようになりました。[<a href="https://github.com/rancher/rancher/issues/2171">#2171</a>, <a href="https://github.com/rancher/rancher/issues/1871">#1871</a>]</li>
+<li>ユーザはホスト名ルーティングルールを持つセレクタを追加できるようになりました。[<a href="https://github.com/rancher/rancher/issues/2288">#2288</a>]</li>
+<li>v2ではポートからサービスへのマッピングをより柔軟に定義できるようになりました。 v1では、ポートをすべてのサービスに対応づける必要がありました。</li>
+<li>好きなLBエンジン(nginxなど)を使って独自のカスタムLBサービスを実装し、Rancherのメタデータサービスと統合して、コンテナがLBに登録することをリクエストするタイミングを判断できるようになりました。</li>
+</ul></li>
+<li><strong>改善 <a href="http://docs.rancher.com/rancher/v1.2/en/rancher-services/storage-service/">Storage Support</a></strong> - カスタムk8sのflexvolumeとDockerボリュームプラグインのライフサイクル、配布、および更新管理を管理する機能が追加されました。
+
+<ul>
+<li>CattleでNFSボリュームプラグインがサポートされました。 <em><strong>1.2からRancherNFSはNFS Dockerプラグインソリューションをサポートするようになります。Convoy-NFSは1.2からオプションとして利用できなくなり、1.3以上では利用できなくなります。</strong></em></li>
+<li><em><strong>[実験的機能]</strong></em> EC2のEBSとAWS EFSがサポートされました。</li>
+</ul></li>
+<li><strong>認証サポートの改善 [[<a href="https://github.com/rancher/rancher/issues/5265">#5265</a>]]</strong> - 認証のフレームワークをリライトすることでRancherに新しい認証・認可サービスを加えるためのより高い柔軟性を実現しました。
+
+<ul>
+<li>Shibboleth v3がRancherにおけるSAML 2.0サポートの認証プロバイダとしてくわえられました。</li>
+</ul></li>
+<li><strong>全体的なパフォーマンス/スケーラビリティの改善</strong> - Rancherにおけるパフォーマンスとスケーラビリティを改善するために様々な機能強化が行なわれました。
+
+<ul>
+<li>インフラストラクチャビューのUIがより環境あたりより多くのホストとコンテナを表示できるよう変更されました。</li>
+<li>スケジューリングの改善と、コンテナの並列起動を実現することでコンテナのデプロイ性能を改善しました。</li>
+</ul></li>
+<li><strong>[Rancher CLI]<a href="https://github.com/rancher/rancher/issues/5265">#5265</a></strong> - Rancherは下に示す機能をサポートしたRancher CLIが同梱されています。
+
+<ul>
+<li>管理ホストに対するネイティブなDocker CLI操作のサポート</li>
+<li>環境管理</li>
+<li>スタック管理</li>
+<li>サービス管理</li>
+<li>ホスト管理</li>
+<li>管理ホストに対するSSHアクセス</li>
+</ul></li>
+<li><strong>リソーススケジューリング</strong> - CattleではCPUとメモリのリソース制約に応じてコンテナ配置のスケジューリングをサポートしていました。管理者も同様にホストあたりのCPU/メモリのリソース制限を設定することができるようになりました。</li>
+<li><strong><a href="http://docs.rancher.com/rancher/v1.2/en/environments/#what-is-an-environment-template">環境テンプレート</a></strong> - Rancehrではユーザが必要なインフラストラクチャサービス(LBやネットワークなど)を記述したテンプレートを作成できるようになりました。また、このテンプレートに基づいた環境の立ち上げをサポートするようになりました。
+
+<ul>
+<li>Rancherではユーザが環境を立ち上げ、利用することができるようデフォルトのテンプレートを継続して提供しています。</li>
+<li>環境テンプレートの作成と管理をユーザが行えるようになりました。環境テンプレートでは、環境の作成に先立ってデプロイするインフラストラクチャサービスを記述することができます。</li>
+<li>ユーザはRancherによって、コミュニティに提供されたサービスおよび地震で作成したサービスの両方を活用することができるようになりました。</li>
+</ul></li>
+<li><strong>HAサポートの改善(<a href="http://docs.rancher.com/rancher/v1.2/en/installing-rancher/installing-server/#launching-rancher-server---full-activeactive-ha">http://docs.rancher.com/rancher/v1.2/en/installing-rancher/installing-server/#launching-rancher-server---full-activeactive-ha</a>)</strong> - Rancher HAの設定と管理が劇的にシンプルになりました。 複数ノードへのRancherのデプロイに際して、RedisとZookeeperが不要になりました。</li>
+<li><strong>さらに&hellip;</strong>
+
+<ul>
+<li>Rancherのデプロイにおいて利用可能なDocker Registryのみを含んだホワイトリストの作成を管理者権限を用いてできるようになりました。</li>
+<li>イメージにprefixがなかった場合に利用するデフォルトのDockerレジストリをadminが指定できるようになりました。</li>
+<li>カタログのポートおよびラベルへのバインディングが可能になりました。</li>
+<li>gitブランチを取り扱うためのカタログサポートがくわえられました。</li>
+<li>Rancher AgentをGo言語でリライトしました。</li>
+<li>Docker Machineがアップデートされ、新しくアップデートされたUIとともにAzureが新しいホストドライバに加えられました。</li>
+<li>RancherOS 0.6.0以降がサポートされました。</li>
+<li>サービスが適切に起動しなかった際、ユーザにより良いロギングを提供することを目的として、サービスログのジャーナリング機能を追加しました。</li>
+</ul></li>
+</ul>
+
+        
+
+    </div>
+</div>
+
+                    
+
+                </div>
+                <div class="col-md-4">
+                                        <div class="row">
+    <div class="col-md-11 col-md-offset-1 card">
+        <h5>Search</h5>
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form">
+            <div class="input-group">
+                <input class="form-control" type="search" name="q" />
+                <span class="input-group-btn">
+                    <button class="btn btn-custom" type="submit"><span class="glyphicon glyphicon-search"></span></button>
+                </span>
+            </div>
+            <input type="hidden" name="q" value="site:https://rancherjp.github.io/site/">
+        </form>
+    </div>
+</div>
+
+                    <div class="row">
+    <div class="col-md-11 col-md-offset-1 card">
+        <h5>Recent Posts</h5>
+        <ul class="list-unstyled posts-recent">
+            
+                <li><a href="https://rancherjp.github.io/site/content/2016/10/27/rancher-workshop-01/">Rancher もくもく勉強会 #1</a></li>
+            
+                <li><a href="https://rancherjp.github.io/site/content/2016/10/07/rancher-meetup-01/">Rancher Meetup Tokyo #1</a></li>
+            
+        </ul>
+    </div>
+</div>
+
+                    
+    
+
+    
+        <div class="row">
+            <div class="col-md-11 col-md-offset-1 card">
+                <h5>categories</h5>
+                <ul class="list-unstyled posts-recent">
+                    
+                        <li><a href="https://rancherjp.github.io/site/categories/blog">blog</a></li>
+                    
+                        <li><a href="https://rancherjp.github.io/site/categories/docs">docs</a></li>
+                    
+                        <li><a href="https://rancherjp.github.io/site/categories/meetup">meetup</a></li>
+                    
+                        <li><a href="https://rancherjp.github.io/site/categories/release-announce">release-announce</a></li>
+                    
+                        <li><a href="https://rancherjp.github.io/site/categories/workshop">workshop</a></li>
+                    
+                </ul>
+            </div>
+        </div>
+    
+
+    
+
+
+                    <div class="row">
+    <div class="col-md-11 col-md-offset-1 card">
+        <div class="sidebar-twitter">
+            <a class="twitter-timeline" height="500" href="https://twitter.com/rancherjp"></a>
+            <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
+    </div>
+</div>
+
+
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-xs-6">
+    <ul class="list-inline links">
+        
+    </ul>
+</div>
+
+            <div class="col-md-4 col-xs-6">
+    <ul class="list-inline social-media">
+        
+            <li><a target="_blank" href="https://twitter.com/rancherjp"><i class="fa fa-twitter fa-lg"></i></a></li>
+        
+        
+        
+            <li><a target="_blank" href="https://www.facebook.com/rancherjp"><i class="fa fa-facebook fa-lg"></i></a></li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+            <li><a target="_blank" href="https://rancherjp.herokuapp.com"><i class="fa fa-slack fa-lg"></i></a></li>
+        
+    </ul>
+</div>
+
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <p>
+                    <p>Copyright © 2016 Rancher JP. All Rights Reserved.</P>
+                    <p>Powered by <a href="//gohugo.io">Hugo</a></p>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+        <div id="back-to-top" class="hidden">
+    <a href="#top" class="well well-sm" onclick="$('html,body').animate({scrollTop:0},'slow');return false;">
+        <i class="glyphicon glyphicon-chevron-up"></i> Back to Top
+    </a>
+</div>
+<script src="https://rancherjp.github.io/site/js/jquery-2.2.1.min.js"></script>
+<script src="https://rancherjp.github.io/site/js/bootstrap.min.js"></script>
+<script src="https://rancherjp.github.io/site/js/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script>
+    if(($(window).height() + 100) < $(document).height()) {
+        $('#back-to-top').removeClass('hidden').affix({
+            offset: {
+                top: 100
+            }
+        });
+    }
+</script>
+
+    
+
+
+    
+
+
+
+    </body>
+</html>
