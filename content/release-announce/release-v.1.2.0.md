@@ -65,7 +65,7 @@ archives:
 * __[環境テンプレート](http://docs.rancher.com/rancher/v1.2/en/environments/#what-is-an-environment-template)__ - Rancehrではユーザが必要なインフラストラクチャサービス(LBやネットワークなど)を記述したテンプレートを作成できるようになりました。また、このテンプレートに基づいた環境の立ち上げをサポートするようになりました。
   * Rancherではユーザが環境を立ち上げ、利用することができるようデフォルトのテンプレートを継続して提供しています。
   * 環境テンプレートの作成と管理をユーザが行えるようになりました。環境テンプレートでは、環境の作成に先立ってデプロイするインフラストラクチャサービスを記述することができます。
-  * ユーザはRancherによって、コミュニティに提供されたサービスおよび地震で作成したサービスの両方を活用することができるようになりました。
+  * ユーザはRancherによって、コミュニティに提供されたサービスおよび自身で作成したサービスの両方を活用することができるようになりました。
 * __HAサポートの改善(http://docs.rancher.com/rancher/v1.2/en/installing-rancher/installing-server/#launching-rancher-server---full-activeactive-ha)__ - Rancher HAの設定と管理が劇的にシンプルになりました。 複数ノードへのRancherのデプロイに際して、RedisとZookeeperが不要になりました。
 * __さらに...__
   * Rancherのデプロイにおいて利用可能なDocker Registryのみを含んだホワイトリストの作成を管理者権限を用いてできるようになりました。
