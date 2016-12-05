@@ -43,7 +43,6 @@
 &lt;li&gt;k8sノード にラベル付けがサポートされました。&lt;/li&gt;
 &lt;li&gt;PetSetオブジェクトを使用してステートフルアプリケーションの管理がサポートされました。&lt;/li&gt;
 &lt;li&gt;環境内でのk8sクラスタアップグレードがサポートされました。&lt;/li&gt;
-&lt;li&gt;Added Rancher UI support for the concept of a Stack to manage k8s templates as individual applications.  Stacks can be upgraded and deleted as an application.&lt;/li&gt;
 &lt;li&gt;Rancher UIで、k8sテンプレートを個々のアプリケーションとして管理するスタックをサポートしました。 スタックは、アプリケーションとしてアップグレード、削除することができます。&lt;/li&gt;
 &lt;li&gt;Rancher UIでk8sの展開とレプリカセットをサポーターしました。&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
@@ -117,6 +116,33 @@
 &lt;li&gt;RancherOS 0.6.0以降がサポートされました。&lt;/li&gt;
 &lt;li&gt;サービスが適切に起動しなかった際、ユーザにより良いロギングを提供することを目的として、サービスログのジャーナリング機能を追加しました。&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;1-2-にアップグレードするには&#34;&gt;1.2 にアップグレードするには&lt;/h2&gt;
+
+&lt;p&gt;Rancher 1.2では、ネットワーク管理方法について大幅に変更されました。特にIPsecネットワークがCNIプラグインを利用するようにリファクタリングされ、新しいv2 LBサービスには柔軟性の高いHAProxy構成のプロバイダーをユーザーが使えるようになりました。この変更の影響で、アップグレードプロセスで&lt;strong&gt;&lt;code&gt;ネットワークのダウン時間が発生します&lt;/code&gt;&lt;/strong&gt; また、ネットワークの環境の再接続のために各環境をアップグレードする必要があります。アップグレードプロセスはそれぞれの環境によりRancherアップデート方法が分かれているので、以下の手順に従って現在のバージョンを適切な方法で1.2にアップグレードしてください:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Rancher サーバーアップグレード&lt;/strong&gt;
+必ずデータベースをバックアップしてください。Rancher 1.2.0へバージョンアップ後には、以前のバージョンに戻すことはできません。戻したい場合は、以前動いていたバージョン時点でのデータベースのスナップショットを利用するしかありません。データベースのバックアップを取ってから、&lt;a href=&#34;http://docs.rancher.com/rancher/v1.2/en/upgrading/&#34;&gt;per the docs&lt;/a&gt;に従ってアップグレードを開始してください。&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;注意:&lt;/strong&gt; AWS セキュリティグループを利用している場合、必ずICMPをセキュリティグループで有効にしてください。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;環境のアップグレード&lt;/strong&gt;&lt;br /&gt;
+Rancherサーバーをアップグレードした後は、1.2環境に正常にアップグレードするまで、環境にアクセスできなくなります。1.2でネットワークとLBの変更される為、新しいネットワークコンポーネントに更新されて移行されるまでアップグレード処理中にネットワークが切断されます。アップデートが必要な環境ごとに&lt;strong&gt;Upgrade Now&lt;/strong&gt;*画面を表示して、いつ更新するかを決めることができる便利な機能を提供しました。更新を実行するまで、コンテナは機能し続けますが、管理機能は許可されません。この時、コンテナの再作成（ヘルスチェック）によってこれらのコンテナが動かなくなる可能性があります。HA、DNSプログラミング、ヘルスチェックなど、Rancherの関与が必要な機能は、完了するまで正常に動作しない可能性があるため、環境をなるべく早くアップグレードすることを強くお勧めします。&lt;/p&gt;
+
+&lt;p&gt;&amp;ldquo;今すぐアップグレード&amp;rdquo;をクリックすると、Rancherは環境のアップグレードを開始します。ご使用の環境の規模によっては最大10〜20分かかる場合がありますので、しばらくお待ちください。&lt;strong&gt;Stacks&lt;/strong&gt; - &amp;gt; &lt;strong&gt;Infrastructure&lt;/strong&gt;の下にあるすべてのスタックが&lt;strong&gt;active&lt;/strong&gt;状態になっていたら、環境は正常に更新されています。&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Kubernetes環境の方は、すべてのインフラストラクチャサービスが「アクティブ」状態になったら、既存のk8s v1.2.6スタックをv1.4.6にアップグレードしなければなりません。注意:k8sをアップグレードする際、既存のポッドを削除して再作成する可能性のある既知の問題があることに注意してください。ポッドがレプリケーションコントローラの一部でない場合は、再作成されません。 それに考慮して計画してください。このケースでもアップグレードプロセスは環境に応じて5〜10分以上かかる場合があり、スタックがアクティブな状態になると完了します。&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;既知のアップグレードの制限事項&#34;&gt;既知のアップグレードの制限事項&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Swarm環境のアップグレードはサポートされていません。DockerがDockerエンジンに移行することに関するDocker Swarmからの変更により、Swarmのサポートが最新のDocker 1.12 Swarmからになった為です。&lt;/li&gt;
+&lt;li&gt;環境テンプレートオプションを表示するマイグレーション用フォルダのカタログエントリがいくつかあります。 これらのカタログ・エントリーは、古いエントリーへのロールバックをサポートしていません。 例えば、Kubernetesにすべての外部DNSエントリが含まれこれ以外にも同様のものがあります。&lt;/li&gt;
+&lt;li&gt;v1ロードバランサからv2ロードバランサへのアップグレード中に、セレクタを使用するルールはアップグレードされません。 これらのルールは、環境のアップグレード後にロードバランサーに再度追加する必要があります。&lt;/li&gt;
+&lt;li&gt;1.2からは、Rancherはcadvisorからの統計情報を取得せず、Dockerの統計情報から取得します。 これにより、Prometheusのようなcadvisorに依存する既存のカタログは、Dockerの統計情報から取得するように修正されるまで機能しなくなることに注意してください。&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>
@@ -506,6 +532,39 @@ VMで動かす場合は、ネットワークが注意&lt;/p&gt;
 &lt;h2 id=&#34;参考サイト&#34;&gt;参考サイト&lt;/h2&gt;
 
 &lt;p&gt;(&lt;a href=&#34;http://connpass.com/event/40326/&#34;&gt;http://connpass.com/event/40326/&lt;/a&gt;)&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://rancherjp.github.io/site/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://rancherjp.github.io/site/about/</guid>
+      <description>
+
+&lt;h2 id=&#34;このページについて&#34;&gt;このページについて&lt;/h2&gt;
+
+&lt;p&gt;本ページは Rancher JP による &lt;strong&gt;Rancher&lt;/strong&gt; 及び関連するコンテナ技術に関する情報発信ページです。&lt;br /&gt;
+日本語による &lt;strong&gt;Rancher&lt;/strong&gt; のリリース情報、新機能解説、ユーザーによるBlog情報、勉強会レポートといった
+各種情報を本ページに集約することで日本のユーザーが簡単に情報収集できることを目的としています。&lt;/p&gt;
+
+&lt;h2 id=&#34;rancher-とは&#34;&gt;Rancher とは?&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Rancher&lt;/strong&gt; とは米国 &lt;a href=&#34;http://rancher.com&#34;&gt;Rancher Labs 社&lt;/a&gt;が主体として開発しているオープンソースのコンテナ管理プラットフォームです。&lt;br /&gt;
+商用環境を想定し複数ホストから構成されるクラスタの管理、稼働するコンテナのライフサイクル管理、
+様々なアプリケーションのテンプレート管理といった機能を有しています。&lt;br /&gt;
+また、既存のコンテナオーケストレーションツールである &lt;a href=&#34;https://docs.docker.com/swarm/&#34;&gt;Docker Swarm&lt;/a&gt;,
+ &lt;a href=&#34;http://kubernetes.io/&#34;&gt;Kubernetes&lt;/a&gt;, &lt;a href=&#34;http://mesos.apache.org/&#34;&gt;Mesos&lt;/a&gt; などをサポートしており
+&lt;strong&gt;Rancher&lt;/strong&gt; を利用することでコンテナサービスにおけるインフラストラクチャ〜アプリケーションといった
+幅広いスタックを容易に管理することが可能になります。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://docs.rancher.com&#34;&gt;Rancher ドキュメントページ&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;rancher-jp-とは&#34;&gt;Rancher JP とは?&lt;/h2&gt;
+
+&lt;p&gt;オープンソースのコンテナ管理プラットフォームである &lt;strong&gt;Rancher&lt;/strong&gt; の日本国内での普及を目的としたコミュニティです。&lt;br /&gt;
+本ページや勉強会、SNS などを通じて &lt;strong&gt;Rancher&lt;/strong&gt; や関連するコンテナ技術に関する情報を日本語により発信し、各種コンテナ技術の普及と人材育成に貢献します。&lt;/p&gt;
 </description>
     </item>
     

@@ -7,7 +7,14 @@
                 <li><i class="fa fa-user"></i>{{ .Params.author }}</li>
                 {{ if isset .Params "categories" }}
                     {{ $categoryCount := .Params.categories | len }}
-                    <li><i class="fa fa-folder"></i>{{ range $index, $value := .Params.categories }}<a href="{{ "/categories/" | absURL }}{{ . | urlize }}">{{ $value }}</a>{{ if lt (add $index 1) $categoryCount }}, {{ end }}{{ end }}</li>
+                    <li>
+                        <i class="fa fa-folder"></i>
+                        {{ range $index, $value := .Params.categories }}
+                            <a href="{{ "/categories/" | absURL }}{{ . | urlize }}">{{ $value }}</a>
+                            {{ if lt (add $index 1) $categoryCount }}, 
+                            {{ end }}
+                        {{ end }}
+                    </li>
                 {{ end }}
             </ul>
         {{ partial "widgets/content/share.html" . }}

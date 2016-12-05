@@ -3,7 +3,11 @@ title: "About"
 slug: "about"
 author: "Go Chiba"
 description: "Explanation for this page"
-draft: true
+draft: false
+tags:
+  - "docs"
+categories:
+  - "docs"
 ---
 
 ## このページについて
