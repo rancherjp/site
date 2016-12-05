@@ -100,7 +100,7 @@
 &lt;ul&gt;
 &lt;li&gt;Rancherではユーザが環境を立ち上げ、利用することができるようデフォルトのテンプレートを継続して提供しています。&lt;/li&gt;
 &lt;li&gt;環境テンプレートの作成と管理をユーザが行えるようになりました。環境テンプレートでは、環境の作成に先立ってデプロイするインフラストラクチャサービスを記述することができます。&lt;/li&gt;
-&lt;li&gt;ユーザはRancherによって、コミュニティに提供されたサービスおよび地震で作成したサービスの両方を活用することができるようになりました。&lt;/li&gt;
+&lt;li&gt;ユーザはRancherによって、コミュニティに提供されたサービスおよび自身で作成したサービスの両方を活用することができるようになりました。&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;HAサポートの改善(&lt;a href=&#34;http://docs.rancher.com/rancher/v1.2/en/installing-rancher/installing-server/#launching-rancher-server---full-activeactive-ha&#34;&gt;http://docs.rancher.com/rancher/v1.2/en/installing-rancher/installing-server/#launching-rancher-server---full-activeactive-ha&lt;/a&gt;)&lt;/strong&gt; - Rancher HAの設定と管理が劇的にシンプルになりました。 複数ノードへのRancherのデプロイに際して、RedisとZookeeperが不要になりました。&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;さらに&amp;hellip;&lt;/strong&gt;

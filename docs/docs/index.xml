@@ -41,7 +41,7 @@
 &lt;h3 id=&#34;rancherサーバーを動かす&#34;&gt;Rancherサーバーを動かす&lt;/h3&gt;
 
 &lt;p&gt;Rancherサーバーを起動するコマンドは1つだけです。コンテナを起動したら、コンテナのログを調べて、サーバが起動して動いているかを確認します。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34; style=&#34;background: #ffffff&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;$ sudo docker run -d --restart=unless-stopped -p 8080:8080 rancher/server
+&lt;div class=&#34;highlight&#34; style=&#34;background: #ffffff&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;$ sudo docker run -d --restart=unless-stopped -p 8080:8080 rancher/server
 &lt;span style=&#34;color: #008800; font-style: italic&#34;&gt;# Rancherのログを表示&lt;/span&gt;
 $ sudo docker logs -f &amp;lt;CONTAINER_ID&amp;gt;
 &lt;/pre&gt;&lt;/div&gt;
@@ -85,7 +85,7 @@ $ sudo docker logs -f &amp;lt;CONTAINER_ID&amp;gt;
 &lt;h3 id=&#34;dockerのcliを直接使ってコンテナを作成する&#34;&gt;DockerのCLIを直接使ってコンテナを作成する&lt;/h3&gt;
 
 &lt;p&gt;Rancherは、コンテナがUIの外で作成されていてもホスト上のコンテナを表示できます。ホストのシェル端末からコンテナを作成してみます。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34; style=&#34;background: #ffffff&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;$ docker run -d -it --name=second-container ubuntu:14.04.2
+&lt;div class=&#34;highlight&#34; style=&#34;background: #ffffff&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;$ docker run -d -it --name=second-container ubuntu:14.04.2
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;UI上では、 &lt;strong&gt;&lt;em&gt;second-container&lt;/em&gt;&lt;/strong&gt; がホスト上にポップアップ表示されます。&lt;/p&gt;
@@ -95,7 +95,7 @@ $ sudo docker logs -f &amp;lt;CONTAINER_ID&amp;gt;
 &lt;p&gt;&lt;strong&gt;&lt;em&gt;second-container&lt;/em&gt;&lt;/strong&gt; のIPアドレスを見ると、&lt;code&gt;10.42.*.*&lt;/code&gt; の範囲には&lt;strong&gt;ない&lt;/strong&gt;ことがわかります。 これは、Dockerデーモンによって割り当てられた通常のIPアドレスです。 CLIを使用してDockerコンテナを作成するとこのようになります。&lt;/p&gt;
 
 &lt;p&gt;CLIを使用してRancherのオバーレイネットワークからIPアドレスのDockerコンテナを作成するにはどうすればよいでしょうか？ しなければならないこと、コマンドにラベル(i.e. &lt;code&gt;io.rancher.container.network=true&lt;/code&gt;)を追加するだけで、Rancherは、このコンテナが&lt;code&gt;管理&lt;/code&gt;ネットワークに属しなければならないと認識します。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34; style=&#34;background: #ffffff&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;$ docker run -d -it --label io.rancher.container.network=true ubuntu:14.04.2
+&lt;div class=&#34;highlight&#34; style=&#34;background: #ffffff&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;$ docker run -d -it --label io.rancher.container.network=true ubuntu:14.04.2
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;h3 id=&#34;マルチコンテナアプリケーションの作成&#34;&gt;マルチコンテナアプリケーションの作成&lt;/h3&gt;
@@ -131,7 +131,7 @@ $ sudo docker logs -f &amp;lt;CONTAINER_ID&amp;gt;
 &lt;p&gt;前のセクションでは、ロードバランサを備えたLetsChatアプリケーションを作成しました。 Rancherで作成していた場合、スタックのドロップダウンメニューから &lt;strong&gt;Export Config&lt;/strong&gt; を選択して、UIから直接ファイルをダウンロードできます。 &lt;code&gt;docker-compose.yml&lt;/code&gt; と &lt;code&gt;rancher-compose.yml&lt;/code&gt; ファイルは次のようになります。&lt;/p&gt;
 
 &lt;h4 id=&#34;example-docker-compose-yml&#34;&gt;Example docker-compose.yml&lt;/h4&gt;
-&lt;div class=&#34;highlight&#34; style=&#34;background: #ffffff&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;version: &lt;span style=&#34;color: #0000FF&#34;&gt;&amp;#39;2&amp;#39;&lt;/span&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #ffffff&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;version: &lt;span style=&#34;color: #0000FF&#34;&gt;&amp;#39;2&amp;#39;&lt;/span&gt;
 services:
   letschatapplb:
     &lt;span style=&#34;color: #008800; font-style: italic&#34;&gt;#If you only have 1 host and also created the host in the UI,&lt;/span&gt;
@@ -159,7 +159,7 @@ services:
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;h4 id=&#34;example-rancher-compose-yml&#34;&gt;Example rancher-compose.yml&lt;/h4&gt;
-&lt;div class=&#34;highlight&#34; style=&#34;background: #ffffff&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;vversion: &lt;span style=&#34;color: #0000FF&#34;&gt;&amp;#39;2&amp;#39;&lt;/span&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #ffffff&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;vversion: &lt;span style=&#34;color: #0000FF&#34;&gt;&amp;#39;2&amp;#39;&lt;/span&gt;
 services:
   letschatapplb:
     scale: 1
@@ -189,7 +189,7 @@ services:
 フッター右側にある &lt;strong&gt;Download CLI&lt;/strong&gt; をクリックして、RancherのUIからRancher CLIバイナリをダウンロードします。 Windows、Mac、Linux用のバイナリを提供しています。&lt;/p&gt;
 
 &lt;p&gt;Rancher CLIを使用してRancherでサービスを開始するには、いくつか環境変数を設定する必要があります。 Rancher UIで&lt;a href=&#34;{{site.baseurl}}/rancher/{{page.version}}/{{page.lang}}/api/api-keys/&#34;&gt;account API Key&lt;/a&gt;を作成します。 &lt;strong&gt;API&lt;/strong&gt; をクリックし、&lt;strong&gt;Add Account API Key&lt;/strong&gt; をクリックします。 ユーザー名 (アクセスキー) とパスワード (秘密キー) を保存します。 Rancher CLIに必要な次の環境変数を設定します: &lt;code&gt;RANCHER_URL&lt;/code&gt;、&lt;code&gt;RANCHER_ACCESS_KEY&lt;/code&gt; と &lt;code&gt;RANCHER_SECRET_KEY&lt;/code&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34; style=&#34;background: #ffffff&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #008800; font-style: italic&#34;&gt;# Set the url that Rancher is on&lt;/span&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #ffffff&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #008800; font-style: italic&#34;&gt;# Set the url that Rancher is on&lt;/span&gt;
 $ export RANCHER_URL=http://server_ip:8080/
 &lt;span style=&#34;color: #008800; font-style: italic&#34;&gt;# Set the access key, i.e. username&lt;/span&gt;
 $ export RANCHER_ACCESS_KEY=&amp;lt;username_of_key&amp;gt;
@@ -199,7 +199,7 @@ $ export RANCHER_SECRET_KEY=&amp;lt;password_of_key&amp;gt;
 
 &lt;p&gt;&lt;br&gt;
 &lt;code&gt;docker-compose.yml&lt;/code&gt; と &lt;code&gt;rancher-compose.yml&lt;/code&gt; を保存したディレクトリに移動し、コマンドを実行します。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34; style=&#34;background: #ffffff&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;$ rancher -p NewLetsChatApp up -d
+&lt;div class=&#34;highlight&#34; style=&#34;background: #ffffff&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;$ rancher -p NewLetsChatApp up -d
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Rancherで &lt;strong&gt;NewLetsChatApp&lt;/strong&gt; という新しいスタックが作成され、サービスがすべて起動します&lt;/p&gt;
