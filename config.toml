@@ -10,7 +10,7 @@ pygmentsstyle           = "borland"
     blog                = "/blog/:year/:month/:day/:slug/"
     docs                = "/docs/:slug/"
     post                = "/content/:year/:month/:day/:slug/"
-    release-announce    = "/release-announce/:slug/"
+    releasenote         = "/releasenote/:slug/"
     page                = "/:slug/"
 
 [taxonomies]
@@ -33,9 +33,9 @@ pygmentsstyle           = "borland"
     weight              = 3
     url                 = "/blog"
 [[menu.header]]
-    name                = "Release Announce"
+    name                = "Release Note"
     weight              = 4
-    url                 = "/release-announce"
+    url                 = "/releasenote"
 [[menu.header]]
     name                = "Archives"
     weight              = 5

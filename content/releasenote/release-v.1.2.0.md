@@ -6,9 +6,9 @@ author: "Rancher JP"
 description: "リリース v1.2.0"
 draft: false
 tags:
-  - "release-announce"
+  - "releasenote"
 categories:
-  - "release-announce"
+  - "releasenote"
 archives:
   - 2016
   - 2016/12
