@@ -33,16 +33,20 @@ pygmentsstyle           = "borland"
     weight              = 3
     url                 = "/blog"
 [[menu.header]]
-    name                = "Release Note"
+    name                = "Q&A"
     weight              = 4
+    url                 = "/qa"
+[[menu.header]]
+    name                = "Release Note"
+    weight              = 5
     url                 = "/releasenote"
 [[menu.header]]
     name                = "Archives"
-    weight              = 5
+    weight              = 6
     url                 = "/archives"
 [[menu.header]]
     name                = "About"
-    weight              = 6
+    weight              = 8
     url                 = "/about"
 
 [params]
