@@ -7,7 +7,18 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
     <copyright>© 2016 Rancher JP</copyright>
+    <lastBuildDate>Thu, 15 Dec 2016 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://rancherjp.github.io/site/page/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Q And A</title>
+      <link>https://rancherjp.github.io/site/qa/</link>
+      <pubDate>Thu, 15 Dec 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://rancherjp.github.io/site/qa/</guid>
+      <description>&lt;p&gt;・準備中&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>About</title>

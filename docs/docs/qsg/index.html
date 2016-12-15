@@ -6,7 +6,7 @@
     
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="generator" content="Hugo 0.18-DEV" />
+    <meta name="generator" content="Hugo 0.17" />
     <title>クイックスタートガイド</title>
     
     
@@ -59,6 +59,12 @@
                     <li>
                         <a href="/site/blog">
                             Blog
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/site/qa">
+                            Q&amp;A
                         </a>
                     </li>
                 
@@ -136,10 +142,9 @@
 <h3 id="rancherサーバーを動かす">Rancherサーバーを動かす</h3>
 
 <p>Rancherサーバーを起動するコマンドは1つだけです。コンテナを起動したら、コンテナのログを調べて、サーバが起動して動いているかを確認します。</p>
-<div class="highlight" style="background: #ffffff"><pre style="line-height: 125%"><span></span>$ sudo docker run -d --restart=unless-stopped -p 8080:8080 rancher/server
-<span style="color: #008800; font-style: italic"># Rancherのログを表示</span>
-$ sudo docker logs -f &lt;CONTAINER_ID&gt;
-</pre></div>
+$ sudo docker run -d --restart=unless-stopped -p 8080:8080 rancher/server
+# Rancherのログを表示
+$ sudo docker logs -f <CONTAINER_ID>
 
 <p>Rancherサーバーの起動に数分おまちください。 <code>.... Startup Succeeded, Listening on port....</code> が表示されたら、RancherのUIは起動して稼働中です。 ログのこの行が表示されたら、ほとんど設定は終了です。 この出力の後に追加のログが出力される可能性があるので、これが初期起動時のログの最後の行であるとは限りません。</p>
 
@@ -180,8 +185,7 @@ $ sudo docker logs -f &lt;CONTAINER_ID&gt;
 <h3 id="dockerのcliを直接使ってコンテナを作成する">DockerのCLIを直接使ってコンテナを作成する</h3>
 
 <p>Rancherは、コンテナがUIの外で作成されていてもホスト上のコンテナを表示できます。ホストのシェル端末からコンテナを作成してみます。</p>
-<div class="highlight" style="background: #ffffff"><pre style="line-height: 125%"><span></span>$ docker run -d -it --name=second-container ubuntu:14.04.2
-</pre></div>
+$ docker run -d -it --name=second-container ubuntu:14.04.2
 
 <p>UI上では、 <strong><em>second-container</em></strong> がホスト上にポップアップ表示されます。</p>
 
@@ -190,8 +194,7 @@ $ sudo docker logs -f &lt;CONTAINER_ID&gt;
 <p><strong><em>second-container</em></strong> のIPアドレスを見ると、<code>10.42.*.*</code> の範囲には<strong>ない</strong>ことがわかります。 これは、Dockerデーモンによって割り当てられた通常のIPアドレスです。 CLIを使用してDockerコンテナを作成するとこのようになります。</p>
 
 <p>CLIを使用してRancherのオバーレイネットワークからIPアドレスのDockerコンテナを作成するにはどうすればよいでしょうか？ しなければならないこと、コマンドにラベル(i.e. <code>io.rancher.container.network=true</code>)を追加するだけで、Rancherは、このコンテナが<code>管理</code>ネットワークに属しなければならないと認識します。</p>
-<div class="highlight" style="background: #ffffff"><pre style="line-height: 125%"><span></span>$ docker run -d -it --label io.rancher.container.network=true ubuntu:14.04.2
-</pre></div>
+$ docker run -d -it --label io.rancher.container.network=true ubuntu:14.04.2
 
 <h3 id="マルチコンテナアプリケーションの作成">マルチコンテナアプリケーションの作成</h3>
 
@@ -226,15 +229,15 @@ $ sudo docker logs -f &lt;CONTAINER_ID&gt;
 <p>前のセクションでは、ロードバランサを備えたLetsChatアプリケーションを作成しました。 Rancherで作成していた場合、スタックのドロップダウンメニューから <strong>Export Config</strong> を選択して、UIから直接ファイルをダウンロードできます。 <code>docker-compose.yml</code> と <code>rancher-compose.yml</code> ファイルは次のようになります。</p>
 
 <h4 id="example-docker-compose-yml">Example docker-compose.yml</h4>
-<div class="highlight" style="background: #ffffff"><pre style="line-height: 125%"><span></span>version: <span style="color: #0000FF">&#39;2&#39;</span>
+version: '2'
 services:
   letschatapplb:
-    <span style="color: #008800; font-style: italic">#If you only have 1 host and also created the host in the UI,</span>
-    <span style="color: #008800; font-style: italic"># you may have to change the port exposed on the host.</span>
+    #If you only have 1 host and also created the host in the UI,
+    # you may have to change the port exposed on the host.
     ports:
     - 80:80/tcp
     labels:
-      io.rancher.container.create_agent: <span style="color: #0000FF">&#39;true&#39;</span>
+      io.rancher.container.create_agent: 'true'
       io.rancher.container.agent.role: environmentAdmin
     image: rancher/lb-service-haproxy:v0.4.2
   web:
@@ -251,18 +254,17 @@ services:
     tty: true
     image: mongo
     stdin_open: true
-</pre></div>
 
 <h4 id="example-rancher-compose-yml">Example rancher-compose.yml</h4>
-<div class="highlight" style="background: #ffffff"><pre style="line-height: 125%"><span></span>vversion: <span style="color: #0000FF">&#39;2&#39;</span>
+vversion: '2'
 services:
   letschatapplb:
     scale: 1
     lb_config:
       certs: []
       port_rules:
-      - hostname: <span style="color: #0000FF">&#39;&#39;</span>
-        path: <span style="color: #0000FF">&#39;&#39;</span>
+      - hostname: ''
+        path: ''
         priority: 1
         protocol: http
         service: quickstartguide/web
@@ -278,24 +280,21 @@ services:
     scale: 2
   database:
     scale: 1
-</pre></div>
 
 <p><br>
 フッター右側にある <strong>Download CLI</strong> をクリックして、RancherのUIからRancher CLIバイナリをダウンロードします。 Windows、Mac、Linux用のバイナリを提供しています。</p>
 
 <p>Rancher CLIを使用してRancherでサービスを開始するには、いくつか環境変数を設定する必要があります。 Rancher UIで<a href="{{site.baseurl}}/rancher/{{page.version}}/{{page.lang}}/api/api-keys/">account API Key</a>を作成します。 <strong>API</strong> をクリックし、<strong>Add Account API Key</strong> をクリックします。 ユーザー名 (アクセスキー) とパスワード (秘密キー) を保存します。 Rancher CLIに必要な次の環境変数を設定します: <code>RANCHER_URL</code>、<code>RANCHER_ACCESS_KEY</code> と <code>RANCHER_SECRET_KEY</code></p>
-<div class="highlight" style="background: #ffffff"><pre style="line-height: 125%"><span></span><span style="color: #008800; font-style: italic"># Set the url that Rancher is on</span>
+# Set the url that Rancher is on
 $ export RANCHER_URL=http://server_ip:8080/
-<span style="color: #008800; font-style: italic"># Set the access key, i.e. username</span>
-$ export RANCHER_ACCESS_KEY=&lt;username_of_key&gt;
-<span style="color: #008800; font-style: italic"># Set the secret key, i.e. password</span>
-$ export RANCHER_SECRET_KEY=&lt;password_of_key&gt;
-</pre></div>
+# Set the access key, i.e. username
+$ export RANCHER_ACCESS_KEY=<username_of_key>
+# Set the secret key, i.e. password
+$ export RANCHER_SECRET_KEY=<password_of_key>
 
 <p><br>
 <code>docker-compose.yml</code> と <code>rancher-compose.yml</code> を保存したディレクトリに移動し、コマンドを実行します。</p>
-<div class="highlight" style="background: #ffffff"><pre style="line-height: 125%"><span></span>$ rancher -p NewLetsChatApp up -d
-</pre></div>
+$ rancher -p NewLetsChatApp up -d
 
 <p>Rancherで <strong>NewLetsChatApp</strong> という新しいスタックが作成され、サービスがすべて起動します</p>
 
@@ -351,9 +350,9 @@ $ export RANCHER_SECRET_KEY=&lt;password_of_key&gt;
                     
                         <li><a href="https://rancherjp.github.io/site/categories/meetup">meetup</a></li>
                     
-                        <li><a href="https://rancherjp.github.io/site/categories/releasenote">releasenote</a></li>
+                        <li><a href="https://rancherjp.github.io/site/categories/qa">qa</a></li>
                     
-                        <li><a href="https://rancherjp.github.io/site/categories/workshop">workshop</a></li>
+                        <li><a href="https://rancherjp.github.io/site/categories/releasenote">releasenote</a></li>
                     
                 </ul>
             </div>
