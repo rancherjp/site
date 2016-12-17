@@ -1,0 +1,27 @@
+general:
+  branches:
+      - master
+
+machine:
+  timezone: Asia/Tokyo
+
+dependencies:
+  pre:
+    - git config --global user.name ${GITHUB_USERNAME}
+    - git config --global user.email ${GITHUB_EMAIL_ADDRESS}
+
+test:
+  override:
+    - "true"
+
+deployment:
+  production:
+    branch: master
+    commands: 
+      - go get -u -v github.com/spf13/hugo
+      - git clone -b ${GITHUB_BRANCH} git@github.com:${CIRCLE_PROJECT_USERNAME}/${CIRCLE_PROJECT_REPONAME}.git ${GITHUB_BRANCH}
+      - cd ${GITHUB_BRANCH}
+      - hugo -d docs
+      - cd ${GITHUB_BRANCH}/docs && git add -A
+      - cd ${GITHUB_BRANCH}/docs && git commit -m "[ci skip] CircleCI automatic page build" || true
+      - cd ${GITHUB_BRANCH}/docs && git push origin master
