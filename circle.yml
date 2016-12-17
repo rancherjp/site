@@ -19,6 +19,6 @@ deployment:
       - cd ${GITHUB_BRANCH}
       - rm -rf ./docs
       - hugo -d docs
-      - cd ${GITHUB_BRANCH}/docs && git add -A
-      - cd ${GITHUB_BRANCH}/docs && git commit -m "[ci skip] CircleCI automatic page build" || true
-      - cd ${GITHUB_BRANCH}/docs && git push origin ${GITHUB_BRANCH}
+      - git add -A
+      - git commit -m "[ci skip] CircleCI automatic page build" || true
+      - git push origin ${GITHUB_BRANCH}
