@@ -21,6 +21,7 @@ deployment:
       - go get -u -v github.com/spf13/hugo
       - git clone -b ${GITHUB_BRANCH} git@github.com:${CIRCLE_PROJECT_USERNAME}/${CIRCLE_PROJECT_REPONAME}.git ${GITHUB_BRANCH}
       - cd ${GITHUB_BRANCH}
+      - rm -rf ./docs
       - hugo -d docs
       - cd ${GITHUB_BRANCH}/docs && git add -A
       - cd ${GITHUB_BRANCH}/docs && git commit -m "[ci skip] CircleCI automatic page build" || true
