@@ -1,13 +1,115 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Rancher JP</title>
+    <title>2016 on Rancher JP</title>
     <link>https://rancherjp.github.io/site/archives/2016/index.xml</link>
-    <description>Recent content on Rancher JP</description>
+    <description>Recent content in 2016 on Rancher JP</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
     <copyright>© 2016 Rancher JP</copyright>
     <atom:link href="https://rancherjp.github.io/site/archives/2016/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>&#39;HUGO&#39;のサイトビルドをCircleCIで自動化する</title>
+      <link>https://rancherjp.github.io/site/blog/2016/12/17/hugo-circleci-automation/</link>
+      <pubDate>Sat, 17 Dec 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://rancherjp.github.io/site/blog/2016/12/17/hugo-circleci-automation/</guid>
+      <description>
+
+&lt;h2 id=&#34;前書き&#34;&gt;前書き&lt;/h2&gt;
+
+&lt;p&gt;こんにちは、@FoxBoxsnet です。&lt;br /&gt;
+この &lt;code&gt;rancherjp&lt;/code&gt; サイトのデザインなどをさせてもらっています。&lt;br /&gt;
+前回の、&lt;a href=&#34;https://connpass.com/event/44092/&#34; title=&#34;Rancher Meetup Tokyo #2 - connpass&#34;&gt;Rancher Meetup Tokyo #2&lt;/a&gt; でLTをさせてもらったようにサイトのレビューを自動化したいと思います。&lt;br /&gt;
+参考: &lt;a href=&#34;http://www.slideshare.net/ssuser7faad1/hugo-70078484&#34; title=&#34;“hugo” 使ってコミュニティサイトを構築してみた&#34;&gt;“hugo” 使ってコミュニティサイトを構築してみた&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;circleci-とは&#34;&gt;CircleCI とは&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://circleci.com/&#34;&gt;https://circleci.com/&lt;/a&gt;&lt;br /&gt;
+知らない方は下記が参考になりそうです&lt;br /&gt;
+&lt;a href=&#34;http://www.slideshare.net/mogproject/circleci-51253223&#34;&gt;http://www.slideshare.net/mogproject/circleci-51253223&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;参考&#34;&gt;参考&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://qiita.com/hatappi/items/e81acf14deca34fd1cbe&#34; title=&#34;GitHubで記事管理、レビューしてCircleCI使ってはてなブログへ自動投稿する - Qiita&#34;&gt;GitHubで記事管理、レビューしてCircleCI使ってはてなブログへ自動投稿する - Qiita&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>リリース v1.2.1</title>
+      <link>https://rancherjp.github.io/site/releasenote/v.1.2.1/</link>
+      <pubDate>Sat, 17 Dec 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://rancherjp.github.io/site/releasenote/v.1.2.1/</guid>
+      <description>
+
+&lt;h2 id=&#34;バージョン&#34;&gt;バージョン&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;rancher/server:v1.2.1&lt;/li&gt;
+&lt;li&gt;rancher/agent:v1.1.1&lt;/li&gt;
+&lt;li&gt;rancher/lb-service-haproxy:v0.4.6&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/rancher/rancher-compose/releases/tag/v0.12.1&#34;&gt;rancher-compose-v0.12.1&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/rancher/cli/releases/tag/v0.4.1&#34;&gt;rancher-v0.4.1&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;注意:&lt;/em&gt; 新しい&lt;a href=&#34;http://docs.rancher.com/rancher/v1.2/en/rancher-services/&#34;&gt;infrastructure services&lt;/a&gt;では、ロードバランサの機能を指定のHAProxyイメージに変更し、ネットワークエージェントが起動されなくなりました。 したがって、rancher/agent-instanceが必要なくなりました。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&#34;rancher-サーバーをv1-1-4からアップグレード&#34;&gt;Rancher サーバーをv1.1.4からアップグレード&lt;/h2&gt;
+
+&lt;p&gt;必ずデータベースをバックアップしてください。Rancher 1.2.0へバージョンアップ後には、以前のバージョンに戻すことはできません。戻したい場合は、以前動いていたバージョン時点でのデータベースのスナップショットを利用するしかありません。データベースのバックアップを取ってから、ドキュメントに従ってアップグレードを開始してください。&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;注意:&lt;/strong&gt; AWS セキュリティグループを利用している場合、必ずICMPをセキュリティグループで有効にしてください。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&#34;環境のアップグレード&#34;&gt;環境のアップグレード&lt;/h2&gt;
+
+&lt;p&gt;Rancherサーバーをアップグレードした後は、1.2環境に正常にアップグレードするまで、環境にアクセスできなくなります。1.2でネットワークとLBの変更される為、新しいネットワークコンポーネントに更新されて移行されるまでアップグレード処理中にネットワークが切断されます。アップデートが必要な環境ごとに&lt;strong&gt;Upgrade Now&lt;/strong&gt;*画面を表示して、いつ更新するかを決めることができる便利な機能を提供しました。更新を実行するまで、コンテナは機能し続けますが、管理機能は許可されません。この時、コンテナの再作成（ヘルスチェック）によってこれらのコンテナが動かなくなる可能性があります。HA、DNSプログラミング、ヘルスチェックなど、Rancherの関与が必要な機能は、完了するまで正常に動作しない可能性があるため、環境をなるべく早くアップグレードすることを強くお勧めします。&lt;/p&gt;
+
+&lt;p&gt;&amp;ldquo;今すぐアップグレード&amp;rdquo;をクリックすると、Rancherは環境のアップグレードを開始します。ご使用の環境の規模によっては最大10～20分かかる場合がありますので、しばらくお待ちください。&lt;strong&gt;Stacks&lt;/strong&gt; - &amp;gt; &lt;strong&gt;Infrastructure&lt;/strong&gt;の下にあるすべてのスタックが&lt;strong&gt;active&lt;/strong&gt;状態になっていたら、環境は正常に更新されています。&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Kubernetes環境の方は、すべてのインフラストラクチャサービスが「アクティブ」状態になったら、既存のk8s v1.2.6スタックをv1.4.6にアップグレードしなければなりません。注意:k8sをアップグレードする際、既存のポッドを削除して再作成する可能性のある既知の問題があることに注意してください。ポッドがレプリケーションコントローラの一部でない場合は、再作成されません。 それに考慮して計画してください。このケースでもアップグレードプロセスは環境に応じて5～10分以上かかる場合があり、スタックがアクティブな状態になると完了します。&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;アップグレードの既知の制限事項&#34;&gt;アップグレードの既知の制限事項&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Swarm環境のアップグレードはサポートされていません。DockerがDockerエンジンに移行することに関するDocker Swarmからの変更により、Swarmのサポートが最新のDocker 1.12 Swarmからになった為です。&lt;/li&gt;
+&lt;li&gt;環境テンプレートオプションを表示するマイグレーション用フォルダのカタログエントリがいくつかあります。 これらのカタログ・エントリーは、古いエントリーへのロールバックをサポートしていません。 例えば、Kubernetesにすべての外部DNSエントリが含まれこれ以外にも同様のものがあります。&lt;/li&gt;
+&lt;li&gt;v1ロードバランサからv2ロードバランサへのアップグレード中に、セレクタを使用するルールはアップグレードされません。 これらのルールは、環境のアップグレード後にロードバランサーに再度追加する必要があります。&lt;/li&gt;
+&lt;li&gt;1.2からは、Rancherはcadvisorからの統計情報を取得せず、Dockerの統計情報から取得します。 これにより、Prometheusのようなcadvisorに依存する既存のカタログは、Dockerの統計情報から取得するように修正されるまで機能しなくなることに注意してください。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;v1-2-0からの主なバグ修正&#34;&gt;v1.2.0からの主なバグ修正&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;boot2docker ホストで rancher/plugin-manager:v0.2.12にあった問題を修正、新しい rancher/network-manager:v0.2.13 ネットワークサービスがあります。ネットワークサービススタックで&amp;rdquo;アップグレード利用可能&amp;rdquo; がボタン表示されている場合は、アップグレードしてください。[#6874]&lt;/li&gt;
+&lt;li&gt;Fixed an issue where docker doesn&amp;rsquo;t have to be installed at var/lib/docker in order for networking to work. [#6897]&lt;/li&gt;
+&lt;li&gt;docker が&lt;/li&gt;
+&lt;li&gt;ipsec やvxlan もしくはインフラストラクチャーのネットワークサービスでデフォルトのdocker0 からdocker ブリッジを構成できるように修正しました。[#6896]&lt;/li&gt;
+&lt;li&gt;UIが固まってしまう問題を修正 [#6995]&lt;/li&gt;
+&lt;li&gt;Rancherがデータベースを適切にクリーニングしておらず、Rancher UIがロックアップしていないのを修正 [#6826, #6978, #6985 ]&lt;/li&gt;
+&lt;li&gt;Rancherドメインを利用する前にRancherサービス検出がホストのパスを検索することができなかったのを修正 [#7010]&lt;/li&gt;
+&lt;li&gt;ロードバランサーがホスト名を使って外部サービスをターゲットにできないのを修正 [#2624]&lt;/li&gt;
+&lt;li&gt;停止中のコンテナのログを見るを修正 [#6442]&lt;/li&gt;
+&lt;li&gt;HA構成でノードを見ることができないのを修正 [#6814]&lt;/li&gt;
+&lt;li&gt;同じサービス名をターゲットとするロードバランサーからスタック名でエクスポートを修正 [#6829]&lt;/li&gt;
+&lt;li&gt;UI上でロードバランサーにホストのIPアドレスを指定することができないのを修正 [#6852]&lt;/li&gt;
+&lt;li&gt;コンテナが自分自身のホスト名にpingできないのを修正 [#6855]&lt;/li&gt;
+&lt;li&gt;古いネットワークエージェントに関連しているテーブルによりCPU使用率が高くなるのを修正 [#6857]&lt;/li&gt;
+&lt;li&gt;Rancher-commpose でロードバランサーが正しくRancherで作成されない問題を修正&lt;/li&gt;
+&lt;li&gt;haproxyのカスタム設定がソートされないのを修正 [#6888]&lt;/li&gt;
+&lt;li&gt;GCR(Google Container Registry)からdockerイメージをプルすることができないのを修正 [#6916]&lt;/li&gt;
+&lt;li&gt;アップグレード後にロードバランサーのhaproxy設定が表示されない問題を修正 [#6921]&lt;/li&gt;
+&lt;li&gt;volumes をキーとした変数が compose v2ファイルで置換されない問題を修正 [#6936]* ホスト登録URLがhttpを受け付けないという問題を修正 [#6957]&lt;/li&gt;
+&lt;li&gt;Rancherエージェントでproxyに関する環境変数が大文字と小文字が区別される問題を修正  [#7019]&lt;/li&gt;
+&lt;li&gt;ロードバランサーのログが勢いよく増える問題を修正&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
     <item>
       <title>リリース v1.2.0</title>

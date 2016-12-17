@@ -7,17 +7,19 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="Hugo 0.18-DEV" />
-    <title>Meetup</title>
+    <title>&#39;HUGO&#39;のサイトビルドをCircleCIで自動化する</title>
     
     
     
-    <meta name="description" content="A description that will appear as a default if front matter does not exist" />
-    <meta name="keywords" content='default,keywords,if,no,front,matter' />
+    <meta name="description" content="&#39;HUGO&#39;のサイトビルドをCircleCIで自動化する" />
+    <meta name="keywords" content='blog' />
+    
+        <meta name="author" content="FoxBoxsnet" />
     
     
         <link rel="icon" type="image/png" href="favicon.ico" sizes="196x196" />
     
-    <link href="https://rancherjp.github.io/site/tags/meetup/index.xml" rel="alternate" type="application/rss+xml" title="Rancher JP" />
+    <link href="" rel="alternate" type="application/rss+xml" title="Rancher JP" />
     <link rel="stylesheet" href="https://rancherjp.github.io/site/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://rancherjp.github.io/site/css/highlightjs-themes/androidstudio.css" />
     <link rel="stylesheet" href="https://rancherjp.github.io/site/css/font-awesome.min.css" />
@@ -92,21 +94,53 @@
         <div id="top" class="container">
             <div class="row" id="content-main">
                 <div class="col-md-8">
+                    <div class="row">
+    <div class="col-md-12 content-card">
+        <h1>&#39;HUGO&#39;のサイトビルドをCircleCIで自動化する</h1>
+            
+            <ul class="list-inline meta">
+                <li><i class="fa fa-calendar"></i>December 17, 2016</li>
+                <li><i class="fa fa-user"></i>FoxBoxsnet</li>
+                
                     
-                    
-                        <div class="row">
-                            <div class="col-md-12 content-card">
-                                <h1><a href="https://rancherjp.github.io/site/content/2016/10/07/rancher-meetup-01/">Rancher Meetup Tokyo #1</a></h1>
-                                <ul class="list-inline">
-                                    <li><i class="fa fa-calendar"></i>October 7, 2016</li>
-                                    <li><i class="fa fa-user"></i>snickerjp (元うなぎ屋)</li>
-                                </ul>
-                                今熱い盛り上がりを見せているRANCHERの勉強会「Rancher Meetup Tokyo #1」参加レポート！ http://snickerjp.blogspot.jp/2016/10/rancher-meetup-tokyo-vol1.html コンテナオーケストレーション管理ツールとして、以<br>
-                                <a class="btn btn-custom" href="https://rancherjp.github.io/site/content/2016/10/07/rancher-meetup-01/" role="button">Read More</a>
-                            </div>
-                        </div>
+                    <li>
+                        <i class="fa fa-folder"></i>
                         
-                    
+                            <a href="https://rancherjp.github.io/categories/blog">blog</a>
+                            
+                        
+                    </li>
+                
+            </ul>
+            <ul class="list-inline share" style="margin-top: 15px; margin-left: 0px">
+        <li class="facebook-share"><a target="_blank" href="http://www.facebook.com/sharer.php?u=https%3a%2f%2francherjp.github.io%2fsite%2fblog%2f2016%2f12%2f17%2fhugo-circleci-automation%2f"><i class="fa fa-facebook fa-lg"></i>Facebook</a></li>
+        <li class="googleplus-share"><a target="_blank" href="https://plus.google.com/share?url=https%3a%2f%2francherjp.github.io%2fsite%2fblog%2f2016%2f12%2f17%2fhugo-circleci-automation%2f"><i class="fa fa-google-plus fa-lg"></i>Google+</a></li>
+        <li class="twitter-share"><a target="_blank" href="https://twitter.com/share?url=https%3a%2f%2francherjp.github.io%2fsite%2fblog%2f2016%2f12%2f17%2fhugo-circleci-automation%2f&amp;text=%27HUGO%27%e3%81%ae%e3%82%b5%e3%82%a4%e3%83%88%e3%83%93%e3%83%ab%e3%83%89%e3%82%92CircleCI%e3%81%a7%e8%87%aa%e5%8b%95%e5%8c%96%e3%81%99%e3%82%8b"><i class="fa fa-twitter fa-lg"></i>Twitter</a></li>
+    </ul>
+        
+
+<h2 id="前書き">前書き</h2>
+
+<p>こんにちは、@FoxBoxsnet です。<br />
+この <code>rancherjp</code> サイトのデザインなどをさせてもらっています。<br />
+前回の、<a href="https://connpass.com/event/44092/" title="Rancher Meetup Tokyo #2 - connpass">Rancher Meetup Tokyo #2</a> でLTをさせてもらったようにサイトのレビューを自動化したいと思います。<br />
+参考: <a href="http://www.slideshare.net/ssuser7faad1/hugo-70078484" title="“hugo” 使ってコミュニティサイトを構築してみた">“hugo” 使ってコミュニティサイトを構築してみた</a></p>
+
+<h2 id="circleci-とは">CircleCI とは</h2>
+
+<p><a href="https://circleci.com/">https://circleci.com/</a><br />
+知らない方は下記が参考になりそうです<br />
+<a href="http://www.slideshare.net/mogproject/circleci-51253223">http://www.slideshare.net/mogproject/circleci-51253223</a></p>
+
+<h2 id="参考">参考</h2>
+
+<p><a href="http://qiita.com/hatappi/items/e81acf14deca34fd1cbe" title="GitHubで記事管理、レビューしてCircleCI使ってはてなブログへ自動投稿する - Qiita">GitHubで記事管理、レビューしてCircleCI使ってはてなブログへ自動投稿する - Qiita</a></p>
+
+        
+
+    </div>
+</div>
+
                     
 
                 </div>
