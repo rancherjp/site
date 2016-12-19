@@ -3,8 +3,10 @@ machine:
 
 dependencies:
   pre:
+    - go get -u -v github.com/spf13/hugo
     - git config --global user.name ${GITHUB_USERNAME}
     - git config --global user.email ${GITHUB_EMAIL_ADDRESS}
+    - rm -rf ./docs
 
 test:
   override:
@@ -14,11 +16,8 @@ deployment:
   production:
     branch: master
     commands: 
-      - go get -u -v github.com/spf13/hugo
-      - git --no-pager log -n 2
-      - rm -rf ./docs
       - hugo -d docs
-      - git status
-      - git add -A --verbose
-      - git commit -m "[ci skip] CircleCI automatic page build" || true
+      - ls -l
+      - git add ./docs/ -A
+      - git commit -m "[ci skip] CircleCI automatic page build Time:`date`" || true
       - git push origin ${GITHUB_BRANCH}
