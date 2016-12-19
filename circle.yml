@@ -15,7 +15,7 @@ deployment:
     branch: master
     commands: 
       - go get -u -v github.com/spf13/hugo
-      - git clone -b ${GITHUB_BRANCH} git@github.com:${CIRCLE_PROJECT_USERNAME}/${CIRCLE_PROJECT_REPONAME}.git ${GITHUB_BRANCH}
+      - ls -l
       - cd ${GITHUB_BRANCH}
       - rm -rf ./docs
       - hugo -d docs
