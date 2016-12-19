@@ -16,9 +16,9 @@ deployment:
     commands: 
       - go get -u -v github.com/spf13/hugo
       - git --no-pager log -n 2
-      - git pull
       - rm -rf ./docs
       - hugo -d docs
+      - git status
       - git add -A
       - git commit -m "[ci skip] CircleCI automatic page build" || true
       - git push origin ${GITHUB_BRANCH}
