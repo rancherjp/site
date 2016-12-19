@@ -20,9 +20,7 @@
     {{ with .Params.author }}
         <meta name="author" content="{{ . }}" />
     {{ end }}
-    {{ with .Site.Params.favicon }}
-        <link rel="icon" type="image/png" href="{{ . }}" sizes="196x196" />
-    {{ end }}
+    <link rel="icon" type="image/png" href="{{ .Site.BaseURL }}/favicon.ico" sizes="196x196" />
     <link href="{{ .RSSlink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
     <link rel="stylesheet" href="{{ .Site.BaseURL }}css/bootstrap.min.css" />
     <link rel="stylesheet" href="{{ .Site.BaseURL }}css/highlightjs-themes/androidstudio.css" />
