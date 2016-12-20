@@ -44,8 +44,7 @@ Rancherサーバーをアップグレードした後は、1.2環境に正常に�
 ## v1.2.0からの主なバグ修正
 
 * boot2docker ホストで rancher/plugin-manager:v0.2.12にあった問題を修正、新しい rancher/network-manager:v0.2.13 ネットワークサービスがあります。ネットワークサービススタックで"アップグレード利用可能" がボタン表示されている場合は、アップグレードしてください。[#6874]
-* Fixed an issue where docker doesn't have to be installed at var/lib/docker in order for networking to work. [#6897]
-* docker が
+* docker がvar/lib/docker 以外の場所にインストールされていても動くように修正 [#6897]
 * ipsec やvxlan もしくはインフラストラクチャーのネットワークサービスでデフォルトのdocker0 からdocker ブリッジを構成できるように修正しました。[#6896]
 * UIが固まってしまう問題を修正 [#6995]
 * Rancherがデータベースを適切にクリーニングしておらず、Rancher UIがロックアップしていないのを修正 [#6826, #6978, #6985 ]
