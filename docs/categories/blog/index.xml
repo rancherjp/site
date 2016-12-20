@@ -10,33 +10,6 @@
     <atom:link href="https://rancherjp.github.io/site/categories/blog/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>&#39;HUGO&#39;のサイトビルドをCircleCIで自動化する</title>
-      <link>https://rancherjp.github.io/site/blog/2016/12/17/hugo-circleci-automation/</link>
-      <pubDate>Sat, 17 Dec 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://rancherjp.github.io/site/blog/2016/12/17/hugo-circleci-automation/</guid>
-      <description>
-
-&lt;h2 id=&#34;前書き&#34;&gt;前書き&lt;/h2&gt;
-
-&lt;p&gt;こんにちは、@FoxBoxsnet です。&lt;br /&gt;
-この &lt;code&gt;rancherjp&lt;/code&gt; サイトのデザインなどをさせてもらっています。&lt;br /&gt;
-前回の、&lt;a href=&#34;https://connpass.com/event/44092/&#34; title=&#34;Rancher Meetup Tokyo #2 - connpass&#34;&gt;Rancher Meetup Tokyo #2&lt;/a&gt; でLTをさせてもらったようにサイトのレビューを自動化したいと思います。&lt;br /&gt;
-参考: &lt;a href=&#34;http://www.slideshare.net/ssuser7faad1/hugo-70078484&#34; title=&#34;“hugo” 使ってコミュニティサイトを構築してみた&#34;&gt;“hugo” 使ってコミュニティサイトを構築してみた&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;circleci-とは&#34;&gt;CircleCI とは&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://circleci.com/&#34;&gt;https://circleci.com/&lt;/a&gt;&lt;br /&gt;
-知らない方は下記が参考になりそうです&lt;br /&gt;
-&lt;a href=&#34;http://www.slideshare.net/mogproject/circleci-51253223&#34;&gt;http://www.slideshare.net/mogproject/circleci-51253223&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;参考&#34;&gt;参考&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://qiita.com/hatappi/items/e81acf14deca34fd1cbe&#34; title=&#34;GitHubで記事管理、レビューしてCircleCI使ってはてなブログへ自動投稿する - Qiita&#34;&gt;GitHubで記事管理、レビューしてCircleCI使ってはてなブログへ自動投稿する - Qiita&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
       <title>Rancher Blog</title>
       <link>https://rancherjp.github.io/site/blog/2016/10/27/01/</link>
       <pubDate>Thu, 27 Oct 2016 00:00:00 +0000</pubDate>
