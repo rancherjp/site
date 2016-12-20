@@ -160,8 +160,7 @@
 
 <ul>
 <li>boot2docker ホストで rancher/plugin-manager:v0.2.12にあった問題を修正、新しい rancher/network-manager:v0.2.13 ネットワークサービスがあります。ネットワークサービススタックで&rdquo;アップグレード利用可能&rdquo; がボタン表示されている場合は、アップグレードしてください。[#6874]</li>
-<li>Fixed an issue where docker doesn&rsquo;t have to be installed at var/lib/docker in order for networking to work. [#6897]</li>
-<li>docker が</li>
+<li>docker がvar/lib/docker 以外の場所にインストールされていても動くように修正 [#6897]</li>
 <li>ipsec やvxlan もしくはインフラストラクチャーのネットワークサービスでデフォルトのdocker0 からdocker ブリッジを構成できるように修正しました。[#6896]</li>
 <li>UIが固まってしまう問題を修正 [#6995]</li>
 <li>Rancherがデータベースを適切にクリーニングしておらず、Rancher UIがロックアップしていないのを修正 [#6826, #6978, #6985 ]</li>
