@@ -171,26 +171,27 @@
 <h2 id="v1-2-0からの主なバグ修正">v1.2.0からの主なバグ修正</h2>
 
 <ul>
-<li>boot2docker ホストで rancher/plugin-manager:v0.2.12にあった問題を修正、新しい rancher/network-manager:v0.2.13 ネットワークサービスがあります。ネットワークサービススタックで&rdquo;アップグレード利用可能&rdquo; がボタン表示されている場合は、アップグレードしてください。[#6874]</li>
-<li>docker がvar/lib/docker 以外の場所にインストールされていても動くように修正 [#6897]</li>
-<li>ipsec やvxlan もしくはインフラストラクチャーのネットワークサービスでデフォルトのdocker0 からdocker ブリッジを構成できるように修正しました。[#6896]</li>
-<li>UIが固まってしまう問題を修正 [#6995]</li>
-<li>Rancherがデータベースを適切にクリーニングしておらず、Rancher UIがロックアップしていないのを修正 [#6826, #6978, #6985 ]</li>
-<li>Rancherドメインを利用する前にRancherサービス検出がホストのパスを検索することができなかったのを修正 [#7010]</li>
-<li>ロードバランサーがホスト名を使って外部サービスをターゲットにできないのを修正 [#2624]</li>
-<li>停止中のコンテナのログを見るを修正 [#6442]</li>
-<li>HA構成でノードを見ることができないのを修正 [#6814]</li>
-<li>同じサービス名をターゲットとするロードバランサーからスタック名でエクスポートを修正 [#6829]</li>
-<li>UI上でロードバランサーにホストのIPアドレスを指定することができないのを修正 [#6852]</li>
-<li>コンテナが自分自身のホスト名にpingできないのを修正 [#6855]</li>
-<li>古いネットワークエージェントに関連しているテーブルによりCPU使用率が高くなるのを修正 [#6857]</li>
-<li>Rancher-commpose でロードバランサーが正しくRancherで作成されない問題を修正</li>
-<li>haproxyのカスタム設定がソートされないのを修正 [#6888]</li>
-<li>GCR(Google Container Registry)からdockerイメージをプルすることができないのを修正 [#6916]</li>
-<li>アップグレード後にロードバランサーのhaproxy設定が表示されない問題を修正 [#6921]</li>
-<li>volumes をキーとした変数が compose v2ファイルで置換されない問題を修正 [#6936]* ホスト登録URLがhttpを受け付けないという問題を修正 [#6957]</li>
-<li>Rancherエージェントでproxyに関する環境変数が大文字と小文字が区別される問題を修正  [#7019]</li>
-<li>ロードバランサーのログが勢いよく増える問題を修正</li>
+<li>boot2docker ホストで rancher/plugin-manager:v0.2.12にあった問題を修正、新しい rancher/network-manager:v0.2.13 ネットワークサービスがあります。ネットワークサービススタックで&rdquo;アップグレード利用可能&rdquo; がボタン表示されている場合は、アップグレードしてください。<a href="https://github.com/rancher/rancher/issues/6874">[#6874]</a></li>
+<li>docker がvar/lib/docker 以外の場所にインストールされていても動くように修正 <a href="https://github.com/rancher/rancher/issues/6897">[#6897]</a></li>
+<li>ipsec やvxlan もしくはインフラストラクチャーのネットワークサービスでデフォルトのdocker0 からdocker ブリッジを構成できるように修正しました。<a href="https://github.com/rancher/rancher/issues/6896">[#6896]</a></li>
+<li>UIが固まってしまう問題を修正 <a href="https://github.com/rancher/rancher/issues/6995">[#6995]</a></li>
+<li>Rancherがデータベースを適切にクリーニングしておらず、Rancher UIがロックアップしていないのを修正 [<a href="https://github.com/rancher/rancher/issues/6826">#6826</a>, <a href="https://github.com/rancher/rancher/issues/6978">#6978</a>, <a href="https://github.com/rancher/rancher/issues/6985">#6985</a> ]</li>
+<li>Rancherドメインを利用する前にRancherサービス検出がホストのパスを検索することができなかったのを修正 <a href="https://github.com/rancher/rancher/issues/7010">[#7010]</a></li>
+<li>ロードバランサーがホスト名を使って外部サービスをターゲットにできないのを修正 <a href="https://github.com/rancher/rancher/issues/2624">[#2624]</a></li>
+<li>停止中のコンテナのログを見るを修正 <a href="https://github.com/rancher/rancher/issues/6442">[#6442]</a></li>
+<li>HA構成でノードを見ることができないのを修正 <a href="https://github.com/rancher/rancher/issues/6814">[#6814]</a></li>
+<li>同じサービス名をターゲットとするロードバランサーからスタック名でエクスポートを修正 <a href="https://github.com/rancher/rancher/issues/6829">[#6829]</a></li>
+<li>UI上でロードバランサーにホストのIPアドレスを指定することができないのを修正 <a href="https://github.com/rancher/rancher/issues/6852">[#6852]</a></li>
+<li>コンテナが自分自身のホスト名にpingできないのを修正 <a href="https://github.com/rancher/rancher/issues/6855">[#6855]</a></li>
+<li>古いネットワークエージェントに関連しているテーブルによりCPU使用率が高くなるのを修正 <a href="https://github.com/rancher/rancher/issues/6857">[#6857]</a></li>
+<li>Rancher-commpose でロードバランサーが正しくRancherで作成されない問題を修正 [<a href="https://github.com/rancher/rancher/issues/6865">#6865</a>, <a href="https://github.com/rancher/rancher/issues/6920">#6920</a>]</li>
+<li>haproxyのカスタム設定がソートされないのを修正 <a href="https://github.com/rancher/rancher/issues/6888">[#6888]</a></li>
+<li>GCR(Google Container Registry)からdockerイメージをプルすることができないのを修正 <a href="https://github.com/rancher/rancher/issues/6916">[#6916]</a></li>
+<li>アップグレード後にロードバランサーのhaproxy設定が表示されない問題を修正 <a href="https://github.com/rancher/rancher/issues/6921">[#6921]</a></li>
+<li>volumes をキーとした変数が compose v2ファイルで置換されない問題を修正 <a href="https://github.com/rancher/rancher/issues/6936">[#6936]</a></li>
+<li>ホスト登録URLがhttpを受け付けないという問題を修正 <a href="https://github.com/rancher/rancher/issues/6957">[#6957]</a></li>
+<li>Rancherエージェントでproxyに関する環境変数が大文字と小文字が区別される問題を修正  <a href="https://github.com/rancher/rancher/issues/7019">[#7019]</a></li>
+<li>ロードバランサーのログが勢いよく増える問題を修正 <a href="https://github.com/rancher/rancher/issues/7028">[#7028]</a></li>
 </ul>
 
         
