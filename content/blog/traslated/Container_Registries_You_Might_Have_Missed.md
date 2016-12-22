@@ -1,9 +1,9 @@
 ---
 date: "2016-12-22"
-title: "[�|��]��������Ă��邩������Ȃ��R���e�i�̃��W�X�g��"
+title: "[翻訳]見逃されているかもしれないコンテナのレジストリ"
 slug: "container-registries-might-missed-ja" 
 author: ""
-description: "�l�X�ȃR���e�i���W�X�g���ɂ��ĊT�v�̖|��"
+description: "様々なコンテナレジストリについて概要の翻訳"
 draft: true
 tags:
   - "blog"
@@ -13,84 +13,84 @@ archives:
   - 2016
   - 2016/12
 ---
-�ȉ��́A
+以下は、
 Rancher Labs | Container registries you may have missed | Rancher Labs
 http://rancher.com/container-registries-might-missed/
-����̖|��ł��B
+からの翻訳です。
 
 Container Registries You Might Have Missed
-��������Ă��邩������Ȃ��R���e�i�̃��W�X�g��
+見逃されているかもしれないコンテナのレジストリ
 
-2016�N11��10�� [Vince Power](http://rancher.com/author/vince-power/)
+2016年11月10日 [Vince Power](http://rancher.com/author/vince-power/)
 
-���W�X�g���́A�R���e�i��������ŏd�v�ȃR���|�[�l���g�̈�ŁA����Docker�ł͑����̐l���璍�ڂ𗁂тĂ��܂��B���W�X�g���́A�R���e�i�G���W���z�X�g�Ƀ_�E�����[�h���s�����C���[�W��ۊǂ��܂��B�R���e�i�͂��̓���̃C���[�W�̒P�Ȃ�C���X�^���X�ł��B�C���[�W�́AMicrosoft Windows��MSI��Red Hat Enterprise Linux��RPM�ȂǁA�����Ɏg����p�b�P�[�W�̂悤�Ȃ��̂ƍl���邱�Ƃ��ł��܂��B���W�X�g���́A�ǂ��������ɓ��삷�邩�ڍׂɂ͏q�ׂ܂��񂪁A�ڍׂ�m�肽���ꍇ�͂��̋L��[�f���炵���L��](http://rancher.com/comparing-four-hosted-docker-registries/)��ǂނƗǂ��ł��傤�B
+レジストリは、コンテナを扱う上で重要なコンポーネントの一つで、特にDockerでは多くの人から注目を浴びています。レジストリは、コンテナエンジンホストにダウンロード実行されるイメージを保管します。コンテナはその特定のイメージの単なるインスタンスです。イメージは、Microsoft WindowsのMSIやRed Hat Enterprise LinuxのRPMなど、すぐに使えるパッケージのようなものと考えることができます。レジストリは、どういう風に動作するか詳細には述べませんが、詳細を知りたい場合はこの記事[素晴らしい記事](http://rancher.com/comparing-four-hosted-docker-registries/)を読むと良いでしょう。
 
-���̋L���Ő������������Ƃ͎��̒��ڂ��Ă��郌�W�X�g���̂����������グ�Ă݂����Ǝv���܂��BDocker���g���l�ɂƂ��Ă͗L���ȃ��W�X�g���͊��ɒm���Ă���Ǝv���܂����A�ǂ��ɃC���[�W��u���������߂�̂ɍl�����鉿�l�̂��鏬�K�͂ȃ��W�X�g��������܂��B
+この記事で説明したいことは私の注目しているレジストリのいくつかを取り上げてみたいと思います。Dockerを使う人にとっては有名なレジストリは既に知られていると思いますが、どこにイメージを置くかを決めるのに考慮する価値のある小規模なレジストリもあります。
 
-���܂�m���Ă��Ȃ������̃R���e�i���W�X�g���ɂ��Ă��������Ă݂܂��傤�B
+あまり知られていないこれらのコンテナレジストリについても検討してみましょう。
 
-# �悭�m���Ă��郌�W�X�g��
+# よく知られているレジストリ
 
-�܂��A���ɑ����郌�W�X�g�������X�g�A�b�v���܂��B���̏�Œ��ڂ��Ă��郌�W�X�g���Ɣ�r���܂��傤�B
+まず、大手に属するレジストリをリストアップします。その上で注目しているレジストリと比較しましょう。
 
-���݁A�S�Ă�Docker���[�U�[����ł��l�C�̂��郌�W�X�g����[Docker Hub](https://hub.docker.com/)�ł��BDocker Hub�̓��W�X�g���E�̒��S�ł��B�S�Ă�Docker���f�t�H���g�Ń��W�X�g���̃z�X�g��Ƃ��ēo�^����Ă��܂��B
+現在、全てのDockerユーザーから最も人気のあるレジストリは[Docker Hub](https://hub.docker.com/)です。Docker Hubはレジストリ界の中心です。全てのDockerがデフォルトでレジストリのホスト先として登録されています。
 
-���̑��̐��ɍL���m���Ă��郌�W�X�g��:
-* [Docker Trusted Registries](https://docs.docker.com/docker-trusted-registry/) (Docker���z�z���Ă���I�[�v���\�[�X)
-* [Quay.io](https://quay.io/) (CoreOS���񋟂��Ă��郌�W�X�g��)
-* [Enterprise Registry](https://tectonic.com/quay-enterprise/) (Quay�̃I���v���~�X��)
-* [Google Container Registry](https://cloud.google.com/container-registry/) (GoogleCloud�v���b�g�t�H�[�����񋟂��Ă��郌�W�X�g��)
-* [Artifactory](https://www.jfrog.com/artifactory/) (JFrog���񋟂��Ă���B�T�[�r�X�^��A�I���v���~�X�ɂł��郌�W�X�g��)
+その他の世に広く知られているレジストリ:
+* [Docker Trusted Registries](https://docs.docker.com/docker-trusted-registry/) (Dockerが配布しているオープンソース)
+* [Quay.io](https://quay.io/) (CoreOSが提供しているレジストリ)
+* [Enterprise Registry](https://tectonic.com/quay-enterprise/) (Quayのオンプレミス版)
+* [Google Container Registry](https://cloud.google.com/container-registry/) (GoogleCloudプラットフォームが提供しているレジストリ)
+* [Artifactory](https://www.jfrog.com/artifactory/) (JFrogが提供している。サービス型や、オンプレミスにできるレジストリ)
 
-# ���܂�m���Ă��Ȃ��R���e�i���W�X�g��
+# あまり知られていないコンテナレジストリ
 
-���āA���ڂ̃p�[�g�ł��B��������͂��܂�m���Ă��Ȃ����W�X�g�����T�����܂��B
+さて、注目のパートです。ここからはあまり知られていないレジストリを概説します。
 
-## Amazon EC2 �R���e�i���W�X�g�� (ECR)
+## Amazon EC2 コンテナレジストリ (ECR)
 
-Amazon��[Amazon EC2�R���e�i�[�T�[�r�X(ECS)](https://aws.amazon.com/ecr/)�ƌĂ΂��R���e�i�T�[�r�X��񋟂��Ă��邱�Ƃ͂��łɂ��������Ǝv���܂��B�������AECS�̊������S�ɐ����郌�W�X�g���ɂ��Ă͂��܂�m���Ă��܂���B
+Amazonが[Amazon EC2コンテナーサービス(ECS)](https://aws.amazon.com/ecr/)と呼ばれるコンテナサービスを提供していることはすでにご存じかと思います。しかし、ECSの環境を完全に整えるレジストリについてはあまり知られていません。
 
-Amazon EC2 �R���e�i���W�X�g��(ECR)�ƌĂ΂�邱�̃��W�X�g���́ADocker�̃R���e�i���W�X�g���Ƃ��Ē񋟂���Ă��܂��BECS�Ɠ�������Ă��܂��B2015�N12���ɓ������ꂽ����́A���̑��̂悭�m���Ă��郌�W�X�g���ɔ�ׂĂ��܂肵���Ă��܂��񂪁A���̗��R��������܂��傤�B
+Amazon EC2 コンテナレジストリ(ECR)と呼ばれるこのレジストリは、Dockerのコンテナレジストリとして提供されています。ECSと統合されています。2015年12月に導入されたそれは、その他のよく知られているレジストリに比べてあまりしられていませんが、その理由を説明しましょう。
 
-ECS�́AECR�Ƃ̂݌݊���������R���e�i���W�X�g���ł͂���܂���BECS�͊O���̃��W�X�g���Ƃ��Ă��g�����Ƃ��ł��܂��B�������AECR�̏d�v�ȓ_�͊��S�ɃT�[�r�X�Ƃ��ĊǗ����ꂽ���W�X�g���ŁA�W�J�ƊǗ����V���v���ɂ��Ă��܂��BECR�́AECS�̃C���t���Ɠ����悤�Ɋg����������A�X�P�[���u���ł���Ƃ������Ƃł��B
+ECSは、ECRとのみ互換性があるコンテナレジストリではありません。ECSは外部のレジストリとしても使うことができます。しかし、ECRの重要な点は完全にサービスとして管理されたレジストリで、展開と管理をシンプルにしています。ECRは、ECSのインフラと同じように拡張性があり、スケーラブルであるということです。
 
-__�x�X�g�ȃ��[�X�P�[�X:__ AWS�̃w�r�[���[�U�[�Ńv���C�x�[�g�ȃC���[�W��ۊǂ���ꏊ���������Ă���̂Ȃ�΁AECR���g���͔̂��ɍ����I�ł��B��K�͂Ƀ��W�X�g����W�J����ꍇ��A�����I�Ƀ��W�X�g�����g�傷�邱�Ƃ��z�肳���ꍇ�ɂ��K���Ă��܂��B�����̏ꍇ�AECR�̎����㖳�����̊g�����̃����b�g������ł���ł��傤�B
+__ベストなユースケース:__ AWSのヘビーユーザーでプライベートなイメージを保管する場所を検討しているのならば、ECRを使うのは非常に合理的です。大規模にレジストリを展開する場合や、将来的にレジストリが拡大することが想定される場合にも適しています。これらの場合、ECRの事実上無制限の拡張性のメリットを享受できるでしょう。
 
-## FlawCheck �v���C�x�[�g���W�X�g��
+## FlawCheck プライベートレジストリ
 
-[FlawCheck�v���C�x�[�g���W�X�g��](https://www.flawcheck.com/) (�ŋ߁A�Z�L�����e�B�x���_�[Tenable�Ђɂ���āAFlawCheck�̃r�W�l�X�̎c��̕����ƈꏏ�ɁA��������܂���)�Z�L�����e�B�d���̃��W�X�g���ł��B�R���e�i�̃C���[�W�ɑ΂���Ǝ㐫�X�L�����ƃ}���E�F�A���o���g�ݍ��܂�Ă��āA�T�[�r�X�Ƃ��Ē񋟂���Ă��܂��B�����̃R���e�i�C���[�W�ɑ΂��鈫�ӂ̂���R�[�h�̖��ߍ��݂∫�ӂ̂���C���[�W�������Ă��܂�����h�����߂̓�����͂���܂��񂪁AFlawCheck�ł́A�X�L�����@�\�ɂ�肻�̃��X�N���y�����邱�Ƃ��ł��܂��B
+[FlawCheckプライベートレジストリ](https://www.flawcheck.com/) (最近、セキュリティベンダーTenable社によって、FlawCheckのビジネスの残りの部分と一緒に、買収されました)セキュリティ重視のレジストリです。コンテナのイメージに対する脆弱性スキャンとマルウェア検出が組み込まれていて、サービスとして提供されています。無料のコンテナイメージに対する悪意のあるコードの埋め込みや悪意のあるイメージを入れられてしまう事を防ぐための特効薬はありませんが、FlawCheckでは、スキャン機能によりそのリスクを軽減することができます。
 
-__�x�X�g�ȃ��[�X�P�[�X:__ �Z�L�����e�B�ӎ��̍�����ƂɂƂ��ẮA����͂ƂĂ��ǂ��@�\���Ǝv���܂��B�������K�����ꂽ�ƊE�ł͗��p��������ł��傤�B
+__ベストなユースケース:__ セキュリティ意識の高い企業にとっては、これはとても良い機能だと思います。厳しく規制された業界では利用が増えるでしょう。
 
-## GitLab Container ���W�X�g��
+## GitLab Container レジストリ
 
-[Gitlab �R���e�i���W�X�g��](https://docs.gitlab.com/ee/user/project/container_registry.html)�́A�I���v���~�X�⃌���^���T�[�o�[�Ń��W�X�g���Ƃ��Ď��s���邱�Ƃ��ł���R���e�i�C���[�W����舵�����Ƃ��ł���GitLab�Ђ̃\�����[�V�����ł��BGitLab�ɑg�ݍ��܂�Ă���̂ŁAGitLab�̃f�v���C�̃p�C�v���C���ɒ��ړ������邱�Ƃ��ł��AGitLab�̑��̕����ƃV�[�����X�ɓ������邱�Ƃ��ł��܂��B���Ȃ��̃`�[����GitLab���g���Ă���c�[���𑝂₵�����Ȃ��ADevOps�ŃV�[�����X�ɓ������ă��[�N�t���[�𗘗p���邱�Ƃ��ł��邱�Ƃ������b�g�ł��B
+[Gitlab コンテナレジストリ](https://docs.gitlab.com/ee/user/project/container_registry.html)は、オンプレミスやレンタルサーバーでレジストリとして実行することができるコンテナイメージを取り扱うことができるGitLab社のソリューションです。GitLabに組み込まれているので、GitLabのデプロイのパイプラインに直接統合することができ、GitLabの他の部分とシームレスに統合することができます。あなたのチームでGitLabを使っておりツールを増やしたくなく、DevOpsでシームレスに統合してワークフローを利用することができることがメリットです。
 
-__�x�X�g�ȃ��[�X�P�[�X:__ �J���҂́ADocker�C���[�W�ƃ\�[�X�R�[�h�������Ƃ��납��Q�Ƃł���ƕ֗����ƍl����ł��傤�BGitLab�Ń\�[�X�R�[�h��������悤��GitLab�R���e�i���W�X�g���Ō�����ƕ֗����Ǝv���܂��B����ŁA���̑��̃��W�X�g���\�t�g�Ɣ�ׂĂ���ƌ���������������Ă���킯�ł͂���܂���B
+__ベストなユースケース:__ 開発者は、Dockerイメージとソースコードが同じところから参照できると便利だと考えるでしょう。GitLabでソースコードが見られるようにGitLabコンテナレジストリで見られると便利だと思います。一方で、その他のレジストリソフトと比べてこれと言った特徴を備えているわけではありません。
 
-## Portus (SUSE��)
+## Portus (SUSE提供)
 
-[Portus](http://port.us.org/)�́A�Z�p�I�ɂ̓��W�X�g���\�t�g�ł͂���܂���B�������ADocker���W�X�g���̎Г��W�J�p��UI��u����������t�����g�G���h������Ă��܂��BPortus�́A�A�N�Z�X�����̃I�v�V����������A����ɂ��Docker���W�X�g���ɒl��ǉ����邱�Ƃ��ł���悤�݌v����Ă��܂��B
-����ɂ��`�[�����\��������A���W�X�g���̃��[�U�[��������A�X�̃`�[���ʂ̃A�N�Z�X������ݒ肷�邱�Ƃ��ł��܂�(�l�X�ȖʂŁA���̋@�\��Unix�̂悤�ȃV�X�e���̃��[�U�[�E�O���[�v�̎d�g�݂Ɏ��Ă��܂�)�BPortus�ł́A�X�̃��[�U�[���x���܂��́A�`�[���̃��[�U�[�ł̃R���e�i�C���[�W�̍X�V������^���邱�Ƃ��ł���l�[���X�y�[�X�����W�X�g���ɗ^���邱�Ƃ��T�|�[�g���A���܂��ȗ��x�Ń��|�W�g���ɑ΂��ĕύX���邱�Ƃ��ł��܂��B�܂��APortus�œ����I�ȓ_�́A���W�X�g���ݒ�ƃA�N�Z�X������ݒ肷�邽�߂̃��[�U�[�t�����h���[��Web�C���^�[�t�F�C�X���񋟂���邱�Ƃł��B�iCLI�\���c�[���Aportusctl�����l�ɗ��p�\�ł��B�j
+[Portus](http://port.us.org/)は、技術的にはレジストリソフトではありません。しかし、Dockerレジストリの社内展開用のUIを置き換えられるフロントエンドを備えています。Portusは、アクセス制限のオプションがあり、それによりDockerレジストリに値を追加することができるよう設計されています。
+これによりチームを構成したり、レジストリのユーザーだったり、個々のチーム別のアクセス権限を設定することができます(様々な面で、この機能はUnixのようなシステムのユーザー・グループの仕組みに似ています)。Portusでは、個々のユーザーレベルまたは、チームのユーザーでのコンテナイメージの更新権限を与えることができるネームスペースをレジストリに与えることをサポートし、こまかな粒度でレポジトリに対して変更することができます。また、Portusで特徴的な点は、レジストリ設定とアクセス権限を設定するためのユーザーフレンドリーなWebインターフェイスが提供されることです。（CLI構成ツール、portusctlが同様に利用可能です。）
 
-__�x�X�g�ȃ��[�X�P�[�X:__ Docker���W�X�g�����D�݂����A�����ƃZ�L�����e�B�R���g���[�����K�v�Ƃ����ꍇ�A�܂��́A���悢�A�N�Z�X�������g�������Ƃ������R������ꍇ�́APortus�͋��͂ȃ\�����[�V�����ł��B
+__ベストなユースケース:__ Dockerレジストリが好みだが、もっとセキュリティコントロールが必要とされる場合、または、よりよいアクセス制限が使いたいという理由がある場合は、Portusは強力なソリューションです。
 
 ## Sonatype Nexus
 
-[Sonatype Nexus](https://www.sonatype.com/products-sonatype)�́A�T�[�r�X�ƃI���v���~�X�ł̐ݒu���T�|�[�g����A�\�[�X�R�[�h�Ǘ��̔ėp�I�ȃ��W�X�g���ł��BDocker���W�X�g���̋@�\�ȊO�ɂ��A�����̋@�\���T�|�[�g���Ă��܂����ADocker���W�X�g�����g�����Ƃ��ł��܂��BDocker�̃��W�X�g�������Â����j��������̂Ȃ̂ŃR���e�i���W�X�g���̋@�\�Ȃ��ȑO���x�e�����̊Ǘ��҂ɂ͂��Ȃ��݂�������܂���BCore Nexus �v���b�g�t�H�[���́A�I�[�v���\�[�X�ł����A���p�̃I�v�V���������p�ł��܂��B
+[Sonatype Nexus](https://www.sonatype.com/products-sonatype)は、サービスとオンプレミスでの設置をサポートする、ソースコード管理の汎用的なレジストリです。Dockerレジストリの機能以外にも、多くの機能をサポートしていますが、Dockerレジストリも使うことができます。Dockerのレジストリよりも古い歴史があるものなのでコンテナレジストリの機能ない以前よりベテランの管理者にはおなじみかもしれません。Core Nexus プラットフォームは、オープンソースですが、商用のオプションも利用できます。
 
-__�x�X�g�ȃ��[�X�P�[�X:__ �����̊�Ƃ�Nexus��Maven�̃��|�W�g���Ƃ��Ē��N���p����Ă��܂����B�P���Ɍ���I�ȃv���b�g�t�H�[���̃����[�X�ɍX�V���邾���ŁA�g�D���ŐV���Ȑ��i��^�p�X�^�b�t�̐V�����Z�p�̏K���Ȃ��ɓƎ���Docker���W�X�g�����쐬���鎖���ł��āADocker�C���[�W�ȊO�̐��ʕ����ꏏ��Docker�C���[�W��ۑ�����T�[�r�X�Ɠ��l�ɗ��p���邱�Ƃ��ł���悤�ɂȂ�܂��B
+__ベストなユースケース:__ 多くの企業でNexusがMavenのレポジトリとして長年利用されてきました。単純に現代的なプラットフォームのリリースに更新するだけで、組織内で新たな製品や運用スタッフの新しい技術の習得なしに独自のDockerレジストリを作成する事ができて、Dockerイメージ以外の成果物も一緒にDockerイメージを保存するサービスと同様に利用することができるようになります。
 
-## VMWare Harbar ���W�X�g��
+## VMWare Harbar レジストリ
 
-VMware�́ADocker�̃G�R�V�X�e�����ł̓��W���[�v���[���[�ƂƂ炦���Ă��Ȃ���������܂��񂪁A���Ђ͊m���ɂ��̃G�R�V�X�e���̈���ɂȂ����܂��B[Harbar���W�X�g��](https://vmware.github.io/harbor/)�́AVMware���o����Docker�C���[�W���W�X�g���̓����ł��B���̃��W�X�g���́ADocker�̊�Տ�ɃR���e�i�ō\�z����Ă��܂����A�Z�L�����e�B��ID�Ǘ��@�\���ǉ�����Ă��܂��B�܂��A�P��z�X�g�ŕ����̃��W�X�g�����T�|�[�g���Ă��܂��B
+VMwareは、Dockerのエコシステム内ではメジャープレーヤーととらえられていないかもしれませんが、同社は確実にそのエコシステムの一員になりつつあります。[Harbarレジストリ](https://vmware.github.io/harbor/)は、VMwareが出したDockerイメージレジストリの答えです。このレジストリは、Dockerの基盤上にコンテナで構築されていますが、セキュリティとID管理機能が追加されています。また、単一ホストで複数のレジストリをサポートしています。
 
-__�x�X�g�ȃ��[�X�P�[�X:__ Harbar���d�����Ă���̂́A�Z�L�����e�B�ƃ��[�U�[�Ǘ��ŁA���̑��̃��W�X�g���ł͂��̂悤�ȋ@�\�͒񋟂���Ă��Ȃ��ׁA��Ƃ����߂鉿�l�̍������W�X�g���̋@�\�ƂȂ��Ă��܂��B��Ƃł̗��p�ɍœK�ł��BHarbar��Docker�̊�Տ�œ������Ƃ��A�ǂ�Docker���ɂ��C���X�g�[�����ȒP�ł��邱�Ƃ����ڂɒl���܂��B�J���҂��Z�L�����e�B���C���^�[�l�b�g�Ɍq���邱�Ƃ��ł��Ȃ��I�t���C���̃V�X�e���ł��C�y�ɓW�J���邱�Ƃ��ł��邱�Ƃ��A�|�C���g�ł��B
+__ベストなユースケース:__ Harbarが重視しているのは、セキュリティとユーザー管理で、その他のレジストリではこのような機能は提供されていない為、企業が求める価値の高いレジストリの機能となっています。企業での利用に最適です。HarbarがDockerの基盤上で動くことも、どのDocker環境にもインストールが簡単であることも注目に値します。開発者がセキュリティ上やインターネットに繋げることができないオフラインのシステムでも気軽に展開することができることも、ポイントです。
 
-# ���_
+# 結論
 
-��ԍŏ��̌����ۑ�́A�T�[�r�X�ł������A�I���v���~�X���A�������Ƃ������̓W�J���@�̎�ނȂǂ��܂񂾂ǂ������^�C�v�̃��W�X�g���𗘗p���邩�Ƃ������ƁG�����āA�����̃A�N�Z�X�����͂ǂ��Ȃ��Ă���̂��Ƃ������ƁG�����āA���̑��̃Z�L�����e�B�I�v�V�������ǂ��������̂����邩�Ƃ������ƁB
+一番最初の検討課題は、サービスでつかうか、オンプレミスか、両方かという環境の展開方法の種類などを含んだどういうタイプのレジストリを利用するかということ；そして、それらのアクセス制限はどうなっているのかということ；そして、その他のセキュリティオプションがどういうものがあるかということ。
 
-�������A�K�v�ȗv���ɍ��������������W�X�g����I�Ԃ��Ƃ́A�ǂ������v����D�悷�邩�ɂ�茈�܂��Ă��܂��B�������A��R�̑I�����̒�����A���̑g�D�Ƀ}�b�`�����o�����X�̗ǂ����W�X�g����������͓̂���Ȃ��ł��傤�B
+もちろん、必要な要件に合った正しいレジストリを選ぶことは、どういう要件を優先するかにより決まってきます。しかし、沢山の選択肢の中から、その組織にマッチしたバランスの良いレジストリを見つけるのは難しくないでしょう。
 
-���҂ɂ��āF���B���X�E�p���[��Medavie�u���[�N���X�̃G���^�[�v���C�Y�A�[�L�e�N�g�ł��B�ނ̏œ_�́A�R�A�E�R���s���[�e�B���O�iIaaS�́j�AID����уA�N�Z�X�Ǘ��A�A�v���P�[�V�����v���b�g�t�H�[���iPaaS�́j�A����јA���z�M�Ȃǂ̎�v����ɂ�����N���E�h�����ƋZ�p�v��ł��B
+著者について：ヴィンス・パワーはMedavieブルークロスのエンタープライズアーキテクトです。彼の焦点は、コア・コンピューティング（IaaSの）、IDおよびアクセス管理、アプリケーションプラットフォーム（PaaSの）、および連続配信などの主要分野におけるクラウド導入と技術計画です。
