@@ -17,8 +17,9 @@ deployment:
     branch: master
     commands: 
       - hugo -d docs
-      - pwd
-      - ls -l
-      - git add ./docs/ -A
-      - git commit -m "[ci skip] CircleCI automatic page build Time:[`date`]" || true
-      - git push origin ${GITHUB_BRANCH}
+      - test-hugo.sh
+#      - pwd
+#      - ls -l
+#      - git add ./docs/ -A
+#      - git commit -m "[ci skip] CircleCI automatic page build Time:[`date`]" || true
+#      - git push origin ${GITHUB_BRANCH}
