@@ -4,9 +4,6 @@
 #/ [Site Update] Merge it to www.rancher.jp
 #////////////////////////////////////////////////
 
-commitMassage=`git log -n 1 --oneline --pretty=format:"%s"`
-
-
 if [ `git log -n 1 --oneline --pretty=format:"%s"` =~ \["Site Update"\] ]; then
 
         echo "[Site Update] Merge it to www.rancher.jp is start..."
