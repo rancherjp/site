@@ -11,7 +11,6 @@ commitMassage=`git log -n 1 --oneline --pretty=format:"%s"`
 
 
 if [[ "$commitMassage" =~ \["Site Update"\] ]]; then
-        cd ~/
         git add ./docs/ -A
         git commit -m "[ci skip] CircleCI automatic page build Time:[`date`]" || true
         git push origin ${GITHUB_BRANCH}
@@ -22,7 +21,7 @@ else
         git clone git@github.com:rancherjp/rancherjp.github.io.git
         mv -v ~/site ~/rancherjp.github.io
         cd ~/rancherjp.github.io
-        git add ./docs/ -A
+        git add .
         git commit -m "CircleCI automatic page build Time:[`date`]" || true
         git push origin ${GITHUB_BRANCH}
 fi
