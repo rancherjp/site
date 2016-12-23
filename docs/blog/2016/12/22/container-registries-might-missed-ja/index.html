@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="ja-jp">
+    <head>
+    
+        <meta name=”robots” content="noindex">
+    
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="Hugo 0.19-DEV" />
+    <title>[翻訳]見逃されているかもしれないコンテナのレジストリ</title>
+    
+    
+    
+    <meta name="description" content="様々なコンテナレジストリについて概要の翻訳" />
+    <meta name="keywords" content='blog' />
+    
+    <link rel="icon" type="image/png" href="https://rancherjp.github.io/site/favicon.ico" sizes="196x196" />
+    <link href="" rel="alternate" type="application/rss+xml" title="Rancher JP" />
+    <link rel="stylesheet" href="https://rancherjp.github.io/site/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://rancherjp.github.io/site/css/highlightjs-themes/androidstudio.css" />
+    <link rel="stylesheet" href="https://rancherjp.github.io/site/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://rancherjp.github.io/site/css/phlat.css" />
+    
+        
+    
+</head>
+
+    <body>
+        <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="https://rancherjp.github.io/site/">Rancher JP</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/site/">
+                            Home
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/site/docs">
+                            Docs
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/site/blog">
+                            Blog
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/site/qa">
+                            Q&amp;A
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/site/releasenote">
+                            Release Note
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/site/archives">
+                            Archives
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/site/about">
+                            About
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+</nav>
+
+        <div id="top" class="container">
+            <div class="row" id="content-main">
+                <div class="col-md-8">
+                    <div class="row">
+    <div class="col-md-12 content-card">
+        <h1>[翻訳]見逃されているかもしれないコンテナのレジストリ</h1>
+            
+            <ul class="list-inline meta">
+                <li><i class="fa fa-calendar"></i>December 22, 2016</li>
+                <li><i class="fa fa-user"></i></li>
+                
+                    
+                    <li>
+                        <i class="fa fa-folder"></i>
+                        
+                            <a href="https://rancherjp.github.io/categories/blog">blog</a>
+                            
+                        
+                    </li>
+                
+            </ul>
+            <ul class="list-inline share" style="margin-top: 15px; margin-left: 0px">
+        <li class="facebook-share"><a target="_blank" href="http://www.facebook.com/sharer.php?u=https%3a%2f%2francherjp.github.io%2fsite%2fblog%2f2016%2f12%2f22%2fcontainer-registries-might-missed-ja%2f"><i class="fa fa-facebook fa-lg"></i>Facebook</a></li>
+        <li class="googleplus-share"><a target="_blank" href="https://plus.google.com/share?url=https%3a%2f%2francherjp.github.io%2fsite%2fblog%2f2016%2f12%2f22%2fcontainer-registries-might-missed-ja%2f"><i class="fa fa-google-plus fa-lg"></i>Google+</a></li>
+        <li class="twitter-share"><a target="_blank" href="https://twitter.com/share?url=https%3a%2f%2francherjp.github.io%2fsite%2fblog%2f2016%2f12%2f22%2fcontainer-registries-might-missed-ja%2f&amp;text=%5b%e7%bf%bb%e8%a8%b3%5d%e8%a6%8b%e9%80%83%e3%81%95%e3%82%8c%e3%81%a6%e3%81%84%e3%82%8b%e3%81%8b%e3%82%82%e3%81%97%e3%82%8c%e3%81%aa%e3%81%84%e3%82%b3%e3%83%b3%e3%83%86%e3%83%8a%e3%81%ae%e3%83%ac%e3%82%b8%e3%82%b9%e3%83%88%e3%83%aa"><i class="fa fa-twitter fa-lg"></i>Twitter</a></li>
+    </ul>
+        
+
+<p>以下は、
+Rancher Labs | Container registries you may have missed | Rancher Labs<br />
+<a href="http://rancher.com/container-registries-might-missed/">http://rancher.com/container-registries-might-missed/</a>
+からの翻訳です。</p>
+
+<p>Container Registries You Might Have Missed
+見逃されているかもしれないコンテナのレジストリ</p>
+
+<p>2016年11月10日 <a href="http://rancher.com/author/vince-power/">Vince Power</a></p>
+
+<p>レジストリは、コンテナを扱う上で重要なコンポーネントの一つで、特にDockerでは多くの人から注目を浴びています。レジストリは、コンテナエンジンホストにダウンロード実行されるイメージを保管します。コンテナはその特定のイメージの単なるインスタンスです。イメージは、Microsoft WindowsのMSIやRed Hat Enterprise LinuxのRPMなど、すぐに使えるパッケージのようなものと考えることができます。レジストリは、どういう風に動作するか詳細には述べませんが、詳細を知りたい場合はこの記事<a href="http://rancher.com/comparing-four-hosted-docker-registries/">素晴らしい記事</a>を読むと良いでしょう。</p>
+
+<p>この記事で説明したいことは私の注目しているレジストリのいくつかを取り上げてみたいと思います。Dockerを使う人にとっては有名なレジストリは既に知られていると思いますが、どこにイメージを置くかを決めるのに考慮する価値のある小規模なレジストリもあります。</p>
+
+<p>あまり知られていないこれらのコンテナレジストリについても検討してみましょう。</p>
+
+<h1 id="よく知られているレジストリ">よく知られているレジストリ</h1>
+
+<p>まず、大手に属するレジストリをリストアップします。その上で注目しているレジストリと比較しましょう。</p>
+
+<p>現在、全てのDockerユーザーから最も人気のあるレジストリは<a href="https://hub.docker.com/">Docker Hub</a>です。Docker Hubはレジストリ界の中心です。全てのDockerがデフォルトでレジストリのホスト先として登録されています。</p>
+
+<p>その他の世に広く知られているレジストリ:
+* <a href="https://docs.docker.com/docker-trusted-registry/">Docker Trusted Registries</a> (Dockerが配布しているオープンソース)
+* <a href="https://quay.io/">Quay.io</a> (CoreOSが提供しているレジストリ)
+* <a href="https://tectonic.com/quay-enterprise/">Enterprise Registry</a> (Quayのオンプレミス版)
+* <a href="https://cloud.google.com/container-registry/">Google Container Registry</a> (GoogleCloudプラットフォームが提供しているレジストリ)
+* <a href="https://www.jfrog.com/artifactory/">Artifactory</a> (JFrogが提供している。サービス型や、オンプレミスにできるレジストリ)</p>
+
+<h1 id="あまり知られていないコンテナレジストリ">あまり知られていないコンテナレジストリ</h1>
+
+<p>さて、注目のパートです。ここからはあまり知られていないレジストリを概説します。</p>
+
+<h2 id="amazon-ec2-コンテナレジストリ-ecr">Amazon EC2 コンテナレジストリ (ECR)</h2>
+
+<p>Amazonが<a href="https://aws.amazon.com/ecr/">Amazon EC2コンテナーサービス(ECS)</a>と呼ばれるコンテナサービスを提供していることはすでにご存じかと思います。しかし、ECSの環境を完全に整えるレジストリについてはあまり知られていません。</p>
+
+<p>Amazon EC2 コンテナレジストリ(ECR)と呼ばれるこのレジストリは、Dockerのコンテナレジストリとして提供されています。ECSと統合されています。2015年12月に導入されたそれは、その他のよく知られているレジストリに比べてあまりしられていませんが、その理由を説明しましょう。</p>
+
+<p>ECSは、ECRとのみ互換性があるコンテナレジストリではありません。ECSは外部のレジストリとしても使うことができます。しかし、ECRの重要な点は完全にサービスとして管理されたレジストリで、展開と管理をシンプルにしています。ECRは、ECSのインフラと同じように拡張性があり、スケーラブルであるということです。</p>
+
+<p><strong>ベストなユースケース:</strong> AWSのヘビーユーザーでプライベートなイメージを保管する場所を検討しているのならば、ECRを使うのは非常に合理的です。大規模にレジストリを展開する場合や、将来的にレジストリが拡大することが想定される場合にも適しています。これらの場合、ECRの事実上無制限の拡張性のメリットを享受できるでしょう。</p>
+
+<h2 id="flawcheck-プライベートレジストリ">FlawCheck プライベートレジストリ</h2>
+
+<p><a href="https://www.flawcheck.com/">FlawCheckプライベートレジストリ</a> (最近、セキュリティベンダーTenable社によって、FlawCheckのビジネスの残りの部分と一緒に、買収されました)セキュリティ重視のレジストリです。コンテナのイメージに対する脆弱性スキャンとマルウェア検出が組み込まれていて、サービスとして提供されています。無料のコンテナイメージに対する悪意のあるコードの埋め込みや悪意のあるイメージを入れられてしまう事を防ぐための特効薬はありませんが、FlawCheckでは、スキャン機能によりそのリスクを軽減することができます。</p>
+
+<p><strong>ベストなユースケース:</strong> セキュリティ意識の高い企業にとっては、これはとても良い機能だと思います。厳しく規制された業界では利用が増えるでしょう。</p>
+
+<h2 id="gitlab-container-レジストリ">GitLab Container レジストリ</h2>
+
+<p><a href="https://docs.gitlab.com/ee/user/project/container_registry.html">Gitlab コンテナレジストリ</a>は、オンプレミスやレンタルサーバーでレジストリとして実行することができるコンテナイメージを取り扱うことができるGitLab社のソリューションです。GitLabに組み込まれているので、GitLabのデプロイのパイプラインに直接統合することができ、GitLabの他の部分とシームレスに統合することができます。あなたのチームでGitLabを使っておりツールを増やしたくなく、DevOpsでシームレスに統合してワークフローを利用することができることがメリットです。</p>
+
+<p><strong>ベストなユースケース:</strong> 開発者は、Dockerイメージとソースコードが同じところから参照できると便利だと考えるでしょう。GitLabでソースコードが見られるようにGitLabコンテナレジストリで見られると便利だと思います。一方で、その他のレジストリソフトと比べてこれと言った特徴を備えているわけではありません。</p>
+
+<h2 id="portus-suse提供">Portus (SUSE提供)</h2>
+
+<p><a href="http://port.us.org/">Portus</a>は、技術的にはレジストリソフトではありません。しかし、Dockerレジストリの社内展開用のUIを置き換えられるフロントエンドを備えています。Portusは、アクセス制限のオプションがあり、それによりDockerレジストリに値を追加することができるよう設計されています。
+これによりチームを構成したり、レジストリのユーザーだったり、個々のチーム別のアクセス権限を設定することができます(様々な面で、この機能はUnixのようなシステムのユーザー・グループの仕組みに似ています)。Portusでは、個々のユーザーレベルまたは、チームのユーザーでのコンテナイメージの更新権限を与えることができるネームスペースをレジストリに与えることをサポートし、こまかな粒度でレポジトリに対して変更することができます。また、Portusで特徴的な点は、レジストリ設定とアクセス権限を設定するためのユーザーフレンドリーなWebインターフェイスが提供されることです。（CLI構成ツール、portusctlが同様に利用可能です。）</p>
+
+<p><strong>ベストなユースケース:</strong> Dockerレジストリが好みだが、もっとセキュリティコントロールが必要とされる場合、または、よりよいアクセス制限が使いたいという理由がある場合は、Portusは強力なソリューションです。</p>
+
+<h2 id="sonatype-nexus">Sonatype Nexus</h2>
+
+<p><a href="https://www.sonatype.com/products-sonatype">Sonatype Nexus</a>は、サービスとオンプレミスでの設置をサポートする、ソースコード管理の汎用的なレジストリです。Dockerレジストリの機能以外にも、多くの機能をサポートしていますが、Dockerレジストリも使うことができます。Dockerのレジストリよりも古い歴史があるものなのでコンテナレジストリの機能ない以前よりベテランの管理者にはおなじみかもしれません。Core Nexus プラットフォームは、オープンソースですが、商用のオプションも利用できます。</p>
+
+<p><strong>ベストなユースケース:</strong> 多くの企業でNexusがMavenのレポジトリとして長年利用されてきました。単純に現代的なプラットフォームのリリースに更新するだけで、組織内で新たな製品や運用スタッフの新しい技術の習得なしに独自のDockerレジストリを作成する事ができて、Dockerイメージ以外の成果物も一緒にDockerイメージを保存するサービスと同様に利用することができるようになります。</p>
+
+<h2 id="vmware-harbar-レジストリ">VMWare Harbar レジストリ</h2>
+
+<p>VMwareは、Dockerのエコシステム内ではメジャープレーヤーととらえられていないかもしれませんが、同社は確実にそのエコシステムの一員になりつつあります。<a href="https://vmware.github.io/harbor/">Harbarレジストリ</a>は、VMwareが出したDockerイメージレジストリの答えです。このレジストリは、Dockerの基盤上にコンテナで構築されていますが、セキュリティとID管理機能が追加されています。また、単一ホストで複数のレジストリをサポートしています。</p>
+
+<p><strong>ベストなユースケース:</strong> Harbarが重視しているのは、セキュリティとユーザー管理で、その他のレジストリではこのような機能は提供されていない為、企業が求める価値の高いレジストリの機能となっています。企業での利用に最適です。HarbarがDockerの基盤上で動くことも、どのDocker環境にもインストールが簡単であることも注目に値します。開発者がセキュリティ上やインターネットに繋げることができないオフラインのシステムでも気軽に展開することができることも、ポイントです。</p>
+
+<h1 id="結論">結論</h1>
+
+<p>一番最初の検討課題は、サービスでつかうか、オンプレミスか、両方かという環境の展開方法の種類などを含んだどういうタイプのレジストリを利用するかということ；そして、それらのアクセス制限はどうなっているのかということ；そして、その他のセキュリティオプションがどういうものがあるかということ。</p>
+
+<p>もちろん、必要な要件に合った正しいレジストリを選ぶことは、どういう要件を優先するかにより決まってきます。しかし、沢山の選択肢の中から、その組織にマッチしたバランスの良いレジストリを見つけるのは難しくないでしょう。</p>
+
+<p>著者について：ヴィンス・パワーはMedavieブルークロスのエンタープライズアーキテクトです。彼の焦点は、コア・コンピューティング（IaaSの）、IDおよびアクセス管理、アプリケーションプラットフォーム（PaaSの）、および連続配信などの主要分野におけるクラウド導入と技術計画です。</p>
+
+        
+
+    </div>
+</div>
+
+                    
+
+                </div>
+                <div class="col-md-4">
+                                        <div class="row">
+    <div class="col-md-11 col-md-offset-1 card">
+        <h5>Search</h5>
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form">
+            <div class="input-group">
+                <input class="form-control" type="search" name="q" />
+                <span class="input-group-btn">
+                    <button class="btn btn-custom" type="submit"><span class="glyphicon glyphicon-search"></span></button>
+                </span>
+            </div>
+            <input type="hidden" name="q" value="site:https://rancherjp.github.io/site/">
+        </form>
+    </div>
+</div>
+
+                    <div class="row">
+    <div class="col-md-11 col-md-offset-1 card">
+        <h5>Recent Posts</h5>
+        <ul class="list-unstyled posts-recent">
+            
+                <li><a href="https://rancherjp.github.io/site/content/2016/10/27/rancher-workshop-01/">Rancher もくもく勉強会 #1</a></li>
+            
+                <li><a href="https://rancherjp.github.io/site/content/2016/10/07/rancher-meetup-01/">Rancher Meetup Tokyo #1</a></li>
+            
+        </ul>
+    </div>
+</div>
+
+                    
+    
+
+    
+        <div class="row">
+            <div class="col-md-11 col-md-offset-1 card">
+                <h5>categories</h5>
+                <ul class="list-unstyled posts-recent">
+                    
+                        <li><a href="https://rancherjp.github.io/site/categories/blog">blog</a></li>
+                    
+                        <li><a href="https://rancherjp.github.io/site/categories/docs">docs</a></li>
+                    
+                        <li><a href="https://rancherjp.github.io/site/categories/releasenote">releasenote</a></li>
+                    
+                        <li><a href="https://rancherjp.github.io/site/categories/meetup">meetup</a></li>
+                    
+                        <li><a href="https://rancherjp.github.io/site/categories/qa">qa</a></li>
+                    
+                </ul>
+            </div>
+        </div>
+    
+
+    
+
+
+                    <div class="row">
+    <div class="col-md-11 col-md-offset-1 card">
+        <div class="sidebar-twitter">
+            <a class="twitter-timeline" height="500" href="https://twitter.com/rancherjp"></a>
+            <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
+    </div>
+</div>
+
+
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-xs-6">
+    <ul class="list-inline links">
+        
+    </ul>
+</div>
+
+            <div class="col-md-4 col-xs-6">
+    <ul class="list-inline social-media">
+        
+            <li><a target="_blank" href="https://twitter.com/rancherjp"><i class="fa fa-twitter fa-lg"></i></a></li>
+        
+        
+        
+            <li><a target="_blank" href="https://www.facebook.com/rancherjp"><i class="fa fa-facebook fa-lg"></i></a></li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+            <li><a target="_blank" href="https://rancherjp.herokuapp.com"><i class="fa fa-slack fa-lg"></i></a></li>
+        
+    </ul>
+</div>
+
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <p>
+                    <p>Copyright © 2016 Rancher JP. All Rights Reserved.</P>
+                    <p>Powered by <a href="//gohugo.io">Hugo</a></p>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+        <div id="back-to-top" class="hidden">
+    <a href="#top" class="well well-sm" onclick="$('html,body').animate({scrollTop:0},'slow');return false;">
+        <i class="glyphicon glyphicon-chevron-up"></i> Back to Top
+    </a>
+</div>
+<script src="https://rancherjp.github.io/site/js/jquery-2.2.1.min.js"></script>
+<script src="https://rancherjp.github.io/site/js/bootstrap.min.js"></script>
+<script src="https://rancherjp.github.io/site/js/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script>
+    if(($(window).height() + 100) < $(document).height()) {
+        $('#back-to-top').removeClass('hidden').affix({
+            offset: {
+                top: 100
+            }
+        });
+    }
+</script>
+
+    
+
+
+    
+
+
+
+    </body>
+</html>
