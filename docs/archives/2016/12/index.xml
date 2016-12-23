@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>2016/12 on Rancher JP</title>
-    <link>https://rancherjp.github.io/site/archives/2016/12/index.xml</link>
+    <link>http://www.rancher.jp/site/archives/2016/12/index.xml</link>
     <description>Recent content in 2016/12 on Rancher JP</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
     <copyright>© 2016 Rancher JP</copyright>
-    <atom:link href="https://rancherjp.github.io/site/archives/2016/12/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://www.rancher.jp/site/archives/2016/12/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>[翻訳]見逃されているかもしれないコンテナのレジストリ</title>
-      <link>https://rancherjp.github.io/site/blog/2016/12/22/container-registries-might-missed-ja/</link>
+      <link>http://www.rancher.jp/site/blog/2016/12/22/container-registries-might-missed-ja/</link>
       <pubDate>Thu, 22 Dec 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://rancherjp.github.io/site/blog/2016/12/22/container-registries-might-missed-ja/</guid>
+      <guid>http://www.rancher.jp/site/blog/2016/12/22/container-registries-might-missed-ja/</guid>
       <description>
 
 &lt;p&gt;以下は、
@@ -103,10 +103,10 @@ Rancher Labs | Container registries you may have missed | Rancher Labs&lt;br /&g
     
     <item>
       <title>リリース v1.2.1</title>
-      <link>https://rancherjp.github.io/site/releasenote/v.1.2.1/</link>
+      <link>http://www.rancher.jp/site/releasenote/v.1.2.1/</link>
       <pubDate>Sat, 17 Dec 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://rancherjp.github.io/site/releasenote/v.1.2.1/</guid>
+      <guid>http://www.rancher.jp/site/releasenote/v.1.2.1/</guid>
       <description>
 
 &lt;h2 id=&#34;バージョン&#34;&gt;バージョン&lt;/h2&gt;
@@ -194,10 +194,10 @@ Rancher Labs | Container registries you may have missed | Rancher Labs&lt;br /&g
     
     <item>
       <title>リリース v1.2.0</title>
-      <link>https://rancherjp.github.io/site/releasenote/v.1.2.0/</link>
+      <link>http://www.rancher.jp/site/releasenote/v.1.2.0/</link>
       <pubDate>Sun, 04 Dec 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://rancherjp.github.io/site/releasenote/v.1.2.0/</guid>
+      <guid>http://www.rancher.jp/site/releasenote/v.1.2.0/</guid>
       <description>
 
 &lt;h2 id=&#34;バージョン&#34;&gt;バージョン&lt;/h2&gt;

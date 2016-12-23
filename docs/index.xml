@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Rancher JP</title>
-    <link>https://rancherjp.github.io/site/index.xml</link>
+    <link>http://www.rancher.jp/site/index.xml</link>
     <description>Recent content on Rancher JP</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
     <copyright>© 2016 Rancher JP</copyright>
     <lastBuildDate>Thu, 22 Dec 2016 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://rancherjp.github.io/site/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://www.rancher.jp/site/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>[翻訳]見逃されているかもしれないコンテナのレジストリ</title>
-      <link>https://rancherjp.github.io/site/blog/2016/12/22/container-registries-might-missed-ja/</link>
+      <link>http://www.rancher.jp/site/blog/2016/12/22/container-registries-might-missed-ja/</link>
       <pubDate>Thu, 22 Dec 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://rancherjp.github.io/site/blog/2016/12/22/container-registries-might-missed-ja/</guid>
+      <guid>http://www.rancher.jp/site/blog/2016/12/22/container-registries-might-missed-ja/</guid>
       <description>
 
 &lt;p&gt;以下は、
@@ -104,10 +104,10 @@ Rancher Labs | Container registries you may have missed | Rancher Labs&lt;br /&g
     
     <item>
       <title>リリース v1.2.1</title>
-      <link>https://rancherjp.github.io/site/releasenote/v.1.2.1/</link>
+      <link>http://www.rancher.jp/site/releasenote/v.1.2.1/</link>
       <pubDate>Sat, 17 Dec 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://rancherjp.github.io/site/releasenote/v.1.2.1/</guid>
+      <guid>http://www.rancher.jp/site/releasenote/v.1.2.1/</guid>
       <description>
 
 &lt;h2 id=&#34;バージョン&#34;&gt;バージョン&lt;/h2&gt;
@@ -195,20 +195,20 @@ Rancher Labs | Container registries you may have missed | Rancher Labs&lt;br /&g
     
     <item>
       <title>Q And A</title>
-      <link>https://rancherjp.github.io/site/qa/</link>
+      <link>http://www.rancher.jp/site/qa/</link>
       <pubDate>Thu, 15 Dec 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://rancherjp.github.io/site/qa/</guid>
+      <guid>http://www.rancher.jp/site/qa/</guid>
       <description>&lt;p&gt;・準備中&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>リリース v1.2.0</title>
-      <link>https://rancherjp.github.io/site/releasenote/v.1.2.0/</link>
+      <link>http://www.rancher.jp/site/releasenote/v.1.2.0/</link>
       <pubDate>Sun, 04 Dec 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://rancherjp.github.io/site/releasenote/v.1.2.0/</guid>
+      <guid>http://www.rancher.jp/site/releasenote/v.1.2.0/</guid>
       <description>
 
 &lt;h2 id=&#34;バージョン&#34;&gt;バージョン&lt;/h2&gt;
@@ -342,10 +342,10 @@ Rancherサーバーをアップグレードした後は、1.2環境に正常に�
     
     <item>
       <title>クイックスタートガイド</title>
-      <link>https://rancherjp.github.io/site/docs/qsg/</link>
+      <link>http://www.rancher.jp/site/docs/qsg/</link>
       <pubDate>Wed, 30 Nov 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://rancherjp.github.io/site/docs/qsg/</guid>
+      <guid>http://www.rancher.jp/site/docs/qsg/</guid>
       <description>
 
 &lt;h2 id=&#34;クイック-スタート-ガイド&#34;&gt;クイック スタート ガイド&lt;/h2&gt;
@@ -531,20 +531,20 @@ $ rancher -p NewLetsChatApp up -d
     
     <item>
       <title>Rancher Blog</title>
-      <link>https://rancherjp.github.io/site/blog/2016/10/27/01/</link>
+      <link>http://www.rancher.jp/site/blog/2016/10/27/01/</link>
       <pubDate>Thu, 27 Oct 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://rancherjp.github.io/site/blog/2016/10/27/01/</guid>
+      <guid>http://www.rancher.jp/site/blog/2016/10/27/01/</guid>
       <description>&lt;p&gt;準備中 &amp;hellip;&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Rancher もくもく勉強会 #1</title>
-      <link>https://rancherjp.github.io/site/content/2016/10/27/rancher-workshop-01/</link>
+      <link>http://www.rancher.jp/site/content/2016/10/27/rancher-workshop-01/</link>
       <pubDate>Thu, 27 Oct 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://rancherjp.github.io/site/content/2016/10/27/rancher-workshop-01/</guid>
+      <guid>http://www.rancher.jp/site/content/2016/10/27/rancher-workshop-01/</guid>
       <description>&lt;p&gt;Rancher もくもく勉強会 #1 - connpass
 &lt;a href=&#34;http://connpass.com/event/41997/&#34;&gt;http://connpass.com/event/41997/&lt;/a&gt;&lt;/p&gt;
 
@@ -557,7 +557,7 @@ $ rancher -p NewLetsChatApp up -d
 &lt;p&gt;・初心者向けチーム
 ・もくもくチーム
 に分かれて開始しました。
-&lt;img src=&#34;https://rancherjp.github.io/site/images/2016/10/27/DSC_0070.JPG&#34; alt=&#34;&#34;&gt;&lt;/img&gt;&lt;/p&gt;
+&lt;img src=&#34;http://www.rancher.jp/site/images/2016/10/27/DSC_0070.JPG&#34; alt=&#34;&#34;&gt;&lt;/img&gt;&lt;/p&gt;
 
 &lt;p&gt;新藤さんが初心者向けチームにRancherの概要説明中&lt;/p&gt;
 
@@ -568,7 +568,7 @@ $ rancher -p NewLetsChatApp up -d
 ・AWSにあるRancherOSのイメージを使えば、ホストの追加もOK。&lt;/p&gt;
 
 &lt;p&gt;＃Chiba goさんの深い話がつづく
-&lt;img src=&#34;https://rancherjp.github.io/site/images/2016/10/27/DSC_0071.JPG&#34; alt=&#34;&#34;&gt;&lt;/img&gt;&lt;/p&gt;
+&lt;img src=&#34;http://www.rancher.jp/site/images/2016/10/27/DSC_0071.JPG&#34; alt=&#34;&#34;&gt;&lt;/img&gt;&lt;/p&gt;
 
 &lt;p&gt;ネットワークとかスケジューリングとかは、K8sとかが担当するべき範囲
 　docker-compose.ymlは、Dockerのコンテナの関係性を示す。
@@ -585,7 +585,7 @@ CIツールは、別途必要になる。&lt;/p&gt;
 &lt;p&gt;Rancherのいいところは、Dockerのコマンドラインではちょっとお。と言う人向けにDockerの民主化の為に必要&lt;/p&gt;
 
 &lt;p&gt;@cyberblack28 さんのDocker解説
-&lt;img src=&#34;https://rancherjp.github.io/site/images/2016/10/27/DSC_0072.JPG&#34; alt=&#34;&#34;&gt;&lt;/img&gt;&lt;/p&gt;
+&lt;img src=&#34;http://www.rancher.jp/site/images/2016/10/27/DSC_0072.JPG&#34; alt=&#34;&#34;&gt;&lt;/img&gt;&lt;/p&gt;
 
 &lt;p&gt;Dockerの手順は、自分の手で打つと勉強になるよ。
 VMで動かす場合は、ネットワークが注意&lt;/p&gt;
@@ -633,7 +633,7 @@ VMで動かす場合は、ネットワークが注意&lt;/p&gt;
 &lt;p&gt;新藤さんが、今日の本題 3行でDocker+Rancherを解説&lt;/p&gt;
 
 &lt;p&gt;@ynott が DockerとRancherの関係を図で解説
-&lt;img src=&#34;https://rancherjp.github.io/site/images/2016/10/27/DSC_0075.JPG&#34; alt=&#34;&#34;&gt;&lt;/img&gt;&lt;/p&gt;
+&lt;img src=&#34;http://www.rancher.jp/site/images/2016/10/27/DSC_0075.JPG&#34; alt=&#34;&#34;&gt;&lt;/img&gt;&lt;/p&gt;
 
 &lt;p&gt;「次回は、12月ぐらいに Meetup しましょう。Google のIan Lewis と会話中」&lt;/p&gt;
 </description>
@@ -641,17 +641,17 @@ VMで動かす場合は、ネットワークが注意&lt;/p&gt;
     
     <item>
       <title>Rancher Meetup Tokyo #1</title>
-      <link>https://rancherjp.github.io/site/content/2016/10/07/rancher-meetup-01/</link>
+      <link>http://www.rancher.jp/site/content/2016/10/07/rancher-meetup-01/</link>
       <pubDate>Fri, 07 Oct 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://rancherjp.github.io/site/content/2016/10/07/rancher-meetup-01/</guid>
+      <guid>http://www.rancher.jp/site/content/2016/10/07/rancher-meetup-01/</guid>
       <description>
 
 &lt;h2 id=&#34;今熱い盛り上がりを見せているrancherの勉強会-rancher-meetup-tokyo-1-参加レポート&#34;&gt;今熱い盛り上がりを見せているRANCHERの勉強会「Rancher Meetup Tokyo #1」参加レポート！&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://snickerjp.blogspot.jp/2016/10/rancher-meetup-tokyo-vol1.html&#34;&gt;http://snickerjp.blogspot.jp/2016/10/rancher-meetup-tokyo-vol1.html&lt;/a&gt;&lt;/p&gt;
 
-&lt;img src=&#34;https://rancherjp.github.io/site/images/2016/10/07/20161007_184910.jpg&#34; alt=&#34;&#34;&gt;&lt;/img&gt;
+&lt;img src=&#34;http://www.rancher.jp/site/images/2016/10/07/20161007_184910.jpg&#34; alt=&#34;&#34;&gt;&lt;/img&gt;
 
 &lt;p&gt;コンテナオーケストレーション管理ツールとして、以前から注目が高かった「RANCHER」&lt;br /&gt;
 初のMeetupが開催されたので、かんたんなレポートです！&lt;/p&gt;
@@ -670,20 +670,20 @@ VMで動かす場合は、ネットワークが注意&lt;/p&gt;
 
 &lt;h2 id=&#34;rancher-overview-demo-bill-maxwell-氏&#34;&gt;「Rancher Overview (DEMO)」（Bill Maxwell 氏）&lt;/h2&gt;
 
-&lt;img src=&#34;https://rancherjp.github.io/site/images/2016/10/07/20161007_185051.jpg&#34; alt=&#34;&#34;&gt;&lt;/img&gt;
+&lt;img src=&#34;http://www.rancher.jp/site/images/2016/10/07/20161007_185051.jpg&#34; alt=&#34;&#34;&gt;&lt;/img&gt;
 
 &lt;p&gt;全編英語で、スライド見ているしかなかった発表&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://rancherjp.github.io/site/images/2016/10/07/DSC02584.JPG&#34; alt=&#34;&#34;&gt;&lt;/img&gt;
-&lt;img src=&#34;https://rancherjp.github.io/site/images/2016/10/07/DSC02586.JPG&#34; alt=&#34;&#34;&gt;&lt;/img&gt;
-&lt;img src=&#34;https://rancherjp.github.io/site/images/2016/10/07/DSC02587.JPG&#34; alt=&#34;&#34;&gt;&lt;/img&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.rancher.jp/site/images/2016/10/07/DSC02584.JPG&#34; alt=&#34;&#34;&gt;&lt;/img&gt;
+&lt;img src=&#34;http://www.rancher.jp/site/images/2016/10/07/DSC02586.JPG&#34; alt=&#34;&#34;&gt;&lt;/img&gt;
+&lt;img src=&#34;http://www.rancher.jp/site/images/2016/10/07/DSC02587.JPG&#34; alt=&#34;&#34;&gt;&lt;/img&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;rancher-cli-jenkins-で実現するci-cd&#34;&gt;「Rancher CLI + Jenkins で実現するCI/CD」&lt;/h2&gt;
 
 &lt;p&gt;最近出てきたという「Rancher CLI」の紹介とJenkinsを絡めた
 「継続的インテグレーションとデリバリ」  かなりかっこよかったんですが、そんなことできるかな？？&lt;/p&gt;
 
-&lt;img src=&#34;https://rancherjp.github.io/site/images/2016/10/07/20161007_194116.jpg&#34; alt=&#34;&#34;&gt;&lt;/img&gt;
+&lt;img src=&#34;http://www.rancher.jp/site/images/2016/10/07/20161007_194116.jpg&#34; alt=&#34;&#34;&gt;&lt;/img&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://github.com/rancher/cli&#34;&gt;https://github.com/rancher/cli&lt;/a&gt;&lt;/p&gt;
 
@@ -691,13 +691,13 @@ VMで動かす場合は、ネットワークが注意&lt;/p&gt;
 
 &lt;p&gt;ちょっと日本語、その後英語なメッセージビデオ&lt;/p&gt;
 
-&lt;img src=&#34;https://rancherjp.github.io/site/images/2016/10/07/20161007_200700_001.jpg&#34; alt=&#34;&#34;&gt;&lt;/img&gt;
+&lt;img src=&#34;http://www.rancher.jp/site/images/2016/10/07/20161007_200700_001.jpg&#34; alt=&#34;&#34;&gt;&lt;/img&gt;
 
 &lt;h2 id=&#34;lt&#34;&gt;LT&lt;/h2&gt;
 
 &lt;p&gt;LTの内容も濃くて、すごかった！&lt;/p&gt;
 
-&lt;img src=&#34;https://rancherjp.github.io/site/images/2016/10/07/20161007_210045.jpg&#34; alt=&#34;&#34;&gt;&lt;/img&gt;
+&lt;img src=&#34;http://www.rancher.jp/site/images/2016/10/07/20161007_210045.jpg&#34; alt=&#34;&#34;&gt;&lt;/img&gt;
 
 &lt;p&gt;(&lt;a href=&#34;http://qiita.com/cyberblack28/items/d1c6259c137c7c71703b&#34;&gt;http://qiita.com/cyberblack28/items/d1c6259c137c7c71703b&lt;/a&gt;)&lt;/p&gt;
 
@@ -705,7 +705,7 @@ VMで動かす場合は、ネットワークが注意&lt;/p&gt;
 
 &lt;p&gt;来場者全員にTシャツがプレゼントされました！豪華！&lt;/p&gt;
 
-&lt;img src=&#34;https://rancherjp.github.io/site/images/2016/10/07/20161007_184910.jpg&#34; alt=&#34;&#34;&gt;&lt;/img&gt;
+&lt;img src=&#34;http://www.rancher.jp/site/images/2016/10/07/20161007_184910.jpg&#34; alt=&#34;&#34;&gt;&lt;/img&gt;
 
 &lt;h2 id=&#34;感想&#34;&gt;感想&lt;/h2&gt;
 
@@ -723,10 +723,10 @@ VMで動かす場合は、ネットワークが注意&lt;/p&gt;
     
     <item>
       <title>About</title>
-      <link>https://rancherjp.github.io/site/about/</link>
+      <link>http://www.rancher.jp/site/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://rancherjp.github.io/site/about/</guid>
+      <guid>http://www.rancher.jp/site/about/</guid>
       <description>
 
 &lt;h2 id=&#34;このページについて&#34;&gt;このページについて&lt;/h2&gt;

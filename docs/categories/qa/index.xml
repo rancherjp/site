@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Qa on Rancher JP</title>
-    <link>https://rancherjp.github.io/site/categories/qa/index.xml</link>
+    <link>http://www.rancher.jp/site/categories/qa/index.xml</link>
     <description>Recent content in Qa on Rancher JP</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
     <copyright>© 2016 Rancher JP</copyright>
-    <atom:link href="https://rancherjp.github.io/site/categories/qa/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://www.rancher.jp/site/categories/qa/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Q And A</title>
-      <link>https://rancherjp.github.io/site/qa/</link>
+      <link>http://www.rancher.jp/site/qa/</link>
       <pubDate>Thu, 15 Dec 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://rancherjp.github.io/site/qa/</guid>
+      <guid>http://www.rancher.jp/site/qa/</guid>
       <description>&lt;p&gt;・準備中&lt;/p&gt;
 </description>
     </item>
