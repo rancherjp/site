@@ -16,7 +16,7 @@ deployment:
   production:
     branch: master
     commands: 
-      - hugo -d docs
+#      - hugo -d docs
       - ./test-hugo.sh
 #      - pwd
 #      - ls -l
