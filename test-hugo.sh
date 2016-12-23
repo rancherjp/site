@@ -21,6 +21,8 @@ else
         cd ~/
         git clone git@github.com:rancherjp/rancherjp.github.io.git
         mv -v ~/site ~/rancherjp.github.io
+        cd ~/rancherjp.github.io
+        git add ./docs/ -A
         git commit -m "CircleCI automatic page build Time:[`date`]" || true
         git push origin ${GITHUB_BRANCH}
 fi
