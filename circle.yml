@@ -17,7 +17,7 @@ deployment:
     branch: master
     commands: 
       - hugo -d docs
-      - test-hugo.sh
+      - ./test-hugo.sh
 #      - pwd
 #      - ls -l
 #      - git add ./docs/ -A
