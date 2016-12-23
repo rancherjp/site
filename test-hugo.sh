@@ -4,7 +4,10 @@
 #/ [Site Update] Merge it to www.rancher.jp
 #////////////////////////////////////////////////
 
-if [ `git log -n 1 --oneline --pretty=format:"%s"` =~ \["Site Update"\] ]; then
+
+commitMassage=`git log -n 1 --oneline --pretty=format:"%s"`
+
+if [[ "$commitMassage" = \["Site Update"\] ]]; then
 
         echo "[Site Update] Merge it to www.rancher.jp is start..."
         sed -i -e 's@http://www.rancher.jp/site/@http://www.rancher.jp/@g' config.toml
