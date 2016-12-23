@@ -4,7 +4,7 @@ title: "[翻訳]見逃されているかもしれないコンテナのレジス�
 slug: "container-registries-might-missed-ja" 
 author: ""
 description: "様々なコンテナレジストリについて概要の翻訳"
-draft: true
+draft: false
 tags:
   - "blog"
 categories:
@@ -14,7 +14,7 @@ archives:
   - 2016/12
 ---
 以下は、
-Rancher Labs | Container registries you may have missed | Rancher Labs
+Rancher Labs | Container registries you may have missed | Rancher Labs  
 http://rancher.com/container-registries-might-missed/
 からの翻訳です。
 
