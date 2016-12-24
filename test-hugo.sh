@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 #////////////////////////////////////////////////
 #/               CircleCI automatic page build
 #/ [Site Update] Merge it to www.rancher.jp
@@ -7,7 +7,7 @@
 
 commitMassage=`git log -n 1 --oneline --pretty=format:"%s"`
 
-if [[ "$commitMassage" = \["Site Update"\] ]]; then
+if [[ "$commitMassage" =~ \["Site Update"\] ]]; then
 
         echo "[Site Update] Merge it to www.rancher.jp is start..."
         sed -i -e 's@http://www.rancher.jp/site/@http://www.rancher.jp/@g' config.toml
