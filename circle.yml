@@ -3,7 +3,8 @@ machine:
 
 dependencies:
   pre:
-    - go get -u -v github.com/spf13/hugo
+    - wget https://github.com/spf13/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}-64bit.deb
+    - sudo dpkg -i hugo_${HUGO_VERSION}-64bit.deb
     - git config --global user.name ${GITHUB_USERNAME}
     - git config --global user.email ${GITHUB_EMAIL_ADDRESS}
     - rm -rf ./docs
@@ -16,10 +17,4 @@ deployment:
   production:
     branch: master
     commands: 
-      - hugo -d docs
-      - test-hugo.sh
-#      - pwd
-#      - ls -l
-#      - git add ./docs/ -A
-#      - git commit -m "[ci skip] CircleCI automatic page build Time:[`date`]" || true
-#      - git push origin ${GITHUB_BRANCH}
+      - ./test-hugo.sh

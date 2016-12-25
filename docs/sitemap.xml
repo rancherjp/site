@@ -2,192 +2,192 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://rancherjp.github.io/site/blog/2016/12/22/container-registries-might-missed-ja/</loc>
+    <loc>http://www.rancher.jp/site/blog/2016/12/22/container-registries-might-missed-ja/</loc>
     <lastmod>2016-12-22T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://rancherjp.github.io/site/releasenote/v.1.2.1/</loc>
+    <loc>http://www.rancher.jp/site/releasenote/v.1.2.1/</loc>
     <lastmod>2016-12-17T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://rancherjp.github.io/site/qa/</loc>
+    <loc>http://www.rancher.jp/site/qa/</loc>
     <lastmod>2016-12-15T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://rancherjp.github.io/site/releasenote/v.1.2.0/</loc>
+    <loc>http://www.rancher.jp/site/releasenote/v.1.2.0/</loc>
     <lastmod>2016-12-04T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://rancherjp.github.io/site/docs/qsg/</loc>
+    <loc>http://www.rancher.jp/site/docs/qsg/</loc>
     <lastmod>2016-11-30T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://rancherjp.github.io/site/blog/2016/10/27/01/</loc>
+    <loc>http://www.rancher.jp/site/blog/2016/10/27/01/</loc>
     <lastmod>2016-10-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://rancherjp.github.io/site/content/2016/10/27/rancher-workshop-01/</loc>
+    <loc>http://www.rancher.jp/site/content/2016/10/27/rancher-workshop-01/</loc>
     <lastmod>2016-10-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://rancherjp.github.io/site/content/2016/10/07/rancher-meetup-01/</loc>
+    <loc>http://www.rancher.jp/site/content/2016/10/07/rancher-meetup-01/</loc>
     <lastmod>2016-10-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://rancherjp.github.io/site/archives/2016/</loc>
+    <loc>http://www.rancher.jp/site/archives/2016/</loc>
     <lastmod>2016-12-22T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://rancherjp.github.io/site/archives/2016/10/</loc>
+    <loc>http://www.rancher.jp/site/archives/2016/10/</loc>
     <lastmod>2016-10-27T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://rancherjp.github.io/site/archives/2016/11/</loc>
+    <loc>http://www.rancher.jp/site/archives/2016/11/</loc>
     <lastmod>2016-11-30T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://rancherjp.github.io/site/archives/2016/12/</loc>
+    <loc>http://www.rancher.jp/site/archives/2016/12/</loc>
     <lastmod>2016-12-22T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://rancherjp.github.io/site/about/</loc>
+    <loc>http://www.rancher.jp/site/about/</loc>
   </url>
   
   <url>
-    <loc>https://rancherjp.github.io/site/archives/</loc>
+    <loc>http://www.rancher.jp/site/archives/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://rancherjp.github.io/site/tags/blog/</loc>
+    <loc>http://www.rancher.jp/site/tags/blog/</loc>
     <lastmod>2016-12-22T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://rancherjp.github.io/site/categories/blog/</loc>
+    <loc>http://www.rancher.jp/site/categories/blog/</loc>
     <lastmod>2016-12-22T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://rancherjp.github.io/site/blog/</loc>
+    <loc>http://www.rancher.jp/site/blog/</loc>
     <lastmod>2016-12-22T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://rancherjp.github.io/site/categories/</loc>
+    <loc>http://www.rancher.jp/site/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://rancherjp.github.io/site/tags/docs/</loc>
+    <loc>http://www.rancher.jp/site/tags/docs/</loc>
     <lastmod>2016-11-30T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://rancherjp.github.io/site/categories/docs/</loc>
+    <loc>http://www.rancher.jp/site/categories/docs/</loc>
     <lastmod>2016-11-30T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://rancherjp.github.io/site/docs/</loc>
+    <loc>http://www.rancher.jp/site/docs/</loc>
     <lastmod>2016-11-30T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://rancherjp.github.io/site/tags/meetup/</loc>
-    <lastmod>2016-10-07T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://rancherjp.github.io/site/categories/meetup/</loc>
+    <loc>http://www.rancher.jp/site/tags/meetup/</loc>
     <lastmod>2016-10-07T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://rancherjp.github.io/site/page/</loc>
+    <loc>http://www.rancher.jp/site/categories/meetup/</loc>
+    <lastmod>2016-10-07T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.rancher.jp/site/page/</loc>
     <lastmod>2016-12-15T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://rancherjp.github.io/site/post/</loc>
+    <loc>http://www.rancher.jp/site/post/</loc>
     <lastmod>2016-10-27T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://rancherjp.github.io/site/tags/qa/</loc>
+    <loc>http://www.rancher.jp/site/tags/qa/</loc>
     <lastmod>2016-12-15T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://rancherjp.github.io/site/categories/qa/</loc>
+    <loc>http://www.rancher.jp/site/categories/qa/</loc>
     <lastmod>2016-12-15T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://rancherjp.github.io/site/</loc>
+    <loc>http://www.rancher.jp/site/</loc>
     <lastmod>2016-12-22T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://rancherjp.github.io/site/tags/releasenote/</loc>
+    <loc>http://www.rancher.jp/site/tags/releasenote/</loc>
     <lastmod>2016-12-17T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://rancherjp.github.io/site/categories/releasenote/</loc>
+    <loc>http://www.rancher.jp/site/categories/releasenote/</loc>
     <lastmod>2016-12-17T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://rancherjp.github.io/site/releasenote/</loc>
+    <loc>http://www.rancher.jp/site/releasenote/</loc>
     <lastmod>2016-12-17T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://rancherjp.github.io/site/tags/</loc>
+    <loc>http://www.rancher.jp/site/tags/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://rancherjp.github.io/site/tags/workshop/</loc>
+    <loc>http://www.rancher.jp/site/tags/workshop/</loc>
     <lastmod>2016-10-27T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://rancherjp.github.io/site/categories/workshop/</loc>
+    <loc>http://www.rancher.jp/site/categories/workshop/</loc>
     <lastmod>2016-10-27T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>

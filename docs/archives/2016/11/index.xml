@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>2016/11 on Rancher JP</title>
-    <link>https://rancherjp.github.io/site/archives/2016/11/index.xml</link>
+    <link>http://www.rancher.jp/site/archives/2016/11/index.xml</link>
     <description>Recent content in 2016/11 on Rancher JP</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
     <copyright>© 2016 Rancher JP</copyright>
-    <atom:link href="https://rancherjp.github.io/site/archives/2016/11/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://www.rancher.jp/site/archives/2016/11/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>クイックスタートガイド</title>
-      <link>https://rancherjp.github.io/site/docs/qsg/</link>
+      <link>http://www.rancher.jp/site/docs/qsg/</link>
       <pubDate>Wed, 30 Nov 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://rancherjp.github.io/site/docs/qsg/</guid>
+      <guid>http://www.rancher.jp/site/docs/qsg/</guid>
       <description>
 
 &lt;h2 id=&#34;クイック-スタート-ガイド&#34;&gt;クイック スタート ガイド&lt;/h2&gt;
