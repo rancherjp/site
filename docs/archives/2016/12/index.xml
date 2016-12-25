@@ -53,7 +53,7 @@
 
 &lt;ul&gt;
 &lt;li&gt;Dockerコンテナを削除しようとしたときに不正な状態になるという問題を修正しました。 [&lt;a href=&#34;https://github.com/rancher/rancher/issues/7013&#34;&gt;#7013&lt;/a&gt;、&lt;a href=&#34;https://github.com/rancher/rancher/issues/7016&#34;&gt;#70161&lt;/a&gt;、&lt;a href=&#34;https://github.com/rancher/rancher/issues/7152&#34;&gt;#7152&lt;/a&gt;]&lt;/li&gt;
-&lt;li&gt;v1.2.1 でホスト削除時に&lt;code&gt;削除中&lt;/code&gt;のままになってしまうのを修正 [&lt;a href=&#34;https://github.com/rancher/rancher/issues/7122&#34;&gt;#7122&lt;/a&gt;]&lt;/li&gt;
+&lt;li&gt;v1.2.1 でホスト削除時に&lt;code&gt;removing&lt;/code&gt;のままになってしまうのを修正 [&lt;a href=&#34;https://github.com/rancher/rancher/issues/7122&#34;&gt;#7122&lt;/a&gt;]&lt;/li&gt;
 &lt;li&gt;コンテナ内から外部公開用ポートに対してpingが反応しないのを修正 [&lt;a href=&#34;https://github.com/rancher/rancher/issues/7128&#34;&gt;#7128&lt;/a&gt;]&lt;/li&gt;
 &lt;li&gt;k8s でポットがフラッピング中にRancherのイベントが溢れるのを修正 [&lt;a href=&#34;https://github.com/rancher/rancher/issues/7149&#34;&gt;#7149&lt;/a&gt;]&lt;/li&gt;
 &lt;li&gt;k8s サービスがスピニング中にプロセスが&lt;code&gt;create stack on label provider&lt;/code&gt; で溢れるのを修正 [&lt;a href=&#34;https://github.com/rancher/rancher/issues/7158&#34;&gt;#7158&lt;/a&gt;]&lt;/li&gt;
