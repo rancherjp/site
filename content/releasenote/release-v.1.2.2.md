@@ -36,7 +36,7 @@ archives:
 
 ## v1.2.1からの主なバグ修正
 * Dockerコンテナを削除しようとしたときに不正な状態になるという問題を修正しました。 [[#7013](https://github.com/rancher/rancher/issues/7013)、[#70161](https://github.com/rancher/rancher/issues/7016)、[#7152](https://github.com/rancher/rancher/issues/7152)]
-* v1.2.1 でホスト削除時に`削除中`のままになってしまうのを修正 [[#7122](https://github.com/rancher/rancher/issues/7122)]
+* v1.2.1 でホスト削除時に`removing`のままになってしまうのを修正 [[#7122](https://github.com/rancher/rancher/issues/7122)]
 * コンテナ内から外部公開用ポートに対してpingが反応しないのを修正 [[#7128](https://github.com/rancher/rancher/issues/7128)]
 * k8s でポットがフラッピング中にRancherのイベントが溢れるのを修正 [[#7149](https://github.com/rancher/rancher/issues/7149)]
 * k8s サービスがスピニング中にプロセスが`create stack on label provider` で溢れるのを修正 [[#7158](https://github.com/rancher/rancher/issues/7158)]
