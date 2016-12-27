@@ -10,6 +10,48 @@
     <atom:link href="http://www.rancher.jp/site/archives/2016/10/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>&#39;HUGO&#39;のサイトビルドをCircleCIで自動化する</title>
+      <link>http://www.rancher.jp/site/blog/2016/12/17/hugo-circleci-automation/</link>
+      <pubDate>Sat, 17 Dec 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.rancher.jp/site/blog/2016/12/17/hugo-circleci-automation/</guid>
+      <description>
+
+&lt;h2 id=&#34;前書き&#34;&gt;前書き&lt;/h2&gt;
+
+&lt;p&gt;こんにちは、@FoxBoxsnet です。&lt;br /&gt;
+この &lt;code&gt;rancherjp&lt;/code&gt; サイトのデザインなどをさせてもらっています。&lt;br /&gt;
+前回の、&lt;a href=&#34;https://connpass.com/event/44092/&#34; title=&#34;Rancher Meetup Tokyo #2 - connpass&#34;&gt;Rancher Meetup Tokyo #2&lt;/a&gt; でLTをさせてもらったようにサイトのレビューを自動化したいと思います。&lt;/p&gt;
+
+&lt;h2 id=&#34;circleci-とは&#34;&gt;CircleCI とは&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://circleci.com/&#34;&gt;https://circleci.com/&lt;/a&gt;&lt;br /&gt;
+知らない方は下記が参考になりそうです&lt;br /&gt;
+&lt;a href=&#34;http://www.slideshare.net/mogproject/circleci-51253223&#34;&gt;http://www.slideshare.net/mogproject/circleci-51253223&lt;/a&gt;&lt;/p&gt;
+
+&lt;iframe src=&#34;//www.slideshare.net/slideshow/embed_code/key/EzoHfmhyHBiTug&#34;
+    width=&#34;766&#34; height=&#34;485&#34; frameborder=&#34;0&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34;
+    style=&#34;border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;&#34; allowfullscreen&gt;
+&lt;/iframe&gt;
+&lt;div style=&#34;margin-bottom:5px&#34;&gt;
+    &lt;strong&gt;
+        &lt;a href=&#34;//www.slideshare.net/ssuser7faad1/hugo-70078484&#34;
+            title=&#34;“hugo” 使ってコミュニティサイトを構築してみた&#34;
+            target=&#34;_blank&#34;&gt;“hugo” 使ってコミュニティサイトを構築してみた
+        &lt;/a&gt;
+    &lt;/strong&gt; from 
+    &lt;strong&gt;
+        &lt;a target=&#34;_blank&#34; href=&#34;//www.slideshare.net/ssuser7faad1/hugo-70078484&#34;&gt;Naoki Aoyama&lt;/a&gt;
+    &lt;/strong&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&#34;参考&#34;&gt;参考&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://qiita.com/hatappi/items/e81acf14deca34fd1cbe&#34; title=&#34;GitHubで記事管理、レビューしてCircleCI使ってはてなブログへ自動投稿する - Qiita&#34;&gt;GitHubで記事管理、レビューしてCircleCI使ってはてなブログへ自動投稿する - Qiita&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Rancher Blog</title>
       <link>http://www.rancher.jp/site/blog/2016/10/27/01/</link>
       <pubDate>Thu, 27 Oct 2016 00:00:00 +0000</pubDate>

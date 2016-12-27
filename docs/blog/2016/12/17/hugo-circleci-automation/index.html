@@ -7,14 +7,14 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="Hugo 0.19-DEV" />
-    <title>Q And A</title>
+    <title>&#39;HUGO&#39;のサイトビルドをCircleCIで自動化する</title>
     
     
     
-    <meta name="description" content="Question and Answer" />
-    <meta name="keywords" content='qa' />
+    <meta name="description" content="&#39;HUGO&#39;のサイトビルドをCircleCIで自動化する" />
+    <meta name="keywords" content='blog' />
     
-        <meta name="author" content="Rancher JP" />
+        <meta name="author" content="FoxBoxsnet" />
     
     <link rel="icon" type="image/png" href="http://www.rancher.jp/site/favicon.ico" sizes="196x196" />
     <link href="" rel="alternate" type="application/rss+xml" title="Rancher JP" />
@@ -94,28 +94,60 @@
                 <div class="col-md-8">
                     <div class="row">
     <div class="col-md-12 content-card">
-        <h1>Q And A</h1>
+        <h1>&#39;HUGO&#39;のサイトビルドをCircleCIで自動化する</h1>
             
             <ul class="list-inline meta">
-                <li><i class="fa fa-calendar"></i>December 15, 2016</li>
-                <li><i class="fa fa-user"></i>Rancher JP</li>
+                <li><i class="fa fa-calendar"></i>December 17, 2016</li>
+                <li><i class="fa fa-user"></i>FoxBoxsnet</li>
                 
                     
                     <li>
                         <i class="fa fa-folder"></i>
                         
-                            <a href="http://www.rancher.jp/categories/qa">qa</a>
+                            <a href="http://www.rancher.jp/categories/blog">blog</a>
                             
                         
                     </li>
                 
             </ul>
             <ul class="list-inline share" style="margin-top: 15px; margin-left: 0px">
-        <li class="facebook-share"><a target="_blank" href="http://www.facebook.com/sharer.php?u=http%3a%2f%2fwww.rancher.jp%2fsite%2fqa%2f"><i class="fa fa-facebook fa-lg"></i>Facebook</a></li>
-        <li class="googleplus-share"><a target="_blank" href="https://plus.google.com/share?url=http%3a%2f%2fwww.rancher.jp%2fsite%2fqa%2f"><i class="fa fa-google-plus fa-lg"></i>Google+</a></li>
-        <li class="twitter-share"><a target="_blank" href="https://twitter.com/share?url=http%3a%2f%2fwww.rancher.jp%2fsite%2fqa%2f&amp;text=Q%20And%20A"><i class="fa fa-twitter fa-lg"></i>Twitter</a></li>
+        <li class="facebook-share"><a target="_blank" href="http://www.facebook.com/sharer.php?u=http%3a%2f%2fwww.rancher.jp%2fsite%2fblog%2f2016%2f12%2f17%2fhugo-circleci-automation%2f"><i class="fa fa-facebook fa-lg"></i>Facebook</a></li>
+        <li class="googleplus-share"><a target="_blank" href="https://plus.google.com/share?url=http%3a%2f%2fwww.rancher.jp%2fsite%2fblog%2f2016%2f12%2f17%2fhugo-circleci-automation%2f"><i class="fa fa-google-plus fa-lg"></i>Google+</a></li>
+        <li class="twitter-share"><a target="_blank" href="https://twitter.com/share?url=http%3a%2f%2fwww.rancher.jp%2fsite%2fblog%2f2016%2f12%2f17%2fhugo-circleci-automation%2f&amp;text=%27HUGO%27%e3%81%ae%e3%82%b5%e3%82%a4%e3%83%88%e3%83%93%e3%83%ab%e3%83%89%e3%82%92CircleCI%e3%81%a7%e8%87%aa%e5%8b%95%e5%8c%96%e3%81%99%e3%82%8b"><i class="fa fa-twitter fa-lg"></i>Twitter</a></li>
     </ul>
-        <p>・準備中</p>
+        
+
+<h2 id="前書き">前書き</h2>
+
+<p>こんにちは、@FoxBoxsnet です。<br />
+この <code>rancherjp</code> サイトのデザインなどをさせてもらっています。<br />
+前回の、<a href="https://connpass.com/event/44092/" title="Rancher Meetup Tokyo #2 - connpass">Rancher Meetup Tokyo #2</a> でLTをさせてもらったようにサイトのレビューを自動化したいと思います。</p>
+
+<h2 id="circleci-とは">CircleCI とは</h2>
+
+<p><a href="https://circleci.com/">https://circleci.com/</a><br />
+知らない方は下記が参考になりそうです<br />
+<a href="http://www.slideshare.net/mogproject/circleci-51253223">http://www.slideshare.net/mogproject/circleci-51253223</a></p>
+
+<iframe src="//www.slideshare.net/slideshow/embed_code/key/EzoHfmhyHBiTug"
+    width="766" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"
+    style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen>
+</iframe>
+<div style="margin-bottom:5px">
+    <strong>
+        <a href="//www.slideshare.net/ssuser7faad1/hugo-70078484"
+            title="“hugo” 使ってコミュニティサイトを構築してみた"
+            target="_blank">“hugo” 使ってコミュニティサイトを構築してみた
+        </a>
+    </strong> from 
+    <strong>
+        <a target="_blank" href="//www.slideshare.net/ssuser7faad1/hugo-70078484">Naoki Aoyama</a>
+    </strong>
+</div>
+
+<h2 id="参考">参考</h2>
+
+<p><a href="http://qiita.com/hatappi/items/e81acf14deca34fd1cbe" title="GitHubで記事管理、レビューしてCircleCI使ってはてなブログへ自動投稿する - Qiita">GitHubで記事管理、レビューしてCircleCI使ってはてなブログへ自動投稿する - Qiita</a></p>
 
         
 
