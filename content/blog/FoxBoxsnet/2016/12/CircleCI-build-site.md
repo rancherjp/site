@@ -4,7 +4,7 @@ title: "'HUGO'のサイトビルドをCircleCIで自動化する"
 slug: "hugo-circleci-automation" 
 author: "FoxBoxsnet"
 description: "'HUGO'のサイトビルドをCircleCIで自動化する"
-draft: true
+draft: false
 tags:
   - "blog"
 categories:
@@ -19,7 +19,6 @@ archives:
 こんにちは、@FoxBoxsnet です。  
 この `rancherjp` サイトのデザインなどをさせてもらっています。  
 前回の、[Rancher Meetup Tokyo #2](https://connpass.com/event/44092/ "Rancher Meetup Tokyo #2 - connpass") でLTをさせてもらったようにサイトのレビューを自動化したいと思います。  
-参考: [“hugo” 使ってコミュニティサイトを構築してみた](http://www.slideshare.net/ssuser7faad1/hugo-70078484 "“hugo” 使ってコミュニティサイトを構築してみた")
 
 
 ## CircleCI とは
@@ -28,9 +27,7 @@ https://circleci.com/
 http://www.slideshare.net/mogproject/circleci-51253223  
 
 
-
-
-
+{{<slideshare "EzoHfmhyHBiTug" "ssuser7faad1/hugo-70078484" "“hugo” 使ってコミュニティサイトを構築してみた" "Naoki Aoyama">}}
 
 
 ## 参考
