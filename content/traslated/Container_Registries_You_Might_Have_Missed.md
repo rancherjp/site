@@ -6,9 +6,9 @@ author: ""
 description: "様々なコンテナレジストリについて概要の翻訳"
 draft: false
 tags:
-  - "blog"
+  - "traslated"
 categories:
-  - "blog"
+  - "traslated"
 archives:
   - 2016
   - 2016/12
