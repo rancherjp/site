@@ -10,8 +10,8 @@ tags:
 categories:
   - "traslated"
 archives:
-  - 2016
-  - 2016/12
+  - "2016"
+  - "2016/12"
 ---
 以下は、
 Rancher Labs | Container registries you may have missed | Rancher Labs  

@@ -10,8 +10,8 @@ tags:
 categories:
   - "Meetup"
 archives:
-  - 2016
-  - 2016/10
+  - "2016"
+  - "2016/10"
 ---
 
 ## 今熱い盛り上がりを見せているRANCHERの勉強会「Rancher Meetup Tokyo #1」参加レポート！  

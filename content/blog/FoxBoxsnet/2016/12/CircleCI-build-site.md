@@ -10,8 +10,8 @@ tags:
 categories:
   - "blog"
 archives:
-  - 2016
-  - 2016/10
+  - "2016"
+  - "2016/10"
 ---
 
 

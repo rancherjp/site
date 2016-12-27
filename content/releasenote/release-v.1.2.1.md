@@ -10,8 +10,8 @@ tags:
 categories:
   - "releasenote"
 archives:
-  - 2016
-  - 2016/12
+  - "2016"
+  - "2016/12"
 ---
 
 ## バージョン
