@@ -8,6 +8,7 @@ pygmentsstyle           = "borland"
 
 [permalinks]
     blog                = "/blog/:year/:month/:day/:slug/"
+    study               = "/study/:slug/"
     docs                = "/docs/:slug/"
     post                = "/content/:year/:month/:day/:slug/"
     releasenote         = "/releasenote/:slug/"
@@ -29,24 +30,28 @@ pygmentsstyle           = "borland"
     weight              = 2
     url                 = "/docs"
 [[menu.header]]
-    name                = "Blog"
+    name                = "Study"
     weight              = 3
+    url                 = "/study"
+[[menu.header]]
+    name                = "Blog"
+    weight              = 4
     url                 = "/blog"
 [[menu.header]]
     name                = "Q&A"
-    weight              = 4
+    weight              = 5
     url                 = "/qa"
 [[menu.header]]
     name                = "Release Note"
-    weight              = 5
+    weight              = 6
     url                 = "/releasenote"
 [[menu.header]]
     name                = "Archives"
-    weight              = 6
+    weight              = 9
     url                 = "/archives"
 [[menu.header]]
     name                = "About"
-    weight              = 8
+    weight              = 10
     url                 = "/about"
 
 [params]
