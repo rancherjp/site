@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.rancher.jp/site/releasenote/v.1.2.2/</loc>
+    <lastmod>2016-12-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://www.rancher.jp/site/blog/2016/12/22/container-registries-might-missed-ja/</loc>
     <lastmod>2016-12-22T00:00:00+00:00</lastmod>
   </url>
@@ -43,7 +48,7 @@
   
   <url>
     <loc>http://www.rancher.jp/site/archives/2016/</loc>
-    <lastmod>2016-12-22T00:00:00+00:00</lastmod>
+    <lastmod>2016-12-23T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -61,7 +66,7 @@
   
   <url>
     <loc>http://www.rancher.jp/site/archives/2016/12/</loc>
-    <lastmod>2016-12-22T00:00:00+00:00</lastmod>
+    <lastmod>2016-12-23T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -75,13 +80,13 @@
   </url>
   
   <url>
-    <loc>http://www.rancher.jp/site/tags/blog/</loc>
+    <loc>http://www.rancher.jp/site/categories/blog/</loc>
     <lastmod>2016-12-22T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://www.rancher.jp/site/categories/blog/</loc>
+    <loc>http://www.rancher.jp/site/tags/blog/</loc>
     <lastmod>2016-12-22T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -98,13 +103,13 @@
   </url>
   
   <url>
-    <loc>http://www.rancher.jp/site/tags/docs/</loc>
+    <loc>http://www.rancher.jp/site/categories/docs/</loc>
     <lastmod>2016-11-30T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://www.rancher.jp/site/categories/docs/</loc>
+    <loc>http://www.rancher.jp/site/tags/docs/</loc>
     <lastmod>2016-11-30T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -116,13 +121,13 @@
   </url>
   
   <url>
-    <loc>http://www.rancher.jp/site/tags/meetup/</loc>
+    <loc>http://www.rancher.jp/site/categories/meetup/</loc>
     <lastmod>2016-10-07T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://www.rancher.jp/site/categories/meetup/</loc>
+    <loc>http://www.rancher.jp/site/tags/meetup/</loc>
     <lastmod>2016-10-07T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -140,38 +145,38 @@
   </url>
   
   <url>
-    <loc>http://www.rancher.jp/site/tags/qa/</loc>
-    <lastmod>2016-12-15T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>http://www.rancher.jp/site/categories/qa/</loc>
     <lastmod>2016-12-15T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://www.rancher.jp/site/</loc>
-    <lastmod>2016-12-22T00:00:00+00:00</lastmod>
+    <loc>http://www.rancher.jp/site/tags/qa/</loc>
+    <lastmod>2016-12-15T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://www.rancher.jp/site/tags/releasenote/</loc>
-    <lastmod>2016-12-17T00:00:00+00:00</lastmod>
+    <loc>http://www.rancher.jp/site/</loc>
+    <lastmod>2016-12-23T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://www.rancher.jp/site/categories/releasenote/</loc>
-    <lastmod>2016-12-17T00:00:00+00:00</lastmod>
+    <lastmod>2016-12-23T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.rancher.jp/site/tags/releasenote/</loc>
+    <lastmod>2016-12-23T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://www.rancher.jp/site/releasenote/</loc>
-    <lastmod>2016-12-17T00:00:00+00:00</lastmod>
+    <lastmod>2016-12-23T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -181,13 +186,13 @@
   </url>
   
   <url>
-    <loc>http://www.rancher.jp/site/tags/workshop/</loc>
+    <loc>http://www.rancher.jp/site/categories/workshop/</loc>
     <lastmod>2016-10-27T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://www.rancher.jp/site/categories/workshop/</loc>
+    <loc>http://www.rancher.jp/site/tags/workshop/</loc>
     <lastmod>2016-10-27T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
