@@ -1,14 +1,14 @@
 ---
 date: "2016-10-27"
-title: "Rancher Blog"
+title: "Rancher Event"
 slug: "01" 
-author: "Foxboxsnet"
+author: "Rancher JP"
 description: ""
 draft: false
 tags:
-  - "blog"
+  - "event"
 categories:
-  - "blog"
+  - "event"
 archives:
   - "2016"
   - "2016/10"

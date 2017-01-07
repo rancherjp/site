@@ -39,9 +39,9 @@ pygmentsstyle           = "borland"
     weight              = 4
     url                 = "/traslated"
 [[menu.header]]
-    name                = "Blog"
+    name                = "Event"
     weight              = 5
-    url                 = "/blog"
+    url                 = "/event"
 [[menu.header]]
     name                = "Q&A"
     weight              = 6
