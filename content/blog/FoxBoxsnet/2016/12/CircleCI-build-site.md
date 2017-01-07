@@ -4,7 +4,7 @@ title: "'HUGO'のサイトビルドをCircleCIで自動化する"
 slug: "hugo-circleci-automation" 
 author: "FoxBoxsnet"
 description: "'HUGO'のサイトビルドをCircleCIで自動化する"
-draft: false
+draft: true
 tags:
   - "blog"
 categories:
