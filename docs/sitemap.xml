@@ -17,11 +17,6 @@
   </url>
   
   <url>
-    <loc>http://www.rancher.jp/site/blog/2016/12/17/hugo-circleci-automation/</loc>
-    <lastmod>2016-12-17T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://www.rancher.jp/site/releasenote/v.1.2.1/</loc>
     <lastmod>2016-12-17T00:00:00+00:00</lastmod>
   </url>
@@ -42,7 +37,7 @@
   </url>
   
   <url>
-    <loc>http://www.rancher.jp/site/blog/2016/10/27/01/</loc>
+    <loc>http://www.rancher.jp/site/event/01/</loc>
     <lastmod>2016-10-27T00:00:00+00:00</lastmod>
   </url>
   
@@ -64,7 +59,7 @@
   
   <url>
     <loc>http://www.rancher.jp/site/archives/2016/10/</loc>
-    <lastmod>2016-12-17T00:00:00+00:00</lastmod>
+    <lastmod>2016-10-27T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -90,24 +85,6 @@
   </url>
   
   <url>
-    <loc>http://www.rancher.jp/site/categories/blog/</loc>
-    <lastmod>2016-12-17T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.rancher.jp/site/tags/blog/</loc>
-    <lastmod>2016-12-17T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.rancher.jp/site/blog/</loc>
-    <lastmod>2016-12-17T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>http://www.rancher.jp/site/categories/</loc>
     <priority>0</priority>
   </url>
@@ -127,6 +104,24 @@
   <url>
     <loc>http://www.rancher.jp/site/docs/</loc>
     <lastmod>2016-11-30T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.rancher.jp/site/categories/event/</loc>
+    <lastmod>2016-10-27T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.rancher.jp/site/tags/event/</loc>
+    <lastmod>2016-10-27T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.rancher.jp/site/event/</loc>
+    <lastmod>2016-10-27T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
