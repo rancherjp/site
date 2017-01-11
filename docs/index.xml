@@ -7,8 +7,100 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
     <copyright>© 2016 Rancher JP</copyright>
-    <lastBuildDate>Tue, 27 Dec 2016 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 11 Jan 2017 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://www.rancher.jp/site/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Rancher Meetup Tokyo #3</title>
+      <link>http://www.rancher.jp/site/content/2017/01/11/rancher-meetup-03/</link>
+      <pubDate>Wed, 11 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.rancher.jp/site/content/2017/01/11/rancher-meetup-03/</guid>
+      <description>
+
+&lt;h1 id=&#34;第3回-コンテナ管理ツール-rancher勉強会&#34;&gt;【第3回】コンテナ管理ツール Rancher勉強会&lt;/h1&gt;
+
+&lt;h2 id=&#34;rancherとは&#34;&gt;Rancherとは？&lt;/h2&gt;
+
+&lt;p&gt;RancherはOSSと商用版で提供されるコンテナ環境構築・運用プラットフォームです。 Rancherの特徴は、Kubernetes, Mesos, Swarmなどのコンテナオーケストレータ自体もデプロイし、その機能を利用した効率的なコンテナインフラの構築・管理運用が可能なことです。 また、Active Directory連携や監査ログな機能などにより本格的なエンタープライズ向けプラットフォームとして世界で導入実績を重ねています。&lt;/p&gt;
+
+&lt;p&gt;是非この機会にRancherについて学んで頂ければ幸いです。 皆様のご参加お待ちしております！&lt;/p&gt;
+
+&lt;p&gt;OSS版：
+&lt;a href=&#34;https://github.com/rancherlabs/&#34;&gt;https://github.com/rancherlabs/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;商用版：
+&lt;a href=&#34;http://rancher.com/&#34;&gt;http://rancher.com/&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;イベント開催概要&#34;&gt;イベント開催概要&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;日時      1月11日(水) 19:00-21:00 (開場:18:30)&lt;/li&gt;
+&lt;li&gt;会場      TKPガーデンシティ渋谷 ホール「B」&lt;br /&gt;
+        東京都渋谷区渋谷2-22-3 渋谷東口ビル1F&lt;br /&gt;
+&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;渋谷駅 東口 徒歩3分&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;※ご注意※&lt;/em&gt;
+&lt;em&gt;【会場変更】当初、TIS様「西新宿三井ビルディング23階」での開催を予定しておりましたが、会場拡大のため渋谷TKPホールに変更になりました。&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;地図：
+&lt;a href=&#34;http://www.kashikaigishitsu.net/facilitys/gc-shibuya/access/&#34;&gt;http://www.kashikaigishitsu.net/facilitys/gc-shibuya/access/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;■ 主催&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://rancherjp.connpass.com/&#34;&gt;Rancher JP&lt;/a&gt;
+Compassページ: &lt;a href=&#34;https://rancherjp.connpass.com/event/45768/&#34;&gt;【会場変更 →渋谷】Rancher Meetup Tokyo #3 - connpass&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;プログラム&#34;&gt;プログラム&lt;/h2&gt;
+
+&lt;h3 id=&#34;19-00-19-20-rancher-海外最新事例紹介&#34;&gt;19:00-19:20 「Rancher 海外最新事例紹介」&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;発表：Shannon Williams (VP of Sales, Rancher Labs)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;19-20-19-40-rancher-のストレージ&#34;&gt;19:20-19:40 「Rancher のストレージ」&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;発表: 矢野 哲朗 (スタイルズ)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;19-40-20-00-rancherを用いた-docker-private-cloud&#34;&gt;19:40-20:00 「Rancherを用いた Docker Private Cloud」&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;発表: 野原 峰彦 (マクニカネットワークス)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;20-00-20-20-休憩&#34;&gt;20:00-20:20 「休憩」&lt;/h3&gt;
+
+&lt;h3 id=&#34;20-20-20-30-rancherでサービスの開発と運用&#34;&gt;20:20-20:30 「Rancherでサービスの開発と運用」&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;発表: @okamu (カヤック)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;20-30-20-40-コンテナ管理ツール比較&#34;&gt;20:30-20:40 「コンテナ管理ツール比較」&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;発表：@cyberblack28&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;20-40-20-50-rancher-on-azure-はじめの一歩&#34;&gt;20:40-20:50 「Rancher on Azure ～ はじめの一歩」&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;発表：@dz_&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;20-50-21-00-rancher-jp-活動紹介-クロージング&#34;&gt;20:50-21:00 「Rancher JP 活動紹介 &amp;amp; クロージング」&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;発表：@go_chiba&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
     <item>
       <title>Rancher もくもく勉強会 #2 </title>
