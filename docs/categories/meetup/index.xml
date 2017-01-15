@@ -67,11 +67,43 @@ Compassページ: &lt;a href=&#34;https://rancherjp.connpass.com/event/45768/&#3
 &lt;li&gt;発表: 矢野 哲朗 (スタイルズ)&lt;/li&gt;
 &lt;/ul&gt;
 
+&lt;iframe src=&#34;//www.slideshare.net/slideshow/embed_code/key/5qT0HYYuSG7YQl&#34;
+    width=&#34;766&#34; height=&#34;485&#34; frameborder=&#34;0&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34;
+    style=&#34;border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;&#34; allowfullscreen&gt;
+&lt;/iframe&gt;
+&lt;div style=&#34;margin-bottom:5px&#34;&gt;
+    &lt;strong&gt;
+        &lt;a href=&#34;//www.slideshare.net/ttyno/rancher-meetup-tokyo3-storage&#34;
+            title=&#34;Rancher Meetup Tokyo#3 Storageについて&#34;
+            target=&#34;_blank&#34;&gt;Rancher Meetup Tokyo#3 Storageについて
+        &lt;/a&gt;
+    &lt;/strong&gt; from 
+    &lt;strong&gt;
+        &lt;a target=&#34;_blank&#34; href=&#34;//www.slideshare.net/ttyno/rancher-meetup-tokyo3-storage&#34;&gt;Tetsuro YANO&lt;/a&gt;
+    &lt;/strong&gt;
+&lt;/div&gt;
+
 &lt;h3 id=&#34;19-40-20-00-rancherを用いた-docker-private-cloud&#34;&gt;19:40-20:00 「Rancherを用いた Docker Private Cloud」&lt;/h3&gt;
 
 &lt;ul&gt;
 &lt;li&gt;発表: 野原 峰彦 (マクニカネットワークス)&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;iframe src=&#34;//www.slideshare.net/slideshow/embed_code/key/sVOJUVNscOzEIm&#34;
+    width=&#34;766&#34; height=&#34;485&#34; frameborder=&#34;0&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34;
+    style=&#34;border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;&#34; allowfullscreen&gt;
+&lt;/iframe&gt;
+&lt;div style=&#34;margin-bottom:5px&#34;&gt;
+    &lt;strong&gt;
+        &lt;a href=&#34;//www.slideshare.net/minehikonohara/20170111-macnica-networksnohararancherusecase&#34;
+            title=&#34;20170111 macnica networks-nohara_rancher_usecase&#34;
+            target=&#34;_blank&#34;&gt;20170111 macnica networks-nohara_rancher_usecase
+        &lt;/a&gt;
+    &lt;/strong&gt; from 
+    &lt;strong&gt;
+        &lt;a target=&#34;_blank&#34; href=&#34;//www.slideshare.net/minehikonohara/20170111-macnica-networksnohararancherusecase&#34;&gt;Minehiko Nohara&lt;/a&gt;
+    &lt;/strong&gt;
+&lt;/div&gt;
 
 &lt;h3 id=&#34;20-00-20-20-休憩&#34;&gt;20:00-20:20 「休憩」&lt;/h3&gt;
 
@@ -87,11 +119,38 @@ Compassページ: &lt;a href=&#34;https://rancherjp.connpass.com/event/45768/&#3
 &lt;li&gt;発表：@cyberblack28&lt;/li&gt;
 &lt;/ul&gt;
 
+&lt;iframe src=&#34;//www.slideshare.net/slideshow/embed_code/key/mcr8ufPmAzX40q&#34;
+    width=&#34;766&#34; height=&#34;485&#34; frameborder=&#34;0&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34;
+    style=&#34;border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;&#34; allowfullscreen&gt;
+&lt;/iframe&gt;
+&lt;div style=&#34;margin-bottom:5px&#34;&gt;
+    &lt;strong&gt;
+        &lt;a href=&#34;//www.slideshare.net/cyberblackvoom/04-publicr001&#34;
+            title=&#34;04 コンテナ管理ツール比較&#34;
+            target=&#34;_blank&#34;&gt;04 コンテナ管理ツール比較
+        &lt;/a&gt;
+    &lt;/strong&gt; from 
+    &lt;strong&gt;
+        &lt;a target=&#34;_blank&#34; href=&#34;//www.slideshare.net/cyberblackvoom/04-publicr001&#34;&gt;Linux Action&lt;/a&gt;
+    &lt;/strong&gt;
+&lt;/div&gt;
+
 &lt;h3 id=&#34;20-40-20-50-rancher-on-azure-はじめの一歩&#34;&gt;20:40-20:50 「Rancher on Azure ～ はじめの一歩」&lt;/h3&gt;
 
 &lt;ul&gt;
 &lt;li&gt;発表：@dz_&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;div style=&#34;width: 752px; max-width: 100%; margin-bottom:5px;&#34;&gt;
+    &lt;a href=&#34;https://docs.com/https://docs.com/oohira-kadumi/4253/rancher-on-azure&#34; title=&#34;Rancher on Azure ～ はじめの一歩！&#34; target=&#34;_blank&#34;
+       style=&#34;font-family: &#39;Segoe UI&#39;; font-size: 13px; text-decoration: none; margin-left:18px &#34;&gt;Rancher on Azure ～ はじめの一歩！&lt;/a&gt;
+    &lt;span style=&#34;font-family: &#39;Segoe UI&#39;; font-size: 13px &#34;&gt;—&lt;/span&gt;
+    &lt;a href=&#34;https://docs.com/oohira-kadumi&#34; target=&#34;_blank&#34;
+       style=&#34;font-family: &#39;Segoe UI&#39;; font-size: 13px; text-decoration: none &#34;&gt;Oohira Kadumi&lt;/a&gt;
+&lt;/div&gt;
+&lt;iframe src=&#34;https://docs.com/d/embed/D25191819-3403-0323-7700-001637397483%7eM1af8d7a5-b506-361b-290d-65d4bfcf2516&#34; frameborder=&#34;0&#34;
+        scrolling=&#34;no&#34; width=&#34;752px&#34; height=&#34;459px&#34; style=&#34;max-width:100%&#34; allowfullscreen=&#34;True&#34;&gt;
+&lt;/iframe&gt;
 
 &lt;h3 id=&#34;20-50-21-00-rancher-jp-活動紹介-クロージング&#34;&gt;20:50-21:00 「Rancher JP 活動紹介 &amp;amp; クロージング」&lt;/h3&gt;
 
