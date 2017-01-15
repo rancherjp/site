@@ -43,7 +43,7 @@ http://www.kashikaigishitsu.net/facilitys/gc-shibuya/access/
 
 ■ 主催
 
-[Rancher JP](https://rancherjp.connpass.com/)
+[Rancher JP](https://rancherjp.connpass.com/)  
 Compassページ: [【会場変更 →渋谷】Rancher Meetup Tokyo \#3 \- connpass](https://rancherjp.connpass.com/event/45768/)
 
 
@@ -65,6 +65,7 @@ Compassページ: [【会場変更 →渋谷】Rancher Meetup Tokyo \#3 \- connp
 
 ### 20:20-20:30 「Rancherでサービスの開発と運用」
 + 発表: @okamu (カヤック)
+
 
 ### 20:30-20:40 「コンテナ管理ツール比較」
 + 発表：@cyberblack28
