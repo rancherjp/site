@@ -61,6 +61,7 @@ pygmentsstyle           = "borland"
 
 [params]
     author              = "Rancher JP"
+    google_analytics    = "UA-90391346-1"
     keywords            = ["Rancher", "RancherJP"]
     description         = "Rancher Japan Community page"
     noindex             = "noindex"
