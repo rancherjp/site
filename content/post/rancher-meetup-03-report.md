@@ -74,7 +74,7 @@ Compassページ: [【会場変更 →渋谷】Rancher Meetup Tokyo \#3 \- connp
 ### 20:40-20:50 「Rancher on Azure ～ はじめの一歩」
 + 発表：@dz_
 
-[Rancher on Azure ～ はじめの一歩！](https://docs.com/oohira-kadumi/4253/rancher-on-azure)
+{{<docscom "https://docs.com/oohira-kadumi/4253/rancher-on-azure" "Rancher on Azure ～ はじめの一歩！" "oohira-kadumi" "Oohira Kadumi" "D25191819-3403-0323-7700-001637397483%7eM1af8d7a5-b506-361b-290d-65d4bfcf2516" >}}
 
 ### 20:50-21:00 「Rancher JP 活動紹介 & クロージング」
 + 発表：@go_chiba
