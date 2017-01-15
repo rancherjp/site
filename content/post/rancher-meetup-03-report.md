@@ -54,8 +54,12 @@ Compassページ: [【会場変更 →渋谷】Rancher Meetup Tokyo \#3 \- connp
 ### 19:20-19:40 「Rancher のストレージ」
 + 発表: 矢野 哲朗 (スタイルズ)
 
+{{<slideshare "5qT0HYYuSG7YQl" "ttyno/rancher-meetup-tokyo3-storage" "Rancher Meetup Tokyo#3 Storageについて" "Tetsuro YANO">}}
+
 ### 19:40-20:00 「Rancherを用いた Docker Private Cloud」
 + 発表: 野原 峰彦 (マクニカネットワークス)
+
+{{<slideshare "sVOJUVNscOzEIm" "minehikonohara/20170111-macnica-networksnohararancherusecase" "20170111 macnica networks-nohara_rancher_usecase" "Minehiko Nohara">}}
 
 ### 20:00-20:20 「休憩」
 
@@ -65,8 +69,12 @@ Compassページ: [【会場変更 →渋谷】Rancher Meetup Tokyo \#3 \- connp
 ### 20:30-20:40 「コンテナ管理ツール比較」
 + 発表：@cyberblack28
 
+{{<slideshare "mcr8ufPmAzX40q" "cyberblackvoom/04-publicr001" "04 コンテナ管理ツール比較" "Linux Action">}}
+
 ### 20:40-20:50 「Rancher on Azure ～ はじめの一歩」
 + 発表：@dz_
+
+[Rancher on Azure ～ はじめの一歩！](https://docs.com/oohira-kadumi/4253/rancher-on-azure)
 
 ### 20:50-21:00 「Rancher JP 活動紹介 & クロージング」
 + 発表：@go_chiba
