@@ -37,11 +37,6 @@
   </url>
   
   <url>
-    <loc>http://www.rancher.jp/site/qa/</loc>
-    <lastmod>2016-12-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://www.rancher.jp/site/releasenote/v.1.2.0/</loc>
     <lastmod>2016-12-04T00:00:00+00:00</lastmod>
   </url>
@@ -64,6 +59,11 @@
   <url>
     <loc>http://www.rancher.jp/site/content/2016/10/07/rancher-meetup-01/</loc>
     <lastmod>2016-10-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.rancher.jp/site/qa/</loc>
+    <lastmod>2016-01-18T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -166,7 +166,7 @@
   
   <url>
     <loc>http://www.rancher.jp/site/page/</loc>
-    <lastmod>2016-12-15T00:00:00+00:00</lastmod>
+    <lastmod>2016-01-18T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -178,13 +178,13 @@
   
   <url>
     <loc>http://www.rancher.jp/site/tags/qa/</loc>
-    <lastmod>2016-12-15T00:00:00+00:00</lastmod>
+    <lastmod>2016-01-18T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://www.rancher.jp/site/categories/qa/</loc>
-    <lastmod>2016-12-15T00:00:00+00:00</lastmod>
+    <lastmod>2016-01-18T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

@@ -14,7 +14,7 @@
     <meta name="description" content="Question and Answer" />
     <meta name="keywords" content='qa' />
     
-        <meta name="author" content="Rancher JP" />
+        <meta name="author" content="FoxBoxsnet" />
     
     <link rel="icon" type="image/png" href="http://www.rancher.jp/site/favicon.ico" sizes="196x196" />
     <link href="" rel="alternate" type="application/rss+xml" title="Rancher JP" />
@@ -109,8 +109,8 @@
         <h1>Q And A</h1>
             
             <ul class="list-inline meta">
-                <li><i class="fa fa-calendar"></i>December 15, 2016</li>
-                <li><i class="fa fa-user"></i>Rancher JP</li>
+                <li><i class="fa fa-calendar"></i>January 18, 2016</li>
+                <li><i class="fa fa-user"></i>FoxBoxsnet</li>
                 
                     
                     <li>
@@ -127,7 +127,194 @@
         <li class="googleplus-share"><a target="_blank" href="https://plus.google.com/share?url=http%3a%2f%2fwww.rancher.jp%2fsite%2fqa%2f"><i class="fa fa-google-plus fa-lg"></i>Google+</a></li>
         <li class="twitter-share"><a target="_blank" href="https://twitter.com/share?url=http%3a%2f%2fwww.rancher.jp%2fsite%2fqa%2f&amp;text=Q%20And%20A"><i class="fa fa-twitter fa-lg"></i>Twitter</a></li>
     </ul>
-        <p>・準備中</p>
+        
+
+<h1 id="このページについて">このページについて</h1>
+
+<p>Rancher JP では皆様に Rancher, Rancher&gt;OS をご使用していただいて疑問や困った事などを SlackのChannel <code>#qa</code> にて議論・検討をしています。
+その中で、一定の情報になった物を掲載していきます。
+質問・疑問などがある方は  <a href="https://rancherjp.herokuapp.com/">Join rancherjp on Slack!</a> より 参加してみてください。</p>
+
+<h2 id="configuring-コンフィグレーション">Configuring(コンフィグレーション)</h2>
+
+<h3 id="ssh鍵を設定したい">SSH鍵を設定したい</h3>
+
+<ul>
+<li>ナレッジ: FoxBoxsnet(@FoxBoxsnet)</li>
+</ul>
+
+<p>RancherOS では、SSH公開鍵暗号方式でのログインが使用できます。
+<code>cloud-config</code> に記述します。</p>
+#cloud-config
+ssh_authorized_keys:
+  - ssh-rsa AAA...ZZZ example1@rancher
+  - ssh-rsa BBB...ZZZ example2@rancher
+
+<h4 id="参考">参考</h4>
+
+<ul>
+<li><a href="https://docs.rancher.com/os/configuration/ssh-keys/">SSH Keys in RancherOS</a></li>
+</ul>
+
+<h3 id="ネットワーク設定">ネットワーク設定</h3>
+
+<ul>
+<li>ナレッジ: FoxBoxsnet(@FoxBoxsnet)</li>
+</ul>
+
+<p>RancherOS ではデフォルトでDHCPによりIPアドレスを決定しますが、固定したい場合もあるかと思います。
+ここでは下記のように設定してみました。　適宜書き換えてください。</p>
+
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Value</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">interface</td>
+<td align="left">eth0</td>
+</tr>
+
+<tr>
+<td align="left">DNS</td>
+<td align="left">172.18.1.254</td>
+</tr>
+
+<tr>
+<td align="left">IP Address</td>
+<td align="left">172.18.1.<sup>1</sup>&frasl;<sub>24</sub></td>
+</tr>
+
+<tr>
+<td align="left">Gate Way</td>
+<td align="left">172.18.1.254</td>
+</tr>
+</tbody>
+</table>
+#cloud-config
+rancher:
+  network:
+    dns:
+      nameservers:
+      - 172.18.1.254
+    interfaces:
+      eth0:
+        address: 172.18.1.1/24
+        gateway: 172.18.1.254
+
+<h4 id="参考-1">参考</h4>
+
+<ul>
+<li><a href="https://docs.rancher.com/os/networking/interfaces/">Configuring Network Interfaces in RancherOS</a></li>
+<li><a href="https://docs.rancher.com/os/networking/dns/">Configuring DNS in RancherOS</a></li>
+</ul>
+
+<h3 id="rancheros-を-proxy-配下で利用する">RancherOS を Proxy 配下で利用する</h3>
+
+<ul>
+<li>ナレッジ: FoxBoxsnet(@FoxBoxsnet)</li>
+</ul>
+
+<p>RancherOSで Proxy 配下で DockerImage をダウンロードできるように設定します。
+<strong>この設定は ホストを再起動するまで適用されません</strong></p>
+#cloud-config
+rancher:
+  network:
+    http_proxy: https://myproxy.example.com
+    https_proxy: https://myproxy.example.com
+    no_proxy: localhost,127.0.0.1
+
+<p><code>http_proxy</code>, <code>https_proxy</code> にポート番号が必要な場合は <code>&lt;ホスト名&gt;:&lt;ポート番号&gt;</code> で可能かと思います。
++ sample</p>
+#cloud-config
+rancher:
+  network:
+    http_proxy: https://myproxy.example.com:8080
+    https_proxy: https://myproxy.example.com:8080
+    no_proxy: localhost,127.0.0.1
+
+<h4 id="参考-2">参考</h4>
+
+<p><a href="https://docs.rancher.com/os/networking/proxy-settings/">Configuring Proxy Settings in RancherOS</a></p>
+
+<h3 id="rancheros-のホスト名-hostname-設定">RancherOS のホスト名(HostName) 設定</h3>
+
+<ul>
+<li>ナレッジ: FoxBoxsnet(@FoxBoxsnet)</li>
+</ul>
+
+<p>RancherOS はデフォルトでは <code>rancher</code> に設定されています。<br />
+運用上、不便のためホスト名を設定します。</p>
+#cloud-config
+hostname: rancher-host01.local
+
+<h4 id="参考-3">参考</h4>
+
+<ul>
+<li><a href="https://docs.rancher.com/os/configuration/hostname/">Setting the Hostname in RancherOS</a></li>
+</ul>
+
+<h3 id="ntpサーバーを設定したい">NTPサーバーを設定したい</h3>
+
+<ul>
+<li>ナレッジ: FoxBoxsnet(@FoxBoxsnet)</li>
+</ul>
+
+<p>RancherOS でNTPサーバーを任意設定します。
+今回は、日本国内の stratum1サーバー NICT(情報通信研究機構) のサーバーからNTPを受信するように設定しました。</p>
+
+<p>Linux標準の <code>/etc/ntpd.conf</code> とほぼ同じ記述で問題無いと思われます。</p>
+#cloud-config
+write_files:
+  - path: /etc/ntp.conf
+    permissions: 0644
+    content: |
+        tinker panic 0
+        default kod nomodify notrap nopeer noquery
+        restrict -6 default kod nomodify notrap nopeer noquery
+
+        restrict 127.0.0.1
+        restrict -6 ::1
+
+        restrict 133.243.238.163 mask 255.255.255.255 nomodify notrap noquery
+        restrict 133.243.238.164 mask 255.255.255.255 nomodify notrap noquery
+        restrict 133.243.238.243 mask 255.255.255.255 nomodify notrap noquery
+        restrict 133.243.238.244 mask 255.255.255.255 nomodify notrap noquery
+
+        server ntp.nict.jp
+
+<h4 id="参考-4">参考</h4>
+
+<ul>
+<li><a href="https://docs.rancher.com/os/configuration/write-files/">Writing Files in RancherOS</a></li>
+<li><a href="https://docs.rancher.com/os/system-services/built-in-system-services/">Built-in System Services in RancherOS</a></li>
+</ul>
+
+<h3 id="rancheros-で-timezone-を-jst-に変更したい">RancherOS で TimeZone を JST に変更したい</h3>
+
+<ul>
+<li>質問: FoxBoxsnet(@FoxBoxsnet)</li>
+</ul>
+
+<p>RancherOS デフォルトの設定は、 TimeZoneは <code>UTC</code> に設定されます。<br />
+コンソールのTimeZoneをJST(Japan Standard Time)に設定したい</p>
+#cloud-config
+rancher:
+  services:
+    console:
+      environment:
+        TZ: 'JST-9'
+
+<h4 id="参考-5">参考</h4>
+
+<ul>
+<li><a href="https://docs.rancher.com/os/system-services/adding-system-services/">Adding System Services in RancherOS</a></li>
+<li><a href="https://docs.rancher.com/os/system-services/built-in-system-services/">Built-in System Services in RancherOS</a></li>
+</ul>
 
         
 
