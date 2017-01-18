@@ -11,8 +11,9 @@ categories:
   - "qa"
 ---
 # このページについて
-Rancher JP では皆様に Rancher, Rancher>OS をご使用していただいて疑問や困った事などを SlackのChannel `#qa` にて議論・検討をしています。
-その中で、一定の情報になった物を掲載していきます。
+Rancher JP では皆様に Rancher, Rancher>OS をご使用していただいて疑問や困った事などを SlackのChannel `#qa` にて議論・検討をしています。  
+その中で、一定の情報になった物を掲載していきます。  
+  
 質問・疑問などがある方は  [Join rancherjp on Slack\!](https://rancherjp.herokuapp.com/) より 参加してみてください。
 
 
@@ -23,7 +24,7 @@ Rancher JP では皆様に Rancher, Rancher>OS をご使用していただいて
 ### SSH鍵を設定したい
 + ナレッジ: FoxBoxsnet(@FoxBoxsnet)
 
-RancherOS では、SSH公開鍵暗号方式でのログインが使用できます。
+RancherOS では、SSH公開鍵暗号方式でのログインが使用できます。  
 `cloud-config` に記述します。
 
 ```yaml
@@ -40,8 +41,9 @@ ssh_authorized_keys:
 ### ネットワーク設定
 + ナレッジ: FoxBoxsnet(@FoxBoxsnet)
 
-RancherOS ではデフォルトでDHCPによりIPアドレスを決定しますが、固定したい場合もあるかと思います。
-ここでは下記のように設定してみました。　適宜書き換えてください。
+RancherOS ではデフォルトでDHCPによりIPアドレスを決定しますが、固定したい場合もあるかと思います。  
+ここでは下記のように設定してみました。  
+適宜書き換えてください。
 
 | Name | Value |
 |:-----|:------|
@@ -71,7 +73,7 @@ rancher:
 ### RancherOS を Proxy 配下で利用する
 + ナレッジ: FoxBoxsnet(@FoxBoxsnet)
 
-RancherOSで Proxy 配下で DockerImage をダウンロードできるように設定します。
+RancherOSで Proxy 配下で DockerImage をダウンロードできるように設定します。  
 **この設定は ホストを再起動するまで適用されません**
 
 
@@ -120,8 +122,7 @@ hostname: rancher-host01.local
 + ナレッジ: FoxBoxsnet(@FoxBoxsnet)
 
 RancherOS でNTPサーバーを任意設定します。
-今回は、日本国内の stratum1サーバー NICT(情報通信研究機構) のサーバーからNTPを受信するように設定しました。
-
+今回は、日本国内の stratum1サーバー NICT(情報通信研究機構) のサーバーからNTPを受信するように設定しました。  
 Linux標準の `/etc/ntpd.conf` とほぼ同じ記述で問題無いと思われます。
 
 ```yaml
