@@ -20,9 +20,10 @@
 
 &lt;h1 id=&#34;このページについて&#34;&gt;このページについて&lt;/h1&gt;
 
-&lt;p&gt;Rancher JP では皆様に Rancher, Rancher&amp;gt;OS をご使用していただいて疑問や困った事などを SlackのChannel &lt;code&gt;#qa&lt;/code&gt; にて議論・検討をしています。
-その中で、一定の情報になった物を掲載していきます。
-質問・疑問などがある方は  &lt;a href=&#34;https://rancherjp.herokuapp.com/&#34;&gt;Join rancherjp on Slack!&lt;/a&gt; より 参加してみてください。&lt;/p&gt;
+&lt;p&gt;Rancher JP では皆様に Rancher, Rancher&amp;gt;OS をご使用していただいて疑問や困った事などを SlackのChannel &lt;code&gt;#qa&lt;/code&gt; にて議論・検討をしています。&lt;br /&gt;
+その中で、一定の情報になった物を掲載していきます。&lt;/p&gt;
+
+&lt;p&gt;質問・疑問などがある方は  &lt;a href=&#34;https://rancherjp.herokuapp.com/&#34;&gt;Join rancherjp on Slack!&lt;/a&gt; より 参加してみてください。&lt;/p&gt;
 
 &lt;h2 id=&#34;configuring-コンフィグレーション&#34;&gt;Configuring(コンフィグレーション)&lt;/h2&gt;
 
@@ -32,7 +33,7 @@
 &lt;li&gt;ナレッジ: FoxBoxsnet(@FoxBoxsnet)&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;RancherOS では、SSH公開鍵暗号方式でのログインが使用できます。
+&lt;p&gt;RancherOS では、SSH公開鍵暗号方式でのログインが使用できます。&lt;br /&gt;
 &lt;code&gt;cloud-config&lt;/code&gt; に記述します。&lt;/p&gt;
 #cloud-config
 ssh_authorized_keys:
@@ -51,8 +52,9 @@ ssh_authorized_keys:
 &lt;li&gt;ナレッジ: FoxBoxsnet(@FoxBoxsnet)&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;RancherOS ではデフォルトでDHCPによりIPアドレスを決定しますが、固定したい場合もあるかと思います。
-ここでは下記のように設定してみました。　適宜書き換えてください。&lt;/p&gt;
+&lt;p&gt;RancherOS ではデフォルトでDHCPによりIPアドレスを決定しますが、固定したい場合もあるかと思います。&lt;br /&gt;
+ここでは下記のように設定してみました。&lt;br /&gt;
+適宜書き換えてください。&lt;/p&gt;
 
 &lt;table&gt;
 &lt;thead&gt;
@@ -108,7 +110,7 @@ rancher:
 &lt;li&gt;ナレッジ: FoxBoxsnet(@FoxBoxsnet)&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;RancherOSで Proxy 配下で DockerImage をダウンロードできるように設定します。
+&lt;p&gt;RancherOSで Proxy 配下で DockerImage をダウンロードできるように設定します。&lt;br /&gt;
 &lt;strong&gt;この設定は ホストを再起動するまで適用されません&lt;/strong&gt;&lt;/p&gt;
 #cloud-config
 rancher:
@@ -154,9 +156,8 @@ hostname: rancher-host01.local
 &lt;/ul&gt;
 
 &lt;p&gt;RancherOS でNTPサーバーを任意設定します。
-今回は、日本国内の stratum1サーバー NICT(情報通信研究機構) のサーバーからNTPを受信するように設定しました。&lt;/p&gt;
-
-&lt;p&gt;Linux標準の &lt;code&gt;/etc/ntpd.conf&lt;/code&gt; とほぼ同じ記述で問題無いと思われます。&lt;/p&gt;
+今回は、日本国内の stratum1サーバー NICT(情報通信研究機構) のサーバーからNTPを受信するように設定しました。&lt;br /&gt;
+Linux標準の &lt;code&gt;/etc/ntpd.conf&lt;/code&gt; とほぼ同じ記述で問題無いと思われます。&lt;/p&gt;
 #cloud-config
 write_files:
   - path: /etc/ntp.conf
