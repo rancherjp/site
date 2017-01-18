@@ -131,9 +131,10 @@
 
 <h1 id="このページについて">このページについて</h1>
 
-<p>Rancher JP では皆様に Rancher, Rancher&gt;OS をご使用していただいて疑問や困った事などを SlackのChannel <code>#qa</code> にて議論・検討をしています。
-その中で、一定の情報になった物を掲載していきます。
-質問・疑問などがある方は  <a href="https://rancherjp.herokuapp.com/">Join rancherjp on Slack!</a> より 参加してみてください。</p>
+<p>Rancher JP では皆様に Rancher, Rancher&gt;OS をご使用していただいて疑問や困った事などを SlackのChannel <code>#qa</code> にて議論・検討をしています。<br />
+その中で、一定の情報になった物を掲載していきます。</p>
+
+<p>質問・疑問などがある方は  <a href="https://rancherjp.herokuapp.com/">Join rancherjp on Slack!</a> より 参加してみてください。</p>
 
 <h2 id="configuring-コンフィグレーション">Configuring(コンフィグレーション)</h2>
 
@@ -143,7 +144,7 @@
 <li>ナレッジ: FoxBoxsnet(@FoxBoxsnet)</li>
 </ul>
 
-<p>RancherOS では、SSH公開鍵暗号方式でのログインが使用できます。
+<p>RancherOS では、SSH公開鍵暗号方式でのログインが使用できます。<br />
 <code>cloud-config</code> に記述します。</p>
 #cloud-config
 ssh_authorized_keys:
@@ -162,8 +163,9 @@ ssh_authorized_keys:
 <li>ナレッジ: FoxBoxsnet(@FoxBoxsnet)</li>
 </ul>
 
-<p>RancherOS ではデフォルトでDHCPによりIPアドレスを決定しますが、固定したい場合もあるかと思います。
-ここでは下記のように設定してみました。　適宜書き換えてください。</p>
+<p>RancherOS ではデフォルトでDHCPによりIPアドレスを決定しますが、固定したい場合もあるかと思います。<br />
+ここでは下記のように設定してみました。<br />
+適宜書き換えてください。</p>
 
 <table>
 <thead>
@@ -219,7 +221,7 @@ rancher:
 <li>ナレッジ: FoxBoxsnet(@FoxBoxsnet)</li>
 </ul>
 
-<p>RancherOSで Proxy 配下で DockerImage をダウンロードできるように設定します。
+<p>RancherOSで Proxy 配下で DockerImage をダウンロードできるように設定します。<br />
 <strong>この設定は ホストを再起動するまで適用されません</strong></p>
 #cloud-config
 rancher:
@@ -265,9 +267,8 @@ hostname: rancher-host01.local
 </ul>
 
 <p>RancherOS でNTPサーバーを任意設定します。
-今回は、日本国内の stratum1サーバー NICT(情報通信研究機構) のサーバーからNTPを受信するように設定しました。</p>
-
-<p>Linux標準の <code>/etc/ntpd.conf</code> とほぼ同じ記述で問題無いと思われます。</p>
+今回は、日本国内の stratum1サーバー NICT(情報通信研究機構) のサーバーからNTPを受信するように設定しました。<br />
+Linux標準の <code>/etc/ntpd.conf</code> とほぼ同じ記述で問題無いと思われます。</p>
 #cloud-config
 write_files:
   - path: /etc/ntp.conf
