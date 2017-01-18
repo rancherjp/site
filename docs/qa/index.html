@@ -141,18 +141,15 @@
 <h2 id="ssh鍵を設定したい">SSH鍵を設定したい</h2>
 
 <ul>
-<li>ナレッジ: FoxBoxsnet(@FoxBoxsnet)</li>
-</ul>
-
-<p>RancherOS では、SSH公開鍵暗号方式でのログインが使用できます。<br />
-  <code>cloud-config</code> に記述します。</p>
+<li><p>ナレッジ: FoxBoxsnet(@FoxBoxsnet)<br />
+RancherOS では、SSH公開鍵暗号方式でのログインが使用できます。<br />
+<code>cloud-config</code> に記述します。</p>
   #cloud-config
   ssh_authorized_keys:
     - ssh-rsa AAA...ZZZ example1@rancher
-    - ssh-rsa BBB...ZZZ example2@rancher
+    - ssh-rsa BBB...ZZZ example2@rancher</li>
 
-<ul>
-<li>参考
+<li><p>参考</p>
 
 <ul>
 <li><a href="https://docs.rancher.com/os/configuration/ssh-keys/">SSH Keys in RancherOS</a></li>
@@ -162,32 +159,54 @@
 <h2 id="ネットワーク設定">ネットワーク設定</h2>
 
 <ul>
-<li>ナレッジ: FoxBoxsnet(@FoxBoxsnet)</li>
-</ul>
+<li><p>ナレッジ: FoxBoxsnet(@FoxBoxsnet)</p>
 
 <p>RancherOS ではデフォルトでDHCPによりIPアドレスを決定しますが、固定したい場合もあるかと思います。<br />
-  ここでは下記のように設定してみました。<br />
-  適宜書き換えてください。</p>
+ここでは下記のように設定してみました。<br />
+適宜書き換えてください。</p>
 
-<p>| Name | Value |
-  |:&mdash;&ndash;|:&mdash;&mdash;|
-  | interface | eth0 |
-  | DNS  | 172.18.1.254|
-  | IP Address | 172.18.1.<sup>1</sup>&frasl;<sub>24</sub> |
-  | Gate Way | 172.18.1.254 |</p>
-  #cloud-config
-  rancher:
-    network:
-      dns:
-        nameservers:
-        - 172.18.1.254
-      interfaces:
-        eth0:
-          address: 172.18.1.1/24
-          gateway: 172.18.1.254
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Value</th>
+</tr>
+</thead>
 
-<ul>
-<li>参考
+<tbody>
+<tr>
+<td align="left">interface</td>
+<td align="left">eth0</td>
+</tr>
+
+<tr>
+<td align="left">DNS</td>
+<td align="left">172.18.1.254</td>
+</tr>
+
+<tr>
+<td align="left">IP Address</td>
+<td align="left">172.18.1.<sup>1</sup>&frasl;<sub>24</sub></td>
+</tr>
+
+<tr>
+<td align="left">Gate Way</td>
+<td align="left">172.18.1.254</td>
+</tr>
+</tbody>
+</table>
+#cloud-config
+rancher:
+  network:
+    dns:
+      nameservers:
+      - 172.18.1.254
+    interfaces:
+      eth0:
+        address: 172.18.1.1/24
+        gateway: 172.18.1.254</li>
+
+<li><p>参考</p>
 
 <ul>
 <li><a href="https://docs.rancher.com/os/networking/interfaces/">Configuring Network Interfaces in RancherOS</a></li>
@@ -198,19 +217,17 @@
 <h2 id="rancheros-を-proxy-配下で利用する">RancherOS を Proxy 配下で利用する</h2>
 
 <ul>
-<li>ナレッジ: FoxBoxsnet(@FoxBoxsnet)</li>
-</ul>
+<li><p>ナレッジ: FoxBoxsnet(@FoxBoxsnet)</p>
 
 <p>RancherOSで Proxy 配下で DockerImage をダウンロードできるように設定します。<br />
-  <strong>この設定は ホストを再起動するまで適用されません</strong></p>
-  #cloud-config
-  rancher:
-    network:
-      http_proxy: https://myproxy.example.com
-      https_proxy: https://myproxy.example.com
-      no_proxy: localhost,127.0.0.1
+<strong>この設定は ホストを再起動するまで適用されません</strong></p>
+#cloud-config
+rancher:
+  network:
+    http_proxy: https://myproxy.example.com
+    https_proxy: https://myproxy.example.com
+    no_proxy: localhost,127.0.0.1</li>
 
-<ul>
 <li><p><code>http_proxy</code>, <code>https_proxy</code> にポート番号が必要な場合は <code>&lt;ホスト名&gt;:&lt;ポート番号&gt;</code> で可能かと思います。</p>
 #cloud-config
 rancher:
@@ -251,32 +268,24 @@ hostname: rancher-host01.local</li>
 <p>RancherOS でNTPサーバーを任意設定します。
 今回は、日本国内の stratum1サーバー NICT(情報通信研究機構) のサーバーからNTPを受信するように設定しました。<br />
 Linux標準の <code>/etc/ntpd.conf</code> とほぼ同じ記述で問題無いと思われます。</p>
+  #cloud-config
+  write_files:
+    - path: /etc/ntp.conf
+      permissions: 0644
+      content: |
+          tinker panic 0
+          default kod nomodify notrap nopeer noquery
+          restrict -6 default kod nomodify notrap nopeer noquery
 
-<p>```yaml
-#cloud-config
-write_files:</p>
+          restrict 127.0.0.1
+          restrict -6 ::1
 
-<ul>
-<li><p>path: /etc/ntp.conf
-permissions: 0644
-content: |
-    tinker panic 0
-    default kod nomodify notrap nopeer noquery
-    restrict -6 default kod nomodify notrap nopeer noquery</p>
+          restrict 133.243.238.163 mask 255.255.255.255 nomodify notrap noquery
+          restrict 133.243.238.164 mask 255.255.255.255 nomodify notrap noquery
+          restrict 133.243.238.243 mask 255.255.255.255 nomodify notrap noquery
+          restrict 133.243.238.244 mask 255.255.255.255 nomodify notrap noquery
 
-<pre><code>restrict 127.0.0.1
-restrict -6 ::1
-
-restrict 133.243.238.163 mask 255.255.255.255 nomodify notrap noquery
-restrict 133.243.238.164 mask 255.255.255.255 nomodify notrap noquery
-restrict 133.243.238.243 mask 255.255.255.255 nomodify notrap noquery
-restrict 133.243.238.244 mask 255.255.255.255 nomodify notrap noquery
-
-server ntp.nict.jp
-</code></pre>
-
-<p>```</p></li>
-</ul></li>
+          server ntp.nict.jp</li>
 
 <li><p>参考</p>
 
@@ -289,24 +298,18 @@ server ntp.nict.jp
 <h3 id="rancheros-で-timezone-を-jst-に変更したい">RancherOS で TimeZone を JST に変更したい</h3>
 
 <ul>
-<li>質問: FoxBoxsnet(@FoxBoxsnet)</li>
-</ul>
+<li><p>質問: FoxBoxsnet(@FoxBoxsnet)</p>
 
 <p>RancherOS デフォルトの設定は、 TimeZoneは <code>UTC</code> に設定されます。<br />
-  コンソールのTimeZoneをJST(Japan Standard Time)に設定したい</p>
-
-<pre><code>```yaml
+コンソールのTimeZoneをJST(Japan Standard Time)に設定したい</p>
 #cloud-config
 rancher:
   services:
     console:
       environment:
-        TZ: 'JST-9'
-```
-</code></pre>
+        TZ: 'JST-9'</li>
 
-<ul>
-<li>参考<br />
+<li><p>参考</p>
 
 <ul>
 <li><a href="https://docs.rancher.com/os/system-services/adding-system-services/">Adding System Services in RancherOS</a><br /></li>

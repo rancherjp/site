@@ -1121,18 +1121,15 @@ VMで動かす場合は、ネットワークが注意&lt;/p&gt;
 &lt;h2 id=&#34;ssh鍵を設定したい&#34;&gt;SSH鍵を設定したい&lt;/h2&gt;
 
 &lt;ul&gt;
-&lt;li&gt;ナレッジ: FoxBoxsnet(@FoxBoxsnet)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;RancherOS では、SSH公開鍵暗号方式でのログインが使用できます。&lt;br /&gt;
-  &lt;code&gt;cloud-config&lt;/code&gt; に記述します。&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;ナレッジ: FoxBoxsnet(@FoxBoxsnet)&lt;br /&gt;
+RancherOS では、SSH公開鍵暗号方式でのログインが使用できます。&lt;br /&gt;
+&lt;code&gt;cloud-config&lt;/code&gt; に記述します。&lt;/p&gt;
   #cloud-config
   ssh_authorized_keys:
     - ssh-rsa AAA...ZZZ example1@rancher
-    - ssh-rsa BBB...ZZZ example2@rancher
+    - ssh-rsa BBB...ZZZ example2@rancher&lt;/li&gt;
 
-&lt;ul&gt;
-&lt;li&gt;参考
+&lt;li&gt;&lt;p&gt;参考&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://docs.rancher.com/os/configuration/ssh-keys/&#34;&gt;SSH Keys in RancherOS&lt;/a&gt;&lt;/li&gt;
@@ -1142,32 +1139,54 @@ VMで動かす場合は、ネットワークが注意&lt;/p&gt;
 &lt;h2 id=&#34;ネットワーク設定&#34;&gt;ネットワーク設定&lt;/h2&gt;
 
 &lt;ul&gt;
-&lt;li&gt;ナレッジ: FoxBoxsnet(@FoxBoxsnet)&lt;/li&gt;
-&lt;/ul&gt;
+&lt;li&gt;&lt;p&gt;ナレッジ: FoxBoxsnet(@FoxBoxsnet)&lt;/p&gt;
 
 &lt;p&gt;RancherOS ではデフォルトでDHCPによりIPアドレスを決定しますが、固定したい場合もあるかと思います。&lt;br /&gt;
-  ここでは下記のように設定してみました。&lt;br /&gt;
-  適宜書き換えてください。&lt;/p&gt;
+ここでは下記のように設定してみました。&lt;br /&gt;
+適宜書き換えてください。&lt;/p&gt;
 
-&lt;p&gt;| Name | Value |
-  |:&amp;mdash;&amp;ndash;|:&amp;mdash;&amp;mdash;|
-  | interface | eth0 |
-  | DNS  | 172.18.1.254|
-  | IP Address | 172.18.1.&lt;sup&gt;1&lt;/sup&gt;&amp;frasl;&lt;sub&gt;24&lt;/sub&gt; |
-  | Gate Way | 172.18.1.254 |&lt;/p&gt;
-  #cloud-config
-  rancher:
-    network:
-      dns:
-        nameservers:
-        - 172.18.1.254
-      interfaces:
-        eth0:
-          address: 172.18.1.1/24
-          gateway: 172.18.1.254
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;left&#34;&gt;Name&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;Value&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
 
-&lt;ul&gt;
-&lt;li&gt;参考
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;interface&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;eth0&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;DNS&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;172.18.1.254&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;IP Address&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;172.18.1.&lt;sup&gt;1&lt;/sup&gt;&amp;frasl;&lt;sub&gt;24&lt;/sub&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;Gate Way&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;172.18.1.254&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+#cloud-config
+rancher:
+  network:
+    dns:
+      nameservers:
+      - 172.18.1.254
+    interfaces:
+      eth0:
+        address: 172.18.1.1/24
+        gateway: 172.18.1.254&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;参考&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://docs.rancher.com/os/networking/interfaces/&#34;&gt;Configuring Network Interfaces in RancherOS&lt;/a&gt;&lt;/li&gt;
@@ -1178,19 +1197,17 @@ VMで動かす場合は、ネットワークが注意&lt;/p&gt;
 &lt;h2 id=&#34;rancheros-を-proxy-配下で利用する&#34;&gt;RancherOS を Proxy 配下で利用する&lt;/h2&gt;
 
 &lt;ul&gt;
-&lt;li&gt;ナレッジ: FoxBoxsnet(@FoxBoxsnet)&lt;/li&gt;
-&lt;/ul&gt;
+&lt;li&gt;&lt;p&gt;ナレッジ: FoxBoxsnet(@FoxBoxsnet)&lt;/p&gt;
 
 &lt;p&gt;RancherOSで Proxy 配下で DockerImage をダウンロードできるように設定します。&lt;br /&gt;
-  &lt;strong&gt;この設定は ホストを再起動するまで適用されません&lt;/strong&gt;&lt;/p&gt;
-  #cloud-config
-  rancher:
-    network:
-      http_proxy: https://myproxy.example.com
-      https_proxy: https://myproxy.example.com
-      no_proxy: localhost,127.0.0.1
+&lt;strong&gt;この設定は ホストを再起動するまで適用されません&lt;/strong&gt;&lt;/p&gt;
+#cloud-config
+rancher:
+  network:
+    http_proxy: https://myproxy.example.com
+    https_proxy: https://myproxy.example.com
+    no_proxy: localhost,127.0.0.1&lt;/li&gt;
 
-&lt;ul&gt;
 &lt;li&gt;&lt;p&gt;&lt;code&gt;http_proxy&lt;/code&gt;, &lt;code&gt;https_proxy&lt;/code&gt; にポート番号が必要な場合は &lt;code&gt;&amp;lt;ホスト名&amp;gt;:&amp;lt;ポート番号&amp;gt;&lt;/code&gt; で可能かと思います。&lt;/p&gt;
 #cloud-config
 rancher:
@@ -1231,32 +1248,24 @@ hostname: rancher-host01.local&lt;/li&gt;
 &lt;p&gt;RancherOS でNTPサーバーを任意設定します。
 今回は、日本国内の stratum1サーバー NICT(情報通信研究機構) のサーバーからNTPを受信するように設定しました。&lt;br /&gt;
 Linux標準の &lt;code&gt;/etc/ntpd.conf&lt;/code&gt; とほぼ同じ記述で問題無いと思われます。&lt;/p&gt;
+  #cloud-config
+  write_files:
+    - path: /etc/ntp.conf
+      permissions: 0644
+      content: |
+          tinker panic 0
+          default kod nomodify notrap nopeer noquery
+          restrict -6 default kod nomodify notrap nopeer noquery
 
-&lt;p&gt;```yaml
-#cloud-config
-write_files:&lt;/p&gt;
+          restrict 127.0.0.1
+          restrict -6 ::1
 
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;path: /etc/ntp.conf
-permissions: 0644
-content: |
-    tinker panic 0
-    default kod nomodify notrap nopeer noquery
-    restrict -6 default kod nomodify notrap nopeer noquery&lt;/p&gt;
+          restrict 133.243.238.163 mask 255.255.255.255 nomodify notrap noquery
+          restrict 133.243.238.164 mask 255.255.255.255 nomodify notrap noquery
+          restrict 133.243.238.243 mask 255.255.255.255 nomodify notrap noquery
+          restrict 133.243.238.244 mask 255.255.255.255 nomodify notrap noquery
 
-&lt;pre&gt;&lt;code&gt;restrict 127.0.0.1
-restrict -6 ::1
-
-restrict 133.243.238.163 mask 255.255.255.255 nomodify notrap noquery
-restrict 133.243.238.164 mask 255.255.255.255 nomodify notrap noquery
-restrict 133.243.238.243 mask 255.255.255.255 nomodify notrap noquery
-restrict 133.243.238.244 mask 255.255.255.255 nomodify notrap noquery
-
-server ntp.nict.jp
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;```&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
+          server ntp.nict.jp&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;参考&lt;/p&gt;
 
@@ -1269,24 +1278,18 @@ server ntp.nict.jp
 &lt;h3 id=&#34;rancheros-で-timezone-を-jst-に変更したい&#34;&gt;RancherOS で TimeZone を JST に変更したい&lt;/h3&gt;
 
 &lt;ul&gt;
-&lt;li&gt;質問: FoxBoxsnet(@FoxBoxsnet)&lt;/li&gt;
-&lt;/ul&gt;
+&lt;li&gt;&lt;p&gt;質問: FoxBoxsnet(@FoxBoxsnet)&lt;/p&gt;
 
 &lt;p&gt;RancherOS デフォルトの設定は、 TimeZoneは &lt;code&gt;UTC&lt;/code&gt; に設定されます。&lt;br /&gt;
-  コンソールのTimeZoneをJST(Japan Standard Time)に設定したい&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;```yaml
+コンソールのTimeZoneをJST(Japan Standard Time)に設定したい&lt;/p&gt;
 #cloud-config
 rancher:
   services:
     console:
       environment:
-        TZ: &#39;JST-9&#39;
-```
-&lt;/code&gt;&lt;/pre&gt;
+        TZ: &#39;JST-9&#39;&lt;/li&gt;
 
-&lt;ul&gt;
-&lt;li&gt;参考&lt;br /&gt;
+&lt;li&gt;&lt;p&gt;参考&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://docs.rancher.com/os/system-services/adding-system-services/&#34;&gt;Adding System Services in RancherOS&lt;/a&gt;&lt;br /&gt;&lt;/li&gt;
