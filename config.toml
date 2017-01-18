@@ -3,7 +3,8 @@ languageCode            = "ja-jp"
 title                   = "Rancher JP"
 hasCJKLanguage          = true
 copyright               = "© 2016 Rancher JP"
-pygmentscodefences      = true
+##pygmentscodefences      = true
+pygmentsuseclasses      = true
 pygmentsstyle           = "borland"
 PygmentsOptions         = "linenos=table,nobackground=true"
 
