@@ -8,6 +8,7 @@ dependencies:
     - git config --global user.name ${GITHUB_USERNAME}
     - git config --global user.email ${GITHUB_EMAIL_ADDRESS}
     - rm -rf ./docs
+    - pip install Pygments --user
 
 test:
   override:
