@@ -152,9 +152,11 @@
 <h3 id="rancherサーバーを動かす">Rancherサーバーを動かす</h3>
 
 <p>Rancherサーバーを起動するコマンドは1つだけです。コンテナを起動したら、コンテナのログを調べて、サーバが起動して動いているかを確認します。</p>
-$ sudo docker run -d --restart=unless-stopped -p 8080:8080 rancher/server
+
+<pre><code class="language-bash">$ sudo docker run -d --restart=unless-stopped -p 8080:8080 rancher/server
 # Rancherのログを表示
-$ sudo docker logs -f <CONTAINER_ID>
+$ sudo docker logs -f &lt;CONTAINER_ID&gt;
+</code></pre>
 
 <p>Rancherサーバーの起動に数分おまちください。 <code>.... Startup Succeeded, Listening on port....</code> が表示されたら、RancherのUIは起動して稼働中です。 ログのこの行が表示されたら、ほとんど設定は終了です。 この出力の後に追加のログが出力される可能性があるので、これが初期起動時のログの最後の行であるとは限りません。</p>
 
@@ -195,7 +197,9 @@ $ sudo docker logs -f <CONTAINER_ID>
 <h3 id="dockerのcliを直接使ってコンテナを作成する">DockerのCLIを直接使ってコンテナを作成する</h3>
 
 <p>Rancherは、コンテナがUIの外で作成されていてもホスト上のコンテナを表示できます。ホストのシェル端末からコンテナを作成してみます。</p>
-$ docker run -d -it --name=second-container ubuntu:14.04.2
+
+<pre><code class="language-bash">$ docker run -d -it --name=second-container ubuntu:14.04.2
+</code></pre>
 
 <p>UI上では、 <strong><em>second-container</em></strong> がホスト上にポップアップ表示されます。</p>
 
@@ -204,7 +208,9 @@ $ docker run -d -it --name=second-container ubuntu:14.04.2
 <p><strong><em>second-container</em></strong> のIPアドレスを見ると、<code>10.42.*.*</code> の範囲には<strong>ない</strong>ことがわかります。 これは、Dockerデーモンによって割り当てられた通常のIPアドレスです。 CLIを使用してDockerコンテナを作成するとこのようになります。</p>
 
 <p>CLIを使用してRancherのオバーレイネットワークからIPアドレスのDockerコンテナを作成するにはどうすればよいでしょうか？ しなければならないこと、コマンドにラベル(i.e. <code>io.rancher.container.network=true</code>)を追加するだけで、Rancherは、このコンテナが<code>管理</code>ネットワークに属しなければならないと認識します。</p>
-$ docker run -d -it --label io.rancher.container.network=true ubuntu:14.04.2
+
+<pre><code class="language-bash">$ docker run -d -it --label io.rancher.container.network=true ubuntu:14.04.2
+</code></pre>
 
 <h3 id="マルチコンテナアプリケーションの作成">マルチコンテナアプリケーションの作成</h3>
 
@@ -239,7 +245,8 @@ $ docker run -d -it --label io.rancher.container.network=true ubuntu:14.04.2
 <p>前のセクションでは、ロードバランサを備えたLetsChatアプリケーションを作成しました。 Rancherで作成していた場合、スタックのドロップダウンメニューから <strong>Export Config</strong> を選択して、UIから直接ファイルをダウンロードできます。 <code>docker-compose.yml</code> と <code>rancher-compose.yml</code> ファイルは次のようになります。</p>
 
 <h4 id="example-docker-compose-yml">Example docker-compose.yml</h4>
-version: '2'
+
+<pre><code class="language-yaml">version: '2'
 services:
   letschatapplb:
     #If you only have 1 host and also created the host in the UI,
@@ -264,9 +271,11 @@ services:
     tty: true
     image: mongo
     stdin_open: true
+</code></pre>
 
 <h4 id="example-rancher-compose-yml">Example rancher-compose.yml</h4>
-vversion: '2'
+
+<pre><code class="language-yaml">vversion: '2'
 services:
   letschatapplb:
     scale: 1
@@ -290,21 +299,26 @@ services:
     scale: 2
   database:
     scale: 1
+</code></pre>
 
 <p><br>
 フッター右側にある <strong>Download CLI</strong> をクリックして、RancherのUIからRancher CLIバイナリをダウンロードします。 Windows、Mac、Linux用のバイナリを提供しています。</p>
 
 <p>Rancher CLIを使用してRancherでサービスを開始するには、いくつか環境変数を設定する必要があります。 Rancher UIで<a href="{{site.baseurl}}/rancher/{{page.version}}/{{page.lang}}/api/api-keys/">account API Key</a>を作成します。 <strong>API</strong> をクリックし、<strong>Add Account API Key</strong> をクリックします。 ユーザー名 (アクセスキー) とパスワード (秘密キー) を保存します。 Rancher CLIに必要な次の環境変数を設定します: <code>RANCHER_URL</code>、<code>RANCHER_ACCESS_KEY</code> と <code>RANCHER_SECRET_KEY</code></p>
-# Set the url that Rancher is on
+
+<pre><code class="language-bash"># Set the url that Rancher is on
 $ export RANCHER_URL=http://server_ip:8080/
 # Set the access key, i.e. username
-$ export RANCHER_ACCESS_KEY=<username_of_key>
+$ export RANCHER_ACCESS_KEY=&lt;username_of_key&gt;
 # Set the secret key, i.e. password
-$ export RANCHER_SECRET_KEY=<password_of_key>
+$ export RANCHER_SECRET_KEY=&lt;password_of_key&gt;
+</code></pre>
 
 <p><br>
 <code>docker-compose.yml</code> と <code>rancher-compose.yml</code> を保存したディレクトリに移動し、コマンドを実行します。</p>
-$ rancher -p NewLetsChatApp up -d
+
+<pre><code class="language-bash">$ rancher -p NewLetsChatApp up -d
+</code></pre>
 
 <p>Rancherで <strong>NewLetsChatApp</strong> という新しいスタックが作成され、サービスがすべて起動します</p>
 

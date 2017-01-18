@@ -144,10 +144,12 @@
 <li><p>ナレッジ: FoxBoxsnet(@FoxBoxsnet)<br />
 RancherOS では、SSH公開鍵暗号方式でのログインが使用できます。<br />
 <code>cloud-config</code> に記述します。</p>
-  #cloud-config
+
+<pre><code class="language-yaml">  #cloud-config
   ssh_authorized_keys:
     - ssh-rsa AAA...ZZZ example1@rancher
-    - ssh-rsa BBB...ZZZ example2@rancher</li>
+    - ssh-rsa BBB...ZZZ example2@rancher
+</code></pre></li>
 
 <li><p>参考</p>
 
@@ -195,7 +197,8 @@ RancherOS では、SSH公開鍵暗号方式でのログインが使用できま�
 </tr>
 </tbody>
 </table>
-#cloud-config
+
+<pre><code class="language-yaml">#cloud-config
 rancher:
   network:
     dns:
@@ -204,7 +207,8 @@ rancher:
     interfaces:
       eth0:
         address: 172.18.1.1/24
-        gateway: 172.18.1.254</li>
+        gateway: 172.18.1.254
+</code></pre></li>
 
 <li><p>参考</p>
 
@@ -221,20 +225,24 @@ rancher:
 
 <p>RancherOSで Proxy 配下で DockerImage をダウンロードできるように設定します。<br />
 <strong>この設定は ホストを再起動するまで適用されません</strong></p>
-#cloud-config
+
+<pre><code class="language-yaml">#cloud-config
 rancher:
   network:
     http_proxy: https://myproxy.example.com
     https_proxy: https://myproxy.example.com
-    no_proxy: localhost,127.0.0.1</li>
+    no_proxy: localhost,127.0.0.1
+</code></pre></li>
 
 <li><p><code>http_proxy</code>, <code>https_proxy</code> にポート番号が必要な場合は <code>&lt;ホスト名&gt;:&lt;ポート番号&gt;</code> で可能かと思います。</p>
-#cloud-config
+
+<pre><code class="language-yaml">#cloud-config
 rancher:
   network:
     http_proxy: https://myproxy.example.com:8080
     https_proxy: https://myproxy.example.com:8080
-    no_proxy: localhost,127.0.0.1</li>
+    no_proxy: localhost,127.0.0.1
+</code></pre></li>
 
 <li><p>参考</p>
 
@@ -250,8 +258,10 @@ rancher:
 
 <p>RancherOS はデフォルトでは <code>rancher</code> に設定されています。<br />
 運用上、不便のためホスト名を設定します。</p>
-#cloud-config
-hostname: rancher-host01.local</li>
+
+<pre><code class="language-yaml">#cloud-config
+hostname: rancher-host01.local
+</code></pre></li>
 
 <li><p>参考</p>
 
@@ -268,7 +278,8 @@ hostname: rancher-host01.local</li>
 <p>RancherOS でNTPサーバーを任意設定します。
 今回は、日本国内の stratum1サーバー NICT(情報通信研究機構) のサーバーからNTPを受信するように設定しました。<br />
 Linux標準の <code>/etc/ntpd.conf</code> とほぼ同じ記述で問題無いと思われます。</p>
-  #cloud-config
+
+<pre><code class="language-yaml">  #cloud-config
   write_files:
     - path: /etc/ntp.conf
       permissions: 0644
@@ -285,7 +296,8 @@ Linux標準の <code>/etc/ntpd.conf</code> とほぼ同じ記述で問題無い�
           restrict 133.243.238.243 mask 255.255.255.255 nomodify notrap noquery
           restrict 133.243.238.244 mask 255.255.255.255 nomodify notrap noquery
 
-          server ntp.nict.jp</li>
+          server ntp.nict.jp
+</code></pre></li>
 
 <li><p>参考</p>
 
@@ -302,12 +314,14 @@ Linux標準の <code>/etc/ntpd.conf</code> とほぼ同じ記述で問題無い�
 
 <p>RancherOS デフォルトの設定は、 TimeZoneは <code>UTC</code> に設定されます。<br />
 コンソールのTimeZoneをJST(Japan Standard Time)に設定したい</p>
-#cloud-config
+
+<pre><code class="language-yaml">#cloud-config
 rancher:
   services:
     console:
       environment:
-        TZ: 'JST-9'</li>
+        TZ: 'JST-9'
+</code></pre></li>
 
 <li><p>参考</p>
 
