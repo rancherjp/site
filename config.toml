@@ -5,6 +5,7 @@ hasCJKLanguage          = true
 copyright               = "© 2016 Rancher JP"
 pygmentscodefences      = true
 pygmentsstyle           = "borland"
+PygmentsOptions         = "linenos=table,nobackground=true"
 
 [permalinks]
     blog                = "/blog/:year/:month/:day/:slug/"
