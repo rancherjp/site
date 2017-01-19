@@ -76,7 +76,7 @@ RancherOS では、SSH公開鍵暗号方式でのログインが使用できま�
 
 &lt;tr&gt;
 &lt;td align=&#34;left&#34;&gt;IP Address&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;172.18.1.&lt;sup&gt;1&lt;/sup&gt;&amp;frasl;&lt;sub&gt;24&lt;/sub&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;172.18.1.1 /24&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
