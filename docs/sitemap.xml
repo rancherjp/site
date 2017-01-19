@@ -17,11 +17,6 @@
   </url>
   
   <url>
-    <loc>http://www.rancher.jp/site/study/rancher-workshop-02/</loc>
-    <lastmod>2016-12-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://www.rancher.jp/site/releasenote/v.1.2.2/</loc>
     <lastmod>2016-12-23T00:00:00+00:00</lastmod>
   </url>
@@ -68,7 +63,7 @@
   
   <url>
     <loc>http://www.rancher.jp/site/archives/2016/</loc>
-    <lastmod>2016-12-27T00:00:00+00:00</lastmod>
+    <lastmod>2016-12-23T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -86,7 +81,7 @@
   
   <url>
     <loc>http://www.rancher.jp/site/archives/2016/12/</loc>
-    <lastmod>2016-12-27T00:00:00+00:00</lastmod>
+    <lastmod>2016-12-23T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -214,7 +209,7 @@
   
   <url>
     <loc>http://www.rancher.jp/site/study/</loc>
-    <lastmod>2016-12-27T00:00:00+00:00</lastmod>
+    <lastmod>2016-10-27T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -243,13 +238,13 @@
   
   <url>
     <loc>http://www.rancher.jp/site/tags/workshop/</loc>
-    <lastmod>2016-12-27T00:00:00+00:00</lastmod>
+    <lastmod>2016-10-27T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://www.rancher.jp/site/categories/workshop/</loc>
-    <lastmod>2016-12-27T00:00:00+00:00</lastmod>
+    <lastmod>2016-10-27T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
