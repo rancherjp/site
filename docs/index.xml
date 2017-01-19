@@ -336,18 +336,6 @@ Compassページ: &lt;a href=&#34;https://rancherjp.connpass.com/event/45768/&#3
     </item>
     
     <item>
-      <title>Rancher もくもく勉強会 #2 </title>
-      <link>http://www.rancher.jp/site/study/rancher-workshop-02/</link>
-      <pubDate>Tue, 27 Dec 2016 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.rancher.jp/site/study/rancher-workshop-02/</guid>
-      <description>
-
-&lt;h1 id=&#34;準備中&#34;&gt;準備中&lt;/h1&gt;
-</description>
-    </item>
-    
-    <item>
       <title>リリース v1.2.2</title>
       <link>http://www.rancher.jp/site/releasenote/v.1.2.2/</link>
       <pubDate>Fri, 23 Dec 2016 00:00:00 +0000</pubDate>
@@ -500,6 +488,8 @@ Rancher Labs | Container registries you may have missed | Rancher Labs&lt;br /&g
       <guid>http://www.rancher.jp/site/releasenote/v.1.2.1/</guid>
       <description>
 
+&lt;h1 id=&#34;リリース-v1-2-1&#34;&gt;リリース v1.2.1&lt;/h1&gt;
+
 &lt;h2 id=&#34;バージョン&#34;&gt;バージョン&lt;/h2&gt;
 
 &lt;ul&gt;
@@ -590,6 +580,8 @@ Rancher Labs | Container registries you may have missed | Rancher Labs&lt;br /&g
       
       <guid>http://www.rancher.jp/site/releasenote/v.1.2.0/</guid>
       <description>
+
+&lt;h1 id=&#34;リリース-v1-2-0&#34;&gt;リリース v1.2.0&lt;/h1&gt;
 
 &lt;h2 id=&#34;バージョン&#34;&gt;バージョン&lt;/h2&gt;
 
