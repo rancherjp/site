@@ -47,7 +47,7 @@ Rancher JP では皆様に Rancher, Rancher>OS をご使用していただいて
     |:-----|:------|
     | interface | eth0 |
     | DNS  | 172.18.1.254|
-    | IP Address | 172.18.1.1/24 |
+    | IP Address | 172.18.1.1 /24 |
     | Gate Way | 172.18.1.254 |
 
     ```yaml
