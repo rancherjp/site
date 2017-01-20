@@ -1,7 +1,7 @@
 ---
 date: "2016-10-27"
 title: "Rancher Event"
-slug: "01" 
+slug: "event-list" 
 author: "Rancher JP"
 description: ""
 draft: false

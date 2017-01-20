@@ -43,7 +43,7 @@ PygmentsOptions         = "linenos=table,nobackground=true"
 [[menu.header]]
     name                = "Event"
     weight              = 5
-    url                 = "/event"
+    url                 = "/event-list/"
 [[menu.header]]
     name                = "Q&A"
     weight              = 6
