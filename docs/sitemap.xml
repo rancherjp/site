@@ -42,7 +42,7 @@
   </url>
   
   <url>
-    <loc>http://www.rancher.jp/site/event/01/</loc>
+    <loc>http://www.rancher.jp/site/event-list/</loc>
     <lastmod>2016-10-27T00:00:00+00:00</lastmod>
   </url>
   
@@ -142,12 +142,6 @@
   </url>
   
   <url>
-    <loc>http://www.rancher.jp/site/event/</loc>
-    <lastmod>2016-10-27T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>http://www.rancher.jp/site/tags/meetup/</loc>
     <lastmod>2017-01-11T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -161,7 +155,7 @@
   
   <url>
     <loc>http://www.rancher.jp/site/page/</loc>
-    <lastmod>2016-01-18T00:00:00+00:00</lastmod>
+    <lastmod>2016-10-27T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

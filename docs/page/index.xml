@@ -7,8 +7,45 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
     <copyright>© 2016 Rancher JP</copyright>
-    <lastBuildDate>Mon, 18 Jan 2016 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 27 Oct 2016 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://www.rancher.jp/site/page/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Rancher Event</title>
+      <link>http://www.rancher.jp/site/event-list/</link>
+      <pubDate>Thu, 27 Oct 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.rancher.jp/site/event-list/</guid>
+      <description>
+
+&lt;h1 id=&#34;rancher-meetup&#34;&gt;Rancher Meetup&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://rancherjp.connpass.com/event/45768/&#34;&gt;【会場変更 →渋谷】Rancher Meetup Tokyo #3 - connpass&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.rancher.jp/content/2017/01/11/rancher-meetup-03/&#34;&gt;Rancher Meetup Tokyo #3&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://rancherjp.connpass.com/event/44092/&#34;&gt;Rancher Meetup Tokyo #2 - connpass&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://rancherjp.connpass.com/event/46208/&#34;&gt;Rancher Meetup Tokyo #2 - 懇親会 - connpass&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://rancherjp.connpass.com/event/40326/&#34;&gt;Rancher Meetup Tokyo #1 - connpass&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.rancher.jp/content/2016/10/07/rancher-meetup-01/&#34;&gt;Rancher Meetup Tokyo #1&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;rancher-もくもく勉強会&#34;&gt;Rancher もくもく勉強会&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://rancherjp.connpass.com/event/47871/&#34;&gt;Rancher もくもく勉強会 #2 - connpass&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://connpass.com/event/41997/&#34;&gt;Rancher もくもく勉強会 #1 - connpass&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
     <item>
       <title>Q And A</title>

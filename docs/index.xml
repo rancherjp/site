@@ -917,10 +917,10 @@ $ export RANCHER_SECRET_KEY=&amp;lt;password_of_key&amp;gt;
     
     <item>
       <title>Rancher Event</title>
-      <link>http://www.rancher.jp/site/event/01/</link>
+      <link>http://www.rancher.jp/site/event-list/</link>
       <pubDate>Thu, 27 Oct 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://www.rancher.jp/site/event/01/</guid>
+      <guid>http://www.rancher.jp/site/event-list/</guid>
       <description>
 
 &lt;h1 id=&#34;rancher-meetup&#34;&gt;Rancher Meetup&lt;/h1&gt;
