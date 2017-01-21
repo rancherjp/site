@@ -12,6 +12,8 @@ categories:
 archives:
   - "2017"
   - "2017/01"
+banner: 
+    "rancher-meetup.png"
 ---
 
 # 【第3回】コンテナ管理ツール Rancher勉強会
