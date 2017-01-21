@@ -5,7 +5,7 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {{ .Hugo.Generator }}
-    <title>{{ .Title }}</title>
+    <title>{{ .Title }} - {{ .Site.Title }}</title>
     {{ with .Site.Params.bing_webmaster }}
         <meta name="msvalidate.01" content="{{ . }}" />
     {{ end }}
@@ -37,4 +37,23 @@
             </script>
         {{ end }}
     {{ end }}
+    <!-- OGP -->
+    <meta property="og:type" content="article">
+    <meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+    <meta property="og:title" content="{{ .Title }} - {{ .Site.Title }}">
+    <meta property="og:url" content="{{ .Permalink }}">
+    <meta property="og:image" content="{{ .Site.BaseURL }}{{ with .Params.banner }}{{ . }}{{ else }}{{ .Site.Params.defaultbanner }}{{ end }}">
+    <meta property="og:site_name" content="{{ .Site.Title }}">
+    <meta property="og:locale" content="ja_JP">
+    <!-- /OGP -->
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+    <meta name="twitter:title" content="{{ .Title }} - {{ .Site.Title }}">
+    <meta name="twitter:url" content="{{ .Permalink }}">
+    <meta name="twitter:image" content="{{ .Site.BaseURL }}{{ with .Params.banner }}{{ . }}{{ else }}{{ .Site.Params.defaultbanner }}{{ end }}">
+    <meta name="twitter:domain" content="{{ with .Site.Params.twitter_domain }}{{ . }}{{ end }}">
+    <meta name="twitter:creator" content="{{ with .Site.Params.twitter_creator }}{{ . }}{{ end }}">
+    <meta name="twitter:site" content="{{ with .Site.Params.twitter_site }}{{ . }}{{ end }}">
+    <!-- /Twitter Card -->
 </head>

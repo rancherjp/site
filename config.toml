@@ -67,7 +67,10 @@ PygmentsOptions         = "linenos=table,nobackground=true"
     keywords            = ["Rancher", "RancherJP"]
     description         = "Rancher Japan Community page"
     noindex             = "noindex"
-
+    defaultbanner       = "images/banner/rancherjp.png"
+    twitter_domain      = "www.rancher.jp"
+    twitter_creator     = "@RancherJP"
+    twitter_site        = "@RancherJP"
 
 
 # Social media icons and links that appear in the footer
