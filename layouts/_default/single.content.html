@@ -17,6 +17,9 @@
                     </li>
                 {{ end }}
             </ul>
+            {{ if .Params.banner }}
+            <img src="{{ .Site.BaseURL }}images/banner/{{ .Params.banner }}" class="banner" height="300px">
+            {{ end }}
         {{ partial "widgets/content/share.html" . }}
         {{ .Content }}
         {{ partial "widgets/content/tags.html" . }}
