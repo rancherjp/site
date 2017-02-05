@@ -318,11 +318,11 @@ pre code {
     white-space: pre;
 }
 
-a.tag-link {
+a.categories-link {
     background: #2a2a2a;
 }
 
-a.tag-link {
+a.categories-link {
     display: inline-block;
     font-weight: 700;
     color: #fff;
