@@ -76,4 +76,4 @@ PygmentsOptions         = "linenos=table,nobackground=true"
 [social]
     twitter             = "https://twitter.com/rancherjp"
     facebook            = "https://www.facebook.com/rancherjp"
-    slack               = "https://rancherjp.herokuapp.com"
+    slack               = "http://slack.rancher.jp/"
