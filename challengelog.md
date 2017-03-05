@@ -1,5 +1,6 @@
 # 変更
-+ `Update` content/event/event.md
++ `add`         content/releasenote/release-v.1.4.0.md
++ `Update`      content/event/event.md
 
 
 # Merge
