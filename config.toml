@@ -3,7 +3,6 @@ languageCode            = "ja-jp"
 title                   = "Rancher JP"
 hasCJKLanguage          = true
 copyright               = "© 2016 Rancher JP"
-##pygmentscodefences      = true
 pygmentsuseclasses      = true
 pygmentsstyle           = "borland"
 PygmentsOptions         = "linenos=table,nobackground=true"
@@ -77,4 +76,4 @@ PygmentsOptions         = "linenos=table,nobackground=true"
 [social]
     twitter             = "https://twitter.com/rancherjp"
     facebook            = "https://www.facebook.com/rancherjp"
-    slack               = "https://rancherjp.herokuapp.com"
+    slack               = "http://slack.rancher.jp/"

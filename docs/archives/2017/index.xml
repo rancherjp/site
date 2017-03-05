@@ -10,6 +10,81 @@
     <atom:link href="http://www.rancher.jp/site/archives/2017/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>リリース v1.3.3</title>
+      <link>http://www.rancher.jp/site/releasenote/v.1.3.3/</link>
+      <pubDate>Tue, 24 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.rancher.jp/site/releasenote/v.1.3.3/</guid>
+      <description>
+
+&lt;h1 id=&#34;リリース-v1-3-3&#34;&gt;リリース v1.3.3&lt;/h1&gt;
+
+&lt;h2 id=&#34;バージョン&#34;&gt;バージョン&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;rancher/server:v1.3.3&lt;/li&gt;
+&lt;li&gt;rancher/agent:v1.1.3&lt;/li&gt;
+&lt;li&gt;rancher/lb-service-haproxy:v0.4.9&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/rancher/rancher-compose/releases/tag/v0.12.1&#34;&gt;rancher-compose-v0.12.1&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/rancher/cli/releases/tag/v0.4.1&#34;&gt;rancher-v0.4.1&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;注意:&lt;/em&gt; 新しい&lt;a href=&#34;http://docs.rancher.com/rancher/v1.2/en/rancher-services/&#34;&gt;infrastructure services&lt;/a&gt;では、ロードバランサの機能を指定のHAProxyイメージに変更し、ネットワークエージェントが起動されなくなりました。 したがって、rancher/agent-instanceが必要なくなりました。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&#34;重要&#34;&gt;重要!&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;このリリースから Rancher で高可用性のために&lt;a href=&#34;http://docs.rancher.com/rancher/v1.3/en/installing-rancher/installing-server/#elb&#34;&gt;ELB を再び利用する&lt;/a&gt;ことができるようになりました。&lt;/li&gt;
+&lt;li&gt;リリース v 1.2.x より前からアップグレードする場合、まずインフラストラクチャのスタックをチェックして、サービスが最新であることを確認してください。 [アップグレード可能]ボタンが表示されている場合は、最新のサービスに更新してください。&lt;strong&gt;ひとつひとつのインフラストラクチャースタックが完全にアップグレードされてから次のスタックに移動してください&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Rancherのリリースごとに、ロードバランサーサービスのための特定のロードバランサイメージ（つまり &lt;code&gt;rancher/lb-service-haproxy&lt;/code&gt;）にタグを付けました。以前のバージョンのRancherからアップグレードして、新しいロードバランサイメージがリリースされている場合は、ロードバランサ名の横にシンボルが表示され、そのRancherバージョンで新しいイメージが使用可能であることを示します。ロードバランサの最新のイメージにアップグレードすることをお勧めします。&lt;/li&gt;
+&lt;li&gt;1.1.xからアップグレードする場合は、アップグレードに関する重要な注意点に関する&lt;a href=&#34;https://github.com/rancher/rancher/releases/tag/v1.2.0&#34;&gt;v1.2.0&lt;/a&gt;のリリースノートをお読みください。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;rancher-サーバータグ&#34;&gt;Rancher サーバータグ&lt;/h2&gt;
+
+&lt;p&gt;Rancher サーバーに2種類のタグを付けています。メジャーリリース毎に特定のバージョンののドキュメントを提供しています。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;rancher/server:latest&lt;/code&gt; タグは、最新の開発ビルドです。これらのビルドは、CI自動化フレームワークを通じて検証されています。これらのリリースは本番環境での展開用ではありません。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;rancher/server:stable&lt;/code&gt; タグは、最新の安定版リリースです。このタグは、本番環境に推奨するバージョンです。&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;末尾が&lt;code&gt;rc{n}&lt;/code&gt;のリリースはどれも利用しないでください。&lt;code&gt;rc&lt;/code&gt; ビルドは、Rancherチームのテスト用です。&lt;/p&gt;
+
+&lt;p&gt;v1.3.3 は、&lt;code&gt;rancher/server:latest&lt;/code&gt; タグが付いています。&lt;/p&gt;
+
+&lt;h2 id=&#34;インフラストラクチャーサービスの注意点&#34;&gt;インフラストラクチャーサービスの注意点&lt;/h2&gt;
+
+&lt;p&gt;このバージョン1.3.1では、新しい &lt;code&gt;scheduler&lt;/code&gt;エントリを追加しました。このエントリは、&lt;code&gt;network-services&lt;/code&gt; より前にアップグレードする必要があります。ネットワークサービスをアップグレードするときのバグが修正されます。&lt;/p&gt;
+
+&lt;h2 id=&#34;主要な既知の問題&#34;&gt;主要な既知の問題&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;UI（aka docker-machine）を使用してv1.1.4から作成されたAWSのホストは、UIから削除されたときに正しくクリーンアップされません[&lt;a href=&#34;https://github.com/rancher/rancher/issues/6750&#34;&gt;#6750&lt;/a&gt;]&lt;/li&gt;
+&lt;li&gt;自己署名証明書では、リモート kubectl クライアントを使用すると自動的には動作しません。回避策があります[&lt;a href=&#34;https://github.com/rancher/rancher/issues/7235&#34;&gt;#7235&lt;/a&gt;]&lt;/li&gt;
+&lt;li&gt;自己証明書とKubernetesを使っているときに、Helm オペレーションが固まる[&lt;a href=&#34;https://github.com/rancher/rancher/issues/7234&#34;&gt;#7234&lt;/a&gt;]&lt;/li&gt;
+&lt;li&gt;コンテナを再起動後に、コンテナが利用可能になるまでDNSの解決が遅延します[&lt;a href=&#34;https://github.com/rancher/rancher/issues/7402&#34;&gt;#74021&lt;/a&gt;]&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;v1-3-2からの主なバグ修正&#34;&gt;v1.3.2からの主なバグ修正&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;ELB を利用する設定を有効にしていると、&lt;code&gt;kubectl exec&lt;/code&gt; がALB 配下で動作しないという問題を修正しました。&lt;a href=&#34;http://docs.rancher.com/rancher/v1.3/en/installing-rancher/installing-server/#elb&#34;&gt;ELB を設定する追加操作&lt;/a&gt;と&lt;a href=&#34;http://docs.rancher.com/rancher/v1.3/en/installing-rancher/installing-server/basic-ssl-config/#elb&#34;&gt;SSL を有効にする追加操作&lt;/a&gt; [&lt;a href=&#34;https://github.com/rancher/rancher/issues/7464&#34;&gt;#7464&lt;/a&gt;]&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;rancher-compose-downloads&#34;&gt;Rancher-Compose Downloads&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/rancher/rancher-compose/releases/tag/v0.12.1&#34;&gt;https://github.com/rancher/rancher-compose/releases/tag/v0.12.1&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;rancher-cli-downloads&#34;&gt;Rancher CLI Downloads&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/rancher/cli/releases/tag/v0.4.1&#34;&gt;https://github.com/rancher/cli/releases/tag/v0.4.1&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>リリース v1.3.1</title>
       <link>http://www.rancher.jp/site/releasenote/v.1.3.1/</link>
       <pubDate>Sat, 14 Jan 2017 00:00:00 +0000</pubDate>
