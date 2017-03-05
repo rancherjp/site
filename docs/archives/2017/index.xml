@@ -10,6 +10,98 @@
     <atom:link href="http://www.rancher.jp/site/archives/2017/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>リリース v1.4.0</title>
+      <link>http://www.rancher.jp/site/releasenote/v.1.4.0/</link>
+      <pubDate>Sun, 05 Feb 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.rancher.jp/site/releasenote/v.1.4.0/</guid>
+      <description>
+
+&lt;h1 id=&#34;リリース-v1-4-0&#34;&gt;リリース v1.4.0&lt;/h1&gt;
+
+&lt;h2 id=&#34;バージョン&#34;&gt;バージョン&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;rancher/server:v1.4.0&lt;/li&gt;
+&lt;li&gt;rancher/agent:v1.2.0&lt;/li&gt;
+&lt;li&gt;rancher/lb-service-haproxy:v0.5.9&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/rancher/rancher-compose/releases/tag/v0.12.2&#34;&gt;rancher-compose-v0.12.2&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/rancher/cli/releases/tag/v0.4.1&#34;&gt;rancher-v0.4.1&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;対応している-docker-のバージョン&#34;&gt;対応している Docker のバージョン&lt;/h3&gt;
+
+&lt;p&gt;Docker 1.10.3
+Docker 1.12.3-1.12.6&lt;/p&gt;
+
+&lt;h2 id=&#34;kubernetes-ui-の変更&#34;&gt;Kubernetes UI の変更&lt;/h2&gt;
+
+&lt;p&gt;Kubernetesをメインのオーケストレーションエンジンにしている場合、v1.4.0リリースからk8sの対応について2つの大きな変更があります。&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Rancher による k8sデフォルトUIを廃止し、&lt;a href=&#34;https://github.com/kubernetes/dashboard&#34;&gt;k8s&amp;rsquo; ダッシュボードUI&lt;/a&gt;に引き継ぎました。各k8sの環境で自動的に起動して有効になります。2016年の後半、KubernetesダッシュボードUIは、一般的な用途向けのweb UIがものすごい貢献により発展し、RancherのデフォルトUIとしての機能と安定性を備えたところに到達したと思います。その為、1.4では Rancher k8s UI を廃止し k8sのダッシュボードUIを k8s リソースの管理UIとしました。&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Rancher カタログにあるk8s グラフ化とテンプレートを廃止し、&lt;a href=&#34;https://github.com/kubernetes/helm&#34;&gt;k8s helm&lt;/a&gt; に引き継ぎました。Helm(とtiller)は、それぞれk8s環境で自動的に有効になります。便利な helmクライアントも 外部から動かせる kubectlシェルコンソールとして同様に追加されます。&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;重要&#34;&gt;重要!&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;バージョン 1.4.0から Rancher &lt;a href=&#34;http://docs.rancher.com/rancher/v1.3/en/installing-rancher/installing-server/#elb&#34;&gt;AWS ELBs&lt;/a&gt; の利用を推奨します。&lt;/li&gt;
+&lt;li&gt;Rancherサーバーをアップグレードした後、まずインフラストラクチャのスタックをチェックして、それぞれのサービスが最新であることを確認してください。 &amp;ldquo;アップグレード可能&amp;rdquo;ボタンが表示されている場合は、最新のサービスに更新してください。&lt;strong&gt;ひとつひとつのインフラストラクチャースタックが完全にアップグレードされてから次のスタックに移動してください&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Rancherのリリースごとに、ロードバランサーサービスのための特定のロードバランサイメージ（つまり &lt;code&gt;rancher/lb-service-haproxy&lt;/code&gt;）にタグを付けました。以前のバージョンのRancherからアップグレードして、新しいロードバランサイメージがリリースされている場合は、ロードバランサ名の横にシンボルが表示され、そのRancherバージョンで新しいイメージが使用可能であることを示します。ロードバランサの最新のイメージにアップグレードすることをお勧めします。&lt;/li&gt;
+&lt;li&gt;1.1.xから v1.2.2にアップグレードする場合は、アップグレードに関する重要な注意点に関する&lt;a href=&#34;https://github.com/rancher/rancher/releases/tag/v1.2.0&#34;&gt;v1.2.0&lt;/a&gt;のリリースノートをお読みください。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;rancher-サーバータグ&#34;&gt;Rancher サーバータグ&lt;/h2&gt;
+
+&lt;p&gt;Rancher サーバーに2種類のタグを付けています。メジャーリリース毎に特定のバージョンののドキュメントを提供しています。
+- &lt;code&gt;rancher/server:latest&lt;/code&gt; タグは、最新の開発ビルドです。これらのビルドは、CI自動化フレームワークを通じて検証されています。これらのリリースは本番環境での展開用ではありません。
+- &lt;code&gt;rancher/server:stable&lt;/code&gt; タグは、最新の安定版リリースです。このタグは、本番環境に推奨するバージョンです。&lt;/p&gt;
+
+&lt;p&gt;末尾が&lt;code&gt;rc{n}&lt;/code&gt;のリリースはどれも利用しないでください。&lt;code&gt;rc&lt;/code&gt; ビルドは、Rancherチームのテスト用です。&lt;/p&gt;
+
+&lt;p&gt;v1.4.0 には、&lt;code&gt;rancher/server:latest&lt;/code&gt; タグが付いています。&lt;/p&gt;
+
+&lt;h2 id=&#34;追加機能&#34;&gt;追加機能&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;ウェブフック [&lt;a href=&#34;https://github.com/rancher/rancher/issues/619&#34;&gt;#619&lt;/a&gt;]&lt;/strong&gt; - Rancherは&lt;a href=&#34;http://docs.rancher.com/rancher/v1.4/en/cattle/webhook-service/&#34;&gt;サービススケールアップダウンのウェブフック生成&lt;/a&gt;機能を使えるようになりました。このフレームワークにより &lt;a href=&#34;https://github.com/rancher/webhook-service&#34;&gt;ウェブフック&lt;/a&gt; 機能へより簡単に貢献できるようになりました。また、その他のウェブフック機能をつかった機能追加のプルリクエストも歓迎しています。様々なウェブフックドライバーがRancherとUIの一つの機能として自動的に統合できるようになるでしょう。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;ネットワークポリシー [&lt;a href=&#34;https://github.com/rancher/rancher/issues/3895&#34;&gt;#3895&lt;/a&gt;]&lt;/strong&gt; - 利用者側で&lt;a href=&#34;http://docs.rancher.com/rancher/v1.4/en/rancher-services/network-policy/&#34;&gt;ネットワークポリシー&lt;/a&gt; をそれぞれの環境毎に変更することができるようになりました。これにより、1つの環境内で作ったコンテナー間のデフォルト通信ポリシーを拒否や全て許可のように選択することができるようになりました。また、もっと洗練されたルールも選択することができるようになりました。例えば、イントラスタック内は、許可するが、インタースタックとのネットワーク通信は拒否するといったことです。** 注意: UI から追加することはまだできません。次のリリースで対応する予定です。**&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;マルチIPホストのスケジューラー接続[&lt;a href=&#34;https://github.com/rancher/rancher/issues/7034&#34;&gt;#7034&lt;/a&gt;]&lt;/strong&gt; - Ranche が複数のIPアドレスを持っているホストに対してコンテナのスケジューラーをサポート &lt;a href=&#34;http://docs.rancher.com/rancher/v1.4/en/hosts/#scheduler-ips&#34;&gt;the IPs are configured in Rancher&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;秘匿情報管理 - 試験的実装 [&lt;a href=&#34;https://github.com/rancher/rancher/issues/1269&#34;&gt;#1269&lt;/a&gt;]&lt;/strong&gt; - Rancher で &lt;a href=&#34;http://docs.rancher.com/rancher/v1.4/en/cattle/secrets/&#34;&gt;コンテナー内で利用される名前ラベル付き秘密情報&lt;/a&gt; 機能をサポートしました。Rancher がローカルAES(高度標準暗号)を使うか、&lt;a href=&#34;https://www.vaultproject.io/docs/secrets/transit/&#34;&gt;Vault Transit&lt;/a&gt; を使って裏側の暗号化機構にRancher内の値を安全に保持するインターフェースを提供します。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;主要な既知の問題&#34;&gt;主要な既知の問題&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;UI（aka docker-machine）を使用してv1.1.4から作成されたAWSのホストは、UIから削除されたときに正しくクリーンアップされません[&lt;a href=&#34;https://github.com/rancher/rancher/issues/6750&#34;&gt;#6750&lt;/a&gt;]&lt;/li&gt;
+&lt;li&gt;自己署名証明書では、リモート kubectl クライアントを使用すると自動的には動作しません。次の回避策があります[&lt;a href=&#34;https://github.com/rancher/rancher/issues/7235&#34;&gt;#7235&lt;/a&gt;]&lt;/li&gt;
+&lt;li&gt;自己証明書とKubernetesを使っているときに、Helm オペレーションが固まる[&lt;a href=&#34;https://github.com/rancher/rancher/issues/7234&#34;&gt;#7234&lt;/a&gt;]
+-　マルチIPホストのスケジューラー接続を有効にした場合、スケジューラーIPと一致する指定されたホストIPが、ポートを公開するとき、またはロード・バランサーのために使用された場合、そのIPでホスト上でスケジュールされません。
+[&lt;a href=&#34;https://github.com/rancher/rancher/issues/7675&#34;&gt;#7675&lt;/a&gt;]&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;v1-3-0からの主なバグ修正&#34;&gt;v1.3.0からの主なバグ修正&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://docs.rancher.com/rancher/v1.4/en/kubernetes/ingress/#host-scheduling&#34;&gt;K8S 環境の特定のホスト上でのロードバランサースケジュール&lt;/a&gt;や&lt;a href=&#34;http://docs.rancher.com/rancher/v1.4/en/kubernetes/ingress/#example-of-a-load-balancer-scheduled-on-all-hosts&#34;&gt;全てのホスト上でロードバランサーをスケジュール&lt;/a&gt;を設定する方法がないのを修正。[&lt;a href=&#34;https://github.com/rancher/rancher/issues/5240&#34;&gt;#5240&lt;/a&gt;, &lt;a href=&#34;https://github.com/rancher/rancher/issues/4849&#34;&gt;#4849&lt;/a&gt;]&lt;/li&gt;
+&lt;li&gt;コンテナーが複数のホストに散らばっている状態でサービスを起動しようとしたら動かないを修正 [&lt;a href=&#34;https://github.com/rancher/rancher/issues/7170&#34;&gt;#7170&lt;/a&gt;]&lt;/li&gt;
+&lt;li&gt;ロードバランサーのアップグレードのスケジューリングが動かないを修正 [&lt;a href=&#34;https://github.com/rancher/rancher/issues/7251&#34;&gt;#7251&lt;/a&gt;]&lt;/li&gt;
+&lt;li&gt;v1 のロードバランサーにあったセレクタがv2 ロードバランサーに変換されないを修正 [&lt;a href=&#34;https://github.com/rancher/rancher/issues/7269&#34;&gt;#7269&lt;/a&gt;]&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;rancher-compose-downloads&#34;&gt;Rancher-Compose Downloads&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/rancher/rancher-compose/releases/tag/v0.12.2&#34;&gt;https://github.com/rancher/rancher-compose/releases/tag/v0.12.2&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;rancher-cli-downloads&#34;&gt;Rancher CLI Downloads&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/rancher/cli/releases/tag/v0.4.1&#34;&gt;https://github.com/rancher/cli/releases/tag/v0.4.1&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>リリース v1.3.3</title>
       <link>http://www.rancher.jp/site/releasenote/v.1.3.3/</link>
       <pubDate>Tue, 24 Jan 2017 00:00:00 +0000</pubDate>
