@@ -72,22 +72,20 @@ Docker 17.03.0-ce (Kubenetes未対応)&lt;/p&gt;
 &lt;li&gt;&lt;strong&gt;APIインターセプター[&lt;a href=&#34;https://github.com/rancher/rancher/issues/7749&#34;&gt;#7779&lt;/a&gt;,&lt;a href=&#34;https://github.com/rancher/rancher/issues/7134&#34;&gt;#7134&lt;/a&gt;]&lt;/strong&gt; - 本リリースからRancherではすべてのAPIリクエストにたいしてリクエスト前処理、後処理を加えられるようになりました。
 これによって管理者はAPIのアクセスコントロールやAPIリクエストやレスポンスのペイロードを加工することでより細かい単位でのAPIポリシーの管理を実施できるようになりました。
 インターセプターの具体的な作成方法については&lt;a href=&#34;https://github.com/rancher/rancher/issues/7749&#34;&gt;#7749&lt;/a&gt;を参照してください。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;より多くの&lt;a href=&#34;http://docs.rancher.com/rancher/v1.5/en/rancher-services/network-policy/&#34;&gt;ネットワークポリシー&lt;/a&gt;[&lt;a href=&#34;https://github.com/rancher/rancher/issues/7743&#34;&gt;#7743&lt;/a&gt;]&lt;/strong&gt; - environment毎に設定可能な2つのネットワークポリシーが本リリースから利用可能になりました。
-本機能のサポートのために、environment設定配下に以下の項目を追加しました。&lt;/li&gt;
-&lt;li&gt;サービス内部のallow/deny - デフォルトではルールはallowですが、denyに設定した場合、全てのコンテナはサービスの外部のコンテナと通信できなくなります。&lt;/li&gt;
-&lt;li&gt;linkサポートの有効化 - サービスまたはスタックでdenyを設定した場合、docker linkまたはselectorラベルを用いて個々のコンテナ間の通信を許可することができます。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;より多くの&lt;a href=&#34;http://docs.rancher.com/rancher/v1.5/en/cattle/webhook-service/&#34;&gt;webhookドライバ&lt;/a&gt;[&lt;a href=&#34;https://github.com/rancher/rancher/issues/7735&#34;&gt;#7735&lt;/a&gt;,&lt;a href=&#34;https://github.com/rancher/rancher/issues/7713&#34;&gt;#7713&lt;/a&gt;]&lt;/strong&gt;
+&lt;li&gt;&lt;strong&gt;より多くの&lt;a href=&#34;http://docs.rancher.com/rancher/v1.5/en/rancher-services/network-policy/&#34;&gt;ネットワークポリシー&lt;/a&gt;[&lt;a href=&#34;https://github.com/rancher/rancher/issues/7743&#34;&gt;#7743&lt;/a&gt;]&lt;/strong&gt;
 
 &lt;ul&gt;
-&lt;li&gt;追加で2つのwebhookドライバがRancherに追加されました。&lt;/li&gt;
+&lt;li&gt;environment毎に設定可能な2つのネットワークポリシーが本リリースから利用可能になりました。本機能のサポートのために、environment設定配下に以下の項目を追加しました。&lt;/li&gt;
+&lt;li&gt;サービス内部のallow/deny - デフォルトではルールはallowですが、denyに設定した場合、全てのコンテナはサービスの外部のコンテナと通信できなくなります。&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;linkサポートの有効化 - サービスまたはスタックでdenyを設定した場合、docker linkまたはselectorラベルを用いて個々のコンテナ間の通信を許可することができます。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;より多くの&lt;a href=&#34;http://docs.rancher.com/rancher/v1.5/en/cattle/webhook-service/&#34;&gt;webhookドライバ&lt;/a&gt;[&lt;a href=&#34;https://github.com/rancher/rancher/issues/7735&#34;&gt;#7735&lt;/a&gt;,&lt;a href=&#34;https://github.com/rancher/rancher/issues/7713&#34;&gt;#7713&lt;/a&gt;]&lt;/strong&gt; - 追加で2つのwebhookドライバがRancherに追加されました。
+
+&lt;ul&gt;
 &lt;li&gt;ホストのスケーリング - ホストのスケールアップ/ダウンを設定できるようになりました。RancherAPIを用いて作成されたホストのみで利用可能です。&lt;/li&gt;
 &lt;li&gt;DockerHubサービスのアップグレード - DockerHubのイメージのアップデートに伴うwebhookを設定することができるようになりました。本webhookを用いてRancher内のサービスをアップデートすることができるようになりました。&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;特定のホストに対するコンテナスケジューリングの制限[&lt;a href=&#34;https://github.com/rancher/rancher/issues/7795&#34;&gt;#7795&lt;/a&gt;]&lt;/strong&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Rancherでホストに対してタグを付与することで特定のラベルをもつホストにしてのみコンテナを配置することができるようになりました。&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;特定のホストに対するコンテナスケジューリングの制限[&lt;a href=&#34;https://github.com/rancher/rancher/issues/7795&#34;&gt;#7795&lt;/a&gt;]&lt;/strong&gt; - Rancherでホストに対してタグを付与することで特定のラベルをもつホストにしてのみコンテナを配置することができるようになりました。&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;メタデータサービスの改善(フェーズ1) [&lt;a href=&#34;https://github.com/rancher/rancher/issues/8004&#34;&gt;#8004&lt;/a&gt;]&lt;/strong&gt;
 
 &lt;ul&gt;
