@@ -83,10 +83,16 @@ Docker 17.03.0-ce (Kubenetes未対応)&lt;/p&gt;
 &lt;li&gt;ホストのスケーリング - ホストのスケールアップ/ダウンを設定できるようになりました。RancherAPIを用いて作成されたホストのみで利用可能です。&lt;/li&gt;
 &lt;li&gt;DockerHubサービスのアップグレード - DockerHubのイメージのアップデートに伴うwebhookを設定することができるようになりました。本webhookを用いてRancher内のサービスをアップデートすることができるようになりました。&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;特定のホストに対するコンテナスケジューリングの制限[&lt;a href=&#34;https://github.com/rancher/rancher/issues/7795&#34;&gt;#7795&lt;/a&gt;]&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;特定のホストに対するコンテナスケジューリングの制限[&lt;a href=&#34;https://github.com/rancher/rancher/issues/7795&#34;&gt;#7795&lt;/a&gt;]&lt;/strong&gt;
+
+&lt;ul&gt;
 &lt;li&gt;Rancherでホストに対してタグを付与することで特定のラベルをもつホストにしてのみコンテナを配置することができるようになりました。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;メタデータサービスの改善(フェーズ1) [&lt;a href=&#34;https://github.com/rancher/rancher/issues/8004&#34;&gt;#8004&lt;/a&gt;]&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;メタデータサービスの改善(フェーズ1) [&lt;a href=&#34;https://github.com/rancher/rancher/issues/8004&#34;&gt;#8004&lt;/a&gt;]&lt;/strong&gt;
+
+&lt;ul&gt;
 &lt;li&gt;DBのスラッシングを減らすためにメタデータ情報のキャッシングを追加しました。個々のメタデータサービスにたいしてパスされるメタデータのフットプリントサイズを削減しました。結果、メタデータに依存する多くのサービスにおけるRancher全般に渡る改善が実現できています。例えば、一度に大量のコンテナを立ち上げた場合や、すでに多くの起動済みのコンテナがある場合に追加のコンテナを起動した際に改善を実感できるはずです。&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;SwarmではデフォルトのUIとしてPortainer.ioを利用するようになりました&lt;/strong&gt;
 
 &lt;ul&gt;
