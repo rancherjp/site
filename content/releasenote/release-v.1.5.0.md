@@ -57,16 +57,14 @@ Rancherサーバーには2種類のタグがあります。
 - **APIインターセプター[[#7779](https://github.com/rancher/rancher/issues/7749),[#7134](https://github.com/rancher/rancher/issues/7134)]** - 本リリースからRancherではすべてのAPIリクエストにたいしてリクエスト前処理、後処理を加えられるようになりました。
 これによって管理者はAPIのアクセスコントロールやAPIリクエストやレスポンスのペイロードを加工することでより細かい単位でのAPIポリシーの管理を実施できるようになりました。
 インターセプターの具体的な作成方法については[#7749](https://github.com/rancher/rancher/issues/7749)を参照してください。
-- **より多くの[ネットワークポリシー](http://docs.rancher.com/rancher/v1.5/en/rancher-services/network-policy/)[[#7743](https://github.com/rancher/rancher/issues/7743)]** - environment毎に設定可能な2つのネットワークポリシーが本リリースから利用可能になりました。
-本機能のサポートのために、environment設定配下に以下の項目を追加しました。
-- サービス内部のallow/deny - デフォルトではルールはallowですが、denyに設定した場合、全てのコンテナはサービスの外部のコンテナと通信できなくなります。
+- **より多くの[ネットワークポリシー](http://docs.rancher.com/rancher/v1.5/en/rancher-services/network-policy/)[[#7743](https://github.com/rancher/rancher/issues/7743)]**
+  - environment毎に設定可能な2つのネットワークポリシーが本リリースから利用可能になりました。本機能のサポートのために、environment設定配下に以下の項目を追加しました。
+  - サービス内部のallow/deny - デフォルトではルールはallowですが、denyに設定した場合、全てのコンテナはサービスの外部のコンテナと通信できなくなります。
 - linkサポートの有効化 - サービスまたはスタックでdenyを設定した場合、docker linkまたはselectorラベルを用いて個々のコンテナ間の通信を許可することができます。
-- **より多くの[webhookドライバ](http://docs.rancher.com/rancher/v1.5/en/cattle/webhook-service/)[[#7735](https://github.com/rancher/rancher/issues/7735),[#7713](https://github.com/rancher/rancher/issues/7713)]**
-  - 追加で2つのwebhookドライバがRancherに追加されました。
-    - ホストのスケーリング - ホストのスケールアップ/ダウンを設定できるようになりました。RancherAPIを用いて作成されたホストのみで利用可能です。
-    - DockerHubサービスのアップグレード - DockerHubのイメージのアップデートに伴うwebhookを設定することができるようになりました。本webhookを用いてRancher内のサービスをアップデートすることができるようになりました。
-- **特定のホストに対するコンテナスケジューリングの制限[[#7795](https://github.com/rancher/rancher/issues/7795)]**
-  - Rancherでホストに対してタグを付与することで特定のラベルをもつホストにしてのみコンテナを配置することができるようになりました。
+- **より多くの[webhookドライバ](http://docs.rancher.com/rancher/v1.5/en/cattle/webhook-service/)[[#7735](https://github.com/rancher/rancher/issues/7735),[#7713](https://github.com/rancher/rancher/issues/7713)]** - 追加で2つのwebhookドライバがRancherに追加されました。
+  - ホストのスケーリング - ホストのスケールアップ/ダウンを設定できるようになりました。RancherAPIを用いて作成されたホストのみで利用可能です。
+  - DockerHubサービスのアップグレード - DockerHubのイメージのアップデートに伴うwebhookを設定することができるようになりました。本webhookを用いてRancher内のサービスをアップデートすることができるようになりました。
+- **特定のホストに対するコンテナスケジューリングの制限[[#7795](https://github.com/rancher/rancher/issues/7795)]** - Rancherでホストに対してタグを付与することで特定のラベルをもつホストにしてのみコンテナを配置することができるようになりました。
 - **メタデータサービスの改善(フェーズ1) [[#8004](https://github.com/rancher/rancher/issues/8004)]** 
   - DBのスラッシングを減らすためにメタデータ情報のキャッシングを追加しました。個々のメタデータサービスにたいしてパスされるメタデータのフットプリントサイズを削減しました。結果、メタデータに依存する多くのサービスにおけるRancher全般に渡る改善が実現できています。例えば、一度に大量のコンテナを立ち上げた場合や、すでに多くの起動済みのコンテナがある場合に追加のコンテナを起動した際に改善を実感できるはずです。
 - **SwarmではデフォルトのUIとしてPortainer.ioを利用するようになりました**
