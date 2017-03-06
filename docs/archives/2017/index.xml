@@ -10,6 +10,124 @@
     <atom:link href="http://www.rancher.jp/site/archives/2017/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>リリース v1.5.0</title>
+      <link>http://www.rancher.jp/site/releasenote/v1.5.0/</link>
+      <pubDate>Fri, 03 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.rancher.jp/site/releasenote/v1.5.0/</guid>
+      <description>
+
+&lt;h1 id=&#34;リリース-v1-5-0&#34;&gt;リリース v1.5.0&lt;/h1&gt;
+
+&lt;h2 id=&#34;バージョン&#34;&gt;バージョン&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;rancher/server:v1.5.0&lt;/li&gt;
+&lt;li&gt;rancher/agent:v1.2.1&lt;/li&gt;
+&lt;li&gt;rancher/lb-service-haproxy:v0.6.2&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/rancher/cli/releases/tag/v0.5.0&#34;&gt;rancher-v0.5.0&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/rancher/rancher-compose/releases/tag/v0.12.3&#34;&gt;rancher-compose-v0.12.3&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;対応している-docker-のバージョン&#34;&gt;対応している Docker のバージョン&lt;/h3&gt;
+
+&lt;p&gt;Docker 1.10.3&lt;br /&gt;
+Docker 1.12.3-1.12.6&lt;br /&gt;
+Docker 1.13.1 (Kubenetes未対応)&lt;br /&gt;
+Docker 17.03.0-ce (Kubenetes未対応)&lt;/p&gt;
+
+&lt;h2 id=&#34;rancherサーバーのタグについて&#34;&gt;Rancherサーバーのタグについて&lt;/h2&gt;
+
+&lt;p&gt;Rancherサーバーには2種類のタグがあります。
+いずれのメジャーリリースタグにおいても、個々のバージョンに向けたドキュメントを提供します。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;rancher/server:latestタグ&lt;/code&gt; 最新の開発中ビルドを提供するタグです。これらのビルドはCIの自動化フレームワークを使って検証済みです。これらのリリースは本番環境へのデプロイを意味していません。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;rancher/server:stableタグ&lt;/code&gt; 最新のリリースビルドのタグです。本番環境にデプロイする際は本タグを利用することを推奨します。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;code&gt;rc{n}&lt;/code&gt;サフィックスのついたリリースを使わないようにしてください。これらの&lt;code&gt;rc&lt;/code&gt;ビルドはRancherチームがテストを行うためのものです。&lt;/p&gt;
+
+&lt;h3 id=&#34;beta-v1-5-0-rancher-server-latest&#34;&gt;Beta - v1.5.0 - &lt;code&gt;rancher/server:latest&lt;/code&gt;&lt;/h3&gt;
+
+&lt;h3 id=&#34;stable-v1-4-1-rancher-server-stable&#34;&gt;Stable - v1.4.1 - &lt;code&gt;rancher/server:stable&lt;/code&gt;&lt;/h3&gt;
+
+&lt;h2 id=&#34;重要な事項-アップグレードについて&#34;&gt;重要な事項 - アップグレードについて&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;本リリースでは、network-servicesインフラストラクチャサービスが自動的にアップグレードされるため、手動でのアップグレードなしでは、あなたのリリースは動作しなくなります。もし、ホストを持たないenvironmentsが存在する場合、ホストを追加した際の自動アップグレードに遅延が発生する場合があります。したがって、当該environmentsにホストを追加した際は&lt;code&gt;network-services&lt;/code&gt;スタックがアップグレードされていることを確認するか、ホストを追加した直後に手動でアップグレードするようにしてください。&lt;/li&gt;
+&lt;li&gt;アップグレードマネージャーを利用することで、Rancherサーバーをアップグレードした後にあなたのインフラストラクチャスタックを最新のデフォルトバージョンにすることができます。これは ** Admin -&amp;gt; Settings -&amp;gt; Advanced Settings **、 &lt;code&gt;upgrade.manager&lt;/code&gt;の設定からアップデート可能です。デフォルトでは本機能は無効になっています。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;追加機能&#34;&gt;追加機能&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;カタログテンプレートにおけるテンプレートサポート[&lt;a href=&#34;http://docs.rancher.com/rancher/v1.5/en/cli/variable-interpolation/#templating&#34;&gt;#3239&lt;/a&gt;]&lt;/strong&gt; - &lt;a href=&#34;https://golang.org/pkg/text/template/&#34;&gt;Goのテンプレートシステム&lt;/a&gt;を利用することで、Rancherでテンプレートにおける条件分岐を実現できるようにしました。
+変数の挿入を用いて条件ロジックを利用することで、より高い柔軟性をもつ動的なカタログテンプレートを出力することができます。
+&lt;em&gt;注意: 現在は文字列比較のみをサポートしています。&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;APIインターセプター[&lt;a href=&#34;https://github.com/rancher/rancher/issues/7749&#34;&gt;#7779&lt;/a&gt;,&lt;a href=&#34;https://github.com/rancher/rancher/issues/7134&#34;&gt;#7134&lt;/a&gt;]&lt;/strong&gt; - 本リリースからRancherではすべてのAPIリクエストにたいしてリクエスト前処理、後処理を加えられるようになりました。
+これによって管理者はAPIのアクセスコントロールやAPIリクエストやレスポンスのペイロードを加工することでより細かい単位でのAPIポリシーの管理を実施できるようになりました。
+インターセプターの具体的な作成方法については&lt;a href=&#34;https://github.com/rancher/rancher/issues/7749&#34;&gt;#7749&lt;/a&gt;を参照してください。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;より多くの&lt;a href=&#34;http://docs.rancher.com/rancher/v1.5/en/rancher-services/network-policy/&#34;&gt;ネットワークポリシー&lt;/a&gt;[&lt;a href=&#34;https://github.com/rancher/rancher/issues/7743&#34;&gt;#7743&lt;/a&gt;]&lt;/strong&gt; - environment毎に設定可能な2つのネットワークポリシーが本リリースから利用可能になりました。本機能のサポートのために、environment設定配下に以下の項目を追加しました。
+
+&lt;ul&gt;
+&lt;li&gt;サービス内部のallow/deny - デフォルトではルールはallowですが、denyに設定した場合、全てのコンテナはサービスの外部のコンテナと通信できなくなります。&lt;/li&gt;
+&lt;li&gt;linkサポートの有効化 - サービスまたはスタックでdenyを設定した場合、docker linkまたはselectorラベルを用いて個々のコンテナ間の通信を許可することができます。&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;より多くの&lt;a href=&#34;http://docs.rancher.com/rancher/v1.5/en/cattle/webhook-service/&#34;&gt;webhookドライバ&lt;/a&gt;[&lt;a href=&#34;https://github.com/rancher/rancher/issues/7735&#34;&gt;#7735&lt;/a&gt;,&lt;a href=&#34;https://github.com/rancher/rancher/issues/7713&#34;&gt;#7713&lt;/a&gt;]&lt;/strong&gt; - 追加で2つのwebhookドライバがRancherに追加されました。
+
+&lt;ul&gt;
+&lt;li&gt;ホストのスケーリング - ホストのスケールアップ/ダウンを設定できるようになりました。RancherAPIを用いて作成されたホストのみで利用可能です。&lt;/li&gt;
+&lt;li&gt;DockerHubサービスのアップグレード - DockerHubのイメージのアップデートに伴うwebhookを設定することができるようになりました。本webhookを用いてRancher内のサービスをアップデートすることができるようになりました。&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;特定のホストに対するコンテナスケジューリングの制限[&lt;a href=&#34;https://github.com/rancher/rancher/issues/7795&#34;&gt;#7795&lt;/a&gt;]&lt;/strong&gt; - Rancherでホストに対してタグを付与することで特定のラベルをもつホストにしてのみコンテナを配置することができるようになりました。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;メタデータサービスの改善(フェーズ1) [&lt;a href=&#34;https://github.com/rancher/rancher/issues/8004&#34;&gt;#8004&lt;/a&gt;]&lt;/strong&gt;
+
+&lt;ul&gt;
+&lt;li&gt;DBのスラッシングを減らすためにメタデータ情報のキャッシングを追加しました。個々のメタデータサービスにたいしてパスされるメタデータのフットプリントサイズを削減しました。結果、メタデータに依存する多くのサービスにおけるRancher全般に渡る改善が実現できています。例えば、一度に大量のコンテナを立ち上げた場合や、すでに多くの起動済みのコンテナがある場合に追加のコンテナを起動した際に改善を実感できるはずです。&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;SwarmではデフォルトのUIとしてPortainer.ioを利用するようになりました&lt;/strong&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Swarm向けのデフォルトのenvironmentテンプレートではPortainer.ioをUIとして利用するようになりました。&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;known-major-issues&#34;&gt;Known Major Issues&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;If there is an environment with no hosts, after upgrading and adding the hosts, the &lt;code&gt;network-services&lt;/code&gt; infrastructure stack, which is required to be upgraded, will not upgrade immediately. It will be delayed by an hour. [&lt;a href=&#34;https://github.com/rancher/rancher/issues/8047&#34;&gt;#8047&lt;/a&gt;]&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;major-bug-fixes-since-v1-4-1&#34;&gt;Major Bug Fixes since v1.4.1&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Fixed a memory leak issue with the metadata service  [&lt;a href=&#34;https://github.com/rancher/rancher/issues/7844&#34;&gt;#7844&lt;/a&gt;]&lt;/li&gt;
+&lt;li&gt;Fixed an issue where the bulk action menu to view logs was not functioning properly [&lt;a href=&#34;https://github.com/rancher/rancher/issues/7787&#34;&gt;#7787&lt;/a&gt;]&lt;/li&gt;
+&lt;li&gt;Fixed an issue where a stack named &amp;ldquo;Y&amp;rdquo; can cause the Rancher metadata service to crash [&lt;a href=&#34;https://github.com/rancher/rancher/issues/7776&#34;&gt;#7776&lt;/a&gt;]&lt;/li&gt;
+&lt;li&gt;Updated Rancher&amp;rsquo;s swarmkit orchestration engine [&lt;a href=&#34;https://github.com/rancher/rancher/issues/7774&#34;&gt;#7774&lt;/a&gt;]&lt;/li&gt;
+&lt;li&gt;Increased the value size for secrets [&lt;a href=&#34;https://github.com/rancher/rancher/issues/7708&#34;&gt;#7708&lt;/a&gt;]&lt;/li&gt;
+&lt;li&gt;Added multiple category support for catalog templates [&lt;a href=&#34;https://github.com/rancher/rancher/issues/7497&#34;&gt;#7497&lt;/a&gt;]&lt;/li&gt;
+&lt;li&gt;Added sticky session support for Rancher&amp;rsquo;s k8s ingress controller [&lt;a href=&#34;https://github.com/rancher/rancher/issues/7467&#34;&gt;#7467&lt;/a&gt;]&lt;/li&gt;
+&lt;li&gt;Added support to allow admins to launch k8s with ability to customize location of system k8s images such as the kubelet, skydns, helm, etc. [&lt;a href=&#34;https://github.com/rancher/rancher/issues/7362&#34;&gt;#7362&lt;/a&gt;]&lt;/li&gt;
+&lt;li&gt;Fixed an issue where you can no longer set a service scale to &amp;lt; 0. [&lt;a href=&#34;https://github.com/rancher/rancher/issues/7275&#34;&gt;#7275&lt;/a&gt;]&lt;/li&gt;
+&lt;li&gt;Rancher now supports vxlan networking for k8s [&lt;a href=&#34;https://github.com/rancher/rancher/issues/6817&#34;&gt;#6817&lt;/a&gt;]&lt;/li&gt;
+&lt;li&gt;Added openldap auth support for &amp;ldquo;accessMode&amp;rdquo; + &amp;ldquo;allowedIdentities&amp;rdquo; [&lt;a href=&#34;https://github.com/rancher/rancher/issues/5141&#34;&gt;#5141&lt;/a&gt;]&lt;/li&gt;
+&lt;li&gt;Fixed an issue where EC private keys would cause the HAProxy LB to crash [&lt;a href=&#34;https://github.com/rancher/rancher/issues/4984&#34;&gt;#4984&lt;/a&gt;]&lt;/li&gt;
+&lt;li&gt;Breaking change to the experimental secrets API  requires upgrading secrets volume driver. [&lt;a href=&#34;https://github.com/rancher/rancher/issues/7708&#34;&gt;#7708&lt;/a&gt;]&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;rancher-cli-http-docs-rancher-com-rancher-v1-5-en-cli-downloads&#34;&gt;&lt;a href=&#34;http://docs.rancher.com/rancher/v1.5/en/cli/&#34;&gt;Rancher CLI&lt;/a&gt; Downloads&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/rancher/cli/releases/tag/v0.5.0&#34;&gt;https://github.com/rancher/cli/releases/tag/v0.5.0&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;rancher-compose-http-docs-rancher-com-rancher-v1-5-en-cattle-rancher-compose-downloads&#34;&gt;&lt;a href=&#34;http://docs.rancher.com/rancher/v1.5/en/cattle/rancher-compose/&#34;&gt;Rancher-Compose&lt;/a&gt; Downloads&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/rancher/rancher-compose/releases/tag/v0.12.3&#34;&gt;https://github.com/rancher/rancher-compose/releases/tag/v0.12.3&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>リリース v1.4.0</title>
       <link>http://www.rancher.jp/site/releasenote/v.1.4.0/</link>
       <pubDate>Sun, 05 Feb 2017 00:00:00 +0000</pubDate>
