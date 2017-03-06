@@ -7,131 +7,8 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
     <copyright>© 2016 Rancher JP</copyright>
-    <lastBuildDate>Fri, 03 Mar 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 05 Feb 2017 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://www.rancher.jp/site/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>リリース v1.5.0</title>
-      <link>http://www.rancher.jp/site/releasenote/v1.5.0/</link>
-      <pubDate>Fri, 03 Mar 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.rancher.jp/site/releasenote/v1.5.0/</guid>
-      <description>
-
-&lt;h1 id=&#34;リリース-v1-5-0&#34;&gt;リリース v1.5.0&lt;/h1&gt;
-
-&lt;h2 id=&#34;バージョン&#34;&gt;バージョン&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;rancher/server:v1.5.0&lt;/li&gt;
-&lt;li&gt;rancher/agent:v1.2.1&lt;/li&gt;
-&lt;li&gt;rancher/lb-service-haproxy:v0.6.2&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/rancher/cli/releases/tag/v0.5.0&#34;&gt;rancher-v0.5.0&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/rancher/rancher-compose/releases/tag/v0.12.3&#34;&gt;rancher-compose-v0.12.3&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;対応している-docker-のバージョン&#34;&gt;対応している Docker のバージョン&lt;/h3&gt;
-
-&lt;p&gt;Docker 1.10.3&lt;br /&gt;
-Docker 1.12.3-1.12.6&lt;br /&gt;
-Docker 1.13.1 (Kubenetes未対応)&lt;br /&gt;
-Docker 17.03.0-ce (Kubenetes未対応)&lt;/p&gt;
-
-&lt;h2 id=&#34;rancherサーバーのタグについて&#34;&gt;Rancherサーバーのタグについて&lt;/h2&gt;
-
-&lt;p&gt;Rancherサーバーには2種類のタグがあります。
-いずれのメジャーリリースタグにおいても、個々のバージョンに向けたドキュメントを提供します。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;rancher/server:latestタグ&lt;/li&gt;
-&lt;li&gt;最新の開発中ビルドを提供するタグです。これらのビルドはCIの自動化フレームワークを使って検証済みです。これらのリリースは本番環境へのデプロイを意味していません。&lt;/li&gt;
-&lt;li&gt;rancher/server:stable&lt;/li&gt;
-&lt;li&gt;最新のリリースビルドのタグです。本番環境にデプロイする際は本タグを利用することを推奨します。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;code&gt;rc{n}&lt;/code&gt;サフィックスのついたリリースを使わないようにしてください。
-これらの&lt;code&gt;rc&lt;/code&gt;ビルドはRancherチームがテストを行うためのものです。&lt;/p&gt;
-
-&lt;h3 id=&#34;beta-v1-5-0-rancher-server-latest&#34;&gt;Beta - v1.5.0 - &lt;code&gt;rancher/server:latest&lt;/code&gt;&lt;/h3&gt;
-
-&lt;h3 id=&#34;stable-v1-4-1-rancher-server-stable&#34;&gt;Stable - v1.4.1 - &lt;code&gt;rancher/server:stable&lt;/code&gt;&lt;/h3&gt;
-
-&lt;h2 id=&#34;重要な事項-アップグレードについて&#34;&gt;重要な事項 - アップグレードについて&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;本リリースでは、network-servicesインフラストラクチャサービスが自動的にアップグレードされるため、手動でのアップグレードなしでは、あなたのリリースは動作しなくなります。もし、ホストを持たないenvironmentsが存在する場合、ホストを追加した際の自動アップグレードに遅延が発生する場合があります。したがって、当該environmentsにホストを追加した際は&lt;code&gt;network-services&lt;/code&gt;スタックがアップグレードされていることを確認するか、ホストを追加した直後に手動でアップグレードするようにしてください。&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;アップグレードマネージャーを利用することで、Rancherサーバーをアップグレードした後にあなたのインフラストラクチャスタックを最新のデフォルトバージョンにすることができます。これは ** Admin -&amp;gt; Settings -&amp;gt; Advanced Settings **、 &lt;code&gt;upgrade.manager&lt;/code&gt;の設定からアップデート可能です。デフォルトでは本機能は無効になっています。&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;追加機能&#34;&gt;追加機能&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;カタログテンプレートにおけるテンプレートサポート[&lt;a href=&#34;http://docs.rancher.com/rancher/v1.5/en/cli/variable-interpolation/#templating&#34;&gt;#3239&lt;/a&gt;]&lt;/strong&gt; - &lt;a href=&#34;https://golang.org/pkg/text/template/&#34;&gt;Goのテンプレートシステム&lt;/a&gt;を利用することで、Rancherでテンプレートにおける条件分岐を実現できるようにしました。
-変数の挿入を用いて条件ロジックを利用することで、より高い柔軟性をもつ動的なカタログテンプレートを出力することができます。
-&lt;em&gt;注意: 現在は文字列比較のみをサポートしています。&lt;/em&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;APIインターセプター[&lt;a href=&#34;https://github.com/rancher/rancher/issues/7749&#34;&gt;#7779&lt;/a&gt;,&lt;a href=&#34;https://github.com/rancher/rancher/issues/7134&#34;&gt;#7134&lt;/a&gt;]&lt;/strong&gt; - 本リリースからRancherではすべてのAPIリクエストにたいしてリクエスト前処理、後処理を加えられるようになりました。
-これによって管理者はAPIのアクセスコントロールやAPIリクエストやレスポンスのペイロードを加工することでより細かい単位でのAPIポリシーの管理を実施できるようになりました。
-インターセプターの具体的な作成方法については&lt;a href=&#34;https://github.com/rancher/rancher/issues/7749&#34;&gt;#7749&lt;/a&gt;を参照してください。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;より多くの&lt;a href=&#34;http://docs.rancher.com/rancher/v1.5/en/rancher-services/network-policy/&#34;&gt;ネットワークポリシー&lt;/a&gt;[&lt;a href=&#34;https://github.com/rancher/rancher/issues/7743&#34;&gt;#7743&lt;/a&gt;]&lt;/strong&gt;
-
-&lt;ul&gt;
-&lt;li&gt;environment毎に設定可能な2つのネットワークポリシーが本リリースから利用可能になりました。本機能のサポートのために、environment設定配下に以下の項目を追加しました。&lt;/li&gt;
-&lt;li&gt;サービス内部のallow/deny - デフォルトではルールはallowですが、denyに設定した場合、全てのコンテナはサービスの外部のコンテナと通信できなくなります。&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;linkサポートの有効化 - サービスまたはスタックでdenyを設定した場合、docker linkまたはselectorラベルを用いて個々のコンテナ間の通信を許可することができます。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;より多くの&lt;a href=&#34;http://docs.rancher.com/rancher/v1.5/en/cattle/webhook-service/&#34;&gt;webhookドライバ&lt;/a&gt;[&lt;a href=&#34;https://github.com/rancher/rancher/issues/7735&#34;&gt;#7735&lt;/a&gt;,&lt;a href=&#34;https://github.com/rancher/rancher/issues/7713&#34;&gt;#7713&lt;/a&gt;]&lt;/strong&gt; - 追加で2つのwebhookドライバがRancherに追加されました。
-
-&lt;ul&gt;
-&lt;li&gt;ホストのスケーリング - ホストのスケールアップ/ダウンを設定できるようになりました。RancherAPIを用いて作成されたホストのみで利用可能です。&lt;/li&gt;
-&lt;li&gt;DockerHubサービスのアップグレード - DockerHubのイメージのアップデートに伴うwebhookを設定することができるようになりました。本webhookを用いてRancher内のサービスをアップデートすることができるようになりました。&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;特定のホストに対するコンテナスケジューリングの制限[&lt;a href=&#34;https://github.com/rancher/rancher/issues/7795&#34;&gt;#7795&lt;/a&gt;]&lt;/strong&gt; - Rancherでホストに対してタグを付与することで特定のラベルをもつホストにしてのみコンテナを配置することができるようになりました。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;メタデータサービスの改善(フェーズ1) [&lt;a href=&#34;https://github.com/rancher/rancher/issues/8004&#34;&gt;#8004&lt;/a&gt;]&lt;/strong&gt;
-
-&lt;ul&gt;
-&lt;li&gt;DBのスラッシングを減らすためにメタデータ情報のキャッシングを追加しました。個々のメタデータサービスにたいしてパスされるメタデータのフットプリントサイズを削減しました。結果、メタデータに依存する多くのサービスにおけるRancher全般に渡る改善が実現できています。例えば、一度に大量のコンテナを立ち上げた場合や、すでに多くの起動済みのコンテナがある場合に追加のコンテナを起動した際に改善を実感できるはずです。&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;SwarmではデフォルトのUIとしてPortainer.ioを利用するようになりました&lt;/strong&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Swarm向けのデフォルトのenvironmentテンプレートではPortainer.ioをUIとして利用するようになりました。&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;known-major-issues&#34;&gt;Known Major Issues&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;If there is an environment with no hosts, after upgrading and adding the hosts, the &lt;code&gt;network-services&lt;/code&gt; infrastructure stack, which is required to be upgraded, will not upgrade immediately. It will be delayed by an hour. [&lt;a href=&#34;https://github.com/rancher/rancher/issues/8047&#34;&gt;#8047&lt;/a&gt;]&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;major-bug-fixes-since-v1-4-1&#34;&gt;Major Bug Fixes since v1.4.1&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Fixed a memory leak issue with the metadata service  [&lt;a href=&#34;https://github.com/rancher/rancher/issues/7844&#34;&gt;#7844&lt;/a&gt;]&lt;/li&gt;
-&lt;li&gt;Fixed an issue where the bulk action menu to view logs was not functioning properly [&lt;a href=&#34;https://github.com/rancher/rancher/issues/7787&#34;&gt;#7787&lt;/a&gt;]&lt;/li&gt;
-&lt;li&gt;Fixed an issue where a stack named &amp;ldquo;Y&amp;rdquo; can cause the Rancher metadata service to crash [&lt;a href=&#34;https://github.com/rancher/rancher/issues/7776&#34;&gt;#7776&lt;/a&gt;]&lt;/li&gt;
-&lt;li&gt;Updated Rancher&amp;rsquo;s swarmkit orchestration engine [&lt;a href=&#34;https://github.com/rancher/rancher/issues/7774&#34;&gt;#7774&lt;/a&gt;]&lt;/li&gt;
-&lt;li&gt;Increased the value size for secrets [&lt;a href=&#34;https://github.com/rancher/rancher/issues/7708&#34;&gt;#7708&lt;/a&gt;]&lt;/li&gt;
-&lt;li&gt;Added multiple category support for catalog templates [&lt;a href=&#34;https://github.com/rancher/rancher/issues/7497&#34;&gt;#7497&lt;/a&gt;]&lt;/li&gt;
-&lt;li&gt;Added sticky session support for Rancher&amp;rsquo;s k8s ingress controller [&lt;a href=&#34;https://github.com/rancher/rancher/issues/7467&#34;&gt;#7467&lt;/a&gt;]&lt;/li&gt;
-&lt;li&gt;Added support to allow admins to launch k8s with ability to customize location of system k8s images such as the kubelet, skydns, helm, etc. [&lt;a href=&#34;https://github.com/rancher/rancher/issues/7362&#34;&gt;#7362&lt;/a&gt;]&lt;/li&gt;
-&lt;li&gt;Fixed an issue where you can no longer set a service scale to &amp;lt; 0. [&lt;a href=&#34;https://github.com/rancher/rancher/issues/7275&#34;&gt;#7275&lt;/a&gt;]&lt;/li&gt;
-&lt;li&gt;Rancher now supports vxlan networking for k8s [&lt;a href=&#34;https://github.com/rancher/rancher/issues/6817&#34;&gt;#6817&lt;/a&gt;]&lt;/li&gt;
-&lt;li&gt;Added openldap auth support for &amp;ldquo;accessMode&amp;rdquo; + &amp;ldquo;allowedIdentities&amp;rdquo; [&lt;a href=&#34;https://github.com/rancher/rancher/issues/5141&#34;&gt;#5141&lt;/a&gt;]&lt;/li&gt;
-&lt;li&gt;Fixed an issue where EC private keys would cause the HAProxy LB to crash [&lt;a href=&#34;https://github.com/rancher/rancher/issues/4984&#34;&gt;#4984&lt;/a&gt;]&lt;/li&gt;
-&lt;li&gt;Breaking change to the experimental secrets API  requires upgrading secrets volume driver. [&lt;a href=&#34;https://github.com/rancher/rancher/issues/7708&#34;&gt;#7708&lt;/a&gt;]&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;rancher-cli-http-docs-rancher-com-rancher-v1-5-en-cli-downloads&#34;&gt;&lt;a href=&#34;http://docs.rancher.com/rancher/v1.5/en/cli/&#34;&gt;Rancher CLI&lt;/a&gt; Downloads&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/rancher/cli/releases/tag/v0.5.0&#34;&gt;https://github.com/rancher/cli/releases/tag/v0.5.0&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;rancher-compose-http-docs-rancher-com-rancher-v1-5-en-cattle-rancher-compose-downloads&#34;&gt;&lt;a href=&#34;http://docs.rancher.com/rancher/v1.5/en/cattle/rancher-compose/&#34;&gt;Rancher-Compose&lt;/a&gt; Downloads&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/rancher/rancher-compose/releases/tag/v0.12.3&#34;&gt;https://github.com/rancher/rancher-compose/releases/tag/v0.12.3&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
     
     <item>
       <title>リリース v1.4.0</title>
@@ -155,17 +32,16 @@ Docker 17.03.0-ce (Kubenetes未対応)&lt;/p&gt;
 
 &lt;h3 id=&#34;対応している-docker-のバージョン&#34;&gt;対応している Docker のバージョン&lt;/h3&gt;
 
-&lt;p&gt;Docker 1.10.3
+&lt;p&gt;Docker 1.10.3&lt;br /&gt;
 Docker 1.12.3-1.12.6&lt;/p&gt;
 
 &lt;h2 id=&#34;kubernetes-ui-の変更&#34;&gt;Kubernetes UI の変更&lt;/h2&gt;
 
-&lt;p&gt;Kubernetesをメインのオーケストレーションエンジンにしている場合、v1.4.0リリースからk8sの対応について2つの大きな変更があります。&lt;/p&gt;
+&lt;p&gt;Kubernetesをメインのオーケストレーションエンジンにしている場合、v1.4.0リリースからk8sの対応について2つの大きな変更があります。
+1. Rancher による k8sデフォルトUIを廃止し、&lt;a href=&#34;https://github.com/kubernetes/dashboard&#34;&gt;k8s&amp;rsquo; ダッシュボードUI&lt;/a&gt;に引き継ぎました。各k8sの環境で自動的に起動して有効になります。2016年の後半、KubernetesダッシュボードUIは、一般的な用途向けのweb UIがものすごい貢献により発展し、RancherのデフォルトUIとしての機能と安定性を備えたところに到達したと思います。その為、1.4では Rancher k8s UI を廃止し k8sのダッシュボードUIを k8s リソースの管理UIとしました。&lt;/p&gt;
 
 &lt;ol&gt;
-&lt;li&gt;&lt;p&gt;Rancher による k8sデフォルトUIを廃止し、&lt;a href=&#34;https://github.com/kubernetes/dashboard&#34;&gt;k8s&amp;rsquo; ダッシュボードUI&lt;/a&gt;に引き継ぎました。各k8sの環境で自動的に起動して有効になります。2016年の後半、KubernetesダッシュボードUIは、一般的な用途向けのweb UIがものすごい貢献により発展し、RancherのデフォルトUIとしての機能と安定性を備えたところに到達したと思います。その為、1.4では Rancher k8s UI を廃止し k8sのダッシュボードUIを k8s リソースの管理UIとしました。&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Rancher カタログにあるk8s グラフ化とテンプレートを廃止し、&lt;a href=&#34;https://github.com/kubernetes/helm&#34;&gt;k8s helm&lt;/a&gt; に引き継ぎました。Helm(とtiller)は、それぞれk8s環境で自動的に有効になります。便利な helmクライアントも 外部から動かせる kubectlシェルコンソールとして同様に追加されます。&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;Rancher カタログにあるk8s グラフ化とテンプレートを廃止し、&lt;a href=&#34;https://github.com/kubernetes/helm&#34;&gt;k8s helm&lt;/a&gt; に引き継ぎました。Helm(とtiller)は、それぞれk8s環境で自動的に有効になります。便利な helmクライアントも 外部から動かせる kubectlシェルコンソールとして同様に追加されます。&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;h2 id=&#34;重要&#34;&gt;重要!&lt;/h2&gt;
@@ -1497,6 +1373,218 @@ VMで動かす場合は、ネットワークが注意&lt;/p&gt;
 &lt;h2 id=&#34;参考サイト&#34;&gt;参考サイト&lt;/h2&gt;
 
 &lt;p&gt;(&lt;a href=&#34;http://connpass.com/event/40326/&#34;&gt;http://connpass.com/event/40326/&lt;/a&gt;)&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Q And A</title>
+      <link>http://www.rancher.jp/site/qa/</link>
+      <pubDate>Mon, 18 Jan 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.rancher.jp/site/qa/</guid>
+      <description>
+
+&lt;h1 id=&#34;このページについて&#34;&gt;このページについて&lt;/h1&gt;
+
+&lt;p&gt;Rancher JP では皆様に Rancher, Rancher&amp;gt;OS をご使用していただいて疑問や困った事などを SlackのChannel &lt;code&gt;#qa&lt;/code&gt; にて議論・検討をしています。&lt;br /&gt;
+その中で、一定の情報になった物を掲載していきます。&lt;/p&gt;
+
+&lt;p&gt;質問・疑問などがある方は  &lt;a href=&#34;https://rancherjp.herokuapp.com/&#34;&gt;Join rancherjp on Slack!&lt;/a&gt; より 参加してみてください。&lt;/p&gt;
+
+&lt;h1 id=&#34;rancheros&#34;&gt;RancherOS&lt;/h1&gt;
+
+&lt;h2 id=&#34;ssh鍵を設定したい&#34;&gt;SSH鍵を設定したい&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;ナレッジ: FoxBoxsnet(@FoxBoxsnet)&lt;br /&gt;
+RancherOS では、SSH公開鍵暗号方式でのログインが使用できます。&lt;br /&gt;
+&lt;code&gt;cloud-config&lt;/code&gt; に記述します。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-yaml&#34;&gt;  #cloud-config
+  ssh_authorized_keys:
+    - ssh-rsa AAA...ZZZ example1@rancher
+    - ssh-rsa BBB...ZZZ example2@rancher
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;参考&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.rancher.com/os/configuration/ssh-keys/&#34;&gt;SSH Keys in RancherOS&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;ネットワーク設定&#34;&gt;ネットワーク設定&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;ナレッジ: FoxBoxsnet(@FoxBoxsnet)&lt;/p&gt;
+
+&lt;p&gt;RancherOS ではデフォルトでDHCPによりIPアドレスを決定しますが、固定したい場合もあるかと思います。&lt;br /&gt;
+ここでは下記のように設定してみました。&lt;br /&gt;
+適宜書き換えてください。&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;left&#34;&gt;Name&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;Value&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;interface&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;eth0&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;DNS&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;172.18.1.254&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;IP Address&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;172.18.1.1 /24&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;Gate Way&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;172.18.1.254&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-yaml&#34;&gt;#cloud-config
+rancher:
+  network:
+    dns:
+      nameservers:
+      - 172.18.1.254
+    interfaces:
+      eth0:
+        address: 172.18.1.1/24
+        gateway: 172.18.1.254
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;参考&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.rancher.com/os/networking/interfaces/&#34;&gt;Configuring Network Interfaces in RancherOS&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.rancher.com/os/networking/dns/&#34;&gt;Configuring DNS in RancherOS&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;rancheros-を-proxy-配下で利用する&#34;&gt;RancherOS を Proxy 配下で利用する&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;ナレッジ: FoxBoxsnet(@FoxBoxsnet)&lt;/p&gt;
+
+&lt;p&gt;RancherOSで Proxy 配下で DockerImage をダウンロードできるように設定します。&lt;br /&gt;
+&lt;strong&gt;この設定は ホストを再起動するまで適用されません&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-yaml&#34;&gt;#cloud-config
+rancher:
+  network:
+    http_proxy: https://myproxy.example.com
+    https_proxy: https://myproxy.example.com
+    no_proxy: localhost,127.0.0.1
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;code&gt;http_proxy&lt;/code&gt;, &lt;code&gt;https_proxy&lt;/code&gt; にポート番号が必要な場合は &lt;code&gt;&amp;lt;ホスト名&amp;gt;:&amp;lt;ポート番号&amp;gt;&lt;/code&gt; で可能かと思います。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-yaml&#34;&gt;#cloud-config
+rancher:
+  network:
+    http_proxy: https://myproxy.example.com:8080
+    https_proxy: https://myproxy.example.com:8080
+    no_proxy: localhost,127.0.0.1
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;参考&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.rancher.com/os/networking/proxy-settings/&#34;&gt;Configuring Proxy Settings in RancherOS&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;rancheros-のホスト名-hostname-設定&#34;&gt;RancherOS のホスト名(HostName) 設定&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;ナレッジ: FoxBoxsnet(@FoxBoxsnet)&lt;/p&gt;
+
+&lt;p&gt;RancherOS はデフォルトでは &lt;code&gt;rancher&lt;/code&gt; に設定されています。&lt;br /&gt;
+運用上、不便のためホスト名を設定します。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-yaml&#34;&gt;#cloud-config
+hostname: rancher-host01.local
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;参考&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.rancher.com/os/configuration/hostname/&#34;&gt;Setting the Hostname in RancherOS&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;ntpサーバーを設定したい&#34;&gt;NTPサーバーを設定したい&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;ナレッジ: FoxBoxsnet(@FoxBoxsnet)&lt;/p&gt;
+
+&lt;p&gt;RancherOS でNTPサーバーを任意設定します。
+今回は、日本国内の stratum1サーバー NICT(情報通信研究機構) のサーバーからNTPを受信するように設定しました。&lt;br /&gt;
+Linux標準の &lt;code&gt;/etc/ntpd.conf&lt;/code&gt; とほぼ同じ記述で問題無いと思われます。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-yaml&#34;&gt;  #cloud-config
+  write_files:
+    - path: /etc/ntp.conf
+      permissions: 0644
+      content: |
+          tinker panic 0
+          default kod nomodify notrap nopeer noquery
+          restrict -6 default kod nomodify notrap nopeer noquery
+
+          restrict 127.0.0.1
+          restrict -6 ::1
+
+          restrict 133.243.238.163 mask 255.255.255.255 nomodify notrap noquery
+          restrict 133.243.238.164 mask 255.255.255.255 nomodify notrap noquery
+          restrict 133.243.238.243 mask 255.255.255.255 nomodify notrap noquery
+          restrict 133.243.238.244 mask 255.255.255.255 nomodify notrap noquery
+
+          server ntp.nict.jp
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;参考&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.rancher.com/os/configuration/write-files/&#34;&gt;Writing Files in RancherOS&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.rancher.com/os/system-services/built-in-system-services/&#34;&gt;Built-in System Services in RancherOS&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;rancheros-で-timezone-を-jst-に変更したい&#34;&gt;RancherOS で TimeZone を JST に変更したい&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;質問: FoxBoxsnet(@FoxBoxsnet)&lt;/p&gt;
+
+&lt;p&gt;RancherOS デフォルトの設定は、 TimeZoneは &lt;code&gt;UTC&lt;/code&gt; に設定されます。&lt;br /&gt;
+コンソールのTimeZoneをJST(Japan Standard Time)に設定したい&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-yaml&#34;&gt;#cloud-config
+rancher:
+  services:
+    console:
+      environment:
+        TZ: &#39;JST-9&#39;
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;参考&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.rancher.com/os/system-services/adding-system-services/&#34;&gt;Adding System Services in RancherOS&lt;/a&gt;&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.rancher.com/os/system-services/built-in-system-services/&#34;&gt;Built-in System Services in RancherOS&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </description>
     </item>
     

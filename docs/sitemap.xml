@@ -2,11 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://www.rancher.jp/site/releasenote/v1.5.0/</loc>
-    <lastmod>2017-03-03T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://www.rancher.jp/site/releasenote/v.1.4.0/</loc>
     <lastmod>2017-02-05T00:00:00+00:00</lastmod>
   </url>
@@ -107,7 +102,7 @@
   
   <url>
     <loc>http://www.rancher.jp/site/archives/2017/</loc>
-    <lastmod>2017-03-03T00:00:00+00:00</lastmod>
+    <lastmod>2017-02-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -120,12 +115,6 @@
   <url>
     <loc>http://www.rancher.jp/site/archives/2017/02/</loc>
     <lastmod>2017-02-05T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.rancher.jp/site/archives/2017/03/</loc>
-    <lastmod>2017-03-03T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -211,13 +200,13 @@
   
   <url>
     <loc>http://www.rancher.jp/site/</loc>
-    <lastmod>2017-03-03T00:00:00+00:00</lastmod>
+    <lastmod>2017-02-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://www.rancher.jp/site/tags/releasenote/</loc>
-    <lastmod>2017-03-03T00:00:00+00:00</lastmod>
+    <lastmod>2017-02-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -229,7 +218,7 @@
   
   <url>
     <loc>http://www.rancher.jp/site/releasenote/</loc>
-    <lastmod>2017-03-03T00:00:00+00:00</lastmod>
+    <lastmod>2017-02-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

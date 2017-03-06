@@ -31,17 +31,16 @@
 
 &lt;h3 id=&#34;対応している-docker-のバージョン&#34;&gt;対応している Docker のバージョン&lt;/h3&gt;
 
-&lt;p&gt;Docker 1.10.3
+&lt;p&gt;Docker 1.10.3&lt;br /&gt;
 Docker 1.12.3-1.12.6&lt;/p&gt;
 
 &lt;h2 id=&#34;kubernetes-ui-の変更&#34;&gt;Kubernetes UI の変更&lt;/h2&gt;
 
-&lt;p&gt;Kubernetesをメインのオーケストレーションエンジンにしている場合、v1.4.0リリースからk8sの対応について2つの大きな変更があります。&lt;/p&gt;
+&lt;p&gt;Kubernetesをメインのオーケストレーションエンジンにしている場合、v1.4.0リリースからk8sの対応について2つの大きな変更があります。
+1. Rancher による k8sデフォルトUIを廃止し、&lt;a href=&#34;https://github.com/kubernetes/dashboard&#34;&gt;k8s&amp;rsquo; ダッシュボードUI&lt;/a&gt;に引き継ぎました。各k8sの環境で自動的に起動して有効になります。2016年の後半、KubernetesダッシュボードUIは、一般的な用途向けのweb UIがものすごい貢献により発展し、RancherのデフォルトUIとしての機能と安定性を備えたところに到達したと思います。その為、1.4では Rancher k8s UI を廃止し k8sのダッシュボードUIを k8s リソースの管理UIとしました。&lt;/p&gt;
 
 &lt;ol&gt;
-&lt;li&gt;&lt;p&gt;Rancher による k8sデフォルトUIを廃止し、&lt;a href=&#34;https://github.com/kubernetes/dashboard&#34;&gt;k8s&amp;rsquo; ダッシュボードUI&lt;/a&gt;に引き継ぎました。各k8sの環境で自動的に起動して有効になります。2016年の後半、KubernetesダッシュボードUIは、一般的な用途向けのweb UIがものすごい貢献により発展し、RancherのデフォルトUIとしての機能と安定性を備えたところに到達したと思います。その為、1.4では Rancher k8s UI を廃止し k8sのダッシュボードUIを k8s リソースの管理UIとしました。&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Rancher カタログにあるk8s グラフ化とテンプレートを廃止し、&lt;a href=&#34;https://github.com/kubernetes/helm&#34;&gt;k8s helm&lt;/a&gt; に引き継ぎました。Helm(とtiller)は、それぞれk8s環境で自動的に有効になります。便利な helmクライアントも 外部から動かせる kubectlシェルコンソールとして同様に追加されます。&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;Rancher カタログにあるk8s グラフ化とテンプレートを廃止し、&lt;a href=&#34;https://github.com/kubernetes/helm&#34;&gt;k8s helm&lt;/a&gt; に引き継ぎました。Helm(とtiller)は、それぞれk8s環境で自動的に有効になります。便利な helmクライアントも 外部から動かせる kubectlシェルコンソールとして同様に追加されます。&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;h2 id=&#34;重要&#34;&gt;重要!&lt;/h2&gt;
