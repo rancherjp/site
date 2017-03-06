@@ -4,7 +4,7 @@ title: "リリース v1.5.0"
 slug: "v1.5.0"
 author: "Rancher JP"
 description: "リリース v1.5.0"
-draft: false
+draft: true
 tags:
  - "releasenote"
 categiries:
@@ -34,20 +34,16 @@ Docker 17.03.0-ce (Kubenetes未対応)
 Rancherサーバーには2種類のタグがあります。
 いずれのメジャーリリースタグにおいても、個々のバージョンに向けたドキュメントを提供します。
 
-- rancher/server:latestタグ
-* 最新の開発中ビルドを提供するタグです。これらのビルドはCIの自動化フレームワークを使って検証済みです。これらのリリースは本番環境へのデプロイを意味していません。
-- rancher/server:stable
-* 最新のリリースビルドのタグです。本番環境にデプロイする際は本タグを利用することを推奨します。
+- `rancher/server:latestタグ` 最新の開発中ビルドを提供するタグです。これらのビルドはCIの自動化フレームワークを使って検証済みです。これらのリリースは本番環境へのデプロイを意味していません。
+- `rancher/server:stableタグ` 最新のリリースビルドのタグです。本番環境にデプロイする際は本タグを利用することを推奨します。
 
-`rc{n}`サフィックスのついたリリースを使わないようにしてください。
-これらの`rc`ビルドはRancherチームがテストを行うためのものです。
+`rc{n}`サフィックスのついたリリースを使わないようにしてください。これらの`rc`ビルドはRancherチームがテストを行うためのものです。
 
 ### Beta - v1.5.0 - `rancher/server:latest`
 ### Stable - v1.4.1 - `rancher/server:stable`
 
 ## 重要な事項 - アップグレードについて
 * 本リリースでは、network-servicesインフラストラクチャサービスが自動的にアップグレードされるため、手動でのアップグレードなしでは、あなたのリリースは動作しなくなります。もし、ホストを持たないenvironmentsが存在する場合、ホストを追加した際の自動アップグレードに遅延が発生する場合があります。したがって、当該environmentsにホストを追加した際は`network-services`スタックがアップグレードされていることを確認するか、ホストを追加した直後に手動でアップグレードするようにしてください。
-
 * アップグレードマネージャーを利用することで、Rancherサーバーをアップグレードした後にあなたのインフラストラクチャスタックを最新のデフォルトバージョンにすることができます。これは ** Admin -> Settings -> Advanced Settings **、 `upgrade.manager`の設定からアップデート可能です。デフォルトでは本機能は無効になっています。
 
 ## 追加機能
@@ -57,10 +53,9 @@ Rancherサーバーには2種類のタグがあります。
 - **APIインターセプター[[#7779](https://github.com/rancher/rancher/issues/7749),[#7134](https://github.com/rancher/rancher/issues/7134)]** - 本リリースからRancherではすべてのAPIリクエストにたいしてリクエスト前処理、後処理を加えられるようになりました。
 これによって管理者はAPIのアクセスコントロールやAPIリクエストやレスポンスのペイロードを加工することでより細かい単位でのAPIポリシーの管理を実施できるようになりました。
 インターセプターの具体的な作成方法については[#7749](https://github.com/rancher/rancher/issues/7749)を参照してください。
-- **より多くの[ネットワークポリシー](http://docs.rancher.com/rancher/v1.5/en/rancher-services/network-policy/)[[#7743](https://github.com/rancher/rancher/issues/7743)]**
-  - environment毎に設定可能な2つのネットワークポリシーが本リリースから利用可能になりました。本機能のサポートのために、environment設定配下に以下の項目を追加しました。
+- **より多くの[ネットワークポリシー](http://docs.rancher.com/rancher/v1.5/en/rancher-services/network-policy/)[[#7743](https://github.com/rancher/rancher/issues/7743)]** - environment毎に設定可能な2つのネットワークポリシーが本リリースから利用可能になりました。本機能のサポートのために、environment設定配下に以下の項目を追加しました。
   - サービス内部のallow/deny - デフォルトではルールはallowですが、denyに設定した場合、全てのコンテナはサービスの外部のコンテナと通信できなくなります。
-- linkサポートの有効化 - サービスまたはスタックでdenyを設定した場合、docker linkまたはselectorラベルを用いて個々のコンテナ間の通信を許可することができます。
+  - linkサポートの有効化 - サービスまたはスタックでdenyを設定した場合、docker linkまたはselectorラベルを用いて個々のコンテナ間の通信を許可することができます。
 - **より多くの[webhookドライバ](http://docs.rancher.com/rancher/v1.5/en/cattle/webhook-service/)[[#7735](https://github.com/rancher/rancher/issues/7735),[#7713](https://github.com/rancher/rancher/issues/7713)]** - 追加で2つのwebhookドライバがRancherに追加されました。
   - ホストのスケーリング - ホストのスケールアップ/ダウンを設定できるようになりました。RancherAPIを用いて作成されたホストのみで利用可能です。
   - DockerHubサービスのアップグレード - DockerHubのイメージのアップデートに伴うwebhookを設定することができるようになりました。本webhookを用いてRancher内のサービスをアップデートすることができるようになりました。
