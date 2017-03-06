@@ -4,7 +4,7 @@ title: "リリース v1.5.0"
 slug: "v1.5.0"
 author: "Rancher JP"
 description: "リリース v1.5.0"
-draft: true
+draft: false
 tags:
  - "releasenote"
 categiries:
