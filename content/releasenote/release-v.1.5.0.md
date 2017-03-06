@@ -6,13 +6,14 @@ author: "Rancher JP"
 description: "リリース v1.5.0"
 draft: false
 tags:
- - "releasenote"
-categiries:
- - "releasenote"
+  - "releasenote"
+categories:
+  - "releasenote"
 archives:
- - "2017"
- - "2017/03"
+  - "2017"
+  - "2017/03"
 ---
+
 # リリース v1.5.0
 
 ## バージョン
