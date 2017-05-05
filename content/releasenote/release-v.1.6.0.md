@@ -48,7 +48,7 @@ Rancherサーバーには2種類のタグがあります。
 ## 追加機能
 
 - **HAProxyにおけるデータボリュームを経由したSSL証明書の読み込みサポート[[#7520](https://github.com/rancher/rancher/issues/7520)]** - Rancherで本バージョンからSSL証明書を含んだデータボリュームをHAProxyのLBサービスに設定できるようになりました。
-これによって定常的にが変更される証明書をHAProxyにアップロードすることへの大体手段が提供されました。
+これによって定常的にが変更される証明書をHAProxyにアップロードすることへの代替手段が提供されました。
 また、複数の証明書設定をHAProxyのLBサービスでサポートすることが可能になりました。
 - **LDAP/ADにおける複数のグループに基づく検索のサポート[[#8157](https://github.com/rancher/rancher/issues/8157)][[#8112](https://github.com/rancher/rancher/issues/8122)]** - 異なる検索ベース(search bases)を経由したユーザ、グループの検索できるようLDAPを設定することができるようになりました。
 - **Rancher EBSボリュームのサポート[[#8295](https://github.com/rancher/rancher/issues/8295)], [[#8618](https://github.com/rancher/rancher/issues/8618)], [[#7599](https://github.com/rancher/rancher/issues/7599)]** - Rancher EBSボリュームがGAになりました。同一のアベイラビリティゾーンに所属するホストにコンテナが移動されるようにアベイラビリティゾーンを意識できるようRancherのスケジューラ機能が強化されました。EBSは各種ボリュームタイプやIOPS指定有無(*訳注:原文中ではIOSとなっているがIOPSのtypoと思われます*)、暗号化の有無やksmkeyIdやスナップショットIDなどの追加オプションを用いた場合でも利用することが可能です。
