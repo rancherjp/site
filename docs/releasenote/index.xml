@@ -2,13 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Releasenotes on Rancher JP</title>
-    <link>http://www.rancher.jp/site/releasenote/index.xml</link>
+    <link>http://www.rancher.jp/site/releasenote/</link>
     <description>Recent content in Releasenotes on Rancher JP</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
     <copyright>© 2016 Rancher JP</copyright>
-    <lastBuildDate>Fri, 03 Mar 2017 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://www.rancher.jp/site/releasenote/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 05 May 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://www.rancher.jp/site/releasenote/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>リリース v1.6.0</title>
+      <link>http://www.rancher.jp/site/releasenote/v1.6.0/</link>
+      <pubDate>Fri, 05 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.rancher.jp/site/releasenote/v1.6.0/</guid>
+      <description>リリース v1.6.0 バージョン rancher/server:v1.6.0 rancher/agent:v1.2.2 rancher/lb-service-proxy:v0.7.1 rancher-v0.6.0 rancher-compose-v0.12.5 対応しているDockerのバージョン Docker 1.10.3 Docker 1.12.3-1.12.6 Docker 1.13.1 (Kubenetesのサポートなし) Docker 17.03.0-ce(K</description>
+    </item>
     
     <item>
       <title>リリース v1.5.0</title>
@@ -16,116 +27,7 @@
       <pubDate>Fri, 03 Mar 2017 00:00:00 +0000</pubDate>
       
       <guid>http://www.rancher.jp/site/releasenote/v1.5.0/</guid>
-      <description>
-
-&lt;h1 id=&#34;リリース-v1-5-0&#34;&gt;リリース v1.5.0&lt;/h1&gt;
-
-&lt;h2 id=&#34;バージョン&#34;&gt;バージョン&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;rancher/server:v1.5.0&lt;/li&gt;
-&lt;li&gt;rancher/agent:v1.2.1&lt;/li&gt;
-&lt;li&gt;rancher/lb-service-haproxy:v0.6.2&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/rancher/cli/releases/tag/v0.5.0&#34;&gt;rancher-v0.5.0&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/rancher/rancher-compose/releases/tag/v0.12.3&#34;&gt;rancher-compose-v0.12.3&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;対応している-docker-のバージョン&#34;&gt;対応している Docker のバージョン&lt;/h3&gt;
-
-&lt;p&gt;Docker 1.10.3&lt;br /&gt;
-Docker 1.12.3-1.12.6&lt;br /&gt;
-Docker 1.13.1 (Kubenetes未対応)&lt;br /&gt;
-Docker 17.03.0-ce (Kubenetes未対応)&lt;/p&gt;
-
-&lt;h2 id=&#34;rancherサーバーのタグについて&#34;&gt;Rancherサーバーのタグについて&lt;/h2&gt;
-
-&lt;p&gt;Rancherサーバーには2種類のタグがあります。
-いずれのメジャーリリースタグにおいても、個々のバージョンに向けたドキュメントを提供します。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;rancher/server:latestタグ&lt;/code&gt; 最新の開発中ビルドを提供するタグです。これらのビルドはCIの自動化フレームワークを使って検証済みです。これらのリリースは本番環境へのデプロイを意味していません。&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;rancher/server:stableタグ&lt;/code&gt; 最新のリリースビルドのタグです。本番環境にデプロイする際は本タグを利用することを推奨します。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;code&gt;rc{n}&lt;/code&gt;サフィックスのついたリリースを使わないようにしてください。これらの&lt;code&gt;rc&lt;/code&gt;ビルドはRancherチームがテストを行うためのものです。&lt;/p&gt;
-
-&lt;h3 id=&#34;beta-v1-5-0-rancher-server-latest&#34;&gt;Beta - v1.5.0 - &lt;code&gt;rancher/server:latest&lt;/code&gt;&lt;/h3&gt;
-
-&lt;h3 id=&#34;stable-v1-4-1-rancher-server-stable&#34;&gt;Stable - v1.4.1 - &lt;code&gt;rancher/server:stable&lt;/code&gt;&lt;/h3&gt;
-
-&lt;h2 id=&#34;重要な事項-アップグレードについて&#34;&gt;重要な事項 - アップグレードについて&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;本リリースでは、network-servicesインフラストラクチャサービスが自動的にアップグレードされるため、手動でのアップグレードなしでは、あなたのリリースは動作しなくなります。もし、ホストを持たないenvironmentsが存在する場合、ホストを追加した際の自動アップグレードに遅延が発生する場合があります。したがって、当該environmentsにホストを追加した際は&lt;code&gt;network-services&lt;/code&gt;スタックがアップグレードされていることを確認するか、ホストを追加した直後に手動でアップグレードするようにしてください。&lt;/li&gt;
-&lt;li&gt;アップグレードマネージャーを利用することで、Rancherサーバーをアップグレードした後にあなたのインフラストラクチャスタックを最新のデフォルトバージョンにすることができます。これは ** Admin -&amp;gt; Settings -&amp;gt; Advanced Settings **、 &lt;code&gt;upgrade.manager&lt;/code&gt;の設定からアップデート可能です。デフォルトでは本機能は無効になっています。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;追加機能&#34;&gt;追加機能&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;カタログテンプレートにおけるテンプレートサポート[&lt;a href=&#34;http://docs.rancher.com/rancher/v1.5/en/cli/variable-interpolation/#templating&#34;&gt;#3239&lt;/a&gt;]&lt;/strong&gt; - &lt;a href=&#34;https://golang.org/pkg/text/template/&#34;&gt;Goのテンプレートシステム&lt;/a&gt;を利用することで、Rancherでテンプレートにおける条件分岐を実現できるようにしました。
-変数の挿入を用いて条件ロジックを利用することで、より高い柔軟性をもつ動的なカタログテンプレートを出力することができます。
-&lt;em&gt;注意: 現在は文字列比較のみをサポートしています。&lt;/em&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;APIインターセプター[&lt;a href=&#34;https://github.com/rancher/rancher/issues/7749&#34;&gt;#7779&lt;/a&gt;,&lt;a href=&#34;https://github.com/rancher/rancher/issues/7134&#34;&gt;#7134&lt;/a&gt;]&lt;/strong&gt; - 本リリースからRancherではすべてのAPIリクエストにたいしてリクエスト前処理、後処理を加えられるようになりました。
-これによって管理者はAPIのアクセスコントロールやAPIリクエストやレスポンスのペイロードを加工することでより細かい単位でのAPIポリシーの管理を実施できるようになりました。
-インターセプターの具体的な作成方法については&lt;a href=&#34;https://github.com/rancher/rancher/issues/7749&#34;&gt;#7749&lt;/a&gt;を参照してください。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;より多くの&lt;a href=&#34;http://docs.rancher.com/rancher/v1.5/en/rancher-services/network-policy/&#34;&gt;ネットワークポリシー&lt;/a&gt;[&lt;a href=&#34;https://github.com/rancher/rancher/issues/7743&#34;&gt;#7743&lt;/a&gt;]&lt;/strong&gt; - environment毎に設定可能な2つのネットワークポリシーが本リリースから利用可能になりました。本機能のサポートのために、environment設定配下に以下の項目を追加しました。
-
-&lt;ul&gt;
-&lt;li&gt;サービス内部のallow/deny - デフォルトではルールはallowですが、denyに設定した場合、全てのコンテナはサービスの外部のコンテナと通信できなくなります。&lt;/li&gt;
-&lt;li&gt;linkサポートの有効化 - サービスまたはスタックでdenyを設定した場合、docker linkまたはselectorラベルを用いて個々のコンテナ間の通信を許可することができます。&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;より多くの&lt;a href=&#34;http://docs.rancher.com/rancher/v1.5/en/cattle/webhook-service/&#34;&gt;webhookドライバ&lt;/a&gt;[&lt;a href=&#34;https://github.com/rancher/rancher/issues/7735&#34;&gt;#7735&lt;/a&gt;,&lt;a href=&#34;https://github.com/rancher/rancher/issues/7713&#34;&gt;#7713&lt;/a&gt;]&lt;/strong&gt; - 追加で2つのwebhookドライバがRancherに追加されました。
-
-&lt;ul&gt;
-&lt;li&gt;ホストのスケーリング - ホストのスケールアップ/ダウンを設定できるようになりました。RancherAPIを用いて作成されたホストのみで利用可能です。&lt;/li&gt;
-&lt;li&gt;DockerHubサービスのアップグレード - DockerHubのイメージのアップデートに伴うwebhookを設定することができるようになりました。本webhookを用いてRancher内のサービスをアップデートすることができるようになりました。&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;特定のホストに対するコンテナスケジューリングの制限[&lt;a href=&#34;https://github.com/rancher/rancher/issues/7795&#34;&gt;#7795&lt;/a&gt;]&lt;/strong&gt; - Rancherでホストに対してタグを付与することで特定のラベルをもつホストにしてのみコンテナを配置することができるようになりました。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;メタデータサービスの改善(フェーズ1) [&lt;a href=&#34;https://github.com/rancher/rancher/issues/8004&#34;&gt;#8004&lt;/a&gt;]&lt;/strong&gt;
-
-&lt;ul&gt;
-&lt;li&gt;DBのスラッシングを減らすためにメタデータ情報のキャッシングを追加しました。個々のメタデータサービスにたいしてパスされるメタデータのフットプリントサイズを削減しました。結果、メタデータに依存する多くのサービスにおけるRancher全般に渡る改善が実現できています。例えば、一度に大量のコンテナを立ち上げた場合や、すでに多くの起動済みのコンテナがある場合に追加のコンテナを起動した際に改善を実感できるはずです。&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;SwarmではデフォルトのUIとしてPortainer.ioを利用するようになりました&lt;/strong&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Swarm向けのデフォルトのenvironmentテンプレートではPortainer.ioをUIとして利用するようになりました。&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;known-major-issues&#34;&gt;Known Major Issues&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;If there is an environment with no hosts, after upgrading and adding the hosts, the &lt;code&gt;network-services&lt;/code&gt; infrastructure stack, which is required to be upgraded, will not upgrade immediately. It will be delayed by an hour. [&lt;a href=&#34;https://github.com/rancher/rancher/issues/8047&#34;&gt;#8047&lt;/a&gt;]&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;major-bug-fixes-since-v1-4-1&#34;&gt;Major Bug Fixes since v1.4.1&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Fixed a memory leak issue with the metadata service  [&lt;a href=&#34;https://github.com/rancher/rancher/issues/7844&#34;&gt;#7844&lt;/a&gt;]&lt;/li&gt;
-&lt;li&gt;Fixed an issue where the bulk action menu to view logs was not functioning properly [&lt;a href=&#34;https://github.com/rancher/rancher/issues/7787&#34;&gt;#7787&lt;/a&gt;]&lt;/li&gt;
-&lt;li&gt;Fixed an issue where a stack named &amp;ldquo;Y&amp;rdquo; can cause the Rancher metadata service to crash [&lt;a href=&#34;https://github.com/rancher/rancher/issues/7776&#34;&gt;#7776&lt;/a&gt;]&lt;/li&gt;
-&lt;li&gt;Updated Rancher&amp;rsquo;s swarmkit orchestration engine [&lt;a href=&#34;https://github.com/rancher/rancher/issues/7774&#34;&gt;#7774&lt;/a&gt;]&lt;/li&gt;
-&lt;li&gt;Increased the value size for secrets [&lt;a href=&#34;https://github.com/rancher/rancher/issues/7708&#34;&gt;#7708&lt;/a&gt;]&lt;/li&gt;
-&lt;li&gt;Added multiple category support for catalog templates [&lt;a href=&#34;https://github.com/rancher/rancher/issues/7497&#34;&gt;#7497&lt;/a&gt;]&lt;/li&gt;
-&lt;li&gt;Added sticky session support for Rancher&amp;rsquo;s k8s ingress controller [&lt;a href=&#34;https://github.com/rancher/rancher/issues/7467&#34;&gt;#7467&lt;/a&gt;]&lt;/li&gt;
-&lt;li&gt;Added support to allow admins to launch k8s with ability to customize location of system k8s images such as the kubelet, skydns, helm, etc. [&lt;a href=&#34;https://github.com/rancher/rancher/issues/7362&#34;&gt;#7362&lt;/a&gt;]&lt;/li&gt;
-&lt;li&gt;Fixed an issue where you can no longer set a service scale to &amp;lt; 0. [&lt;a href=&#34;https://github.com/rancher/rancher/issues/7275&#34;&gt;#7275&lt;/a&gt;]&lt;/li&gt;
-&lt;li&gt;Rancher now supports vxlan networking for k8s [&lt;a href=&#34;https://github.com/rancher/rancher/issues/6817&#34;&gt;#6817&lt;/a&gt;]&lt;/li&gt;
-&lt;li&gt;Added openldap auth support for &amp;ldquo;accessMode&amp;rdquo; + &amp;ldquo;allowedIdentities&amp;rdquo; [&lt;a href=&#34;https://github.com/rancher/rancher/issues/5141&#34;&gt;#5141&lt;/a&gt;]&lt;/li&gt;
-&lt;li&gt;Fixed an issue where EC private keys would cause the HAProxy LB to crash [&lt;a href=&#34;https://github.com/rancher/rancher/issues/4984&#34;&gt;#4984&lt;/a&gt;]&lt;/li&gt;
-&lt;li&gt;Breaking change to the experimental secrets API  requires upgrading secrets volume driver. [&lt;a href=&#34;https://github.com/rancher/rancher/issues/7708&#34;&gt;#7708&lt;/a&gt;]&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;rancher-cli-http-docs-rancher-com-rancher-v1-5-en-cli-downloads&#34;&gt;&lt;a href=&#34;http://docs.rancher.com/rancher/v1.5/en/cli/&#34;&gt;Rancher CLI&lt;/a&gt; Downloads&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/rancher/cli/releases/tag/v0.5.0&#34;&gt;https://github.com/rancher/cli/releases/tag/v0.5.0&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;rancher-compose-http-docs-rancher-com-rancher-v1-5-en-cattle-rancher-compose-downloads&#34;&gt;&lt;a href=&#34;http://docs.rancher.com/rancher/v1.5/en/cattle/rancher-compose/&#34;&gt;Rancher-Compose&lt;/a&gt; Downloads&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/rancher/rancher-compose/releases/tag/v0.12.3&#34;&gt;https://github.com/rancher/rancher-compose/releases/tag/v0.12.3&lt;/a&gt;&lt;/p&gt;
-</description>
+      <description>リリース v1.5.0 バージョン rancher/server:v1.5.0 rancher/agent:v1.2.1 rancher/lb-service-haproxy:v0.6.2 rancher-v0.5.0 rancher-compose-v0.12.3 対応している Docker のバージョン Docker 1.10.3 Docker 1.12.3-1.12.6 Docker 1.13.1 (Kubenetes未対応) Docker 17.03.0-ce (Kubenetes未対応) Ranche</description>
     </item>
     
     <item>
@@ -134,89 +36,7 @@ Docker 17.03.0-ce (Kubenetes未対応)&lt;/p&gt;
       <pubDate>Sun, 05 Feb 2017 00:00:00 +0000</pubDate>
       
       <guid>http://www.rancher.jp/site/releasenote/v.1.4.0/</guid>
-      <description>
-
-&lt;h1 id=&#34;リリース-v1-4-0&#34;&gt;リリース v1.4.0&lt;/h1&gt;
-
-&lt;h2 id=&#34;バージョン&#34;&gt;バージョン&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;rancher/server:v1.4.0&lt;/li&gt;
-&lt;li&gt;rancher/agent:v1.2.0&lt;/li&gt;
-&lt;li&gt;rancher/lb-service-haproxy:v0.5.9&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/rancher/rancher-compose/releases/tag/v0.12.2&#34;&gt;rancher-compose-v0.12.2&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/rancher/cli/releases/tag/v0.4.1&#34;&gt;rancher-v0.4.1&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;対応している-docker-のバージョン&#34;&gt;対応している Docker のバージョン&lt;/h3&gt;
-
-&lt;p&gt;Docker 1.10.3&lt;br /&gt;
-Docker 1.12.3-1.12.6&lt;/p&gt;
-
-&lt;h2 id=&#34;kubernetes-ui-の変更&#34;&gt;Kubernetes UI の変更&lt;/h2&gt;
-
-&lt;p&gt;Kubernetesをメインのオーケストレーションエンジンにしている場合、v1.4.0リリースからk8sの対応について2つの大きな変更があります。
-1. Rancher による k8sデフォルトUIを廃止し、&lt;a href=&#34;https://github.com/kubernetes/dashboard&#34;&gt;k8s&amp;rsquo; ダッシュボードUI&lt;/a&gt;に引き継ぎました。各k8sの環境で自動的に起動して有効になります。2016年の後半、KubernetesダッシュボードUIは、一般的な用途向けのweb UIがものすごい貢献により発展し、RancherのデフォルトUIとしての機能と安定性を備えたところに到達したと思います。その為、1.4では Rancher k8s UI を廃止し k8sのダッシュボードUIを k8s リソースの管理UIとしました。&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Rancher カタログにあるk8s グラフ化とテンプレートを廃止し、&lt;a href=&#34;https://github.com/kubernetes/helm&#34;&gt;k8s helm&lt;/a&gt; に引き継ぎました。Helm(とtiller)は、それぞれk8s環境で自動的に有効になります。便利な helmクライアントも 外部から動かせる kubectlシェルコンソールとして同様に追加されます。&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&#34;重要&#34;&gt;重要!&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;バージョン 1.4.0から Rancher &lt;a href=&#34;http://docs.rancher.com/rancher/v1.3/en/installing-rancher/installing-server/#elb&#34;&gt;AWS ELBs&lt;/a&gt; の利用を推奨します。&lt;/li&gt;
-&lt;li&gt;Rancherサーバーをアップグレードした後、まずインフラストラクチャのスタックをチェックして、それぞれのサービスが最新であることを確認してください。 &amp;ldquo;アップグレード可能&amp;rdquo;ボタンが表示されている場合は、最新のサービスに更新してください。&lt;strong&gt;ひとつひとつのインフラストラクチャースタックが完全にアップグレードされてから次のスタックに移動してください&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;Rancherのリリースごとに、ロードバランサーサービスのための特定のロードバランサイメージ（つまり &lt;code&gt;rancher/lb-service-haproxy&lt;/code&gt;）にタグを付けました。以前のバージョンのRancherからアップグレードして、新しいロードバランサイメージがリリースされている場合は、ロードバランサ名の横にシンボルが表示され、そのRancherバージョンで新しいイメージが使用可能であることを示します。ロードバランサの最新のイメージにアップグレードすることをお勧めします。&lt;/li&gt;
-&lt;li&gt;1.1.xから v1.2.2にアップグレードする場合は、アップグレードに関する重要な注意点に関する&lt;a href=&#34;https://github.com/rancher/rancher/releases/tag/v1.2.0&#34;&gt;v1.2.0&lt;/a&gt;のリリースノートをお読みください。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;rancher-サーバータグ&#34;&gt;Rancher サーバータグ&lt;/h2&gt;
-
-&lt;p&gt;Rancher サーバーに2種類のタグを付けています。メジャーリリース毎に特定のバージョンののドキュメントを提供しています。
-- &lt;code&gt;rancher/server:latest&lt;/code&gt; タグは、最新の開発ビルドです。これらのビルドは、CI自動化フレームワークを通じて検証されています。これらのリリースは本番環境での展開用ではありません。
-- &lt;code&gt;rancher/server:stable&lt;/code&gt; タグは、最新の安定版リリースです。このタグは、本番環境に推奨するバージョンです。&lt;/p&gt;
-
-&lt;p&gt;末尾が&lt;code&gt;rc{n}&lt;/code&gt;のリリースはどれも利用しないでください。&lt;code&gt;rc&lt;/code&gt; ビルドは、Rancherチームのテスト用です。&lt;/p&gt;
-
-&lt;p&gt;v1.4.0 には、&lt;code&gt;rancher/server:latest&lt;/code&gt; タグが付いています。&lt;/p&gt;
-
-&lt;h2 id=&#34;追加機能&#34;&gt;追加機能&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;ウェブフック [&lt;a href=&#34;https://github.com/rancher/rancher/issues/619&#34;&gt;#619&lt;/a&gt;]&lt;/strong&gt; - Rancherは&lt;a href=&#34;http://docs.rancher.com/rancher/v1.4/en/cattle/webhook-service/&#34;&gt;サービススケールアップダウンのウェブフック生成&lt;/a&gt;機能を使えるようになりました。このフレームワークにより &lt;a href=&#34;https://github.com/rancher/webhook-service&#34;&gt;ウェブフック&lt;/a&gt; 機能へより簡単に貢献できるようになりました。また、その他のウェブフック機能をつかった機能追加のプルリクエストも歓迎しています。様々なウェブフックドライバーがRancherとUIの一つの機能として自動的に統合できるようになるでしょう。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;ネットワークポリシー [&lt;a href=&#34;https://github.com/rancher/rancher/issues/3895&#34;&gt;#3895&lt;/a&gt;]&lt;/strong&gt; - 利用者側で&lt;a href=&#34;http://docs.rancher.com/rancher/v1.4/en/rancher-services/network-policy/&#34;&gt;ネットワークポリシー&lt;/a&gt; をそれぞれの環境毎に変更することができるようになりました。これにより、1つの環境内で作ったコンテナー間のデフォルト通信ポリシーを拒否や全て許可のように選択することができるようになりました。また、もっと洗練されたルールも選択することができるようになりました。例えば、イントラスタック内は、許可するが、インタースタックとのネットワーク通信は拒否するといったことです。** 注意: UI から追加することはまだできません。次のリリースで対応する予定です。**&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;マルチIPホストのスケジューラー接続[&lt;a href=&#34;https://github.com/rancher/rancher/issues/7034&#34;&gt;#7034&lt;/a&gt;]&lt;/strong&gt; - Ranche が複数のIPアドレスを持っているホストに対してコンテナのスケジューラーをサポート &lt;a href=&#34;http://docs.rancher.com/rancher/v1.4/en/hosts/#scheduler-ips&#34;&gt;the IPs are configured in Rancher&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;秘匿情報管理 - 試験的実装 [&lt;a href=&#34;https://github.com/rancher/rancher/issues/1269&#34;&gt;#1269&lt;/a&gt;]&lt;/strong&gt; - Rancher で &lt;a href=&#34;http://docs.rancher.com/rancher/v1.4/en/cattle/secrets/&#34;&gt;コンテナー内で利用される名前ラベル付き秘密情報&lt;/a&gt; 機能をサポートしました。Rancher がローカルAES(高度標準暗号)を使うか、&lt;a href=&#34;https://www.vaultproject.io/docs/secrets/transit/&#34;&gt;Vault Transit&lt;/a&gt; を使って裏側の暗号化機構にRancher内の値を安全に保持するインターフェースを提供します。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;主要な既知の問題&#34;&gt;主要な既知の問題&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;UI（aka docker-machine）を使用してv1.1.4から作成されたAWSのホストは、UIから削除されたときに正しくクリーンアップされません[&lt;a href=&#34;https://github.com/rancher/rancher/issues/6750&#34;&gt;#6750&lt;/a&gt;]&lt;/li&gt;
-&lt;li&gt;自己署名証明書では、リモート kubectl クライアントを使用すると自動的には動作しません。次の回避策があります[&lt;a href=&#34;https://github.com/rancher/rancher/issues/7235&#34;&gt;#7235&lt;/a&gt;]&lt;/li&gt;
-&lt;li&gt;自己証明書とKubernetesを使っているときに、Helm オペレーションが固まる[&lt;a href=&#34;https://github.com/rancher/rancher/issues/7234&#34;&gt;#7234&lt;/a&gt;]
--　マルチIPホストのスケジューラー接続を有効にした場合、スケジューラーIPと一致する指定されたホストIPが、ポートを公開するとき、またはロード・バランサーのために使用された場合、そのIPでホスト上でスケジュールされません。
-[&lt;a href=&#34;https://github.com/rancher/rancher/issues/7675&#34;&gt;#7675&lt;/a&gt;]&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;v1-3-0からの主なバグ修正&#34;&gt;v1.3.0からの主なバグ修正&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://docs.rancher.com/rancher/v1.4/en/kubernetes/ingress/#host-scheduling&#34;&gt;K8S 環境の特定のホスト上でのロードバランサースケジュール&lt;/a&gt;や&lt;a href=&#34;http://docs.rancher.com/rancher/v1.4/en/kubernetes/ingress/#example-of-a-load-balancer-scheduled-on-all-hosts&#34;&gt;全てのホスト上でロードバランサーをスケジュール&lt;/a&gt;を設定する方法がないのを修正。[&lt;a href=&#34;https://github.com/rancher/rancher/issues/5240&#34;&gt;#5240&lt;/a&gt;, &lt;a href=&#34;https://github.com/rancher/rancher/issues/4849&#34;&gt;#4849&lt;/a&gt;]&lt;/li&gt;
-&lt;li&gt;コンテナーが複数のホストに散らばっている状態でサービスを起動しようとしたら動かないを修正 [&lt;a href=&#34;https://github.com/rancher/rancher/issues/7170&#34;&gt;#7170&lt;/a&gt;]&lt;/li&gt;
-&lt;li&gt;ロードバランサーのアップグレードのスケジューリングが動かないを修正 [&lt;a href=&#34;https://github.com/rancher/rancher/issues/7251&#34;&gt;#7251&lt;/a&gt;]&lt;/li&gt;
-&lt;li&gt;v1 のロードバランサーにあったセレクタがv2 ロードバランサーに変換されないを修正 [&lt;a href=&#34;https://github.com/rancher/rancher/issues/7269&#34;&gt;#7269&lt;/a&gt;]&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;rancher-compose-downloads&#34;&gt;Rancher-Compose Downloads&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/rancher/rancher-compose/releases/tag/v0.12.2&#34;&gt;https://github.com/rancher/rancher-compose/releases/tag/v0.12.2&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;rancher-cli-downloads&#34;&gt;Rancher CLI Downloads&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/rancher/cli/releases/tag/v0.4.1&#34;&gt;https://github.com/rancher/cli/releases/tag/v0.4.1&lt;/a&gt;&lt;/p&gt;
-</description>
+      <description>リリース v1.4.0 バージョン rancher/server:v1.4.0 rancher/agent:v1.2.0 rancher/lb-service-haproxy:v0.5.9 rancher-compose-v0.12.2 rancher-v0.4.1 対応している Docker のバージョン Docker 1.10.3 Docker 1.12.3-1.12.6 Kubernetes UI の変更 Kubernetesをメインのオーケストレーションエンジンにしてい</description>
     </item>
     
     <item>
@@ -225,73 +45,7 @@ Docker 1.12.3-1.12.6&lt;/p&gt;
       <pubDate>Tue, 24 Jan 2017 00:00:00 +0000</pubDate>
       
       <guid>http://www.rancher.jp/site/releasenote/v.1.3.3/</guid>
-      <description>
-
-&lt;h1 id=&#34;リリース-v1-3-3&#34;&gt;リリース v1.3.3&lt;/h1&gt;
-
-&lt;h2 id=&#34;バージョン&#34;&gt;バージョン&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;rancher/server:v1.3.3&lt;/li&gt;
-&lt;li&gt;rancher/agent:v1.1.3&lt;/li&gt;
-&lt;li&gt;rancher/lb-service-haproxy:v0.4.9&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/rancher/rancher-compose/releases/tag/v0.12.1&#34;&gt;rancher-compose-v0.12.1&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/rancher/cli/releases/tag/v0.4.1&#34;&gt;rancher-v0.4.1&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;&lt;em&gt;注意:&lt;/em&gt; 新しい&lt;a href=&#34;http://docs.rancher.com/rancher/v1.2/en/rancher-services/&#34;&gt;infrastructure services&lt;/a&gt;では、ロードバランサの機能を指定のHAProxyイメージに変更し、ネットワークエージェントが起動されなくなりました。 したがって、rancher/agent-instanceが必要なくなりました。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&#34;重要&#34;&gt;重要!&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;このリリースから Rancher で高可用性のために&lt;a href=&#34;http://docs.rancher.com/rancher/v1.3/en/installing-rancher/installing-server/#elb&#34;&gt;ELB を再び利用する&lt;/a&gt;ことができるようになりました。&lt;/li&gt;
-&lt;li&gt;リリース v 1.2.x より前からアップグレードする場合、まずインフラストラクチャのスタックをチェックして、サービスが最新であることを確認してください。 [アップグレード可能]ボタンが表示されている場合は、最新のサービスに更新してください。&lt;strong&gt;ひとつひとつのインフラストラクチャースタックが完全にアップグレードされてから次のスタックに移動してください&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;Rancherのリリースごとに、ロードバランサーサービスのための特定のロードバランサイメージ（つまり &lt;code&gt;rancher/lb-service-haproxy&lt;/code&gt;）にタグを付けました。以前のバージョンのRancherからアップグレードして、新しいロードバランサイメージがリリースされている場合は、ロードバランサ名の横にシンボルが表示され、そのRancherバージョンで新しいイメージが使用可能であることを示します。ロードバランサの最新のイメージにアップグレードすることをお勧めします。&lt;/li&gt;
-&lt;li&gt;1.1.xからアップグレードする場合は、アップグレードに関する重要な注意点に関する&lt;a href=&#34;https://github.com/rancher/rancher/releases/tag/v1.2.0&#34;&gt;v1.2.0&lt;/a&gt;のリリースノートをお読みください。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;rancher-サーバータグ&#34;&gt;Rancher サーバータグ&lt;/h2&gt;
-
-&lt;p&gt;Rancher サーバーに2種類のタグを付けています。メジャーリリース毎に特定のバージョンののドキュメントを提供しています。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;rancher/server:latest&lt;/code&gt; タグは、最新の開発ビルドです。これらのビルドは、CI自動化フレームワークを通じて検証されています。これらのリリースは本番環境での展開用ではありません。&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;rancher/server:stable&lt;/code&gt; タグは、最新の安定版リリースです。このタグは、本番環境に推奨するバージョンです。&lt;br /&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;末尾が&lt;code&gt;rc{n}&lt;/code&gt;のリリースはどれも利用しないでください。&lt;code&gt;rc&lt;/code&gt; ビルドは、Rancherチームのテスト用です。&lt;/p&gt;
-
-&lt;p&gt;v1.3.3 は、&lt;code&gt;rancher/server:latest&lt;/code&gt; タグが付いています。&lt;/p&gt;
-
-&lt;h2 id=&#34;インフラストラクチャーサービスの注意点&#34;&gt;インフラストラクチャーサービスの注意点&lt;/h2&gt;
-
-&lt;p&gt;このバージョン1.3.1では、新しい &lt;code&gt;scheduler&lt;/code&gt;エントリを追加しました。このエントリは、&lt;code&gt;network-services&lt;/code&gt; より前にアップグレードする必要があります。ネットワークサービスをアップグレードするときのバグが修正されます。&lt;/p&gt;
-
-&lt;h2 id=&#34;主要な既知の問題&#34;&gt;主要な既知の問題&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;UI（aka docker-machine）を使用してv1.1.4から作成されたAWSのホストは、UIから削除されたときに正しくクリーンアップされません[&lt;a href=&#34;https://github.com/rancher/rancher/issues/6750&#34;&gt;#6750&lt;/a&gt;]&lt;/li&gt;
-&lt;li&gt;自己署名証明書では、リモート kubectl クライアントを使用すると自動的には動作しません。回避策があります[&lt;a href=&#34;https://github.com/rancher/rancher/issues/7235&#34;&gt;#7235&lt;/a&gt;]&lt;/li&gt;
-&lt;li&gt;自己証明書とKubernetesを使っているときに、Helm オペレーションが固まる[&lt;a href=&#34;https://github.com/rancher/rancher/issues/7234&#34;&gt;#7234&lt;/a&gt;]&lt;/li&gt;
-&lt;li&gt;コンテナを再起動後に、コンテナが利用可能になるまでDNSの解決が遅延します[&lt;a href=&#34;https://github.com/rancher/rancher/issues/7402&#34;&gt;#74021&lt;/a&gt;]&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;v1-3-2からの主なバグ修正&#34;&gt;v1.3.2からの主なバグ修正&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;ELB を利用する設定を有効にしていると、&lt;code&gt;kubectl exec&lt;/code&gt; がALB 配下で動作しないという問題を修正しました。&lt;a href=&#34;http://docs.rancher.com/rancher/v1.3/en/installing-rancher/installing-server/#elb&#34;&gt;ELB を設定する追加操作&lt;/a&gt;と&lt;a href=&#34;http://docs.rancher.com/rancher/v1.3/en/installing-rancher/installing-server/basic-ssl-config/#elb&#34;&gt;SSL を有効にする追加操作&lt;/a&gt; [&lt;a href=&#34;https://github.com/rancher/rancher/issues/7464&#34;&gt;#7464&lt;/a&gt;]&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;rancher-compose-downloads&#34;&gt;Rancher-Compose Downloads&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/rancher/rancher-compose/releases/tag/v0.12.1&#34;&gt;https://github.com/rancher/rancher-compose/releases/tag/v0.12.1&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;rancher-cli-downloads&#34;&gt;Rancher CLI Downloads&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/rancher/cli/releases/tag/v0.4.1&#34;&gt;https://github.com/rancher/cli/releases/tag/v0.4.1&lt;/a&gt;&lt;/p&gt;
-</description>
+      <description>リリース v1.3.3 バージョン rancher/server:v1.3.3 rancher/agent:v1.1.3 rancher/lb-service-haproxy:v0.4.9 rancher-compose-v0.12.1 rancher-v0.4.1 注意: 新しいinfrastructure servicesでは、ロードバランサの機能を指定のHAProxyイメー</description>
     </item>
     
     <item>
@@ -300,73 +54,7 @@ Docker 1.12.3-1.12.6&lt;/p&gt;
       <pubDate>Sat, 14 Jan 2017 00:00:00 +0000</pubDate>
       
       <guid>http://www.rancher.jp/site/releasenote/v.1.3.1/</guid>
-      <description>
-
-&lt;h1 id=&#34;リリース-v1-3-1&#34;&gt;リリース v1.3.1&lt;/h1&gt;
-
-&lt;h2 id=&#34;バージョン&#34;&gt;バージョン&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;rancher/server:v1.3.1&lt;/li&gt;
-&lt;li&gt;rancher/agent:v1.1.3&lt;/li&gt;
-&lt;li&gt;rancher/lb-service-haproxy:v0.4.8&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/rancher/rancher-compose/releases/tag/v0.12.1&#34;&gt;rancher-compose-v0.12.1&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/rancher/cli/releases/tag/v0.4.1&#34;&gt;rancher-v0.4.1&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;&lt;em&gt;注意:&lt;/em&gt; 新しい&lt;a href=&#34;http://docs.rancher.com/rancher/v1.2/en/rancher-services/&#34;&gt;infrastructure services&lt;/a&gt;では、ロードバランサの機能を指定のHAProxyイメージに変更し、ネットワークエージェントが起動されなくなりました。 したがって、rancher/agent-instanceが必要なくなりました。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&#34;重要&#34;&gt;重要!&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;バージョン 1.2.0 から Rancher は AWS ELB をサポートしなくなり、AWS ALB (アプリケーションロードバランサー)のみをサポートします。高可用性設定は、ALB を利用してください。&lt;/li&gt;
-&lt;li&gt;リリース v 1.2.x より前からアップグレードする場合、まずインフラストラクチャのスタックをチェックして、サービスが最新であることを確認してください。 [アップグレード可能]ボタンが表示されている場合は、最新のサービスに更新してください。&lt;strong&gt;ひとつひとつのインフラストラクチャースタックが完全にアップグレードされてから次のスタックに移動してください&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;Rancherのリリースごとに、ロードバランサーサービスのための特定のロードバランサイメージ（つまり &lt;code&gt;rancher/lb-service-haproxy&lt;/code&gt;）にタグを付けました。以前のバージョンのRancherからアップグレードして、新しいロードバランサイメージがリリースされている場合は、ロードバランサ名の横にシンボルが表示され、そのRancherバージョンで新しいイメージが使用可能であることを示します。ロードバランサの最新のイメージにアップグレードすることをお勧めします。&lt;/li&gt;
-&lt;li&gt;1.1.xからv1.2.2にアップグレードする場合は、アップグレードに関する重要な注意点に関する&lt;a href=&#34;https://github.com/rancher/rancher/releases/tag/v1.2.0&#34;&gt;v1.2.0&lt;/a&gt;のリリースノートをお読みください。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;rancher-サーバータグ&#34;&gt;Rancher サーバータグ&lt;/h2&gt;
-
-&lt;p&gt;Rancher サーバーに2種類のタグを付けています。メジャーリリース毎に特定のバージョンののドキュメントを提供しています。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;rancher/server:latest&lt;/code&gt; タグは、最新の開発ビルドです。これらのビルドは、CI自動化フレームワークを通じて検証されています。これらのリリースは本番環境での展開用ではありません。&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;rancher/server:stable&lt;/code&gt; タグは、最新の安定版リリースです。このタグは、本番環境に推奨するバージョンです。&lt;br /&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;末尾が&lt;code&gt;rc{n}&lt;/code&gt;のリリースはどれも利用しないでください。&lt;code&gt;rc&lt;/code&gt; ビルドは、Rancherチームのテスト用です。&lt;/p&gt;
-
-&lt;p&gt;v1.3.1 は、&lt;code&gt;rancher/server:latest&lt;/code&gt; タグが付いています。&lt;/p&gt;
-
-&lt;h2 id=&#34;インフラストラクチャーサービスの注意点&#34;&gt;インフラストラクチャーサービスの注意点&lt;/h2&gt;
-
-&lt;p&gt;このバージョンでは、新しい &lt;code&gt;scheduler&lt;/code&gt;エントリを追加しました。このエントリは、&lt;code&gt;network-services&lt;/code&gt; より前にアップグレードする必要があります。ネットワークサービスをアップグレードするときのバグが修正されます。&lt;/p&gt;
-
-&lt;h2 id=&#34;主要な既知の問題&#34;&gt;主要な既知の問題&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;UI（aka docker-machine）を使用してv1.1.4から作成されたAWSのホストは、UIから削除されたときに正しくクリーンアップされません[&lt;a href=&#34;https://github.com/rancher/rancher/issues/6750&#34;&gt;#6750&lt;/a&gt;]&lt;/li&gt;
-&lt;li&gt;自己署名証明書では、リモート kubectl クライアントを使用すると自動的には動作しません。回避策があります[&lt;a href=&#34;https://github.com/rancher/rancher/issues/7235&#34;&gt;#7235&lt;/a&gt;]&lt;/li&gt;
-&lt;li&gt;自己証明書とKubernetesを使っているときに、Helm オペレーションが固まる[&lt;a href=&#34;https://github.com/rancher/rancher/issues/7234&#34;&gt;#7234&lt;/a&gt;]&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;v1-3-0からの主なバグ修正&#34;&gt;v1.3.0からの主なバグ修正&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;composeとCLIのダウンロードリンクが古いバージョンであるのを修正しました。[&lt;a href=&#34;https://github.com/rancher/rancher/issues/7361&#34;&gt;#7361&lt;/a&gt;]&lt;/li&gt;
-&lt;li&gt;Kubernetes Dashboardが時折読み込まれない問題を修正しました。[&lt;a href=&#34;https://github.com/rancher/rancher/issues/7320&#34;&gt;#7320&lt;/a&gt;] &lt;strong&gt;注意:&lt;/strong&gt; ダッシュボードがv1.3.0で動作していない場合は、アップグレード後に &lt;code&gt;kubernetes-dashboard-xxx&lt;/code&gt;ポッドを削除する必要があります。 &lt;strong&gt;Kubernetes&lt;/strong&gt;  -&amp;gt; &lt;strong&gt;Pods&lt;/strong&gt; の下の &lt;strong&gt;kube-system&lt;/strong&gt; 名前空間でポッドが見つかります。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;rancher-compose-downloads&#34;&gt;Rancher-Compose Downloads&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/rancher/rancher-compose/releases/tag/v0.12.1&#34;&gt;https://github.com/rancher/rancher-compose/releases/tag/v0.12.1&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;rancher-cli-downloads&#34;&gt;Rancher CLI Downloads&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/rancher/cli/releases/tag/v0.4.1&#34;&gt;https://github.com/rancher/cli/releases/tag/v0.4.1&lt;/a&gt;&lt;/p&gt;
-</description>
+      <description>リリース v1.3.1 バージョン rancher/server:v1.3.1 rancher/agent:v1.1.3 rancher/lb-service-haproxy:v0.4.8 rancher-compose-v0.12.1 rancher-v0.4.1 注意: 新しいinfrastructure servicesでは、ロードバランサの機能を指定のHAProxyイメー</description>
     </item>
     
     <item>
@@ -375,74 +63,7 @@ Docker 1.12.3-1.12.6&lt;/p&gt;
       <pubDate>Sat, 14 Jan 2017 00:00:00 +0000</pubDate>
       
       <guid>http://www.rancher.jp/site/releasenote/v.1.3.2/</guid>
-      <description>
-
-&lt;h1 id=&#34;リリース-v1-3-2&#34;&gt;リリース v1.3.2&lt;/h1&gt;
-
-&lt;h2 id=&#34;バージョン&#34;&gt;バージョン&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;rancher/server:v1.3.2&lt;/li&gt;
-&lt;li&gt;rancher/agent:v1.1.3&lt;/li&gt;
-&lt;li&gt;rancher/lb-service-haproxy:v0.4.9&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/rancher/rancher-compose/releases/tag/v0.12.1&#34;&gt;rancher-compose-v0.12.1&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/rancher/cli/releases/tag/v0.4.1&#34;&gt;rancher-v0.4.1&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;&lt;em&gt;注意:&lt;/em&gt; 新しい&lt;a href=&#34;http://docs.rancher.com/rancher/v1.2/en/rancher-services/&#34;&gt;infrastructure services&lt;/a&gt;では、ロードバランサの機能を指定のHAProxyイメージに変更し、ネットワークエージェントが起動されなくなりました。 したがって、rancher/agent-instanceが必要なくなりました。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&#34;重要&#34;&gt;重要!&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;バージョン 1.2.0 から Rancher は AWS ELB をサポートしなくなり、AWS ALB (アプリケーションロードバランサー)のみをサポートします。高可用性設定は、ALB を利用してください。&lt;/li&gt;
-&lt;li&gt;リリース v 1.2.x より前からアップグレードする場合、まずインフラストラクチャのスタックをチェックして、サービスが最新であることを確認してください。 [アップグレード可能]ボタンが表示されている場合は、最新のサービスに更新してください。&lt;strong&gt;ひとつひとつのインフラストラクチャースタックが完全にアップグレードされてから次のスタックに移動してください&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;Rancherのリリースごとに、ロードバランサーサービスのための特定のロードバランサイメージ（つまり &lt;code&gt;rancher/lb-service-haproxy&lt;/code&gt;）にタグを付けました。以前のバージョンのRancherからアップグレードして、新しいロードバランサイメージがリリースされている場合は、ロードバランサ名の横にシンボルが表示され、そのRancherバージョンで新しいイメージが使用可能であることを示します。ロードバランサの最新のイメージにアップグレードすることをお勧めします。&lt;/li&gt;
-&lt;li&gt;1.1.xからアップグレードする場合は、アップグレードに関する重要な注意点に関する&lt;a href=&#34;https://github.com/rancher/rancher/releases/tag/v1.2.0&#34;&gt;v1.2.0&lt;/a&gt;のリリースノートをお読みください。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;rancher-サーバータグ&#34;&gt;Rancher サーバータグ&lt;/h2&gt;
-
-&lt;p&gt;Rancher サーバーに2種類のタグを付けています。メジャーリリース毎に特定のバージョンののドキュメントを提供しています。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;rancher/server:latest&lt;/code&gt; タグは、最新の開発ビルドです。これらのビルドは、CI自動化フレームワークを通じて検証されています。これらのリリースは本番環境での展開用ではありません。&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;rancher/server:stable&lt;/code&gt; タグは、最新の安定版リリースです。このタグは、本番環境に推奨するバージョンです。&lt;br /&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;末尾が&lt;code&gt;rc{n}&lt;/code&gt;のリリースはどれも利用しないでください。&lt;code&gt;rc&lt;/code&gt; ビルドは、Rancherチームのテスト用です。&lt;/p&gt;
-
-&lt;p&gt;v1.3.2 は、&lt;code&gt;rancher/server:latest&lt;/code&gt; タグが付いています。&lt;/p&gt;
-
-&lt;h2 id=&#34;インフラストラクチャーサービスの注意点&#34;&gt;インフラストラクチャーサービスの注意点&lt;/h2&gt;
-
-&lt;p&gt;バージョン1.3.1では、新しい &lt;code&gt;scheduler&lt;/code&gt;エントリを追加しました。このエントリは、&lt;code&gt;network-services&lt;/code&gt; より前にアップグレードする必要があります。ネットワークサービスをアップグレードするときのバグが修正されます。&lt;/p&gt;
-
-&lt;h2 id=&#34;主要な既知の問題&#34;&gt;主要な既知の問題&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;UI（aka docker-machine）を使用してv1.1.4から作成されたAWSのホストは、UIから削除されたときに正しくクリーンアップされません[&lt;a href=&#34;https://github.com/rancher/rancher/issues/6750&#34;&gt;#6750&lt;/a&gt;]&lt;/li&gt;
-&lt;li&gt;自己署名証明書では、リモート kubectl クライアントを使用すると自動的には動作しません。回避策があります[&lt;a href=&#34;https://github.com/rancher/rancher/issues/7235&#34;&gt;#7235&lt;/a&gt;]&lt;/li&gt;
-&lt;li&gt;自己証明書とKubernetesを使っているときに、Helm オペレーションが固まる[&lt;a href=&#34;https://github.com/rancher/rancher/issues/7234&#34;&gt;#7234&lt;/a&gt;]&lt;/li&gt;
-&lt;li&gt;コンテナを再起動後に、コンテナが利用可能になるまでDNSの解決が遅延します[&lt;a href=&#34;https://github.com/rancher/rancher/issues/7402&#34;&gt;#74021&lt;/a&gt;]&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;v1-3-1からの主なバグ修正&#34;&gt;v1.3.1からの主なバグ修正&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;コンテナーで出力されていたログを表示した後にブラウザーを閉じると、フロントエンドチャンネルが見つからないためにログがスパムのようになっていたのを修正 [&lt;a href=&#34;https://github.com/rancher/rancher/issues/7327&#34;&gt;#7327&lt;/a&gt;]&lt;/li&gt;
-&lt;li&gt;ボリュームが削除できないときに volumestoragepoolmap.remove プロセスが肥大し続けていたのを修正[&lt;a href=&#34;https://github.com/rancher/rancher/issues/7464&#34;&gt;#7464&lt;/a&gt;]&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;rancher-compose-downloads&#34;&gt;Rancher-Compose Downloads&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/rancher/rancher-compose/releases/tag/v0.12.1&#34;&gt;https://github.com/rancher/rancher-compose/releases/tag/v0.12.1&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;rancher-cli-downloads&#34;&gt;Rancher CLI Downloads&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/rancher/cli/releases/tag/v0.4.1&#34;&gt;https://github.com/rancher/cli/releases/tag/v0.4.1&lt;/a&gt;&lt;/p&gt;
-</description>
+      <description>リリース v1.3.2 バージョン rancher/server:v1.3.2 rancher/agent:v1.1.3 rancher/lb-service-haproxy:v0.4.9 rancher-compose-v0.12.1 rancher-v0.4.1 注意: 新しいinfrastructure servicesでは、ロードバランサの機能を指定のHAProxyイメー</description>
     </item>
     
     <item>
@@ -451,97 +72,7 @@ Docker 1.12.3-1.12.6&lt;/p&gt;
       <pubDate>Wed, 04 Jan 2017 00:00:00 +0000</pubDate>
       
       <guid>http://www.rancher.jp/site/releasenote/v.1.3.0/</guid>
-      <description>
-
-&lt;h1 id=&#34;リリース-v1-3-0&#34;&gt;リリース v1.3.0&lt;/h1&gt;
-
-&lt;h2 id=&#34;バージョン&#34;&gt;バージョン&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;rancher/server:v1.3.0&lt;/li&gt;
-&lt;li&gt;rancher/agent:v1.1.3&lt;/li&gt;
-&lt;li&gt;rancher/lb-service-haproxy:v0.4.8&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/rancher/rancher-compose/releases/tag/v0.12.1&#34;&gt;rancher-compose-v0.12.1&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/rancher/cli/releases/tag/v0.4.1&#34;&gt;rancher-v0.4.1&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;&lt;em&gt;注意:&lt;/em&gt; 新しい&lt;a href=&#34;http://docs.rancher.com/rancher/v1.2/en/rancher-services/&#34;&gt;infrastructure services&lt;/a&gt;では、ロードバランサの機能を指定のHAProxyイメージに変更し、ネットワークエージェントが起動されなくなりました。 したがって、rancher/agent-instanceが必要なくなりました。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&#34;重要&#34;&gt;重要!&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Rancher は今後 AWS ELB をサポートせず、AWS ALB (Application Load Balancers) のみのサポートとなります。そのため、今後は ALB を利用するよう設定をアップデートしてください。&lt;/li&gt;
-&lt;li&gt;バージョン 1.2.0 から Rancher は AWS ELB をサポートしなくなり、AWS ALB (アプリケーションロードバランサー)のみをサポートします。高可用性設定は、ALB を利用してください。&lt;/li&gt;
-&lt;li&gt;リリース v 1.2.x より前からアップグレードする場合、まずインフラストラクチャのスタックをチェックして、サービスが最新であることを確認してください。 [アップグレード可能]ボタンが表示されている場合は、最新のサービスに更新してください。&lt;strong&gt;ひとつひとつのインフラストラクチャースタックが完全にアップグレードされてから次のスタックに移動してください&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;Rancherのリリースごとに、ロードバランサーサービスのための特定のロードバランサイメージ（つまり &lt;code&gt;rancher/lb-service-haproxy&lt;/code&gt;）にタグを付けました。以前のバージョンのRancherからアップグレードして、新しいロードバランサイメージがリリースされている場合は、ロードバランサ名の横にシンボルが表示され、そのRancherバージョンで新しいイメージが使用可能であることを示します。ロードバランサの最新のイメージにアップグレードすることをお勧めします。&lt;/li&gt;
-&lt;li&gt;1.1.xからv1.2.2にアップグレードする場合は、アップグレードに関する重要な注意点に関する&lt;a href=&#34;https://github.com/rancher/rancher/releases/tag/v1.2.0&#34;&gt;v1.2.0&lt;/a&gt;のリリースノートをお読みください。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;rancher-サーバータグ&#34;&gt;Rancher サーバータグ&lt;/h2&gt;
-
-&lt;p&gt;Rancher サーバーに2種類のタグを付けています。メジャーリリース毎に特定のバージョンののドキュメントを提供しています。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;rancher/server:latest&lt;/code&gt; タグは、最新の開発ビルドです。これらのビルドは、CI自動化フレームワークを通じて検証されています。これらのリリースは本番環境での展開用ではありません。&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;rancher/server:stable&lt;/code&gt; タグは、最新の安定版リリースです。このタグは、本番環境に推奨するバージョンです。&lt;br /&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;末尾が&lt;code&gt;rc{n}&lt;/code&gt;のリリースはどれも利用しないでください。&lt;code&gt;rc&lt;/code&gt; ビルドは、Rancherチームのテスト用です。&lt;/p&gt;
-
-&lt;p&gt;v1.3.0 は、&lt;code&gt;rancher/server:latest&lt;/code&gt; タグが付いています。&lt;/p&gt;
-
-&lt;h2 id=&#34;特徴&#34;&gt;特徴&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Windows Server 2016 サポート - 実験的 [&lt;a href=&#34;https://github.com/rancher/rancher/issues/4576&#34;&gt;#4576&lt;/a&gt;]&lt;/strong&gt; - 実験的なプレビューで&lt;a href=&#34;http://docs.rancher.com/rancher/v1.3/en/windows/&#34;&gt;Windowsコンテナーをサポート&lt;/a&gt;。 Windowsコンテナに対するDockerのサポートの詳細については、&lt;a href=&#34;https://docs.microsoft.com/en-us/virtualization/windowscontainers/quick-start/quick-start-windows-server&#34;&gt;Dockerのウィンドウのサポート&lt;/a&gt;を参照してください。今回の実験的リリースでは、次の機能に制限しています:
-
-&lt;ul&gt;
-&lt;li&gt;RancherエージェントサービスとしてのWindows 2016サーバーホストの追加。&lt;/li&gt;
-&lt;li&gt;スタック、サービス、およびコンテナの追加。&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://docs.rancher.com/rancher/v1.3/en/windows/#networking-in-windows&#34;&gt;サポートされているネットワークモード&lt;/a&gt;は、「NAT」と「透過」のみです。&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;注意: 上記以外にも、LBサービス、DNS、メタデータなどの既存のRancherの機能は、まだWindowsコンテナで動作するように移植されていないため、現在は機能していません。今後にご期待下さい！&lt;/em&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Kubernetes のさらなる改善&lt;/strong&gt; - 次のサポートが追加されました:
-
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Kubernetes 1.5.1&lt;/strong&gt; - k8s 1.5.1 をサポートしました。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;SkyDNS サポート [&lt;a href=&#34;https://github.com/rancher/rancher/issues/5948&#34;&gt;#5948&lt;/a&gt;]&lt;/strong&gt; - Rancher 1.3 + k8s 1.5.1からは、SkyDNSのみがデフォルトのDNSエンジンになりました。すべての Rancher DNSエントリは SkyDNS を使用するように自動的に移行され、RancherDNS は k8s では廃止されます。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Helm と Dashboard UI [&lt;a href=&#34;https://github.com/rancher/rancher/issues/7003&#34;&gt;#7003&lt;/a&gt;]&lt;/strong&gt; - Rancher 1.3から、デフォルトで k8s ダッシュボードUIとHelmサポートが自動的に起動し、Rancherから管理されます。&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;UIの強化&lt;/strong&gt; - その他のUI機能:
-
-&lt;ul&gt;
-&lt;li&gt;コンテナページに一括操作と検索を追加しました [&lt;a href=&#34;https://github.com/rancher/rancher/issues/342&#34;&gt;#342&lt;/a&gt;, &lt;a href=&#34;https://github.com/rancher/rancher/issues/1533&#34;&gt;#1533&lt;/a&gt;]&lt;/li&gt;
-&lt;li&gt;ホストビューでスタック名をクリックする機能 [&lt;a href=&#34;https://github.com/rancher/rancher/issues/2557&#34;&gt;#2557&lt;/a&gt;]&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;主要な既知の問題&#34;&gt;主要な既知の問題&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;UI（aka docker-machine）を使用してv1.1.4から作成されたAWSのホストは、UIから削除されたときに正しくクリーンアップされません[&lt;a href=&#34;https://github.com/rancher/rancher/issues/6750&#34;&gt;#6750&lt;/a&gt;]&lt;/li&gt;
-&lt;li&gt;自己署名証明書では、リモート kubectl クライアントを使用すると自動的には動作しません。回避策があります[&lt;a href=&#34;https://github.com/rancher/rancher/issues/7235&#34;&gt;#7235&lt;/a&gt;]&lt;/li&gt;
-&lt;li&gt;自己証明書とKubernetesを使っているときに、Helm オペレーションが固まる[&lt;a href=&#34;https://github.com/rancher/rancher/issues/7234&#34;&gt;#7234&lt;/a&gt;]&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;v1-2-2からの主なバグ修正&#34;&gt;v1.2.2からの主なバグ修正&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Rancherサーバーで自己署名証明書が動作しない問題を修正しました。[&lt;a href=&#34;https://github.com/rancher/rancher/issues/6122&#34;&gt;#6122&lt;/a&gt;]&lt;/li&gt;
-&lt;li&gt;個々のコンテナリンクを解決できない問題を修正しました。[&lt;a href=&#34;https://github.com/rancher/rancher/issues/6584&#34;&gt;#6584&lt;/a&gt;]&lt;/li&gt;
-&lt;li&gt;Google Container Registryが機能しない問題を修正しました。[&lt;a href=&#34;https://github.com/rancher/rancher/issues/6956&#34;&gt;#6956&lt;/a&gt;]&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;rancher-compose-downloads&#34;&gt;Rancher-Compose Downloads&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/rancher/rancher-compose/releases/tag/v0.12.1&#34;&gt;https://github.com/rancher/rancher-compose/releases/tag/v0.12.1&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;rancher-cli-downloads&#34;&gt;Rancher CLI Downloads&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/rancher/cli/releases/tag/v0.4.1&#34;&gt;https://github.com/rancher/cli/releases/tag/v0.4.1&lt;/a&gt;&lt;/p&gt;
-</description>
+      <description>リリース v1.3.0 バージョン rancher/server:v1.3.0 rancher/agent:v1.1.3 rancher/lb-service-haproxy:v0.4.8 rancher-compose-v0.12.1 rancher-v0.4.1 注意: 新しいinfrastructure servicesでは、ロードバランサの機能を指定のHAProxyイメー</description>
     </item>
     
     <item>
@@ -550,51 +81,7 @@ Docker 1.12.3-1.12.6&lt;/p&gt;
       <pubDate>Fri, 23 Dec 2016 00:00:00 +0000</pubDate>
       
       <guid>http://www.rancher.jp/site/releasenote/v.1.2.2/</guid>
-      <description>
-
-&lt;h1 id=&#34;リリース-v1-2-2&#34;&gt;リリース v1.2.2&lt;/h1&gt;
-
-&lt;h2 id=&#34;バージョン&#34;&gt;バージョン&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;rancher/server:v1.2.2&lt;/li&gt;
-&lt;li&gt;rancher/agent:v1.1.2&lt;/li&gt;
-&lt;li&gt;rancher/lb-service-haproxy:v0.4.6&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/rancher/rancher-compose/releases/tag/v0.12.1&#34;&gt;rancher-compose-v0.12.1&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/rancher/cli/releases/tag/v0.4.1&#34;&gt;rancher-v0.4.1&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;&lt;em&gt;注意:&lt;/em&gt; 新しい&lt;a href=&#34;http://docs.rancher.com/rancher/v1.2/en/rancher-services/&#34;&gt;infrastructure services&lt;/a&gt;では、ロードバランサの機能を指定のHAProxyイメージに変更し、ネットワークエージェントが起動されなくなりました。 したがって、rancher/agent-instanceが必要なくなりました。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&#34;重要&#34;&gt;重要!&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Rancher は今後 AWS ELB をサポートせず、AWS ALB (Application Load Balancers) のみのサポートとなります。そのため、今後は ALB を利用するよう設定をアップデートしてください。&lt;/li&gt;
-&lt;li&gt;リリース v 1.2.x より前からアップグレードする場合、まずインフラストラクチャのスタックをチェックして、サービスが最新であることを確認してください。 [アップグレード可能]ボタンが表示されている場合は、最新のサービスに更新してください。&lt;/li&gt;
-&lt;li&gt;1.1.xからv1.2.2にアップグレードする場合は、アップグレードに関する重要な注意点に関する&lt;a href=&#34;https://github.com/rancher/rancher/releases/tag/v1.2.0&#34;&gt;v1.2.0&lt;/a&gt;のリリースノートをお読みください。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;既知の問題&#34;&gt;既知の問題&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;個々のコンテナ間リンクが正常に動作しない。この問題はコンテナのリンクのみが対象であり、サービスのリンクは正常に動作します。[&lt;a href=&#34;https://github.com/rancher/rancher/issues/6584&#34;&gt;#6584&lt;/a&gt;]&lt;/li&gt;
-&lt;li&gt;Rancher サーバーにおいて自己証明書が正常に動作しない [&lt;a href=&#34;https://github.com/rancher/rancher/issues/6122&#34;&gt;#6122&lt;/a&gt;]&lt;/li&gt;
-&lt;li&gt;先のリリースで UI から(docker-machine から)作成された AWS ホストが UI から削除した際に正常にクリーンアップされない [&lt;a href=&#34;https://github.com/rancher/rancher/issues/6750&#34;&gt;#6750&lt;/a&gt;]&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;v1-2-1からの主なバグ修正&#34;&gt;v1.2.1からの主なバグ修正&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Dockerコンテナを削除しようとしたときに不正な状態になるという問題を修正しました。 [&lt;a href=&#34;https://github.com/rancher/rancher/issues/7013&#34;&gt;#7013&lt;/a&gt;、&lt;a href=&#34;https://github.com/rancher/rancher/issues/7016&#34;&gt;#70161&lt;/a&gt;、&lt;a href=&#34;https://github.com/rancher/rancher/issues/7152&#34;&gt;#7152&lt;/a&gt;]&lt;/li&gt;
-&lt;li&gt;v1.2.1 でホスト削除時に&lt;code&gt;removing&lt;/code&gt;のままになってしまうのを修正 [&lt;a href=&#34;https://github.com/rancher/rancher/issues/7122&#34;&gt;#7122&lt;/a&gt;]&lt;/li&gt;
-&lt;li&gt;コンテナ内から外部公開用ポートに対してpingが反応しないのを修正 [&lt;a href=&#34;https://github.com/rancher/rancher/issues/7128&#34;&gt;#7128&lt;/a&gt;]&lt;/li&gt;
-&lt;li&gt;k8s でポットがフラッピング中にRancherのイベントが溢れるのを修正 [&lt;a href=&#34;https://github.com/rancher/rancher/issues/7149&#34;&gt;#7149&lt;/a&gt;]&lt;/li&gt;
-&lt;li&gt;k8s サービスがスピニング中にプロセスが&lt;code&gt;create stack on label provider&lt;/code&gt; で溢れるのを修正 [&lt;a href=&#34;https://github.com/rancher/rancher/issues/7158&#34;&gt;#7158&lt;/a&gt;]&lt;/li&gt;
-&lt;li&gt;swarm 環境が初期化時にスタックすることがあるのを修正 [&lt;a href=&#34;https://github.com/rancher/rancher/issues/7178&#34;&gt;#7178&lt;/a&gt;]&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <description>リリース v1.2.2 バージョン rancher/server:v1.2.2 rancher/agent:v1.1.2 rancher/lb-service-haproxy:v0.4.6 rancher-compose-v0.12.1 rancher-v0.4.1 注意: 新しいinfrastructure servicesでは、ロードバランサの機能を指定のHAProxyイメー</description>
     </item>
     
     <item>
@@ -603,91 +90,7 @@ Docker 1.12.3-1.12.6&lt;/p&gt;
       <pubDate>Sat, 17 Dec 2016 00:00:00 +0000</pubDate>
       
       <guid>http://www.rancher.jp/site/releasenote/v.1.2.1/</guid>
-      <description>
-
-&lt;h1 id=&#34;リリース-v1-2-1&#34;&gt;リリース v1.2.1&lt;/h1&gt;
-
-&lt;h2 id=&#34;バージョン&#34;&gt;バージョン&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;rancher/server:v1.2.1&lt;/li&gt;
-&lt;li&gt;rancher/agent:v1.1.1&lt;/li&gt;
-&lt;li&gt;rancher/lb-service-haproxy:v0.4.6&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/rancher/rancher-compose/releases/tag/v0.12.1&#34;&gt;rancher-compose-v0.12.1&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/rancher/cli/releases/tag/v0.4.1&#34;&gt;rancher-v0.4.1&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;&lt;em&gt;注意:&lt;/em&gt; 新しい&lt;a href=&#34;http://docs.rancher.com/rancher/v1.2/en/rancher-services/&#34;&gt;infrastructure services&lt;/a&gt;では、ロードバランサの機能を指定のHAProxyイメージに変更し、ネットワークエージェントが起動されなくなりました。 したがって、rancher/agent-instanceが必要なくなりました。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&#34;重要&#34;&gt;重要!&lt;/h2&gt;
-
-&lt;p&gt;Rancher は今後 AWS ELB をサポートせず、AWS ALB (Application Load Balancers) のみのサポートとなります。そのため、今後は ALB を利用するよう設定をアップデートしてください。&lt;/p&gt;
-
-&lt;h2 id=&#34;1-2-へのアップグレード方法&#34;&gt;1.2 へのアップグレード方法&lt;/h2&gt;
-
-&lt;p&gt;Rancher 1.2 ではネットワークの管理に関していくつか主要な変更が含まれます、特筆すべき点としては CNI プラグイン向けに IPSec ネットワークをリファクタリングした点とより柔軟な HAProxy 設定が可能になった新しい v2 LB サービスが挙げられます。これらの変更によりアップグレードプロセスではネットワークのダウンタイムが生じ、ネットワークの接続性を回復させるには各環境のアップグレードが必要になります。アップグレードプロセスは Rancher 自身のアップデートとそれに続く個別環境のアップデートに分けられるため現在ご利用のバージョンから適切にアップグレードするには以下の手順を参照ください:&lt;/p&gt;
-
-&lt;h3 id=&#34;rancher-サーバーをv1-1-4からアップグレード&#34;&gt;Rancher サーバーをv1.1.4からアップグレード&lt;/h3&gt;
-
-&lt;p&gt;必ずデータベースをバックアップしてください。Rancher 1.2.0へバージョンアップ後には、以前のバージョンに戻すことはできません。戻したい場合は、以前動いていたバージョン時点でのデータベースのスナップショットを利用するしかありません。データベースのバックアップを取ってから、ドキュメントに従ってアップグレードを開始してください。&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;注意:&lt;/strong&gt; AWS セキュリティグループを利用している場合、必ずICMPをセキュリティグループで有効にしてください。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h3 id=&#34;環境のアップグレード&#34;&gt;環境のアップグレード&lt;/h3&gt;
-
-&lt;p&gt;Rancherサーバーをアップグレードした後は、1.2環境に正常にアップグレードするまで、環境にアクセスできなくなります。1.2でネットワークとLBの変更される為、新しいネットワークコンポーネントに更新されて移行されるまでアップグレード処理中にネットワークが切断されます。アップデートが必要な環境ごとに&lt;strong&gt;Upgrade Now&lt;/strong&gt;*画面を表示して、いつ更新するかを決めることができる便利な機能を提供しました。更新を実行するまで、コンテナは機能し続けますが、管理機能は許可されません。この時、コンテナの再作成（ヘルスチェック）によってこれらのコンテナが動かなくなる可能性があります。HA、DNSプログラミング、ヘルスチェックなど、Rancherの関与が必要な機能は、完了するまで正常に動作しない可能性があるため、環境をなるべく早くアップグレードすることを強くお勧めします。&lt;/p&gt;
-
-&lt;p&gt;&amp;ldquo;今すぐアップグレード&amp;rdquo;をクリックすると、Rancherは環境のアップグレードを開始します。ご使用の環境の規模によっては最大10～20分かかる場合がありますので、しばらくお待ちください。&lt;strong&gt;Stacks&lt;/strong&gt; - &amp;gt; &lt;strong&gt;Infrastructure&lt;/strong&gt;の下にあるすべてのスタックが&lt;strong&gt;active&lt;/strong&gt;状態になっていたら、環境は正常に更新されています。&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;&lt;strong&gt;Kubernetes環境の方は、すべてのインフラストラクチャサービスが「アクティブ」状態になったら、既存のk8s v1.2.6スタックをv1.4.6にアップグレードしなければなりません。注意:k8sをアップグレードする際、既存のポッドを削除して再作成する可能性のある既知の問題があることに注意してください。ポッドがレプリケーションコントローラの一部でない場合は、再作成されません。 それに考慮して計画してください。このケースでもアップグレードプロセスは環境に応じて5～10分以上かかる場合があり、スタックがアクティブな状態になると完了します。&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;アップグレードの既知の制限事項&#34;&gt;アップグレードの既知の制限事項&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Swarm環境のアップグレードはサポートされていません。DockerがDockerエンジンに移行することに関するDocker Swarmからの変更により、Swarmのサポートが最新のDocker 1.12 Swarmからになった為です。&lt;/li&gt;
-&lt;li&gt;環境テンプレートオプションを表示するマイグレーション用フォルダのカタログエントリがいくつかあります。 これらのカタログ・エントリーは、古いエントリーへのロールバックをサポートしていません。 例えば、Kubernetesにすべての外部DNSエントリが含まれこれ以外にも同様のものがあります。&lt;/li&gt;
-&lt;li&gt;v1ロードバランサからv2ロードバランサへのアップグレード中に、セレクタを使用するルールはアップグレードされません。 これらのルールは、環境のアップグレード後にロードバランサーに再度追加する必要があります。&lt;/li&gt;
-&lt;li&gt;1.2からは、Rancherはcadvisorからの統計情報を取得せず、Dockerの統計情報から取得します。 これにより、Prometheusのようなcadvisorに依存する既存のカタログは、Dockerの統計情報から取得するように修正されるまで機能しなくなることに注意してください。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;既知の問題&#34;&gt;既知の問題&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;個々のコンテナ間リンクが正常に動作しない。この問題はコンテナのリンクのみが対象であり、サービスのリンクは正常に動作します。&lt;a href=&#34;https://github.com/rancher/rancher/issues/6584&#34;&gt;[#6584]&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Rancher サーバーにおいて自己証明書が正常に動作しない &lt;a href=&#34;https://github.com/rancher/rancher/issues/6122&#34;&gt;[#6122]&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;先のリリースで UI から(docker-machine から)作成された AWS ホストが UI から削除した際に正常にクリーンアップされない &lt;a href=&#34;https://github.com/rancher/rancher/issues/6750&#34;&gt;[#6750]&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;v1-2-0からの主なバグ修正&#34;&gt;v1.2.0からの主なバグ修正&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;boot2docker ホストで rancher/plugin-manager:v0.2.12にあった問題を修正、新しい rancher/network-manager:v0.2.13 ネットワークサービスがあります。ネットワークサービススタックで&amp;rdquo;アップグレード利用可能&amp;rdquo; がボタン表示されている場合は、アップグレードしてください。&lt;a href=&#34;https://github.com/rancher/rancher/issues/6874&#34;&gt;[#6874]&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;docker がvar/lib/docker 以外の場所にインストールされていても動くように修正 &lt;a href=&#34;https://github.com/rancher/rancher/issues/6897&#34;&gt;[#6897]&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;ipsec やvxlan もしくはインフラストラクチャーのネットワークサービスでデフォルトのdocker0 からdocker ブリッジを構成できるように修正しました。&lt;a href=&#34;https://github.com/rancher/rancher/issues/6896&#34;&gt;[#6896]&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;UIが固まってしまう問題を修正 &lt;a href=&#34;https://github.com/rancher/rancher/issues/6995&#34;&gt;[#6995]&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Rancherがデータベースを適切にクリーニングしておらず、Rancher UIがロックアップしていないのを修正 [&lt;a href=&#34;https://github.com/rancher/rancher/issues/6826&#34;&gt;#6826&lt;/a&gt;, &lt;a href=&#34;https://github.com/rancher/rancher/issues/6978&#34;&gt;#6978&lt;/a&gt;, &lt;a href=&#34;https://github.com/rancher/rancher/issues/6985&#34;&gt;#6985&lt;/a&gt; ]&lt;/li&gt;
-&lt;li&gt;Rancherドメインを利用する前にRancherサービス検出がホストのパスを検索することができなかったのを修正 &lt;a href=&#34;https://github.com/rancher/rancher/issues/7010&#34;&gt;[#7010]&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;ロードバランサーがホスト名を使って外部サービスをターゲットにできないのを修正 &lt;a href=&#34;https://github.com/rancher/rancher/issues/2624&#34;&gt;[#2624]&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;停止中のコンテナのログを見るを修正 &lt;a href=&#34;https://github.com/rancher/rancher/issues/6442&#34;&gt;[#6442]&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;HA構成でノードを見ることができないのを修正 &lt;a href=&#34;https://github.com/rancher/rancher/issues/6814&#34;&gt;[#6814]&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;同じサービス名をターゲットとするロードバランサーからスタック名でエクスポートを修正 &lt;a href=&#34;https://github.com/rancher/rancher/issues/6829&#34;&gt;[#6829]&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;UI上でロードバランサーにホストのIPアドレスを指定することができないのを修正 &lt;a href=&#34;https://github.com/rancher/rancher/issues/6852&#34;&gt;[#6852]&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;コンテナが自分自身のホスト名にpingできないのを修正 &lt;a href=&#34;https://github.com/rancher/rancher/issues/6855&#34;&gt;[#6855]&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;古いネットワークエージェントに関連しているテーブルによりCPU使用率が高くなるのを修正 &lt;a href=&#34;https://github.com/rancher/rancher/issues/6857&#34;&gt;[#6857]&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Rancher-commpose でロードバランサーが正しくRancherで作成されない問題を修正 [&lt;a href=&#34;https://github.com/rancher/rancher/issues/6865&#34;&gt;#6865&lt;/a&gt;, &lt;a href=&#34;https://github.com/rancher/rancher/issues/6920&#34;&gt;#6920&lt;/a&gt;]&lt;/li&gt;
-&lt;li&gt;haproxyのカスタム設定がソートされないのを修正 &lt;a href=&#34;https://github.com/rancher/rancher/issues/6888&#34;&gt;[#6888]&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;GCR(Google Container Registry)からdockerイメージをプルすることができないのを修正 &lt;a href=&#34;https://github.com/rancher/rancher/issues/6916&#34;&gt;[#6916]&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;アップグレード後にロードバランサーのhaproxy設定が表示されない問題を修正 &lt;a href=&#34;https://github.com/rancher/rancher/issues/6921&#34;&gt;[#6921]&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;volumes をキーとした変数が compose v2ファイルで置換されない問題を修正 &lt;a href=&#34;https://github.com/rancher/rancher/issues/6936&#34;&gt;[#6936]&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;ホスト登録URLがhttpを受け付けないという問題を修正 &lt;a href=&#34;https://github.com/rancher/rancher/issues/6957&#34;&gt;[#6957]&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Rancherエージェントでproxyに関する環境変数が大文字と小文字が区別される問題を修正  &lt;a href=&#34;https://github.com/rancher/rancher/issues/7019&#34;&gt;[#7019]&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;ロードバランサーのログが勢いよく増える問題を修正 &lt;a href=&#34;https://github.com/rancher/rancher/issues/7028&#34;&gt;[#7028]&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <description>リリース v1.2.1 バージョン rancher/server:v1.2.1 rancher/agent:v1.1.1 rancher/lb-service-haproxy:v0.4.6 rancher-compose-v0.12.1 rancher-v0.4.1 注意: 新しいinfrastructure servicesでは、ロードバランサの機能を指定のHAProxyイメー</description>
     </item>
     
     <item>
@@ -696,137 +99,7 @@ Docker 1.12.3-1.12.6&lt;/p&gt;
       <pubDate>Sun, 04 Dec 2016 00:00:00 +0000</pubDate>
       
       <guid>http://www.rancher.jp/site/releasenote/v.1.2.0/</guid>
-      <description>
-
-&lt;h1 id=&#34;リリース-v1-2-0&#34;&gt;リリース v1.2.0&lt;/h1&gt;
-
-&lt;h2 id=&#34;バージョン&#34;&gt;バージョン&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;rancher/server:v1.2.0&lt;/li&gt;
-&lt;li&gt;rancher/agent:v1.1.0&lt;/li&gt;
-&lt;li&gt;rancher/lb-service-haproxy:v0.4.2&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/rancher/rancher-compose/releases/tag/v0.12.0&#34;&gt;rancher-compose-v0.12.0&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/rancher/cli/releases/tag/v0.4.0&#34;&gt;rancher-v0.4.0&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;&lt;em&gt;注意:&lt;/em&gt; 新しい&lt;a href=&#34;http://docs.rancher.com/rancher/v1.2/en/rancher-services/&#34;&gt;infrastructure services&lt;/a&gt;では、ロードバランサの機能を指定のHAProxyイメージに変更し、ネットワークエージェントが起動されなくなりました。 したがって、rancher/agent-instanceが必要なくなりました。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&#34;新機能-v1-1-4からの変更点&#34;&gt;新機能 (v1.1.4からの変更点)&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Kubernetes 1.4.6 に対応&lt;/strong&gt; - 最新のk8sに対応することに加えて、Rancherは以下の機能が提供されます:
-
-&lt;ul&gt;
-&lt;li&gt;既定のRancherオプションに加えて、ユーザーがAWSをKubernetesのクラウドプロバイダーとして選択できるようになりました。&lt;/li&gt;
-&lt;li&gt;kubectl exec、logs、attachがサポートされました。&lt;/li&gt;
-&lt;li&gt;k8sノード にラベル付けがサポートされました。&lt;/li&gt;
-&lt;li&gt;PetSetオブジェクトを使用してステートフルアプリケーションの管理がサポートされました。&lt;/li&gt;
-&lt;li&gt;環境内でのk8sクラスタアップグレードがサポートされました。&lt;/li&gt;
-&lt;li&gt;Rancher UIで、k8sテンプレートを個々のアプリケーションとして管理するスタックをサポートしました。 スタックは、アプリケーションとしてアップグレード、削除することができます。&lt;/li&gt;
-&lt;li&gt;Rancher UIでk8sの展開とレプリカセットをサポーターしました。&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Docker 1.12.x サポート [&lt;a href=&#34;https://github.com/rancher/rancher/issues/5179&#34;&gt;#5179&lt;/a&gt;]&lt;/strong&gt; - Docker 1.12.xがRancherでサポートされ、いくつかの機能が強化されました。
-
-&lt;ul&gt;
-&lt;li&gt;Docker Swarmモードは、環境作成時にオーケストレーションフレームワークのオプションとして利用できるようになりました。&lt;/li&gt;
-&lt;li&gt;CattleはDocker 1.12.3以降のすべてのdocker runオプションをサポートするようになりました。更新された実行オプションの詳細については、&lt;a href=&#34;https://github.com/rancher/rancher/issues/4708&#34;&gt;#4708&lt;/a&gt;を参照してください。&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;改善 &lt;a href=&#34;http://docs.rancher.com/rancher/v1.2/en/rancher-services/networking&#34;&gt;Network&lt;/a&gt; サポート [&lt;a href=&#34;https://github.com/rancher/rancher/issues/5256&#34;&gt;#5256&lt;/a&gt;, &lt;a href=&#34;https://github.com/rancher/rancher/issues/5276&#34;&gt;#5276&lt;/a&gt;]&lt;/strong&gt; - Container Network Interface(CNI)仕様用に作成されたカスタムネットワークプラグインのライフサイクル、配布、および更新管理を管理する機能が追加されました。
-
-&lt;ul&gt;
-&lt;li&gt;現在のRancher IPSec管理ネットワークオプションがCNIプラグインとして完全に書き直されて、Cattleとk8sオーケストレーションフレームワークの両方で利用できます。&lt;/li&gt;
-&lt;li&gt;Rancherは、暗号化されていない(その為に性能の良い)クロスホスト用の管理ネットワークの代替オプションとして、VXLAN CNIプラグインが提供されるようになりました。&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;改善 &lt;a href=&#34;http://docs.rancher.com/rancher/v1.2/en/cattle/adding-load-balancers/&#34;&gt;Load Balancer v2&lt;/a&gt; のサポート [&lt;a href=&#34;https://github.com/rancher/rancher/issues/2179&#34;&gt;#2179&lt;/a&gt;]&lt;/strong&gt; - RancherのLBサービスは、以下のサポートを受けて完全に書き直されました。
-
-&lt;ul&gt;
-&lt;li&gt;SNIルーティングがLB v2で利用可能になりました。&lt;/li&gt;
-&lt;li&gt;HAProxyロギングがLB v2で利用可能になりました。[&lt;a href=&#34;https://github.com/rancher/rancher/issues/2414&#34;&gt;#2414&lt;/a&gt;]&lt;/li&gt;
-&lt;li&gt;既にサポートされているグローバルセクションとデフォルトセクションに加えて、フロントエンドとバックエンドのカスタム構成をHAProxy構成に追加できるようになりました。[&lt;a href=&#34;https://github.com/rancher/rancher/issues/2171&#34;&gt;#2171&lt;/a&gt;, &lt;a href=&#34;https://github.com/rancher/rancher/issues/1871&#34;&gt;#1871&lt;/a&gt;]&lt;/li&gt;
-&lt;li&gt;ユーザはホスト名ルーティングルールを持つセレクタを追加できるようになりました。[&lt;a href=&#34;https://github.com/rancher/rancher/issues/2288&#34;&gt;#2288&lt;/a&gt;]&lt;/li&gt;
-&lt;li&gt;v2ではポートからサービスへのマッピングをより柔軟に定義できるようになりました。 v1では、ポートをすべてのサービスに対応づける必要がありました。&lt;/li&gt;
-&lt;li&gt;好きなLBエンジン(nginxなど)を使って独自のカスタムLBサービスを実装し、Rancherのメタデータサービスと統合して、コンテナがLBに登録することをリクエストするタイミングを判断できるようになりました。&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;改善 &lt;a href=&#34;http://docs.rancher.com/rancher/v1.2/en/rancher-services/storage-service/&#34;&gt;Storage Support&lt;/a&gt;&lt;/strong&gt; - カスタムk8sのflexvolumeとDockerボリュームプラグインのライフサイクル、配布、および更新管理を管理する機能が追加されました。
-
-&lt;ul&gt;
-&lt;li&gt;CattleでNFSボリュームプラグインがサポートされました。 &lt;em&gt;&lt;strong&gt;1.2からRancherNFSはNFS Dockerプラグインソリューションをサポートするようになります。Convoy-NFSは1.2からオプションとして利用できなくなり、1.3以上では利用できなくなります。&lt;/strong&gt;&lt;/em&gt;&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;&lt;strong&gt;[実験的機能]&lt;/strong&gt;&lt;/em&gt; EC2のEBSとAWS EFSがサポートされました。&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;認証サポートの改善 [[&lt;a href=&#34;https://github.com/rancher/rancher/issues/5265&#34;&gt;#5265&lt;/a&gt;]]&lt;/strong&gt; - 認証のフレームワークをリライトすることでRancherに新しい認証・認可サービスを加えるためのより高い柔軟性を実現しました。
-
-&lt;ul&gt;
-&lt;li&gt;Shibboleth v3がRancherにおけるSAML 2.0サポートの認証プロバイダとしてくわえられました。&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;全体的なパフォーマンス/スケーラビリティの改善&lt;/strong&gt; - Rancherにおけるパフォーマンスとスケーラビリティを改善するために様々な機能強化が行なわれました。
-
-&lt;ul&gt;
-&lt;li&gt;インフラストラクチャビューのUIがより環境あたりより多くのホストとコンテナを表示できるよう変更されました。&lt;/li&gt;
-&lt;li&gt;スケジューリングの改善と、コンテナの並列起動を実現することでコンテナのデプロイ性能を改善しました。&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;[Rancher CLI]&lt;a href=&#34;https://github.com/rancher/rancher/issues/5265&#34;&gt;#5265&lt;/a&gt;&lt;/strong&gt; - Rancherは下に示す機能をサポートしたRancher CLIが同梱されています。
-
-&lt;ul&gt;
-&lt;li&gt;管理ホストに対するネイティブなDocker CLI操作のサポート&lt;/li&gt;
-&lt;li&gt;環境管理&lt;/li&gt;
-&lt;li&gt;スタック管理&lt;/li&gt;
-&lt;li&gt;サービス管理&lt;/li&gt;
-&lt;li&gt;ホスト管理&lt;/li&gt;
-&lt;li&gt;管理ホストに対するSSHアクセス&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;リソーススケジューリング&lt;/strong&gt; - CattleではCPUとメモリのリソース制約に応じてコンテナ配置のスケジューリングをサポートしていました。管理者も同様にホストあたりのCPU/メモリのリソース制限を設定することができるようになりました。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;http://docs.rancher.com/rancher/v1.2/en/environments/#what-is-an-environment-template&#34;&gt;環境テンプレート&lt;/a&gt;&lt;/strong&gt; - Rancehrではユーザが必要なインフラストラクチャサービス(LBやネットワークなど)を記述したテンプレートを作成できるようになりました。また、このテンプレートに基づいた環境の立ち上げをサポートするようになりました。
-
-&lt;ul&gt;
-&lt;li&gt;Rancherではユーザが環境を立ち上げ、利用することができるようデフォルトのテンプレートを継続して提供しています。&lt;/li&gt;
-&lt;li&gt;環境テンプレートの作成と管理をユーザが行えるようになりました。環境テンプレートでは、環境の作成に先立ってデプロイするインフラストラクチャサービスを記述することができます。&lt;/li&gt;
-&lt;li&gt;ユーザはRancherによって、コミュニティに提供されたサービスおよび自身で作成したサービスの両方を活用することができるようになりました。&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;HAサポートの改善(&lt;a href=&#34;http://docs.rancher.com/rancher/v1.2/en/installing-rancher/installing-server/#launching-rancher-server---full-activeactive-ha&#34;&gt;http://docs.rancher.com/rancher/v1.2/en/installing-rancher/installing-server/#launching-rancher-server---full-activeactive-ha&lt;/a&gt;)&lt;/strong&gt; - Rancher HAの設定と管理が劇的にシンプルになりました。 複数ノードへのRancherのデプロイに際して、RedisとZookeeperが不要になりました。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;さらに&amp;hellip;&lt;/strong&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Rancherのデプロイにおいて利用可能なDocker Registryのみを含んだホワイトリストの作成を管理者権限を用いてできるようになりました。&lt;/li&gt;
-&lt;li&gt;イメージにprefixがなかった場合に利用するデフォルトのDockerレジストリをadminが指定できるようになりました。&lt;/li&gt;
-&lt;li&gt;カタログのポートおよびラベルへのバインディングが可能になりました。&lt;/li&gt;
-&lt;li&gt;gitブランチを取り扱うためのカタログサポートがくわえられました。&lt;/li&gt;
-&lt;li&gt;Rancher AgentをGo言語でリライトしました。&lt;/li&gt;
-&lt;li&gt;Docker Machineがアップデートされ、新しくアップデートされたUIとともにAzureが新しいホストドライバに加えられました。&lt;/li&gt;
-&lt;li&gt;RancherOS 0.6.0以降がサポートされました。&lt;/li&gt;
-&lt;li&gt;サービスが適切に起動しなかった際、ユーザにより良いロギングを提供することを目的として、サービスログのジャーナリング機能を追加しました。&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;1-2-にアップグレードするには&#34;&gt;1.2 にアップグレードするには&lt;/h2&gt;
-
-&lt;p&gt;Rancher 1.2では、ネットワーク管理方法について大幅に変更されました。特にIPsecネットワークがCNIプラグインを利用するようにリファクタリングされ、新しいv2 LBサービスには柔軟性の高いHAProxy構成のプロバイダーをユーザーが使えるようになりました。この変更の影響で、アップグレードプロセスで&lt;strong&gt;&lt;code&gt;ネットワークのダウン時間が発生します&lt;/code&gt;&lt;/strong&gt; また、ネットワークの環境の再接続のために各環境をアップグレードする必要があります。アップグレードプロセスはそれぞれの環境によりRancherアップデート方法が分かれているので、以下の手順に従って現在のバージョンを適切な方法で1.2にアップグレードしてください:&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Rancher サーバーアップグレード&lt;/strong&gt;
-必ずデータベースをバックアップしてください。Rancher 1.2.0へバージョンアップ後には、以前のバージョンに戻すことはできません。戻したい場合は、以前動いていたバージョン時点でのデータベースのスナップショットを利用するしかありません。データベースのバックアップを取ってから、&lt;a href=&#34;http://docs.rancher.com/rancher/v1.2/en/upgrading/&#34;&gt;per the docs&lt;/a&gt;に従ってアップグレードを開始してください。&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;注意:&lt;/strong&gt; AWS セキュリティグループを利用している場合、必ずICMPをセキュリティグループで有効にしてください。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;strong&gt;環境のアップグレード&lt;/strong&gt;&lt;br /&gt;
-Rancherサーバーをアップグレードした後は、1.2環境に正常にアップグレードするまで、環境にアクセスできなくなります。1.2でネットワークとLBの変更される為、新しいネットワークコンポーネントに更新されて移行されるまでアップグレード処理中にネットワークが切断されます。アップデートが必要な環境ごとに&lt;strong&gt;Upgrade Now&lt;/strong&gt;*画面を表示して、いつ更新するかを決めることができる便利な機能を提供しました。更新を実行するまで、コンテナは機能し続けますが、管理機能は許可されません。この時、コンテナの再作成（ヘルスチェック）によってこれらのコンテナが動かなくなる可能性があります。HA、DNSプログラミング、ヘルスチェックなど、Rancherの関与が必要な機能は、完了するまで正常に動作しない可能性があるため、環境をなるべく早くアップグレードすることを強くお勧めします。&lt;/p&gt;
-
-&lt;p&gt;&amp;ldquo;今すぐアップグレード&amp;rdquo;をクリックすると、Rancherは環境のアップグレードを開始します。ご使用の環境の規模によっては最大10〜20分かかる場合がありますので、しばらくお待ちください。&lt;strong&gt;Stacks&lt;/strong&gt; - &amp;gt; &lt;strong&gt;Infrastructure&lt;/strong&gt;の下にあるすべてのスタックが&lt;strong&gt;active&lt;/strong&gt;状態になっていたら、環境は正常に更新されています。&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;&lt;strong&gt;Kubernetes環境の方は、すべてのインフラストラクチャサービスが「アクティブ」状態になったら、既存のk8s v1.2.6スタックをv1.4.6にアップグレードしなければなりません。注意:k8sをアップグレードする際、既存のポッドを削除して再作成する可能性のある既知の問題があることに注意してください。ポッドがレプリケーションコントローラの一部でない場合は、再作成されません。 それに考慮して計画してください。このケースでもアップグレードプロセスは環境に応じて5〜10分以上かかる場合があり、スタックがアクティブな状態になると完了します。&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;既知のアップグレードの制限事項&#34;&gt;既知のアップグレードの制限事項&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Swarm環境のアップグレードはサポートされていません。DockerがDockerエンジンに移行することに関するDocker Swarmからの変更により、Swarmのサポートが最新のDocker 1.12 Swarmからになった為です。&lt;/li&gt;
-&lt;li&gt;環境テンプレートオプションを表示するマイグレーション用フォルダのカタログエントリがいくつかあります。 これらのカタログ・エントリーは、古いエントリーへのロールバックをサポートしていません。 例えば、Kubernetesにすべての外部DNSエントリが含まれこれ以外にも同様のものがあります。&lt;/li&gt;
-&lt;li&gt;v1ロードバランサからv2ロードバランサへのアップグレード中に、セレクタを使用するルールはアップグレードされません。 これらのルールは、環境のアップグレード後にロードバランサーに再度追加する必要があります。&lt;/li&gt;
-&lt;li&gt;1.2からは、Rancherはcadvisorからの統計情報を取得せず、Dockerの統計情報から取得します。 これにより、Prometheusのようなcadvisorに依存する既存のカタログは、Dockerの統計情報から取得するように修正されるまで機能しなくなることに注意してください。&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <description>リリース v1.2.0 バージョン rancher/server:v1.2.0 rancher/agent:v1.1.0 rancher/lb-service-haproxy:v0.4.2 rancher-compose-v0.12.0 rancher-v0.4.0 注意: 新しいinfrastructure servicesでは、ロードバランサの機能を指定のHAProxyイメー</description>
     </item>
     
   </channel>

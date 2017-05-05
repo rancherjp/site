@@ -6,7 +6,7 @@
     
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="generator" content="Hugo 0.18" />
+    <meta name="generator" content="Hugo 0.20.1" />
     <title>Q And A - Rancher JP</title>
     
     
@@ -19,9 +19,12 @@
     <link rel="icon" type="image/png" href="http://www.rancher.jp/site/favicon.ico" sizes="196x196" />
     <link href="" rel="alternate" type="application/rss+xml" title="Rancher JP" />
     <link rel="stylesheet" href="http://www.rancher.jp/site/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="http://www.rancher.jp/site/css/highlightjs-themes/androidstudio.css" />
     <link rel="stylesheet" href="http://www.rancher.jp/site/css/font-awesome.min.css" />
     <link rel="stylesheet" href="http://www.rancher.jp/site/css/phlat.css" />
+    </script>
+    <link rel="stylesheet" href="http://www.rancher.jp/site//css/highlightjs/dark.css">
+    <script src="http://www.rancher.jp/site//js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
     
         
     
@@ -151,7 +154,7 @@
 
 <h1 id="このページについて">このページについて</h1>
 
-<p>Rancher JP では皆様に Rancher, Rancher&gt;OS をご使用していただいて疑問や困った事などを SlackのChannel <code>#qa</code> にて議論・検討をしています。<br />
+<p>Rancher JP では皆様に Rancher, Rancher&gt;OS をご使用していただいて疑問や困った事などを SlackのChannel <code>#qa</code> にて議論・検討をしています。
 その中で、一定の情報になった物を掲載していきます。</p>
 
 <p>質問・疑問などがある方は  <a href="https://rancherjp.herokuapp.com/">Join rancherjp on Slack!</a> より 参加してみてください。</p>
@@ -161,8 +164,8 @@
 <h2 id="ssh鍵を設定したい">SSH鍵を設定したい</h2>
 
 <ul>
-<li><p>ナレッジ: FoxBoxsnet(@FoxBoxsnet)<br />
-RancherOS では、SSH公開鍵暗号方式でのログインが使用できます。<br />
+<li><p>ナレッジ: FoxBoxsnet(@FoxBoxsnet)
+RancherOS では、SSH公開鍵暗号方式でのログインが使用できます。
 <code>cloud-config</code> に記述します。</p>
 
 <pre><code class="language-yaml">  #cloud-config
@@ -183,8 +186,8 @@ RancherOS では、SSH公開鍵暗号方式でのログインが使用できま�
 <ul>
 <li><p>ナレッジ: FoxBoxsnet(@FoxBoxsnet)</p>
 
-<p>RancherOS ではデフォルトでDHCPによりIPアドレスを決定しますが、固定したい場合もあるかと思います。<br />
-ここでは下記のように設定してみました。<br />
+<p>RancherOS ではデフォルトでDHCPによりIPアドレスを決定しますが、固定したい場合もあるかと思います。
+ここでは下記のように設定してみました。
 適宜書き換えてください。</p>
 
 <table>
@@ -218,16 +221,16 @@ RancherOS では、SSH公開鍵暗号方式でのログインが使用できま�
 </tbody>
 </table>
 
-<pre><code class="language-yaml">#cloud-config
-rancher:
-  network:
-    dns:
-      nameservers:
-      - 172.18.1.254
-    interfaces:
-      eth0:
-        address: 172.18.1.1/24
-        gateway: 172.18.1.254
+<pre><code class="language-yaml">  #cloud-config
+  rancher:
+    network:
+      dns:
+        nameservers:
+        - 172.18.1.254
+      interfaces:
+        eth0:
+          address: 172.18.1.1/24
+          gateway: 172.18.1.254
 </code></pre></li>
 
 <li><p>参考</p>
@@ -243,25 +246,25 @@ rancher:
 <ul>
 <li><p>ナレッジ: FoxBoxsnet(@FoxBoxsnet)</p>
 
-<p>RancherOSで Proxy 配下で DockerImage をダウンロードできるように設定します。<br />
+<p>RancherOSで Proxy 配下で DockerImage をダウンロードできるように設定します。
 <strong>この設定は ホストを再起動するまで適用されません</strong></p>
 
-<pre><code class="language-yaml">#cloud-config
-rancher:
-  network:
-    http_proxy: https://myproxy.example.com
-    https_proxy: https://myproxy.example.com
-    no_proxy: localhost,127.0.0.1
+<pre><code class="language-yaml">        #cloud-config
+        rancher:
+          network:
+            http_proxy: https://myproxy.example.com
+            https_proxy: https://myproxy.example.com
+            no_proxy: localhost,127.0.0.1
 </code></pre></li>
 
 <li><p><code>http_proxy</code>, <code>https_proxy</code> にポート番号が必要な場合は <code>&lt;ホスト名&gt;:&lt;ポート番号&gt;</code> で可能かと思います。</p>
 
-<pre><code class="language-yaml">#cloud-config
-rancher:
-  network:
-    http_proxy: https://myproxy.example.com:8080
-    https_proxy: https://myproxy.example.com:8080
-    no_proxy: localhost,127.0.0.1
+<pre><code class="language-yaml">    #cloud-config
+    rancher:
+      network:
+        http_proxy: https://myproxy.example.com:8080
+        https_proxy: https://myproxy.example.com:8080
+        no_proxy: localhost,127.0.0.1
 </code></pre></li>
 
 <li><p>参考</p>
@@ -276,11 +279,11 @@ rancher:
 <ul>
 <li><p>ナレッジ: FoxBoxsnet(@FoxBoxsnet)</p>
 
-<p>RancherOS はデフォルトでは <code>rancher</code> に設定されています。<br />
+<p>RancherOS はデフォルトでは <code>rancher</code> に設定されています。
 運用上、不便のためホスト名を設定します。</p>
 
-<pre><code class="language-yaml">#cloud-config
-hostname: rancher-host01.local
+<pre><code class="language-yaml">  #cloud-config
+  hostname: rancher-host01.local
 </code></pre></li>
 
 <li><p>参考</p>
@@ -296,7 +299,7 @@ hostname: rancher-host01.local
 <li><p>ナレッジ: FoxBoxsnet(@FoxBoxsnet)</p>
 
 <p>RancherOS でNTPサーバーを任意設定します。
-今回は、日本国内の stratum1サーバー NICT(情報通信研究機構) のサーバーからNTPを受信するように設定しました。<br />
+今回は、日本国内の stratum1サーバー NICT(情報通信研究機構) のサーバーからNTPを受信するように設定しました。
 Linux標準の <code>/etc/ntpd.conf</code> とほぼ同じ記述で問題無いと思われます。</p>
 
 <pre><code class="language-yaml">  #cloud-config
@@ -332,21 +335,21 @@ Linux標準の <code>/etc/ntpd.conf</code> とほぼ同じ記述で問題無い�
 <ul>
 <li><p>質問: FoxBoxsnet(@FoxBoxsnet)</p>
 
-<p>RancherOS デフォルトの設定は、 TimeZoneは <code>UTC</code> に設定されます。<br />
+<p>RancherOS デフォルトの設定は、 TimeZoneは <code>UTC</code> に設定されます。
 コンソールのTimeZoneをJST(Japan Standard Time)に設定したい</p>
 
-<pre><code class="language-yaml">#cloud-config
-rancher:
-  services:
-    console:
-      environment:
-        TZ: 'JST-9'
+<pre><code class="language-yaml">  #cloud-config
+    rancher:
+      services:
+        console:
+          environment:
+            TZ: 'JST-9'
 </code></pre></li>
 
 <li><p>参考</p>
 
 <ul>
-<li><a href="https://docs.rancher.com/os/system-services/adding-system-services/">Adding System Services in RancherOS</a><br /></li>
+<li><a href="https://docs.rancher.com/os/system-services/adding-system-services/">Adding System Services in RancherOS</a></li>
 <li><a href="https://docs.rancher.com/os/system-services/built-in-system-services/">Built-in System Services in RancherOS</a></li>
 </ul></li>
 </ul>
@@ -380,15 +383,15 @@ rancher:
         <h5>Recent Posts</h5>
         <ul class="list-unstyled posts-recent">
             
+                <li><a href="http://www.rancher.jp/site/releasenote/v1.6.0/">リリース v1.6.0</a></li>
+            
+                <li><a href="http://www.rancher.jp/site/content/2017/04/14/osc2017-spring/">オープンソースカンファレンス2017 Tokyo/Spring 出展</a></li>
+            
                 <li><a href="http://www.rancher.jp/site/releasenote/v1.5.0/">リリース v1.5.0</a></li>
             
                 <li><a href="http://www.rancher.jp/site/releasenote/v.1.4.0/">リリース v1.4.0</a></li>
             
                 <li><a href="http://www.rancher.jp/site/releasenote/v.1.3.3/">リリース v1.3.3</a></li>
-            
-                <li><a href="http://www.rancher.jp/site/releasenote/v.1.3.1/">リリース v1.3.1</a></li>
-            
-                <li><a href="http://www.rancher.jp/site/releasenote/v.1.3.2/">リリース v1.3.2</a></li>
             
         </ul>
     </div>
@@ -431,9 +434,9 @@ rancher:
                     
                         <a href="http://www.rancher.jp/site/categories/docs" class="categories-link" style="font-size: 12px;">docs</a>
                     
-                        <a href="http://www.rancher.jp/site/categories/meetup" class="categories-link" style="font-size: 12px;">meetup</a>
-                    
                         <a href="http://www.rancher.jp/site/categories/event" class="categories-link" style="font-size: 12px;">event</a>
+                    
+                        <a href="http://www.rancher.jp/site/categories/meetup" class="categories-link" style="font-size: 12px;">meetup</a>
                     
                         <a href="http://www.rancher.jp/site/categories/qa" class="categories-link" style="font-size: 12px;">qa</a>
                     
@@ -513,17 +516,6 @@ rancher:
 </div>
 <script src="http://www.rancher.jp/site/js/jquery-2.2.1.min.js"></script>
 <script src="http://www.rancher.jp/site/js/bootstrap.min.js"></script>
-<script src="http://www.rancher.jp/site/js/highlight.min.js"></script>
-<script>hljs.initHighlightingOnLoad();</script>
-<script>
-    if(($(window).height() + 100) < $(document).height()) {
-        $('#back-to-top').removeClass('hidden').affix({
-            offset: {
-                top: 100
-            }
-        });
-    }
-</script>
 
     
 

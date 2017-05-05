@@ -2,12 +2,15 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Meetup on Rancher JP</title>
-    <link>http://www.rancher.jp/site/categories/meetup/index.xml</link>
+    <link>http://www.rancher.jp/site/categories/meetup/</link>
     <description>Recent content in Meetup on Rancher JP</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
     <copyright>© 2016 Rancher JP</copyright>
-    <atom:link href="http://www.rancher.jp/site/categories/meetup/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 11 Jan 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://www.rancher.jp/site/categories/meetup/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Rancher Meetup Tokyo #3</title>
@@ -15,149 +18,7 @@
       <pubDate>Wed, 11 Jan 2017 00:00:00 +0000</pubDate>
       
       <guid>http://www.rancher.jp/site/content/2017/01/11/rancher-meetup-03/</guid>
-      <description>
-
-&lt;h1 id=&#34;第3回-コンテナ管理ツール-rancher勉強会&#34;&gt;【第3回】コンテナ管理ツール Rancher勉強会&lt;/h1&gt;
-
-&lt;h2 id=&#34;rancherとは&#34;&gt;Rancherとは？&lt;/h2&gt;
-
-&lt;p&gt;RancherはOSSと商用版で提供されるコンテナ環境構築・運用プラットフォームです。 Rancherの特徴は、Kubernetes, Mesos, Swarmなどのコンテナオーケストレータ自体もデプロイし、その機能を利用した効率的なコンテナインフラの構築・管理運用が可能なことです。 また、Active Directory連携や監査ログな機能などにより本格的なエンタープライズ向けプラットフォームとして世界で導入実績を重ねています。&lt;/p&gt;
-
-&lt;p&gt;是非この機会にRancherについて学んで頂ければ幸いです。 皆様のご参加お待ちしております！&lt;/p&gt;
-
-&lt;p&gt;OSS版：
-&lt;a href=&#34;https://github.com/rancherlabs/&#34;&gt;https://github.com/rancherlabs/&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;商用版：
-&lt;a href=&#34;http://rancher.com/&#34;&gt;http://rancher.com/&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;イベント開催概要&#34;&gt;イベント開催概要&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;日時      1月11日(水) 19:00-21:00 (開場:18:30)&lt;/li&gt;
-&lt;li&gt;会場      TKPガーデンシティ渋谷 ホール「B」&lt;br /&gt;
-        東京都渋谷区渋谷2-22-3 渋谷東口ビル1F&lt;br /&gt;
-&lt;br /&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;渋谷駅 東口 徒歩3分&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;※ご注意※&lt;/em&gt;
-&lt;em&gt;【会場変更】当初、TIS様「西新宿三井ビルディング23階」での開催を予定しておりましたが、会場拡大のため渋谷TKPホールに変更になりました。&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;地図：
-&lt;a href=&#34;http://www.kashikaigishitsu.net/facilitys/gc-shibuya/access/&#34;&gt;http://www.kashikaigishitsu.net/facilitys/gc-shibuya/access/&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;■ 主催&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://rancherjp.connpass.com/&#34;&gt;Rancher JP&lt;/a&gt;&lt;br /&gt;
-Compassページ: &lt;a href=&#34;https://rancherjp.connpass.com/event/45768/&#34;&gt;【会場変更 →渋谷】Rancher Meetup Tokyo #3 - connpass&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;プログラム&#34;&gt;プログラム&lt;/h2&gt;
-
-&lt;h3 id=&#34;19-00-19-20-rancher-海外最新事例紹介&#34;&gt;19:00-19:20 「Rancher 海外最新事例紹介」&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;発表：Shannon Williams (VP of Sales, Rancher Labs)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;19-20-19-40-rancher-のストレージ&#34;&gt;19:20-19:40 「Rancher のストレージ」&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;発表: 矢野 哲朗 (スタイルズ)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;iframe src=&#34;//www.slideshare.net/slideshow/embed_code/key/5qT0HYYuSG7YQl&#34;
-    width=&#34;766&#34; height=&#34;485&#34; frameborder=&#34;0&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34;
-    style=&#34;border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;&#34; allowfullscreen&gt;
-&lt;/iframe&gt;
-&lt;div style=&#34;margin-bottom:5px&#34;&gt;
-    &lt;strong&gt;
-        &lt;a href=&#34;//www.slideshare.net/ttyno/rancher-meetup-tokyo3-storage&#34;
-            title=&#34;Rancher Meetup Tokyo#3 Storageについて&#34;
-            target=&#34;_blank&#34;&gt;Rancher Meetup Tokyo#3 Storageについて
-        &lt;/a&gt;
-    &lt;/strong&gt; from 
-    &lt;strong&gt;
-        &lt;a target=&#34;_blank&#34; href=&#34;//www.slideshare.net/ttyno/rancher-meetup-tokyo3-storage&#34;&gt;Tetsuro YANO&lt;/a&gt;
-    &lt;/strong&gt;
-&lt;/div&gt;
-
-&lt;h3 id=&#34;19-40-20-00-rancherを用いた-docker-private-cloud&#34;&gt;19:40-20:00 「Rancherを用いた Docker Private Cloud」&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;発表: 野原 峰彦 (マクニカネットワークス)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;iframe src=&#34;//www.slideshare.net/slideshow/embed_code/key/sVOJUVNscOzEIm&#34;
-    width=&#34;766&#34; height=&#34;485&#34; frameborder=&#34;0&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34;
-    style=&#34;border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;&#34; allowfullscreen&gt;
-&lt;/iframe&gt;
-&lt;div style=&#34;margin-bottom:5px&#34;&gt;
-    &lt;strong&gt;
-        &lt;a href=&#34;//www.slideshare.net/minehikonohara/20170111-macnica-networksnohararancherusecase&#34;
-            title=&#34;20170111 macnica networks-nohara_rancher_usecase&#34;
-            target=&#34;_blank&#34;&gt;20170111 macnica networks-nohara_rancher_usecase
-        &lt;/a&gt;
-    &lt;/strong&gt; from 
-    &lt;strong&gt;
-        &lt;a target=&#34;_blank&#34; href=&#34;//www.slideshare.net/minehikonohara/20170111-macnica-networksnohararancherusecase&#34;&gt;Minehiko Nohara&lt;/a&gt;
-    &lt;/strong&gt;
-&lt;/div&gt;
-
-&lt;h3 id=&#34;20-00-20-20-休憩&#34;&gt;20:00-20:20 「休憩」&lt;/h3&gt;
-
-&lt;h3 id=&#34;20-20-20-30-rancherでサービスの開発と運用&#34;&gt;20:20-20:30 「Rancherでサービスの開発と運用」&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;発表: @okamu (カヤック)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;20-30-20-40-コンテナ管理ツール比較&#34;&gt;20:30-20:40 「コンテナ管理ツール比較」&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;発表：@cyberblack28&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;iframe src=&#34;//www.slideshare.net/slideshow/embed_code/key/mcr8ufPmAzX40q&#34;
-    width=&#34;766&#34; height=&#34;485&#34; frameborder=&#34;0&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34;
-    style=&#34;border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;&#34; allowfullscreen&gt;
-&lt;/iframe&gt;
-&lt;div style=&#34;margin-bottom:5px&#34;&gt;
-    &lt;strong&gt;
-        &lt;a href=&#34;//www.slideshare.net/cyberblackvoom/04-publicr001&#34;
-            title=&#34;04 コンテナ管理ツール比較&#34;
-            target=&#34;_blank&#34;&gt;04 コンテナ管理ツール比較
-        &lt;/a&gt;
-    &lt;/strong&gt; from 
-    &lt;strong&gt;
-        &lt;a target=&#34;_blank&#34; href=&#34;//www.slideshare.net/cyberblackvoom/04-publicr001&#34;&gt;Linux Action&lt;/a&gt;
-    &lt;/strong&gt;
-&lt;/div&gt;
-
-&lt;h3 id=&#34;20-40-20-50-rancher-on-azure-はじめの一歩&#34;&gt;20:40-20:50 「Rancher on Azure ～ はじめの一歩」&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;発表：@dz_&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div style=&#34;width: 752px; max-width: 100%; margin-bottom:5px;&#34;&gt;
-    &lt;a href=&#34;https://docs.com/https://docs.com/oohira-kadumi/4253/rancher-on-azure&#34; title=&#34;Rancher on Azure ～ はじめの一歩！&#34; target=&#34;_blank&#34;
-       style=&#34;font-family: &#39;Segoe UI&#39;; font-size: 13px; text-decoration: none; margin-left:18px &#34;&gt;Rancher on Azure ～ はじめの一歩！&lt;/a&gt;
-    &lt;span style=&#34;font-family: &#39;Segoe UI&#39;; font-size: 13px &#34;&gt;—&lt;/span&gt;
-    &lt;a href=&#34;https://docs.com/oohira-kadumi&#34; target=&#34;_blank&#34;
-       style=&#34;font-family: &#39;Segoe UI&#39;; font-size: 13px; text-decoration: none &#34;&gt;Oohira Kadumi&lt;/a&gt;
-&lt;/div&gt;
-&lt;iframe src=&#34;https://docs.com/d/embed/D25191819-3403-0323-7700-001637397483%7eM1af8d7a5-b506-361b-290d-65d4bfcf2516&#34; frameborder=&#34;0&#34;
-        scrolling=&#34;no&#34; width=&#34;752px&#34; height=&#34;459px&#34; style=&#34;max-width:100%&#34; allowfullscreen=&#34;True&#34;&gt;
-&lt;/iframe&gt;
-
-&lt;h3 id=&#34;20-50-21-00-rancher-jp-活動紹介-クロージング&#34;&gt;20:50-21:00 「Rancher JP 活動紹介 &amp;amp; クロージング」&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;発表：@go_chiba&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <description>【第3回】コンテナ管理ツール Rancher勉強会 Rancherとは？ RancherはOSSと商用版で提供されるコンテナ環境構築・運用プラット</description>
     </item>
     
     <item>
@@ -166,80 +27,7 @@ Compassページ: &lt;a href=&#34;https://rancherjp.connpass.com/event/45768/&#3
       <pubDate>Fri, 07 Oct 2016 00:00:00 +0000</pubDate>
       
       <guid>http://www.rancher.jp/site/content/2016/10/07/rancher-meetup-01/</guid>
-      <description>
-
-&lt;h2 id=&#34;今熱い盛り上がりを見せているrancherの勉強会-rancher-meetup-tokyo-1-参加レポート&#34;&gt;今熱い盛り上がりを見せているRANCHERの勉強会「Rancher Meetup Tokyo #1」参加レポート！&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://snickerjp.blogspot.jp/2016/10/rancher-meetup-tokyo-vol1.html&#34;&gt;http://snickerjp.blogspot.jp/2016/10/rancher-meetup-tokyo-vol1.html&lt;/a&gt;&lt;/p&gt;
-
-&lt;img src=&#34;http://www.rancher.jp/site/images/2016/10/07/20161007_184910.jpg&#34; alt=&#34;&#34;&gt;&lt;/img&gt;
-
-&lt;p&gt;コンテナオーケストレーション管理ツールとして、以前から注目が高かった「RANCHER」&lt;br /&gt;
-初のMeetupが開催されたので、かんたんなレポートです！&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h3 id=&#34;もくじ&#34;&gt;もくじ&lt;/h3&gt;
-
-&lt;p&gt;-「Rancher Overview (DEMO)」（Bill Maxwell 氏）(#「Rancher Overview (DEMO)」（Bill Maxwell 氏）)&lt;br /&gt;
--「Rancher CLI + Jenkins で実現するCI/CD」(#「Rancher CLI + Jenkins で実現するCI/CD」)&lt;br /&gt;
-- RANCHERのCEO (Sheng Liang 氏)のメッセージビデオ(#RANCHERのCEO (Sheng Liang 氏)のメッセージビデオ)&lt;br /&gt;
-- LT(#LT)&lt;br /&gt;
-- 参加者プレゼントで「RANCHER」のTシャツ(#参加者プレゼントで「RANCHER」のTシャツ)&lt;br /&gt;
-- 感想(#感想)&lt;br /&gt;
-- 参考サイト(#参考サイト)&lt;/p&gt;
-
-&lt;h2 id=&#34;rancher-overview-demo-bill-maxwell-氏&#34;&gt;「Rancher Overview (DEMO)」（Bill Maxwell 氏）&lt;/h2&gt;
-
-&lt;img src=&#34;http://www.rancher.jp/site/images/2016/10/07/20161007_185051.jpg&#34; alt=&#34;&#34;&gt;&lt;/img&gt;
-
-&lt;p&gt;全編英語で、スライド見ているしかなかった発表&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://www.rancher.jp/site/images/2016/10/07/DSC02584.JPG&#34; alt=&#34;&#34;&gt;&lt;/img&gt;
-&lt;img src=&#34;http://www.rancher.jp/site/images/2016/10/07/DSC02586.JPG&#34; alt=&#34;&#34;&gt;&lt;/img&gt;
-&lt;img src=&#34;http://www.rancher.jp/site/images/2016/10/07/DSC02587.JPG&#34; alt=&#34;&#34;&gt;&lt;/img&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;rancher-cli-jenkins-で実現するci-cd&#34;&gt;「Rancher CLI + Jenkins で実現するCI/CD」&lt;/h2&gt;
-
-&lt;p&gt;最近出てきたという「Rancher CLI」の紹介とJenkinsを絡めた
-「継続的インテグレーションとデリバリ」  かなりかっこよかったんですが、そんなことできるかな？？&lt;/p&gt;
-
-&lt;img src=&#34;http://www.rancher.jp/site/images/2016/10/07/20161007_194116.jpg&#34; alt=&#34;&#34;&gt;&lt;/img&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/rancher/cli&#34;&gt;https://github.com/rancher/cli&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;rancherのceo-sheng-liang-氏-のメッセージビデオ&#34;&gt;RANCHERのCEO (Sheng Liang 氏)のメッセージビデオ&lt;/h2&gt;
-
-&lt;p&gt;ちょっと日本語、その後英語なメッセージビデオ&lt;/p&gt;
-
-&lt;img src=&#34;http://www.rancher.jp/site/images/2016/10/07/20161007_200700_001.jpg&#34; alt=&#34;&#34;&gt;&lt;/img&gt;
-
-&lt;h2 id=&#34;lt&#34;&gt;LT&lt;/h2&gt;
-
-&lt;p&gt;LTの内容も濃くて、すごかった！&lt;/p&gt;
-
-&lt;img src=&#34;http://www.rancher.jp/site/images/2016/10/07/20161007_210045.jpg&#34; alt=&#34;&#34;&gt;&lt;/img&gt;
-
-&lt;p&gt;(&lt;a href=&#34;http://qiita.com/cyberblack28/items/d1c6259c137c7c71703b&#34;&gt;http://qiita.com/cyberblack28/items/d1c6259c137c7c71703b&lt;/a&gt;)&lt;/p&gt;
-
-&lt;h2 id=&#34;参加者プレゼントで-rancher-のtシャツ&#34;&gt;参加者プレゼントで「RANCHER」のTシャツ&lt;/h2&gt;
-
-&lt;p&gt;来場者全員にTシャツがプレゼントされました！豪華！&lt;/p&gt;
-
-&lt;img src=&#34;http://www.rancher.jp/site/images/2016/10/07/20161007_184910.jpg&#34; alt=&#34;&#34;&gt;&lt;/img&gt;
-
-&lt;h2 id=&#34;感想&#34;&gt;感想&lt;/h2&gt;
-
-&lt;p&gt;RANCHERって結構サクッと動いちゃって、なんかうまいことやってくれるUIツールだなー！&lt;br /&gt;
-と、思っていたけど。&lt;br /&gt;
-エンタープライズ向けに設計されているし、なんか色々使ってうまく出来ないかな？？&lt;/p&gt;
-
-&lt;p&gt;dockerのSwarm modeへの対応待たれますねー！&lt;/p&gt;
-
-&lt;h2 id=&#34;参考サイト&#34;&gt;参考サイト&lt;/h2&gt;
-
-&lt;p&gt;(&lt;a href=&#34;http://connpass.com/event/40326/&#34;&gt;http://connpass.com/event/40326/&lt;/a&gt;)&lt;/p&gt;
-</description>
+      <description>今熱い盛り上がりを見せているRANCHERの勉強会「Rancher Meetup Tokyo #1」参加レポート！ http://snickerjp.blogspot.jp/2016/10/rancher-meetup-tokyo-vol1.html コンテナオーケストレーション管理ツールとして、以</description>
     </item>
     
   </channel>

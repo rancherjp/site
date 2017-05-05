@@ -2,6 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.rancher.jp/site/releasenote/v1.6.0/</loc>
+    <lastmod>2017-05-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.rancher.jp/site/content/2017/04/14/osc2017-spring/</loc>
+    <lastmod>2017-04-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://www.rancher.jp/site/releasenote/v1.5.0/</loc>
     <lastmod>2017-03-03T00:00:00+00:00</lastmod>
   </url>
@@ -107,7 +117,7 @@
   
   <url>
     <loc>http://www.rancher.jp/site/archives/2017/</loc>
-    <lastmod>2017-03-03T00:00:00+00:00</lastmod>
+    <lastmod>2017-05-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -130,11 +140,24 @@
   </url>
   
   <url>
+    <loc>http://www.rancher.jp/site/archives/2017/04/</loc>
+    <lastmod>2017-04-14T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.rancher.jp/site/archives/2017/05/</loc>
+    <lastmod>2017-05-05T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://www.rancher.jp/site/about/</loc>
   </url>
   
   <url>
     <loc>http://www.rancher.jp/site/archives/</loc>
+    <lastmod>2016-12-23T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -163,13 +186,13 @@
   
   <url>
     <loc>http://www.rancher.jp/site/tags/event/</loc>
-    <lastmod>2016-10-27T00:00:00+00:00</lastmod>
+    <lastmod>2017-04-14T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://www.rancher.jp/site/categories/event/</loc>
-    <lastmod>2016-10-27T00:00:00+00:00</lastmod>
+    <lastmod>2017-04-14T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -193,7 +216,7 @@
   
   <url>
     <loc>http://www.rancher.jp/site/post/</loc>
-    <lastmod>2017-01-11T00:00:00+00:00</lastmod>
+    <lastmod>2017-04-14T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -211,25 +234,25 @@
   
   <url>
     <loc>http://www.rancher.jp/site/</loc>
-    <lastmod>2017-03-03T00:00:00+00:00</lastmod>
+    <lastmod>2017-05-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://www.rancher.jp/site/tags/releasenote/</loc>
-    <lastmod>2017-03-03T00:00:00+00:00</lastmod>
+    <lastmod>2017-05-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://www.rancher.jp/site/categories/releasenote/</loc>
-    <lastmod>2017-03-03T00:00:00+00:00</lastmod>
+    <lastmod>2017-05-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://www.rancher.jp/site/releasenote/</loc>
-    <lastmod>2017-03-03T00:00:00+00:00</lastmod>
+    <lastmod>2017-05-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -241,6 +264,7 @@
   
   <url>
     <loc>http://www.rancher.jp/site/tags/</loc>
+    <lastmod>2016-11-30T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

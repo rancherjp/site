@@ -2,13 +2,15 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Pages on Rancher JP</title>
-    <link>http://www.rancher.jp/site/page/index.xml</link>
+    <link>http://www.rancher.jp/site/page/</link>
     <description>Recent content in Pages on Rancher JP</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
     <copyright>© 2016 Rancher JP</copyright>
     <lastBuildDate>Thu, 27 Oct 2016 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://www.rancher.jp/site/page/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="http://www.rancher.jp/site/page/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Rancher Event</title>
@@ -16,35 +18,7 @@
       <pubDate>Thu, 27 Oct 2016 00:00:00 +0000</pubDate>
       
       <guid>http://www.rancher.jp/site/event-list/</guid>
-      <description>
-
-&lt;h1 id=&#34;rancher-meetup&#34;&gt;Rancher Meetup&lt;/h1&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://rancherjp.connpass.com/event/45768/&#34;&gt;【会場変更 →渋谷】Rancher Meetup Tokyo #3 - connpass&lt;/a&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.rancher.jp/content/2017/01/11/rancher-meetup-03/&#34;&gt;Rancher Meetup Tokyo #3&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://rancherjp.connpass.com/event/44092/&#34;&gt;Rancher Meetup Tokyo #2 - connpass&lt;/a&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://rancherjp.connpass.com/event/46208/&#34;&gt;Rancher Meetup Tokyo #2 - 懇親会 - connpass&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://rancherjp.connpass.com/event/40326/&#34;&gt;Rancher Meetup Tokyo #1 - connpass&lt;/a&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.rancher.jp/content/2016/10/07/rancher-meetup-01/&#34;&gt;Rancher Meetup Tokyo #1&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&#34;rancher-もくもく勉強会&#34;&gt;Rancher もくもく勉強会&lt;/h1&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://rancherjp.connpass.com/event/47871/&#34;&gt;Rancher もくもく勉強会 #2 - connpass&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://connpass.com/event/41997/&#34;&gt;Rancher もくもく勉強会 #1 - connpass&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <description>Rancher Meetup 【会場変更 →渋谷】Rancher Meetup Tokyo #3 - connpass Rancher Meetup Tokyo #3 Rancher Meetup Tokyo #2 - connpass Rancher Meetup Tokyo #2 - 懇親会 - connpass Rancher Meetup Tokyo #1 - connpass Rancher Meetup Tokyo #1 Rancher もくもく勉強会 Rancher もくもく勉強会 #2</description>
     </item>
     
     <item>
@@ -53,210 +27,7 @@
       <pubDate>Mon, 18 Jan 2016 00:00:00 +0000</pubDate>
       
       <guid>http://www.rancher.jp/site/qa/</guid>
-      <description>
-
-&lt;h1 id=&#34;このページについて&#34;&gt;このページについて&lt;/h1&gt;
-
-&lt;p&gt;Rancher JP では皆様に Rancher, Rancher&amp;gt;OS をご使用していただいて疑問や困った事などを SlackのChannel &lt;code&gt;#qa&lt;/code&gt; にて議論・検討をしています。&lt;br /&gt;
-その中で、一定の情報になった物を掲載していきます。&lt;/p&gt;
-
-&lt;p&gt;質問・疑問などがある方は  &lt;a href=&#34;https://rancherjp.herokuapp.com/&#34;&gt;Join rancherjp on Slack!&lt;/a&gt; より 参加してみてください。&lt;/p&gt;
-
-&lt;h1 id=&#34;rancheros&#34;&gt;RancherOS&lt;/h1&gt;
-
-&lt;h2 id=&#34;ssh鍵を設定したい&#34;&gt;SSH鍵を設定したい&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;ナレッジ: FoxBoxsnet(@FoxBoxsnet)&lt;br /&gt;
-RancherOS では、SSH公開鍵暗号方式でのログインが使用できます。&lt;br /&gt;
-&lt;code&gt;cloud-config&lt;/code&gt; に記述します。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-yaml&#34;&gt;  #cloud-config
-  ssh_authorized_keys:
-    - ssh-rsa AAA...ZZZ example1@rancher
-    - ssh-rsa BBB...ZZZ example2@rancher
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;参考&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://docs.rancher.com/os/configuration/ssh-keys/&#34;&gt;SSH Keys in RancherOS&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;ネットワーク設定&#34;&gt;ネットワーク設定&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;ナレッジ: FoxBoxsnet(@FoxBoxsnet)&lt;/p&gt;
-
-&lt;p&gt;RancherOS ではデフォルトでDHCPによりIPアドレスを決定しますが、固定したい場合もあるかと思います。&lt;br /&gt;
-ここでは下記のように設定してみました。&lt;br /&gt;
-適宜書き換えてください。&lt;/p&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th align=&#34;left&#34;&gt;Name&lt;/th&gt;
-&lt;th align=&#34;left&#34;&gt;Value&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;interface&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;eth0&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;DNS&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;172.18.1.254&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;IP Address&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;172.18.1.1 /24&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;Gate Way&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;172.18.1.254&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-yaml&#34;&gt;#cloud-config
-rancher:
-  network:
-    dns:
-      nameservers:
-      - 172.18.1.254
-    interfaces:
-      eth0:
-        address: 172.18.1.1/24
-        gateway: 172.18.1.254
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;参考&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://docs.rancher.com/os/networking/interfaces/&#34;&gt;Configuring Network Interfaces in RancherOS&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://docs.rancher.com/os/networking/dns/&#34;&gt;Configuring DNS in RancherOS&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;rancheros-を-proxy-配下で利用する&#34;&gt;RancherOS を Proxy 配下で利用する&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;ナレッジ: FoxBoxsnet(@FoxBoxsnet)&lt;/p&gt;
-
-&lt;p&gt;RancherOSで Proxy 配下で DockerImage をダウンロードできるように設定します。&lt;br /&gt;
-&lt;strong&gt;この設定は ホストを再起動するまで適用されません&lt;/strong&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-yaml&#34;&gt;#cloud-config
-rancher:
-  network:
-    http_proxy: https://myproxy.example.com
-    https_proxy: https://myproxy.example.com
-    no_proxy: localhost,127.0.0.1
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;code&gt;http_proxy&lt;/code&gt;, &lt;code&gt;https_proxy&lt;/code&gt; にポート番号が必要な場合は &lt;code&gt;&amp;lt;ホスト名&amp;gt;:&amp;lt;ポート番号&amp;gt;&lt;/code&gt; で可能かと思います。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-yaml&#34;&gt;#cloud-config
-rancher:
-  network:
-    http_proxy: https://myproxy.example.com:8080
-    https_proxy: https://myproxy.example.com:8080
-    no_proxy: localhost,127.0.0.1
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;参考&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://docs.rancher.com/os/networking/proxy-settings/&#34;&gt;Configuring Proxy Settings in RancherOS&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;rancheros-のホスト名-hostname-設定&#34;&gt;RancherOS のホスト名(HostName) 設定&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;ナレッジ: FoxBoxsnet(@FoxBoxsnet)&lt;/p&gt;
-
-&lt;p&gt;RancherOS はデフォルトでは &lt;code&gt;rancher&lt;/code&gt; に設定されています。&lt;br /&gt;
-運用上、不便のためホスト名を設定します。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-yaml&#34;&gt;#cloud-config
-hostname: rancher-host01.local
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;参考&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://docs.rancher.com/os/configuration/hostname/&#34;&gt;Setting the Hostname in RancherOS&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;ntpサーバーを設定したい&#34;&gt;NTPサーバーを設定したい&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;ナレッジ: FoxBoxsnet(@FoxBoxsnet)&lt;/p&gt;
-
-&lt;p&gt;RancherOS でNTPサーバーを任意設定します。
-今回は、日本国内の stratum1サーバー NICT(情報通信研究機構) のサーバーからNTPを受信するように設定しました。&lt;br /&gt;
-Linux標準の &lt;code&gt;/etc/ntpd.conf&lt;/code&gt; とほぼ同じ記述で問題無いと思われます。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-yaml&#34;&gt;  #cloud-config
-  write_files:
-    - path: /etc/ntp.conf
-      permissions: 0644
-      content: |
-          tinker panic 0
-          default kod nomodify notrap nopeer noquery
-          restrict -6 default kod nomodify notrap nopeer noquery
-
-          restrict 127.0.0.1
-          restrict -6 ::1
-
-          restrict 133.243.238.163 mask 255.255.255.255 nomodify notrap noquery
-          restrict 133.243.238.164 mask 255.255.255.255 nomodify notrap noquery
-          restrict 133.243.238.243 mask 255.255.255.255 nomodify notrap noquery
-          restrict 133.243.238.244 mask 255.255.255.255 nomodify notrap noquery
-
-          server ntp.nict.jp
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;参考&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://docs.rancher.com/os/configuration/write-files/&#34;&gt;Writing Files in RancherOS&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://docs.rancher.com/os/system-services/built-in-system-services/&#34;&gt;Built-in System Services in RancherOS&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;rancheros-で-timezone-を-jst-に変更したい&#34;&gt;RancherOS で TimeZone を JST に変更したい&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;質問: FoxBoxsnet(@FoxBoxsnet)&lt;/p&gt;
-
-&lt;p&gt;RancherOS デフォルトの設定は、 TimeZoneは &lt;code&gt;UTC&lt;/code&gt; に設定されます。&lt;br /&gt;
-コンソールのTimeZoneをJST(Japan Standard Time)に設定したい&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-yaml&#34;&gt;#cloud-config
-rancher:
-  services:
-    console:
-      environment:
-        TZ: &#39;JST-9&#39;
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;参考&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://docs.rancher.com/os/system-services/adding-system-services/&#34;&gt;Adding System Services in RancherOS&lt;/a&gt;&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://docs.rancher.com/os/system-services/built-in-system-services/&#34;&gt;Built-in System Services in RancherOS&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <description>このページについて Rancher JP では皆様に Rancher, Rancher&amp;gt;OS をご使用していただいて疑問や困った事などを SlackのChannel #qa にて議論・検討をしています。 その中</description>
     </item>
     
     <item>
@@ -265,31 +36,7 @@ rancher:
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://www.rancher.jp/site/about/</guid>
-      <description>
-
-&lt;h2 id=&#34;このページについて&#34;&gt;このページについて&lt;/h2&gt;
-
-&lt;p&gt;本ページは Rancher JP による &lt;strong&gt;Rancher&lt;/strong&gt; 及び関連するコンテナ技術に関する情報発信ページです。&lt;br /&gt;
-日本語による &lt;strong&gt;Rancher&lt;/strong&gt; のリリース情報、新機能解説、ユーザーによるBlog情報、勉強会レポートといった
-各種情報を本ページに集約することで日本のユーザーが簡単に情報収集できることを目的としています。&lt;/p&gt;
-
-&lt;h2 id=&#34;rancher-とは&#34;&gt;Rancher とは?&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;Rancher&lt;/strong&gt; とは米国 &lt;a href=&#34;http://rancher.com&#34;&gt;Rancher Labs 社&lt;/a&gt;が主体として開発しているオープンソースのコンテナ管理プラットフォームです。&lt;br /&gt;
-商用環境を想定し複数ホストから構成されるクラスタの管理、稼働するコンテナのライフサイクル管理、
-様々なアプリケーションのテンプレート管理といった機能を有しています。&lt;br /&gt;
-また、既存のコンテナオーケストレーションツールである &lt;a href=&#34;https://docs.docker.com/swarm/&#34;&gt;Docker Swarm&lt;/a&gt;,
- &lt;a href=&#34;http://kubernetes.io/&#34;&gt;Kubernetes&lt;/a&gt;, &lt;a href=&#34;http://mesos.apache.org/&#34;&gt;Mesos&lt;/a&gt; などをサポートしており
-&lt;strong&gt;Rancher&lt;/strong&gt; を利用することでコンテナサービスにおけるインフラストラクチャ〜アプリケーションといった
-幅広いスタックを容易に管理することが可能になります。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://docs.rancher.com&#34;&gt;Rancher ドキュメントページ&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;rancher-jp-とは&#34;&gt;Rancher JP とは?&lt;/h2&gt;
-
-&lt;p&gt;オープンソースのコンテナ管理プラットフォームである &lt;strong&gt;Rancher&lt;/strong&gt; の日本国内での普及を目的としたコミュニティです。&lt;br /&gt;
-本ページや勉強会、SNS などを通じて &lt;strong&gt;Rancher&lt;/strong&gt; や関連するコンテナ技術に関する情報を日本語により発信し、各種コンテナ技術の普及と人材育成に貢献します。&lt;/p&gt;
-</description>
+      <description>このページについて 本ページは Rancher JP による Rancher 及び関連するコンテナ技術に関する情報発信ページです。 日本語による Rancher のリリース情報、新機能解説、ユーザ</description>
     </item>
     
   </channel>
