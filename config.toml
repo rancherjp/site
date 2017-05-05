@@ -3,9 +3,9 @@ languageCode            = "ja-jp"
 title                   = "Rancher JP"
 hasCJKLanguage          = true
 copyright               = "© 2016 Rancher JP"
-pygmentsuseclasses      = true
-pygmentsstyle           = "borland"
-PygmentsOptions         = "linenos=table,nobackground=true"
+#pygmentsuseclasses      = true
+#pygmentsstyle           = "borland"
+#PygmentsOptions         = "linenos=table,nobackground=true"
 
 [permalinks]
     blog                = "/blog/:year/:month/:day/:slug/"

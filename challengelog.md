@@ -1,4 +1,5 @@
 # 変更
++ `Mon Mar 6 11:41:38 JST` content/releasenote/release-v.1.5.0.md
 + `add`         content/releasenote/release-v.1.4.0.md
 + `Update`      content/event/event.md
 

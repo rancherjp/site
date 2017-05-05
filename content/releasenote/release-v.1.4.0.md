@@ -23,12 +23,11 @@ archives:
 * [rancher-v0.4.1](https://github.com/rancher/cli/releases/tag/v0.4.1)
 
 ### 対応している Docker のバージョン
-Docker 1.10.3
-Docker 1.12.3-1.12.6
+Docker 1.10.3  
+Docker 1.12.3-1.12.6  
 
 ## Kubernetes UI の変更
 Kubernetesをメインのオーケストレーションエンジンにしている場合、v1.4.0リリースからk8sの対応について2つの大きな変更があります。
-
 1. Rancher による k8sデフォルトUIを廃止し、[k8s' ダッシュボードUI](https://github.com/kubernetes/dashboard)に引き継ぎました。各k8sの環境で自動的に起動して有効になります。2016年の後半、KubernetesダッシュボードUIは、一般的な用途向けのweb UIがものすごい貢献により発展し、RancherのデフォルトUIとしての機能と安定性を備えたところに到達したと思います。その為、1.4では Rancher k8s UI を廃止し k8sのダッシュボードUIを k8s リソースの管理UIとしました。
 
 2. Rancher カタログにあるk8s グラフ化とテンプレートを廃止し、[k8s helm](https://github.com/kubernetes/helm) に引き継ぎました。Helm(とtiller)は、それぞれk8s環境で自動的に有効になります。便利な helmクライアントも 外部から動かせる kubectlシェルコンソールとして同様に追加されます。

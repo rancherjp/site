@@ -5,17 +5,6 @@
 </div>
 <script src="{{ .Site.BaseURL }}js/jquery-2.2.1.min.js"></script>
 <script src="{{ .Site.BaseURL }}js/bootstrap.min.js"></script>
-<script src="{{ .Site.BaseURL }}js/highlight.min.js"></script>
-<script>hljs.initHighlightingOnLoad();</script>
-<script>
-    if(($(window).height() + 100) < $(document).height()) {
-        $('#back-to-top').removeClass('hidden').affix({
-            offset: {
-                top: 100
-            }
-        });
-    }
-</script>
 {{ if not (in (printf "%#v" .Site.BaseURL) "localhost") }}
     {{ with .Site.Params.google_adsense }}
         <script>
