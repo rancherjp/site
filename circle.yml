@@ -3,7 +3,7 @@ machine:
 
 dependencies:
   pre:
-    - wget https://github.com/spf13/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}-64bit.deb
+    - wget https://github.com/spf13/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_Linux-64bit.deb
     - sudo dpkg -i hugo_${HUGO_VERSION}-64bit.deb
     - git config --global user.name ${GITHUB_USERNAME}
     - git config --global user.email ${GITHUB_EMAIL_ADDRESS}
@@ -17,5 +17,5 @@ test:
 deployment:
   production:
     branch: master
-    commands: 
+    commands:
       - ./test-hugo.sh
