@@ -6,7 +6,7 @@
     
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="generator" content="Hugo 0.20.1" />
+    <meta name="generator" content="Hugo 0.20.7" />
     <title>リリース v1.6.0 - Rancher JP</title>
     
     
@@ -194,10 +194,10 @@
 
 <ul>
 <li><strong>HAProxyにおけるデータボリュームを経由したSSL証明書の読み込みサポート[<a href="https://github.com/rancher/rancher/issues/7520">#7520</a>]</strong> - Rancherで本バージョンからSSL証明書を含んだデータボリュームをHAProxyのLBサービスに設定できるようになりました。
-これによって定常的にが変更される証明書をHAProxyにアップロードすることへの代替手段が提供されました。
+これによって定常的に変更される証明書をHAProxyにアップロードすることへの代替手段が提供されました。
 また、複数の証明書設定をHAProxyのLBサービスでサポートすることが可能になりました。</li>
 <li><strong>LDAP/ADにおける複数のグループに基づく検索のサポート[<a href="https://github.com/rancher/rancher/issues/8157">#8157</a>][<a href="https://github.com/rancher/rancher/issues/8122">#8112</a>]</strong> - 異なる検索ベース(search bases)を経由したユーザ、グループの検索できるようLDAPを設定することができるようになりました。</li>
-<li><strong>Rancher EBSボリュームのサポート[<a href="https://github.com/rancher/rancher/issues/8295">#8295</a>], [<a href="https://github.com/rancher/rancher/issues/8618">#8618</a>], [<a href="https://github.com/rancher/rancher/issues/7599">#7599</a>]</strong> - Rancher EBSボリュームがGAになりました。同一のアベイラビリティゾーンに所属するホストにコンテナが移動されるようにアベイラビリティゾーンを意識できるようRancherのスケジューラ機能が強化されました。EBSは各種ボリュームタイプやIOPS指定有無(<em>訳注:原文中ではIOSとなっているがIOPSのtypoと思われます</em>)、暗号化の有無やksmkeyIdやスナップショットIDなどの追加オプションを用いた場合でも利用することが可能です。</li>
+<li><strong>Rancher EBSボリュームのサポート[<a href="https://github.com/rancher/rancher/issues/8295">#8295</a>], [<a href="https://github.com/rancher/rancher/issues/8618">#8618</a>], [<a href="https://github.com/rancher/rancher/issues/7599">#7599</a>]</strong> - Rancher EBSボリュームがGAになりました。ホストにコンテナが移動される際、アベイラビリティゾーンを意識できるようRancherのスケジューラ機能が強化されました。EBSは各種ボリュームタイプやIOPS指定有無(<em>訳注:原文中ではIOSとなっていますがIOPSのtypoと思われます</em>)、暗号化の有無やksmkeyIdやスナップショットIDなどの追加オプションを用いた場合でも利用することが可能です。</li>
 <li><strong>Rancher secretのcomposeにおけるサポート[<a href="https://github.com/rancher/rancher/issues/8016">#8016</a>],[<a href="https://github.com/rancher/rancher/issues/8025">#8025</a>]</strong> - Rancher CLIでcomposeファイルを用いたsecretsの生成が可能になりました。過去のバージョンのrancher-compose CLIには本機能は存在しないことに留意してください。全ての新しい機能は新しいRancher CLIツールでしか開発されず、過去のバージョンのRancher CLIへの取り込みは行われません。</li>
 </ul>
 
