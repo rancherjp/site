@@ -36,9 +36,9 @@ copyright               = "© 2016 Rancher JP"
     weight              = 3
     url                 = "/study"
 [[menu.header]]
-    name                = "Traslated"
+    name                = "Translated"
     weight              = 4
-    url                 = "/traslated"
+    url                 = "/translated"
 [[menu.header]]
     name                = "Event"
     weight              = 5
