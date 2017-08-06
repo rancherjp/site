@@ -72,7 +72,7 @@ Rancherサーバーには2種類のタグがあります。
   - compose で スタック名を変数名に利用できる機能を追加 [[#3393](https://github.com/rancher/rancher/issues/3393)]
 
 ## インフラストラクチャサービスの更新
-インフラストラクチャサービスをアップグレードするときには、 please make sure to [推奨するアップグレードの順番](http://rancher.com/docs/rancher/v1.6/en/upgrading/#infrastructure-services) を必ず確認してください。
+インフラストラクチャサービスをアップグレードするときには、[推奨するアップグレードの順番](http://rancher.com/docs/rancher/v1.6/en/upgrading/#infrastructure-services) を必ず確認してください。
 
 * **ネットワークサービス - v0.2.4**
   - _新規イメージ: `rancher/network-manager:v0.7.7`_
