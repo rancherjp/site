@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
     <copyright>© 2016 Rancher JP</copyright>
-    <lastBuildDate>Fri, 05 May 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 01 Aug 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://www.rancher.jp/site/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>リリース v1.6.6</title>
+      <link>http://www.rancher.jp/site/releasenote/v1.6.6/</link>
+      <pubDate>Tue, 01 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.rancher.jp/site/releasenote/v1.6.6/</guid>
+      <description>リリース v1.6.6 バージョン rancher/server:v1.6.6 rancher/agent:v1.2.5 rancher/lb-service-proxy:v0.7.6 rancher-v0.6.3 rancher-compose-v0.12.5 対応しているDockerのバージョン Docker 1.12.3-1.12.6 Docker 1.13.1 (Kubenetesのサポートなし) Docker 17.03.0-ce/ee(</description>
+    </item>
     
     <item>
       <title>リリース v1.6.0</title>
@@ -104,10 +113,10 @@
     
     <item>
       <title>[翻訳]見逃されているかもしれないコンテナのレジストリ</title>
-      <link>http://www.rancher.jp/site/traslated/container-registries-might-missed-ja/</link>
+      <link>http://www.rancher.jp/site/translated/container-registries-might-missed-ja/</link>
       <pubDate>Thu, 22 Dec 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://www.rancher.jp/site/traslated/container-registries-might-missed-ja/</guid>
+      <guid>http://www.rancher.jp/site/translated/container-registries-might-missed-ja/</guid>
       <description>以下は、 Rancher Labs | Container registries you may have missed | Rancher Labs http://rancher.com/container-registries-might-missed/ からの翻訳です。 Container Registries You Might Have Missed 見逃されているかもしれないコンテナのレジストリ 2016年11月10日 Vince Power レジス</description>
     </item>
     
