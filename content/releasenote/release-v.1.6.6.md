@@ -68,7 +68,6 @@ Rancherサーバーには2種類のタグがあります。
 * **Rancher CLI の拡張**
 
   - compose files で `init` サポートの追加 [[#8608](https://github.com/rancher/rancher/issues/8608)]
-
   - compose で スタック名を変数名に利用できる機能を追加 [[#3393](https://github.com/rancher/rancher/issues/3393)]
 
 ## インフラストラクチャサービスの更新
