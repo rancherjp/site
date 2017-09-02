@@ -30,7 +30,7 @@ archives:
 - Docker 17.03.0-ce/ee（Kubenetesのサポートなし）
 - Docker 17.06.0-ce/ee（Kubenetesのサポートなし）
 
-> 注意: Kubenetes 1.7は Docker 1.12.6までのサポートです。
+> 注意: Kubenetes 1.7は、Docker 1.12.6までのサポートです。
 
 
 ## Rancherサーバーのタグについて
@@ -58,13 +58,13 @@ Rancherサーバーには2種類のタグがあります。
     インフラストラクチャスタックのアップグレードなしには、本リリースバージョンは動作しません。
 - Rancher v1.6.0以前のものを利用している場合
   - 自身のカタログを設定するために、デフォルトのRancherライブラリの設定に変更を加えている場合、
-    **Admin->Settings->Catalog** の順で選択します。
+    **管理者** -> **設定** -> **カタログ** の順で選択します。
     その後、GUIからデフォルトのRancherライブラリのブランチを再度設定します。。
     以前のデフォルトブランチは `master` ブランチでしたが、現在は `v1.6-release` ブランチです。
 - バージョンのロールバック手順
   - Rancher v1.6.8からv1.6.7へのロールバックをサポートしています。
   - ロールバックの手順
-    1. **管理者** -> **拡張設定** -> APIの値 を選択した後、 `upgrade.manager` の値を `all`に変更します。
+    1. **管理者** -> **拡張設定** -> APIの値を選択した後、 `upgrade.manager` の値を `all` に変更します。
     1. Rancherサーバーをアップグレードします。この時に古いバージョンRancher（v.1.6.7）を指定します。
        この作業を行う際には、データベースのバックアップを取得たうえで、
        Rancherサーバーが現在のデータベースを指すように設定します。
@@ -73,7 +73,7 @@ Rancherサーバーには2種類のタグがあります。
 
 ## 重要 - AD認証を使っている場合のv1.6.8へのアップグレードについて
 Rancherではv1.6.8からActive Directoryの認証プラグインを新しい認証フレームワークに変更しています。
-ADサーバーのホスト名/IPとTLS証明書のホスト名/IPと一致するかを確認することで
+ADサーバーのホスト名/IPとTLS証明書のホスト名/IPが一致するかを確認することで
 AD+TLSオプションをさらにセキュアなものにしています。
 詳細は、[[#9459](https://github.com/rancher/rancher/issues/9459)]を参照してください。
 
@@ -82,7 +82,7 @@ AD+TLSオプションをさらにセキュアなものにしています。
 アップグレートに伴う問題を回避するためも、以下に述べる手順に沿って設定が正しいかを確認してください。
 
 - AD設定のホスト名/IPを確認する。
-  これを行うには、Rancherにブラウザでログインし、 **Admin -> Access Control** とアクセスします。
+  これを行うには、Rancherにブラウザでログインし、 **管理者** -> **アクセスコントロール** の順でアクセスします。
   serverフィールドがあなたの設定したADサーバーのホスト名/IPアドレスです。
 - TLS証明書のホスト名/IPを確認するために、以下のコマンドを実行して、CN属性の値を取得してください。
   - `openssl s_client -showcerts -connect domain.example.com:443`
@@ -94,15 +94,15 @@ AD+TLSオプションをさらにセキュアなものにしています。
 もし、フィールドの値が一致しなかった場合は、次の手順に従って設定を修正してください。
 
 - ブラウザを使ってRancherの `settings` のURLへと移動します。
-  これは、Rancherにログイン後に **API->Keys** の順でクリックすることで移動できます。
+  これは、Rancherにログイン後に **API** -> **Keys** の順でクリックすることで移動できます。
   `Endpoint（v2-beta）` フィールドが見えるはずです。
   フィールドの値を確認し、 `/settings` にくわえます。
   最終的なURLは `my.rancher.url:8080/v2-beta/settings` のようになるはずです。
   このURLにブラウザでアクセスすることでRancherのAPIブラウザを利用できます。
 - `api.auth.ldap.server` を検索し、その値を編集するためにクリックします。
-  画面上部、右側にeditボタンがあるのでクリックします。
+  画面上部、右側に編集ボタンがあるのでクリックします。
   ホスト名/IPの値を変更して先ほど確認したCN属性の値と一致するようにします。
-  その後、 **Show Request->Send Request** とクリックし、値をRancherのDBで永続化させます。
+  その後、 **Show Request->Send Request** とクリックし、値をRancherのデータベースで永続化させます。
   レスポンスには先ほど設定した新しい値が含まれているはずです。
 
 一度この作業が完了し、ホスト名/IPが証明書のCN属性と一致すれば、
@@ -114,7 +114,7 @@ v1.6.8にアップグレードした後も特に問題は発生しないはず�
   - なお、 `network-services` をバージョン `0.2.5` にアップグレードする必要があります。
 - **アクセス制御を無効化せずにLDAPをアップデート可能にしました**
   [[#8115](https://github.com/rancher/rancher/issues/8115)]
-  - ADサーバーガアップデートされた際に、Rancherでアクセス制御を無効化することなしにアクセス制御のアップデートができるようになりました。
+  - ADサーバーがアップデートされた際に、Rancherでアクセス制御を無効化することなしにアクセス制御のアップデートができるようになりました。
 - **Rancher CLIの機能拡張**
   - composeファイル内部で環境変数を使えるようになりました。
     [[#8791](https://github.com/rancher/rancher/issues/8791)]
@@ -168,20 +168,20 @@ v1.6.8にアップグレードした後も特に問題は発生しないはず�
     - `rancher/kubenetes-auth:v0.0.8`
     - `rancher/lb-service-rancher:v0.7.10`
   - 名前解決の回避のためにRancherメタデータのIPを直接利用するよう修正しました。[[#9521](https://github.com/rancher/rancher/issues/9521)] 
-  - `kubernetes.io/ingress.class`アノテーションのサポートを追加しました[[#6344](https://github.com/rancher/rancher/issues/6344)]
+  - `kubernetes.io/ingress.class` アノテーションのサポートを追加しました[[#6344](https://github.com/rancher/rancher/issues/6344)]
   - ホストネットワークを使う Pod でネットワークが壊れている状態を解消しました。[[#9678](https://github.com/rancher/rancher/issues/9678)]
 
 
 ## 既知の主要なバグ
 - 認証で保護されたプライベートレジストリを持つKubernetesユーザの場合に以下の問題が発生しています。
   - 事象
-    - アドオンスターターが `pause-amd64:3.0` イメージをプルすることができす、
+    - アドオンスターターが `pause-amd64:3.0` イメージをpullすることができす、
       アドオンを起動させることができません。
   - ワークアラウンド
-    - ホストにあらかじめ `pause-amd64:3.0` イメージをプルしておきます。
+    - ホストにあらかじめ `pause-amd64:3.0` イメージをpullしておきます。
 
 ## v1.6.7からの主要なバグの修正
-- アクセス制御認証の間APIからサービスのアカウントパスワードが返されていた問題を修正しました。
+- アクセス制御認証の間、APIからサービスのアカウントパスワードが返されていた問題を修正しました。
   [[#8625](https://github.com/rancher/rancher/issues/8625)]
 - HAProxyのログがファイルのみに送られていた問題を修正しました。stdout/stderrにも送られるようになりました。
   [[#9616](https://github.com/rancher/rancher/issues/9616)]
@@ -189,7 +189,7 @@ v1.6.8にアップグレードした後も特に問題は発生しないはず�
 - カスタムHAProxy設定に2つ以上のバックエンドが含まれていた場合に、
   ロードバランサが作動しない問題を修正しました。
   [[#8226](https://github.com/rancher/rancher/issues/8226)]
-- rancher upが --waitや--wait-stateオプションを無視する問題を修正しました。
+- rancher upが--waitや--wait-stateオプションを無視する問題を修正しました。
   [[#8492](https://github.com/rancher/rancher/issues/8492)]
 - ldap接続時のデフォルトタイムアウト設定の値が小さすぎたので修正しました。
   [[#8944](https://github.com/rancher/rancher/issues/8944)]
