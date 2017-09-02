@@ -120,7 +120,7 @@ v1.6.8にアップグレードした後も特に問題は発生しないはず�
     [[#8791](https://github.com/rancher/rancher/issues/8791)]
   - stop/grace:periodのサポートが実装されました
     [[#7715](https://github.com/rancher/rancher/issues/7715)]
-- コンテナへの環境UUIDの自動ラベリングサポート
+- コンテナーへの環境UUIDの自動ラベリングサポート
   [[#8442](https://github.com/rancher/rancher/issues/8442)]
 
 
@@ -152,7 +152,7 @@ v1.6.8にアップグレードした後も特に問題は発生しないはず�
 - Healthcheck - v0.3.3
   - 新しいイメージを利用するようになりました。
     - rancher/healthcheck:v0.3.3
-  - networkFromプライマリをつかうようsidekickサービスコンテナのヘルスチェックを追加しました。[[#6305](https://github.com/rancher/rancher/issues/6305)] 
+  - networkFromプライマリをつかうようsidekickサービスコンテナーのヘルスチェックを追加しました。[[#6305](https://github.com/rancher/rancher/issues/6305)] 
   - 名前解決の回避のためにRancherメタデータのIPを直接利用するよう修正しました。[[#9521](https://github.com/rancher/rancher/issues/9521)] 
 - VXLAN - 0.2.1
   - 新しいイメージを利用するようになりました。
