@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>2017/09 on Rancher JP</title>
+    <link>http://www.rancher.jp/site/archives/2017/09/</link>
+    <description>Recent content in 2017/09 on Rancher JP</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <copyright>© 2016 Rancher JP</copyright>
+    <lastBuildDate>Sat, 02 Sep 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://www.rancher.jp/site/archives/2017/09/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>リリース v1.6.8</title>
+      <link>http://www.rancher.jp/site/releasenote/v1.6.8/</link>
+      <pubDate>Sat, 02 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.rancher.jp/site/releasenote/v1.6.8/</guid>
+      <description>リリース v1.6.8 バージョン rancher/server:v1.6.8 rancher/agent:v1.2.6 rancher/lb-service-proxy:v0.7.9 rancher-v0.6.4 rancher-compose-v0.12.5 対応しているDockerのバージョン Docker 1.12.3-1.12.6 Docker 1.13.1（Kubenetesのサポートなし） Docker 17.03.0-c</description>
+    </item>
+    
+  </channel>
+</rss>
