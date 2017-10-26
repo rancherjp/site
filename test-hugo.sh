@@ -9,7 +9,7 @@ commitMassage=`git log -n 1 --oneline --pretty=format:"%s"`
 
 if [[ "$commitMassage" =~ \["Site Update"\] ]]; then
 
-        echo "[Site Update] Merge it to www.rancher.jp is start..."
+        echo "[Site Update] Updating www.rancher.jp has started..."
         sed -i -e 's@http://www.rancher.jp/site/@http://www.rancher.jp/@g' config.toml
         sed -i -e '/noindex/d' config.toml
         hugo -d docs
@@ -24,7 +24,7 @@ if [[ "$commitMassage" =~ \["Site Update"\] ]]; then
 
 else
 
-        echo "[Site Update] Merge it to www.rancher.jp is skipped..."
+        echo "[Site Update] Updating www.rancher.jp has been skipped..."
         hugo -d docs
         git add ./docs/ -A
         git commit -m "[ci skip] CircleCI automatic page build Time:[`date`]" || true
