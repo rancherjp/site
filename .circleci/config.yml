@@ -8,7 +8,7 @@ jobs:
       - checkout
       - run:
           name: "Run Hugo"
-          command: HUGO_ENV=production hugo -v -s ~/project/ && ls -l
+          command: HUGO_ENV=production hugo -v -s ~/project/
       - run:
           name: "Test Website"
           command: htmlproofer ~/project/src/public --allow-hash-href --check-html --empty-alt-ignore
