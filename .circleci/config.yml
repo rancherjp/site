@@ -13,6 +13,9 @@ jobs:
           name: "Test Website"
           command: htmlproofer ~/project/src/public --allow-hash-href --check-html --empty-alt-ignore
       - run:
+          name: "Set GitHub information"
+          command: git config --global user.name ${GITHUB_USERNAME} && git config --global user.email ${GITHUB_EMAIL_ADDRESS}
+      - run:
           name: "Deploy"
           command: |
             if [ "${CIRCLE_BRANCH}" == "master" ]; then
