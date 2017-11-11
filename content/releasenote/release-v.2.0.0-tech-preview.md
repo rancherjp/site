@@ -16,19 +16,19 @@ archives:
 
 # リリース v2.0.0 テクニカルプレビュー
 
-Rancher 2.0のテクニカルプレビューが利用可能になったことをお知らせします。このリリースは、我々のエンジニアチームが直近7ヶ月もの間多忙を極め、ようやく何をやったのかについてベールを脱ぐことができることをとても嬉しく思っております。この最初のリリースに加え、追加機能の紹介、バグへの対応、皆様の貴重なフィードバックを組み込むために、RC版のビルドを定期的に公開する予定です。
+Rancher 2.0のテクニカルプレビューが利用可能になったことをお知らせします。  このリリースは、我々のエンジニアチームが直近7ヶ月もの間多忙を極め、ようやく何をやったのかについてベールを脱ぐことができることをとても嬉しく思っております。  今回の初リリースに加え、追加機能の紹介、バグへの対応、皆様の貴重なフィードバックなどを組み込むために、RC版のビルドを定期的に公開する予定です。
 
 では、何が新しくなったか見ていきましょう。
 
 2.0では、Rancherは自身のアーキテクチャと全てのクラスタ/環境をKubernetes上に置いています。1.0が既にKubernetesのインストール、管理、運用をサポートしてはいますが、Rancherのユーザーエクスペリエンスとして物足りなさを感じていました。2.0ではそれを改善し、ネイティブに対応したKubernetesダッシュボードUIとkubectlにアクセス可能になっただけではなく、RancherのUX(CLI, API, UIおよびDocker)はすべてKubernetes上で直接的に動作します。2.0は、既存のRancherのすべての機能を引き続き継承しながらも、Kubernetesの豊かなエコシステムと革新的な技術を活用することができる、Kubernetes環境の強化されたアドオンであると考えていただければと思います。
 
-また、我々は、このリリースはDockerとKubernetesの日常利用を信じられないほど単純なものにするための次のステップだと確信しております。是非、ご自身でビルドをお試しください。そして、皆様のご意見やご提案をお寄せください。
+また、我々は、このリリースはDockerとKubernetesの日常利用を信じられないほど単純なものにするための次のステップだと確信しております。是非、ご自身でビルドをお試しください。  そして、皆様のご意見やご提案をお寄せください。
 
 ## 参考リンク
-Quick Start Guide(英語): http://rancher.com/docs/rancher/v2.0/en/quick-start-guide/152
-フィードバック、コメント、提案用のフォーラム(英語): https://forums.rancher.com/c/rancher-2-0-tech-preview57
-User Slack(英語): https://slack.rancher.io/35 #2-0-tech-preview
-RancherJP Slack: http://slack.rancher.jp/
+- Quick Start Guide(英語): http://rancher.com/docs/rancher/v2.0/en/quick-start-guide/152
+- フィードバック、コメント、提案用のフォーラム(英語): https://forums.rancher.com/c/rancher-2-0-tech-preview57
+- User Slack(英語): https://slack.rancher.io/35 #2-0-tech-preview
+- RancherJP Slack: http://slack.rancher.jp/
 
 ## 重要事項
 テクニカルプレビューの目的として、GA版のリリースに至るまでは全て `rancher/server:preview` タグにて最新ビルドをアップデートいたします。GA版のリリースが固まり次第、 `latest` や `stable` についても必要に合わせ更新していきます。
