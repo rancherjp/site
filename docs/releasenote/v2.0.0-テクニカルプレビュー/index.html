@@ -181,15 +181,18 @@
 <p>テクニカルプレビューの目的として、GA版のリリースに至るまでは全て <code>rancher/server:preview</code> タグにて最新ビルドをアップデートいたします。<br>
 GA版のリリースが固まり次第、 <code>latest</code> や <code>stable</code> についても必要に合わせ更新していきます。</p>
 
-<h2 id="プレビュー用タグのバージョン">プレビュー用タグのバージョン</h2>
+<h2 id="プレビューの最新バージョンタグ">プレビューの最新バージョンタグ</h2>
 
 <blockquote>
-<p><strong>注意</strong>: 全ての最新機能を試すためにはrancher/server:previewをご利用ください
-- rancher/server:v2.0.0-alpha8
-- rancher/agent:v2.0-alpha4
-- rancher/lb-service-haproxy:v0.8.1
-- rancher-v1.0.0-alpha3</p>
+<p><strong>注意</strong>: 全ての最新機能を試すためにはrancher/server:previewをご利用ください</p>
 </blockquote>
+
+<ul>
+<li>rancher/server:v2.0.0-alpha8</li>
+<li>rancher/agent:v2.0-alpha4</li>
+<li>rancher/lb-service-haproxy:v0.8.1</li>
+<li>rancher-v1.0.0-alpha3</li>
+</ul>
 
 <h2 id="対応しているdockerのバージョン">対応しているDockerのバージョン</h2>
 
@@ -203,10 +206,11 @@ GA版のリリースが固まり次第、 <code>latest</code> や <code>stable</
 <h2 id="追加機能">追加機能</h2>
 
 <blockquote>
-<p><strong>注意</strong>: テクニカルプレビューにおいては、全機能が使用できるわけではない点についてご理解ください。
-管理パネル上で無効になっている機能がある場合もあります。開発チームとしても、できるだけ早い段階で提供できるようにいたします。
-以下、本ビルドで追加された主な機能について紹介します。</p>
+<p><strong>注意</strong>: テクニカルプレビューにおいては、全機能が使用できるわけではない点についてご理解ください。<br>
+管理パネル上で無効になっている機能がある場合もあります。開発チームとしても、できるだけ早い段階で提供できるようにいたします。</p>
 </blockquote>
+
+<p>以下、本ビルドで追加された主な機能について紹介します。</p>
 
 <ul>
 <li><p><strong>2.0 UI</strong> - Kubernetes上でRancherのUXを提供するために、UIを作り直しました。以下の変更を行っております。</p>
@@ -229,18 +233,23 @@ GA版のリリースが固まり次第、 <code>latest</code> や <code>stable</
 <li><p>その他、UIの全般的な応答速度などを速めた</p></li>
 </ul></li>
 
-<li><p><strong>クラスターと環境</strong> - Kubernetesの優位性を活かし、Rancherでもついにクラスターの概念を導入、これによってクラスター上で(K8s namespaceのように)複数環境を構築できるようになりました。複数コンテナが物理的に同じノードを共有しながらも、8s namespaceを利用してそれぞれ独立したワークスペースを所有できるようになります。</p></li>
+<li><p><strong>クラスターと環境</strong> - Kubernetesの優位性を活かし、Rancherでもついにクラスターの概念を導入、これによってクラスター上で(K8s namespaceのように)複数環境を構築できるようになりました。<br>
+複数コンテナが物理的に同じノードを共有しながらも、8s namespaceを利用してそれぞれ独立したワークスペースを所有できるようになります。</p></li>
 
-<li><p><strong>Kunernetes環境のインポート</strong> - Rancherを使ってどこからでもK8sクラスターを管理できるようになります。Rancher上で管理されるあなた自身のK8s clusterを作成するということもできます。また、GKEやACSなどの主要なホスティングプロバイダ上の環境にとどまらず、kopsやkubeadmを使って構築した自前のクラスターに至るまで、Rancher上にインポートが可能です。</p></li>
+<li><p><strong>Kunernetes環境のインポート</strong> - Rancherを使ってどこからでもK8sクラスターを管理できるようになります。Rancher上で管理されるあなた自身のK8s clusterを作成するということもできます。<br>
+また、GKEやACSなどの主要なホスティングプロバイダ上の環境にとどまらず、kopsやkubeadmを使って構築した自前のクラスターに至るまで、Rancher上にインポートが可能です。</p></li>
 
-<li><p><strong>ホストテンプレート</strong> - RancherのDocker Machineインテグレーションを使って新規作成したホストは全て自動的にテンプレート化されるようになります。同一環境を追加で同じクラウドプロバイダーから作成する際に情報を再入力することなく、迅速にホストを立てることができます。</p></li>
+<li><p><strong>ホストテンプレート</strong> - RancherのDocker Machineインテグレーションを使って新規作成したホストは全て自動的にテンプレート化されるようになります。<br>
+同一環境を追加で同じクラウドプロバイダーから作成する際に情報を再入力することなく、迅速にホストを立てることができます。</p></li>
 </ul>
 
 <h2 id="既知の主要なバグ">既知の主要なバグ</h2>
 
 <ul>
-<li><p>Systemの状態がHealthyになる前にコンテナを作成すると、次のエラーが表示されることがわかっています。&rdquo;service account default/default was not found, retry after the service account is created&rdquo;<br />
-これは、最初のノードが追加される際、k8s componentsや全ての要求システムが立ち上がるまでに数分の時間を要することが原因です。管理画面右上のSystemよりヘルスチェックを行うことができます。一度Systemの状態がHealthyになれば、コンテナの追加や再構築などを行うことができます。</p></li>
+<li><p>Systemの状態がHealthyになる前にコンテナを作成すると、次のエラーが表示されることがわかっています。<br>
+&ldquo;service account default/default was not found, retry after the service account is created&rdquo;<br>
+これは、最初のノードが追加される際、k8s componentsや全ての要求システムが立ち上がるまでに数分の時間を要することが原因です。管理画面右上のSystemよりヘルスチェックを行うことができます。<br>
+一度Systemの状態がHealthyになれば、コンテナの追加や再構築などを行うことができます。</p></li>
 
 <li><p>このテクニカルプレビュー時点では、前バージョンからのアップデート、HAモードやDockerhubへのアクセスについてはサポート対象外です(エアギャップ環境もサポートされていません)。</p></li>
 
@@ -248,7 +257,8 @@ GA版のリリースが固まり次第、 <code>latest</code> や <code>stable</
 
 <li><p>クラウドプロバイダー経由でホストを追加する際に一定条件下でバグが発生することがわかっています。もし遭遇した場合は、一度ホストを削除してから再試行してください。</p></li>
 
-<li><p>現在、Anonymous volumeとNamed volumeがRancher上で正常に動作しないことがわかっています。そのため、カタログについても各ボリュームを利用しているものについては選択不可となっております。それらについてはサポートされ次第順次開放予定です。</p></li>
+<li><p>現在、Anonymous volumeとNamed volumeがRancher上で正常に動作しないことがわかっています。そのため、カタログについても各ボリュームを利用しているものについては選択不可となっております。<br>
+それらについてはサポートされ次第順次開放予定です。</p></li>
 </ul>
 
         
