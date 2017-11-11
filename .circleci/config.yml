@@ -1,0 +1,20 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: felicianotech/docker-hugo:0.30.2
+    working_directory: ~/project
+    steps:
+      - checkout
+      - run:
+          name: "Run Hugo"
+          command: HUGO_ENV=production hugo -v -s ~/project/src/ && ls -l
+      - run:
+          name: "Test Website"
+          command: htmlproofer ~/project/src/public --allow-hash-href --check-html --empty-alt-ignore
+      - run:
+          name: "Deploy"
+          command: |
+            if [ "${CIRCLE_BRANCH}" == "master" ]; then
+              ./test-hugo.sh
+            fi
