@@ -1,6 +1,8 @@
 # Rancher JP Site Project
 ---
 
+[![CircleCI](https://circleci.com/gh/rancherjp/site/tree/master.svg?style=svg)](https://circleci.com/gh/rancherjp/site/tree/master)
+
 ## ショートコード
 + 写真(images)  
     `{{<images "<ファイル名>" "<写真のキャプション>">}}`
