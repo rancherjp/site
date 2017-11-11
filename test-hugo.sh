@@ -5,9 +5,9 @@
 #////////////////////////////////////////////////
 
 
-commitMassage=`git log -n 1 --oneline --pretty=format:"%s"`
+commitMessage=`git log -n 1 --oneline --pretty=format:"%s"`
 
-if [[ "$commitMassage" =~ \["Site Update"\] ]]; then
+if [[ "$commitMessage" =~ \["Site Update"\] ]]; then
 
         echo "[Site Update] Updating www.rancher.jp has started..."
         sed -i -e 's@http://www.rancher.jp/site/@http://www.rancher.jp/@g' config.toml
