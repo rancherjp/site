@@ -3,12 +3,12 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://www.rancher.jp/site/releasenote/v1.6.8/</loc>
-    <lastmod>2017-09-02T00:00:00+00:00</lastmod>
+    <loc>http://www.rancher.jp/site/releasenote/v2.0.0-%E3%83%86%E3%82%AF%E3%83%8B%E3%82%AB%E3%83%AB%E3%83%97%E3%83%AC%E3%83%93%E3%83%A5%E3%83%BC/</loc>
+    <lastmod>2017-11-11T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://www.rancher.jp/site/releasenote/v2.0.0-%E3%83%86%E3%82%AF%E3%83%8B%E3%82%AB%E3%83%AB%E3%83%97%E3%83%AC%E3%83%93%E3%83%A5%E3%83%BC/</loc>
+    <loc>http://www.rancher.jp/site/releasenote/v1.6.8/</loc>
     <lastmod>2017-09-02T00:00:00+00:00</lastmod>
   </url>
   
@@ -133,7 +133,7 @@
   
   <url>
     <loc>http://www.rancher.jp/site/archives/2017/</loc>
-    <lastmod>2017-09-02T00:00:00+00:00</lastmod>
+    <lastmod>2017-11-11T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -176,6 +176,12 @@
   <url>
     <loc>http://www.rancher.jp/site/archives/2017/09/</loc>
     <lastmod>2017-09-02T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.rancher.jp/site/archives/2017/11/</loc>
+    <lastmod>2017-11-11T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -262,25 +268,25 @@
   
   <url>
     <loc>http://www.rancher.jp/site/</loc>
-    <lastmod>2017-09-02T00:00:00+00:00</lastmod>
+    <lastmod>2017-11-11T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://www.rancher.jp/site/tags/releasenote/</loc>
-    <lastmod>2017-09-02T00:00:00+00:00</lastmod>
+    <lastmod>2017-11-11T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://www.rancher.jp/site/categories/releasenote/</loc>
-    <lastmod>2017-09-02T00:00:00+00:00</lastmod>
+    <lastmod>2017-11-11T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://www.rancher.jp/site/releasenote/</loc>
-    <lastmod>2017-09-02T00:00:00+00:00</lastmod>
+    <lastmod>2017-11-11T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
