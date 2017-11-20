@@ -30,9 +30,9 @@ Rancher 2.0のテクニカルプレビューが利用可能になったことを
 そして、皆様のご意見やご提案をお寄せください。
 
 ## 参考リンク
-- Quick Start Guide(英語): http://rancher.com/docs/rancher/v2.0/en/quick-start-guide/152
-- フィードバック、コメント、提案用のフォーラム(英語): https://forums.rancher.com/c/rancher-2-0-tech-preview57
-- User Slack(英語): https://slack.rancher.io/35 #2-0-tech-preview
+- Quick Start Guide(英語): http://rancher.com/docs/rancher/v2.0/en/quick-start-guide/
+- フィードバック、コメント、提案用のフォーラム(英語): https://forums.rancher.com/c/rancher-2-0-tech-preview
+- User Slack(英語): https://slack.rancher.io/ #2-0-tech-preview
 - RancherJP Slack: http://slack.rancher.jp/
 
 ## 重要事項
