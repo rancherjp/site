@@ -1,4 +1,5 @@
 # 変更
+* `add` content/releasenote/release-v.2.0.0-tech-preview.md
 + `add` content/releasenote/release-v.1.6.0.md
 + `Mon Mar 6 11:41:38 JST` content/releasenote/release-v.1.5.0.md
 + `add`         content/releasenote/release-v.1.4.0.md
