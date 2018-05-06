@@ -179,16 +179,18 @@
 <h2 id="重要事項">重要事項</h2>
 
 <p>テクニカルプレビューの目的として、GA版のリリースに至るまでは全て <code>rancher/server:preview</code> タグにて最新ビルドをアップデートいたします。<br>
-GA版のリリースが固まり次第、 <code>latest</code> や <code>stable</code> についても必要に合わせ更新していきます。</p>
+GA版のリリースが固まり次第、 <code>latest</code> や <code>stable</code> についても必要に合わせ更新していきます。<br />
+(訳注: 2017/11/20時点では <code>preview</code> タグは <code>v2.0.0-alpha9</code> に相当します。)</p>
 
 <h2 id="プレビューの最新バージョンタグ">プレビューの最新バージョンタグ</h2>
 
 <blockquote>
-<p><strong>注意</strong>: 全ての最新機能を試すためにはrancher/server:previewをご利用ください</p>
+<p><strong>注意</strong>: 全ての最新機能を試すためにはrancher/server:previewをご利用ください<br />
+  (訳注: 2017/11/20時点では <code>preview</code> タグは <code>v2.0.0-alpha9</code> に相当するため最新機能を試す場合は最新の <code>v2.0.0-alpha-XX</code> バージョンをご利用ください。)</p>
 </blockquote>
 
 <ul>
-<li>rancher/server:v2.0.0-alpha8</li>
+<li>rancher/server:v2.0.0-alpha10</li>
 <li>rancher/agent:v2.0-alpha4</li>
 <li>rancher/lb-service-haproxy:v0.8.1</li>
 <li>rancher-v1.0.0-alpha3</li>
@@ -259,6 +261,16 @@ GA版のリリースが固まり次第、 <code>latest</code> や <code>stable</
 
 <li><p>現在、Anonymous volumeとNamed volumeがRancher上で正常に動作しないことがわかっています。そのため、カタログについても各ボリュームを利用しているものについては選択不可となっております。<br>
 それらについてはサポートされ次第順次開放予定です。</p></li>
+</ul>
+
+<h2 id="追記の修正">追記の修正</h2>
+
+<p>2017/11/20時点で(v2.0.0-alpha10)、以下の機能について追加が行われています。</p>
+
+<ul>
+<li>外部のデータベースとSSLをインストールする機能を追加</li>
+<li>プライベートレジストリを使用する機能を追加</li>
+<li>インターネットにアクセスすることなくUIを動かす機能を追加</li>
 </ul>
 
         
