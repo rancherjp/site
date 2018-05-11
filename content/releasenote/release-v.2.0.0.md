@@ -1,3 +1,19 @@
+---
+date: "2018-05-12"
+title: "リリース v2.0.0"
+slug: "v2.0.0"
+author: "Rancher JP"
+description: "リリース v2.0.0"
+draft: false
+tags:
+  - "releasenote"
+categories:
+  - "releasenote"
+archives:
+  - "2018"
+  - "2018/05"
+---
+
 # Release v2.0.0
 数か月に渡る開発期間を経て、私たちはついに Rancher 2.0 をユーザに提供できるようになりました。
 以前のバージョンの Rancher バージョン 1.6 は、 Docker 上に作られたコンテナ管理プラットフォームでした。 Rancher 2.0 は Rancher 1.6 での経験と成功をもとに構築されていますが、2.0 においては Rancher の機能のほとんどが Kubernetes 上で動くように再設計されています。 Rancher 2.0 はバージョン 1.6 の UI やカタログのようなユーザフレンドリーさは残しつつも、以下のようなたくさんの新機能も備えています。
