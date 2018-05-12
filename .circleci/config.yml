@@ -8,10 +8,10 @@ jobs:
       - checkout
       - run:
           name: "Run Hugo"
-          command: HUGO_ENV=production hugo -v -s ~/project/
+          command: HUGO_ENV=production hugo -v --config config.toml -s "${CIRCLE_WORKING_DIRECTORY}" -d docs
       - run:
           name: "Test Website"
-          command: htmlproofer ~/project/src/public --allow-hash-href --check-html --empty-alt-ignore
+          command: htmlproofer "${CIRCLE_WORKING_DIRECTORY}/src/public" --allow-hash-href --check-html --empty-alt-ignore
       - run:
           name: "Set GitHub information"
           command: git config --global user.name ${GITHUB_USERNAME} && git config --global user.email ${GITHUB_EMAIL_ADDRESS}

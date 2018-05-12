@@ -16,7 +16,7 @@ if [[ "$commitMessage" =~ \["Site Update"\] ]]; then
 
         cd ~/
         git clone git@github.com:rancherjp/rancherjp.github.io.git
-        cp -vrp ~/site/docs/* ~/rancherjp.github.io/
+        cp -vrp "${CIRCLE_WORKING_DIRECTORY}/docs/*" ~/rancherjp.github.io/
         cd ~/rancherjp.github.io
         git add . -A
         git commit -m "CircleCI automatic page build Time:[`date`]" || true
