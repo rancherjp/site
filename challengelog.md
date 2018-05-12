@@ -1,4 +1,5 @@
 # 変更
+* `fix` circleci
 * `add` content/releasenote/release-v.2.0.0.md
 * `add` content/releasenote/release-v.2.0.0-tech-preview.md
 + `add` content/releasenote/release-v.1.6.0.md
