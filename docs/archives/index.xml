@@ -129,5 +129,23 @@
       <description></description>
     </item>
     
+    <item>
+      <title>2018</title>
+      <link>http://www.rancher.jp/site/archives/2018/</link>
+      <pubDate>Sat, 12 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.rancher.jp/site/archives/2018/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>2018/05</title>
+      <link>http://www.rancher.jp/site/archives/2018/05/</link>
+      <pubDate>Sat, 12 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.rancher.jp/site/archives/2018/05/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>

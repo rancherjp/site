@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
     <copyright>© 2016 Rancher JP</copyright>
-    <lastBuildDate>Sat, 11 Nov 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 12 May 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://www.rancher.jp/site/tags/releasenote/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>リリース v2.0.0</title>
+      <link>http://www.rancher.jp/site/releasenote/v2.0.0/</link>
+      <pubDate>Sat, 12 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.rancher.jp/site/releasenote/v2.0.0/</guid>
+      <description>Release v2.0.0 数か月に渡る開発期間を経て、私たちはついに Rancher 2.0 をユーザに提供できるようになりました。 以前のバージョンの Rancher バージョン 1.6 は、 Docker 上に作られたコ</description>
+    </item>
     
     <item>
       <title>リリース v2.0.0 テクニカルプレビュー</title>
