@@ -2,220 +2,220 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Rancher JP</title>
-    <link>http://www.rancher.jp/site/</link>
+    <link>https://www.rancher.jp/site/</link>
     <description>Recent content on Rancher JP</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
     <copyright>© 2018 Rancher JP</copyright>
     <lastBuildDate>Sat, 12 May 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://www.rancher.jp/site/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.rancher.jp/site/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>リリース v2.0.0</title>
-      <link>http://www.rancher.jp/site/releasenote/v2.0.0/</link>
+      <link>https://www.rancher.jp/site/releasenote/v2.0.0/</link>
       <pubDate>Sat, 12 May 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://www.rancher.jp/site/releasenote/v2.0.0/</guid>
+      <guid>https://www.rancher.jp/site/releasenote/v2.0.0/</guid>
       <description>Release v2.0.0 数か月に渡る開発期間を経て、私たちはついに Rancher 2.0 をユーザに提供できるようになりました。 以前のバージョンの Rancher バージョン 1.6 は、 Docker 上に作られたコ</description>
     </item>
     
     <item>
       <title>リリース v2.0.0 テクニカルプレビュー</title>
-      <link>http://www.rancher.jp/site/releasenote/v2.0.0-%E3%83%86%E3%82%AF%E3%83%8B%E3%82%AB%E3%83%AB%E3%83%97%E3%83%AC%E3%83%93%E3%83%A5%E3%83%BC/</link>
+      <link>https://www.rancher.jp/site/releasenote/v2.0.0-%E3%83%86%E3%82%AF%E3%83%8B%E3%82%AB%E3%83%AB%E3%83%97%E3%83%AC%E3%83%93%E3%83%A5%E3%83%BC/</link>
       <pubDate>Sat, 11 Nov 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://www.rancher.jp/site/releasenote/v2.0.0-%E3%83%86%E3%82%AF%E3%83%8B%E3%82%AB%E3%83%AB%E3%83%97%E3%83%AC%E3%83%93%E3%83%A5%E3%83%BC/</guid>
+      <guid>https://www.rancher.jp/site/releasenote/v2.0.0-%E3%83%86%E3%82%AF%E3%83%8B%E3%82%AB%E3%83%AB%E3%83%97%E3%83%AC%E3%83%93%E3%83%A5%E3%83%BC/</guid>
       <description>リリース v2.0.0 テクニカルプレビュー Rancher 2.0のテクニカルプレビューが利用可能になったことをお知らせします。 このリリースは、我々のエンジニアチームが</description>
     </item>
     
     <item>
       <title>リリース v1.6.8</title>
-      <link>http://www.rancher.jp/site/releasenote/v1.6.8/</link>
+      <link>https://www.rancher.jp/site/releasenote/v1.6.8/</link>
       <pubDate>Sat, 02 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://www.rancher.jp/site/releasenote/v1.6.8/</guid>
+      <guid>https://www.rancher.jp/site/releasenote/v1.6.8/</guid>
       <description>リリース v1.6.8 バージョン rancher/server:v1.6.8 rancher/agent:v1.2.6 rancher/lb-service-proxy:v0.7.9 rancher-v0.6.4 rancher-compose-v0.12.5 対応しているDockerのバージョン Docker 1.12.3-1.12.6 Docker 1.13.1（Kubenetesのサポートなし） Docker 17.03.0-c</description>
     </item>
     
     <item>
       <title>リリース v1.6.6</title>
-      <link>http://www.rancher.jp/site/releasenote/v1.6.6/</link>
+      <link>https://www.rancher.jp/site/releasenote/v1.6.6/</link>
       <pubDate>Tue, 01 Aug 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://www.rancher.jp/site/releasenote/v1.6.6/</guid>
+      <guid>https://www.rancher.jp/site/releasenote/v1.6.6/</guid>
       <description>リリース v1.6.6 バージョン rancher/server:v1.6.6 rancher/agent:v1.2.5 rancher/lb-service-proxy:v0.7.6 rancher-v0.6.3 rancher-compose-v0.12.5 対応しているDockerのバージョン Docker 1.12.3-1.12.6 Docker 1.13.1 (Kubenetesのサポートなし) Docker 17.03.0-ce/ee(</description>
     </item>
     
     <item>
       <title>リリース v1.6.0</title>
-      <link>http://www.rancher.jp/site/releasenote/v1.6.0/</link>
+      <link>https://www.rancher.jp/site/releasenote/v1.6.0/</link>
       <pubDate>Fri, 05 May 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://www.rancher.jp/site/releasenote/v1.6.0/</guid>
+      <guid>https://www.rancher.jp/site/releasenote/v1.6.0/</guid>
       <description>リリース v1.6.0 バージョン rancher/server:v1.6.0 rancher/agent:v1.2.2 rancher/lb-service-proxy:v0.7.1 rancher-v0.6.0 rancher-compose-v0.12.5 対応しているDockerのバージョン Docker 1.10.3 Docker 1.12.3-1.12.6 Docker 1.13.1 (Kubenetesのサポートなし) Docker 17.03.0-ce(K</description>
     </item>
     
     <item>
       <title>オープンソースカンファレンス2017 Tokyo/Spring 出展</title>
-      <link>http://www.rancher.jp/site/content/2017/04/14/osc2017-spring/</link>
+      <link>https://www.rancher.jp/site/content/2017/04/14/osc2017-spring/</link>
       <pubDate>Fri, 14 Apr 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://www.rancher.jp/site/content/2017/04/14/osc2017-spring/</guid>
+      <guid>https://www.rancher.jp/site/content/2017/04/14/osc2017-spring/</guid>
       <description>オープンソースカンファレンス2017 Tokyo/Spring 出展 してきました。 はい、今日は 4月14日 になりますｗ イソガシクテ更新できませんでしたー たくさんの方に Rancher</description>
     </item>
     
     <item>
       <title>リリース v1.5.0</title>
-      <link>http://www.rancher.jp/site/releasenote/v1.5.0/</link>
+      <link>https://www.rancher.jp/site/releasenote/v1.5.0/</link>
       <pubDate>Fri, 03 Mar 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://www.rancher.jp/site/releasenote/v1.5.0/</guid>
+      <guid>https://www.rancher.jp/site/releasenote/v1.5.0/</guid>
       <description>リリース v1.5.0 バージョン rancher/server:v1.5.0 rancher/agent:v1.2.1 rancher/lb-service-haproxy:v0.6.2 rancher-v0.5.0 rancher-compose-v0.12.3 対応している Docker のバージョン Docker 1.10.3 Docker 1.12.3-1.12.6 Docker 1.13.1 (Kubenetes未対応) Docker 17.03.0-ce (Kubenetes未対応) Ranche</description>
     </item>
     
     <item>
       <title>リリース v1.4.0</title>
-      <link>http://www.rancher.jp/site/releasenote/v.1.4.0/</link>
+      <link>https://www.rancher.jp/site/releasenote/v.1.4.0/</link>
       <pubDate>Sun, 05 Feb 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://www.rancher.jp/site/releasenote/v.1.4.0/</guid>
+      <guid>https://www.rancher.jp/site/releasenote/v.1.4.0/</guid>
       <description>リリース v1.4.0 バージョン rancher/server:v1.4.0 rancher/agent:v1.2.0 rancher/lb-service-haproxy:v0.5.9 rancher-compose-v0.12.2 rancher-v0.4.1 対応している Docker のバージョン Docker 1.10.3 Docker 1.12.3-1.12.6 Kubernetes UI の変更 Kubernetesをメインのオーケストレーションエンジンにしてい</description>
     </item>
     
     <item>
       <title>リリース v1.3.3</title>
-      <link>http://www.rancher.jp/site/releasenote/v.1.3.3/</link>
+      <link>https://www.rancher.jp/site/releasenote/v.1.3.3/</link>
       <pubDate>Tue, 24 Jan 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://www.rancher.jp/site/releasenote/v.1.3.3/</guid>
+      <guid>https://www.rancher.jp/site/releasenote/v.1.3.3/</guid>
       <description>リリース v1.3.3 バージョン rancher/server:v1.3.3 rancher/agent:v1.1.3 rancher/lb-service-haproxy:v0.4.9 rancher-compose-v0.12.1 rancher-v0.4.1 注意: 新しいinfrastructure servicesでは、ロードバランサの機能を指定のHAProxyイメー</description>
     </item>
     
     <item>
       <title>リリース v1.3.1</title>
-      <link>http://www.rancher.jp/site/releasenote/v.1.3.1/</link>
+      <link>https://www.rancher.jp/site/releasenote/v.1.3.1/</link>
       <pubDate>Sat, 14 Jan 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://www.rancher.jp/site/releasenote/v.1.3.1/</guid>
+      <guid>https://www.rancher.jp/site/releasenote/v.1.3.1/</guid>
       <description>リリース v1.3.1 バージョン rancher/server:v1.3.1 rancher/agent:v1.1.3 rancher/lb-service-haproxy:v0.4.8 rancher-compose-v0.12.1 rancher-v0.4.1 注意: 新しいinfrastructure servicesでは、ロードバランサの機能を指定のHAProxyイメー</description>
     </item>
     
     <item>
       <title>リリース v1.3.2</title>
-      <link>http://www.rancher.jp/site/releasenote/v.1.3.2/</link>
+      <link>https://www.rancher.jp/site/releasenote/v.1.3.2/</link>
       <pubDate>Sat, 14 Jan 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://www.rancher.jp/site/releasenote/v.1.3.2/</guid>
+      <guid>https://www.rancher.jp/site/releasenote/v.1.3.2/</guid>
       <description>リリース v1.3.2 バージョン rancher/server:v1.3.2 rancher/agent:v1.1.3 rancher/lb-service-haproxy:v0.4.9 rancher-compose-v0.12.1 rancher-v0.4.1 注意: 新しいinfrastructure servicesでは、ロードバランサの機能を指定のHAProxyイメー</description>
     </item>
     
     <item>
       <title>Rancher Meetup Tokyo #3</title>
-      <link>http://www.rancher.jp/site/content/2017/01/11/rancher-meetup-03/</link>
+      <link>https://www.rancher.jp/site/content/2017/01/11/rancher-meetup-03/</link>
       <pubDate>Wed, 11 Jan 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://www.rancher.jp/site/content/2017/01/11/rancher-meetup-03/</guid>
+      <guid>https://www.rancher.jp/site/content/2017/01/11/rancher-meetup-03/</guid>
       <description>【第3回】コンテナ管理ツール Rancher勉強会 Rancherとは？ RancherはOSSと商用版で提供されるコンテナ環境構築・運用プラット</description>
     </item>
     
     <item>
       <title>リリース v1.3.0</title>
-      <link>http://www.rancher.jp/site/releasenote/v.1.3.0/</link>
+      <link>https://www.rancher.jp/site/releasenote/v.1.3.0/</link>
       <pubDate>Wed, 04 Jan 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://www.rancher.jp/site/releasenote/v.1.3.0/</guid>
+      <guid>https://www.rancher.jp/site/releasenote/v.1.3.0/</guid>
       <description>リリース v1.3.0 バージョン rancher/server:v1.3.0 rancher/agent:v1.1.3 rancher/lb-service-haproxy:v0.4.8 rancher-compose-v0.12.1 rancher-v0.4.1 注意: 新しいinfrastructure servicesでは、ロードバランサの機能を指定のHAProxyイメー</description>
     </item>
     
     <item>
       <title>リリース v1.2.2</title>
-      <link>http://www.rancher.jp/site/releasenote/v.1.2.2/</link>
+      <link>https://www.rancher.jp/site/releasenote/v.1.2.2/</link>
       <pubDate>Fri, 23 Dec 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://www.rancher.jp/site/releasenote/v.1.2.2/</guid>
+      <guid>https://www.rancher.jp/site/releasenote/v.1.2.2/</guid>
       <description>リリース v1.2.2 バージョン rancher/server:v1.2.2 rancher/agent:v1.1.2 rancher/lb-service-haproxy:v0.4.6 rancher-compose-v0.12.1 rancher-v0.4.1 注意: 新しいinfrastructure servicesでは、ロードバランサの機能を指定のHAProxyイメー</description>
     </item>
     
     <item>
       <title>[翻訳]見逃されているかもしれないコンテナのレジストリ</title>
-      <link>http://www.rancher.jp/site/translated/container-registries-might-missed-ja/</link>
+      <link>https://www.rancher.jp/site/translated/container-registries-might-missed-ja/</link>
       <pubDate>Thu, 22 Dec 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://www.rancher.jp/site/translated/container-registries-might-missed-ja/</guid>
+      <guid>https://www.rancher.jp/site/translated/container-registries-might-missed-ja/</guid>
       <description>以下は、 Rancher Labs | Container registries you may have missed | Rancher Labs http://rancher.com/container-registries-might-missed/ からの翻訳です。 Container Registries You Might Have Missed 見逃されているかもしれないコンテナのレジストリ 2016年11月10日 Vince Power レジス</description>
     </item>
     
     <item>
       <title>リリース v1.2.1</title>
-      <link>http://www.rancher.jp/site/releasenote/v.1.2.1/</link>
+      <link>https://www.rancher.jp/site/releasenote/v.1.2.1/</link>
       <pubDate>Sat, 17 Dec 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://www.rancher.jp/site/releasenote/v.1.2.1/</guid>
+      <guid>https://www.rancher.jp/site/releasenote/v.1.2.1/</guid>
       <description>リリース v1.2.1 バージョン rancher/server:v1.2.1 rancher/agent:v1.1.1 rancher/lb-service-haproxy:v0.4.6 rancher-compose-v0.12.1 rancher-v0.4.1 注意: 新しいinfrastructure servicesでは、ロードバランサの機能を指定のHAProxyイメー</description>
     </item>
     
     <item>
       <title>リリース v1.2.0</title>
-      <link>http://www.rancher.jp/site/releasenote/v.1.2.0/</link>
+      <link>https://www.rancher.jp/site/releasenote/v.1.2.0/</link>
       <pubDate>Sun, 04 Dec 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://www.rancher.jp/site/releasenote/v.1.2.0/</guid>
+      <guid>https://www.rancher.jp/site/releasenote/v.1.2.0/</guid>
       <description>リリース v1.2.0 バージョン rancher/server:v1.2.0 rancher/agent:v1.1.0 rancher/lb-service-haproxy:v0.4.2 rancher-compose-v0.12.0 rancher-v0.4.0 注意: 新しいinfrastructure servicesでは、ロードバランサの機能を指定のHAProxyイメー</description>
     </item>
     
     <item>
       <title>クイックスタートガイド</title>
-      <link>http://www.rancher.jp/site/docs/qsg/</link>
+      <link>https://www.rancher.jp/site/docs/qsg/</link>
       <pubDate>Wed, 30 Nov 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://www.rancher.jp/site/docs/qsg/</guid>
+      <guid>https://www.rancher.jp/site/docs/qsg/</guid>
       <description>クイック スタート ガイド このガイドでは、1台のLinuxサーバーに全てインストールして動く、最も簡単なRancherをインストールしてみます。</description>
     </item>
     
     <item>
       <title>Rancher Event</title>
-      <link>http://www.rancher.jp/site/event-list/</link>
+      <link>https://www.rancher.jp/site/event-list/</link>
       <pubDate>Thu, 27 Oct 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://www.rancher.jp/site/event-list/</guid>
+      <guid>https://www.rancher.jp/site/event-list/</guid>
       <description>Rancher Meetup 【会場変更 →渋谷】Rancher Meetup Tokyo #3 - connpass Rancher Meetup Tokyo #3 Rancher Meetup Tokyo #2 - connpass Rancher Meetup Tokyo #2 - 懇親会 - connpass Rancher Meetup Tokyo #1 - connpass Rancher Meetup Tokyo #1 Rancher もくもく勉強会 Rancher もくもく勉強会 #2</description>
     </item>
     
     <item>
       <title>Rancher もくもく勉強会 #1</title>
-      <link>http://www.rancher.jp/site/study/rancher-workshop-01/</link>
+      <link>https://www.rancher.jp/site/study/rancher-workshop-01/</link>
       <pubDate>Thu, 27 Oct 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://www.rancher.jp/site/study/rancher-workshop-01/</guid>
+      <guid>https://www.rancher.jp/site/study/rancher-workshop-01/</guid>
       <description>Rancher もくもく勉強会 #1 - connpass http://connpass.com/event/41997/ 挨拶 自己紹介 自己紹介のつもりが、名刺交換会から開始になってしまいました。 ・初心者向けチーム ・もくもくチーム に分かれて</description>
     </item>
     
     <item>
       <title>Rancher Meetup Tokyo #1</title>
-      <link>http://www.rancher.jp/site/content/2016/10/07/rancher-meetup-01/</link>
+      <link>https://www.rancher.jp/site/content/2016/10/07/rancher-meetup-01/</link>
       <pubDate>Fri, 07 Oct 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://www.rancher.jp/site/content/2016/10/07/rancher-meetup-01/</guid>
+      <guid>https://www.rancher.jp/site/content/2016/10/07/rancher-meetup-01/</guid>
       <description>今熱い盛り上がりを見せているRANCHERの勉強会「Rancher Meetup Tokyo #1」参加レポート！ http://snickerjp.blogspot.jp/2016/10/rancher-meetup-tokyo-vol1.html コンテナオーケストレーション管理ツールとして、以</description>
     </item>
     
     <item>
       <title>Q And A</title>
-      <link>http://www.rancher.jp/site/qa/</link>
+      <link>https://www.rancher.jp/site/qa/</link>
       <pubDate>Mon, 18 Jan 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://www.rancher.jp/site/qa/</guid>
+      <guid>https://www.rancher.jp/site/qa/</guid>
       <description>このページについて Rancher JP では皆様に Rancher, Rancher&amp;gt;OS をご使用していただいて疑問や困った事などを SlackのChannel #qa にて議論・検討をしています。 その中</description>
     </item>
     
     <item>
       <title>About</title>
-      <link>http://www.rancher.jp/site/about/</link>
+      <link>https://www.rancher.jp/site/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://www.rancher.jp/site/about/</guid>
+      <guid>https://www.rancher.jp/site/about/</guid>
       <description>このページについて 本ページは Rancher JP による Rancher 及び関連するコンテナ技術に関する情報発信ページです。 日本語による Rancher のリリース情報、新機能解説、ユーザ</description>
     </item>
     

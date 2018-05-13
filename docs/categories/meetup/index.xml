@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Meetup on Rancher JP</title>
-    <link>http://www.rancher.jp/site/categories/meetup/</link>
+    <link>https://www.rancher.jp/site/categories/meetup/</link>
     <description>Recent content in Meetup on Rancher JP</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
     <copyright>© 2018 Rancher JP</copyright>
     <lastBuildDate>Wed, 11 Jan 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://www.rancher.jp/site/categories/meetup/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.rancher.jp/site/categories/meetup/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Rancher Meetup Tokyo #3</title>
-      <link>http://www.rancher.jp/site/content/2017/01/11/rancher-meetup-03/</link>
+      <link>https://www.rancher.jp/site/content/2017/01/11/rancher-meetup-03/</link>
       <pubDate>Wed, 11 Jan 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://www.rancher.jp/site/content/2017/01/11/rancher-meetup-03/</guid>
+      <guid>https://www.rancher.jp/site/content/2017/01/11/rancher-meetup-03/</guid>
       <description>【第3回】コンテナ管理ツール Rancher勉強会 Rancherとは？ RancherはOSSと商用版で提供されるコンテナ環境構築・運用プラット</description>
     </item>
     
     <item>
       <title>Rancher Meetup Tokyo #1</title>
-      <link>http://www.rancher.jp/site/content/2016/10/07/rancher-meetup-01/</link>
+      <link>https://www.rancher.jp/site/content/2016/10/07/rancher-meetup-01/</link>
       <pubDate>Fri, 07 Oct 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://www.rancher.jp/site/content/2016/10/07/rancher-meetup-01/</guid>
+      <guid>https://www.rancher.jp/site/content/2016/10/07/rancher-meetup-01/</guid>
       <description>今熱い盛り上がりを見せているRANCHERの勉強会「Rancher Meetup Tokyo #1」参加レポート！ http://snickerjp.blogspot.jp/2016/10/rancher-meetup-tokyo-vol1.html コンテナオーケストレーション管理ツールとして、以</description>
     </item>
     

@@ -2,40 +2,40 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Pages on Rancher JP</title>
-    <link>http://www.rancher.jp/site/page/</link>
+    <link>https://www.rancher.jp/site/page/</link>
     <description>Recent content in Pages on Rancher JP</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
     <copyright>© 2018 Rancher JP</copyright>
     <lastBuildDate>Thu, 27 Oct 2016 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://www.rancher.jp/site/page/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.rancher.jp/site/page/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Rancher Event</title>
-      <link>http://www.rancher.jp/site/event-list/</link>
+      <link>https://www.rancher.jp/site/event-list/</link>
       <pubDate>Thu, 27 Oct 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://www.rancher.jp/site/event-list/</guid>
+      <guid>https://www.rancher.jp/site/event-list/</guid>
       <description>Rancher Meetup 【会場変更 →渋谷】Rancher Meetup Tokyo #3 - connpass Rancher Meetup Tokyo #3 Rancher Meetup Tokyo #2 - connpass Rancher Meetup Tokyo #2 - 懇親会 - connpass Rancher Meetup Tokyo #1 - connpass Rancher Meetup Tokyo #1 Rancher もくもく勉強会 Rancher もくもく勉強会 #2</description>
     </item>
     
     <item>
       <title>Q And A</title>
-      <link>http://www.rancher.jp/site/qa/</link>
+      <link>https://www.rancher.jp/site/qa/</link>
       <pubDate>Mon, 18 Jan 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://www.rancher.jp/site/qa/</guid>
+      <guid>https://www.rancher.jp/site/qa/</guid>
       <description>このページについて Rancher JP では皆様に Rancher, Rancher&amp;gt;OS をご使用していただいて疑問や困った事などを SlackのChannel #qa にて議論・検討をしています。 その中</description>
     </item>
     
     <item>
       <title>About</title>
-      <link>http://www.rancher.jp/site/about/</link>
+      <link>https://www.rancher.jp/site/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://www.rancher.jp/site/about/</guid>
+      <guid>https://www.rancher.jp/site/about/</guid>
       <description>このページについて 本ページは Rancher JP による Rancher 及び関連するコンテナ技術に関する情報発信ページです。 日本語による Rancher のリリース情報、新機能解説、ユーザ</description>
     </item>
     

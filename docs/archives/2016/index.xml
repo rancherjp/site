@@ -2,85 +2,85 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>2016 on Rancher JP</title>
-    <link>http://www.rancher.jp/site/archives/2016/</link>
+    <link>https://www.rancher.jp/site/archives/2016/</link>
     <description>Recent content in 2016 on Rancher JP</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
     <copyright>© 2018 Rancher JP</copyright>
     <lastBuildDate>Fri, 23 Dec 2016 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://www.rancher.jp/site/archives/2016/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.rancher.jp/site/archives/2016/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>リリース v1.2.2</title>
-      <link>http://www.rancher.jp/site/releasenote/v.1.2.2/</link>
+      <link>https://www.rancher.jp/site/releasenote/v.1.2.2/</link>
       <pubDate>Fri, 23 Dec 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://www.rancher.jp/site/releasenote/v.1.2.2/</guid>
+      <guid>https://www.rancher.jp/site/releasenote/v.1.2.2/</guid>
       <description>リリース v1.2.2 バージョン rancher/server:v1.2.2 rancher/agent:v1.1.2 rancher/lb-service-haproxy:v0.4.6 rancher-compose-v0.12.1 rancher-v0.4.1 注意: 新しいinfrastructure servicesでは、ロードバランサの機能を指定のHAProxyイメー</description>
     </item>
     
     <item>
       <title>[翻訳]見逃されているかもしれないコンテナのレジストリ</title>
-      <link>http://www.rancher.jp/site/translated/container-registries-might-missed-ja/</link>
+      <link>https://www.rancher.jp/site/translated/container-registries-might-missed-ja/</link>
       <pubDate>Thu, 22 Dec 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://www.rancher.jp/site/translated/container-registries-might-missed-ja/</guid>
+      <guid>https://www.rancher.jp/site/translated/container-registries-might-missed-ja/</guid>
       <description>以下は、 Rancher Labs | Container registries you may have missed | Rancher Labs http://rancher.com/container-registries-might-missed/ からの翻訳です。 Container Registries You Might Have Missed 見逃されているかもしれないコンテナのレジストリ 2016年11月10日 Vince Power レジス</description>
     </item>
     
     <item>
       <title>リリース v1.2.1</title>
-      <link>http://www.rancher.jp/site/releasenote/v.1.2.1/</link>
+      <link>https://www.rancher.jp/site/releasenote/v.1.2.1/</link>
       <pubDate>Sat, 17 Dec 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://www.rancher.jp/site/releasenote/v.1.2.1/</guid>
+      <guid>https://www.rancher.jp/site/releasenote/v.1.2.1/</guid>
       <description>リリース v1.2.1 バージョン rancher/server:v1.2.1 rancher/agent:v1.1.1 rancher/lb-service-haproxy:v0.4.6 rancher-compose-v0.12.1 rancher-v0.4.1 注意: 新しいinfrastructure servicesでは、ロードバランサの機能を指定のHAProxyイメー</description>
     </item>
     
     <item>
       <title>リリース v1.2.0</title>
-      <link>http://www.rancher.jp/site/releasenote/v.1.2.0/</link>
+      <link>https://www.rancher.jp/site/releasenote/v.1.2.0/</link>
       <pubDate>Sun, 04 Dec 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://www.rancher.jp/site/releasenote/v.1.2.0/</guid>
+      <guid>https://www.rancher.jp/site/releasenote/v.1.2.0/</guid>
       <description>リリース v1.2.0 バージョン rancher/server:v1.2.0 rancher/agent:v1.1.0 rancher/lb-service-haproxy:v0.4.2 rancher-compose-v0.12.0 rancher-v0.4.0 注意: 新しいinfrastructure servicesでは、ロードバランサの機能を指定のHAProxyイメー</description>
     </item>
     
     <item>
       <title>クイックスタートガイド</title>
-      <link>http://www.rancher.jp/site/docs/qsg/</link>
+      <link>https://www.rancher.jp/site/docs/qsg/</link>
       <pubDate>Wed, 30 Nov 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://www.rancher.jp/site/docs/qsg/</guid>
+      <guid>https://www.rancher.jp/site/docs/qsg/</guid>
       <description>クイック スタート ガイド このガイドでは、1台のLinuxサーバーに全てインストールして動く、最も簡単なRancherをインストールしてみます。</description>
     </item>
     
     <item>
       <title>Rancher Event</title>
-      <link>http://www.rancher.jp/site/event-list/</link>
+      <link>https://www.rancher.jp/site/event-list/</link>
       <pubDate>Thu, 27 Oct 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://www.rancher.jp/site/event-list/</guid>
+      <guid>https://www.rancher.jp/site/event-list/</guid>
       <description>Rancher Meetup 【会場変更 →渋谷】Rancher Meetup Tokyo #3 - connpass Rancher Meetup Tokyo #3 Rancher Meetup Tokyo #2 - connpass Rancher Meetup Tokyo #2 - 懇親会 - connpass Rancher Meetup Tokyo #1 - connpass Rancher Meetup Tokyo #1 Rancher もくもく勉強会 Rancher もくもく勉強会 #2</description>
     </item>
     
     <item>
       <title>Rancher もくもく勉強会 #1</title>
-      <link>http://www.rancher.jp/site/study/rancher-workshop-01/</link>
+      <link>https://www.rancher.jp/site/study/rancher-workshop-01/</link>
       <pubDate>Thu, 27 Oct 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://www.rancher.jp/site/study/rancher-workshop-01/</guid>
+      <guid>https://www.rancher.jp/site/study/rancher-workshop-01/</guid>
       <description>Rancher もくもく勉強会 #1 - connpass http://connpass.com/event/41997/ 挨拶 自己紹介 自己紹介のつもりが、名刺交換会から開始になってしまいました。 ・初心者向けチーム ・もくもくチーム に分かれて</description>
     </item>
     
     <item>
       <title>Rancher Meetup Tokyo #1</title>
-      <link>http://www.rancher.jp/site/content/2016/10/07/rancher-meetup-01/</link>
+      <link>https://www.rancher.jp/site/content/2016/10/07/rancher-meetup-01/</link>
       <pubDate>Fri, 07 Oct 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://www.rancher.jp/site/content/2016/10/07/rancher-meetup-01/</guid>
+      <guid>https://www.rancher.jp/site/content/2016/10/07/rancher-meetup-01/</guid>
       <description>今熱い盛り上がりを見せているRANCHERの勉強会「Rancher Meetup Tokyo #1」参加レポート！ http://snickerjp.blogspot.jp/2016/10/rancher-meetup-tokyo-vol1.html コンテナオーケストレーション管理ツールとして、以</description>
     </item>
     

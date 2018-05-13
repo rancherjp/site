@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Traslated on Rancher JP</title>
-    <link>http://www.rancher.jp/site/tags/traslated/</link>
+    <link>https://www.rancher.jp/site/tags/traslated/</link>
     <description>Recent content in Traslated on Rancher JP</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
     <copyright>© 2018 Rancher JP</copyright>
     <lastBuildDate>Thu, 22 Dec 2016 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://www.rancher.jp/site/tags/traslated/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.rancher.jp/site/tags/traslated/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>[翻訳]見逃されているかもしれないコンテナのレジストリ</title>
-      <link>http://www.rancher.jp/site/translated/container-registries-might-missed-ja/</link>
+      <link>https://www.rancher.jp/site/translated/container-registries-might-missed-ja/</link>
       <pubDate>Thu, 22 Dec 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://www.rancher.jp/site/translated/container-registries-might-missed-ja/</guid>
+      <guid>https://www.rancher.jp/site/translated/container-registries-might-missed-ja/</guid>
       <description>以下は、 Rancher Labs | Container registries you may have missed | Rancher Labs http://rancher.com/container-registries-might-missed/ からの翻訳です。 Container Registries You Might Have Missed 見逃されているかもしれないコンテナのレジストリ 2016年11月10日 Vince Power レジス</description>
     </item>
     

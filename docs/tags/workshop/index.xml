@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Workshop on Rancher JP</title>
-    <link>http://www.rancher.jp/site/tags/workshop/</link>
+    <link>https://www.rancher.jp/site/tags/workshop/</link>
     <description>Recent content in Workshop on Rancher JP</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
     <copyright>© 2018 Rancher JP</copyright>
     <lastBuildDate>Thu, 27 Oct 2016 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://www.rancher.jp/site/tags/workshop/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.rancher.jp/site/tags/workshop/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Rancher もくもく勉強会 #1</title>
-      <link>http://www.rancher.jp/site/study/rancher-workshop-01/</link>
+      <link>https://www.rancher.jp/site/study/rancher-workshop-01/</link>
       <pubDate>Thu, 27 Oct 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://www.rancher.jp/site/study/rancher-workshop-01/</guid>
+      <guid>https://www.rancher.jp/site/study/rancher-workshop-01/</guid>
       <description>Rancher もくもく勉強会 #1 - connpass http://connpass.com/event/41997/ 挨拶 自己紹介 自己紹介のつもりが、名刺交換会から開始になってしまいました。 ・初心者向けチーム ・もくもくチーム に分かれて</description>
     </item>
     
