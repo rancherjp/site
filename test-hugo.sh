@@ -10,7 +10,7 @@ commitMessage=`git log -n 1 --oneline --pretty=format:"%s"`
 if [[ "$commitMessage" =~ \["Site Update"\] ]]; then
 
         echo "[Site Update] Updating www.rancher.jp has started..."
-        sed -i -e 's@http://www.rancher.jp/site/@http://www.rancher.jp/@g' config.toml
+        sed -i -e 's@https://www.rancher.jp/site/@https://www.rancher.jp/@g' config.toml
         sed -i -e '/noindex/d' config.toml
         hugo -d docs
 
