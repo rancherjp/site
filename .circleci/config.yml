@@ -6,6 +6,9 @@ jobs:
     working_directory: ~/project
     steps:
       - checkout
+      - add_ssh_keys:
+          fingerprints:
+            - "63:6f:a6:75:a1:ec:ae:ff:64:0e:b2:01:a2:1d:45:13"
       - run:
           name: "Run Hugo"
           command: HUGO_ENV=production hugo -v --config config.toml -s ~/project -d docs
