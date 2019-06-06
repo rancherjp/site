@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
     <copyright>© 2018 Rancher JP</copyright>
-    <lastBuildDate>Wed, 30 Nov 2016 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 04 Jun 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://www.rancher.jp/site/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,7 +15,7 @@
     <item>
       <title>Docs</title>
       <link>https://www.rancher.jp/site/tags/docs/</link>
-      <pubDate>Wed, 30 Nov 2016 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 04 Jun 2019 00:00:00 +0000</pubDate>
       
       <guid>https://www.rancher.jp/site/tags/docs/</guid>
       <description></description>
