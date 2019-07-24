@@ -1,0 +1,10 @@
+<div style="width: 752px; max-width: 100%; margin-bottom:5px;">
+    <a href="https://docs.com/{{ index .Params 0 }}" title="{{ index .Params 1 }}" target="_blank"
+       style="font-family: 'Segoe UI'; font-size: 13px; text-decoration: none; margin-left:18px ">{{ index .Params 1 }}</a>
+    <span style="font-family: 'Segoe UI'; font-size: 13px ">—</span>
+    <a href="https://docs.com/{{ index .Params 2 }}" target="_blank"
+       style="font-family: 'Segoe UI'; font-size: 13px; text-decoration: none ">{{ index .Params 3 }}</a>
+</div>
+<iframe src="https://docs.com/d/embed/{{ index .Params 4 }}" frameborder="0"
+        scrolling="no" width="752px" height="459px" style="max-width:100%" allowfullscreen="True">
+</iframe>

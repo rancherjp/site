@@ -4,6 +4,13 @@ body {
 }
 
 
+img {
+    width:auto;
+    height:auto;
+    max-width:100%;
+    max-height:100%;
+}
+
 /*
  * START NAVIGATION
  */
@@ -193,6 +200,7 @@ body {
     margin-bottom: 15px;
     margin-top: 0px;
     font-size: 16px;
+    border-bottom: 3px solid #337ab7;
 }
 
 .posts-recent li {
@@ -303,9 +311,23 @@ pre {
     border-radius: 0px;
     padding: 10px;
     border: none;
-//    background-color: #282b2e;
+    background-color: #282b2e;
 }
 
 pre code {
     white-space: pre;
+}
+
+a.categories-link {
+    background: #2a2a2a;
+}
+
+a.categories-link {
+    display: inline-block;
+    font-weight: 700;
+    color: #fff;
+    padding: 5px 10px;
+    margin: 0 4px 8px 0;
+    white-space: nowrap;
+    text-transform: uppercase;
 }

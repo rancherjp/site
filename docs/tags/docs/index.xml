@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Docs on Rancher JP</title>
+    <link>https://www.rancher.jp/site/tags/docs/</link>
+    <description>Recent content in Docs on Rancher JP</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <copyright>© 2018 Rancher JP</copyright>
+    <lastBuildDate>Tue, 04 Jun 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://www.rancher.jp/site/tags/docs/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>About</title>
+      <link>https://www.rancher.jp/site/about/</link>
+      <pubDate>Tue, 04 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.rancher.jp/site/about/</guid>
+      <description>このページについて 本ページは Rancher JP による Rancher 及び関連するコンテナ技術に関する情報発信ページです。 日本語による Rancher のリリース情報、新機能解説、ユーザ</description>
+    </item>
+    
+    <item>
+      <title>クイックスタートガイド</title>
+      <link>https://www.rancher.jp/site/docs/qsg/</link>
+      <pubDate>Wed, 30 Nov 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.rancher.jp/site/docs/qsg/</guid>
+      <description>クイック スタート ガイド このガイドでは、1台のLinuxサーバーに全てインストールして動く、最も簡単なRancherをインストールしてみます。</description>
+    </item>
+    
+  </channel>
+</rss>

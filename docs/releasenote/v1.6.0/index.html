@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="ja-jp">
+    <head>
+    
+        <meta name=”robots” content="noindex">
+    
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="Hugo 0.47.1" />
+    <title>リリース v1.6.0 - Rancher JP</title>
+    
+    
+    
+    <meta name="description" content="リリース v1.6.0" />
+    <meta name="keywords" content='releasenote' />
+    
+        <meta name="author" content="Rancher JP" />
+    
+    <link rel="icon" type="image/png" href="https://www.rancher.jp/site/favicon.ico" sizes="196x196" />
+    <link href="" rel="alternate" type="application/rss+xml" title="Rancher JP" />
+    <link rel="stylesheet" href="https://www.rancher.jp/site/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://www.rancher.jp/site/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://www.rancher.jp/site/css/phlat.css" />
+    </script>
+    <link rel="stylesheet" href="https://www.rancher.jp/site//css/highlightjs/dark.css">
+    <script src="https://www.rancher.jp/site//js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+        
+    
+    
+    <meta property="og:type" content="article">
+    <meta property="og:description" content="リリース v1.6.0">
+    <meta property="og:title" content="リリース v1.6.0 - Rancher JP">
+    <meta property="og:url" content="https://www.rancher.jp/site/releasenote/v1.6.0/">
+    <meta property="og:image" content="https://www.rancher.jp/site/images/banner/rancherjp.png">
+    <meta property="og:site_name" content="Rancher JP">
+    <meta property="og:locale" content="ja_JP">
+    
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:description" content="リリース v1.6.0">
+    <meta name="twitter:title" content="リリース v1.6.0 - Rancher JP">
+    <meta name="twitter:url" content="https://www.rancher.jp/site/releasenote/v1.6.0/">
+    <meta name="twitter:image" content="https://www.rancher.jp/site/images/banner/rancherjp.png">
+    <meta name="twitter:domain" content="www.rancher.jp">
+    <meta name="twitter:creator" content="@RancherJP">
+    <meta name="twitter:site" content="@RancherJP">
+    
+</head>
+
+    <body>
+        <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="https://www.rancher.jp/site/">Rancher JP</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/site/">
+                            Home
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/site/docs">
+                            Docs
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/site/study">
+                            Study
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/site/translated">
+                            Translated
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/site/event-list/">
+                            Event
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/site/qa">
+                            Q&amp;A
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/site/releasenote">
+                            Release Note
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/site/archives">
+                            Archives
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/site/about">
+                            About
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+</nav>
+
+        <div id="top" class="container">
+            <div class="row" id="content-main">
+                <div class="col-md-8">
+                    <div class="row">
+    <div class="col-md-12 content-card">
+        <h1>リリース v1.6.0</h1>
+            
+            <ul class="list-inline meta">
+                <li><i class="fa fa-calendar"></i>May 5, 2017</li>
+                <li><i class="fa fa-user"></i>Rancher JP</li>
+                
+                    
+                    <li>
+                        <i class="fa fa-folder"></i>
+                        
+                            <a href="https://www.rancher.jp/categories/releasenote">releasenote</a>
+                            
+                        
+                    </li>
+                
+            </ul>
+            
+            <ul class="list-inline share" style="margin-top: 15px; margin-left: 0px">
+        <li class="facebook-share"><a target="_blank" href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fwww.rancher.jp%2fsite%2freleasenote%2fv1.6.0%2f"><i class="fa fa-facebook fa-lg"></i>Facebook</a></li>
+        <li class="googleplus-share"><a target="_blank" href="https://plus.google.com/share?url=https%3a%2f%2fwww.rancher.jp%2fsite%2freleasenote%2fv1.6.0%2f"><i class="fa fa-google-plus fa-lg"></i>Google+</a></li>
+        <li class="twitter-share"><a target="_blank" href="https://twitter.com/share?url=https%3a%2f%2fwww.rancher.jp%2fsite%2freleasenote%2fv1.6.0%2f&amp;text=%e3%83%aa%e3%83%aa%e3%83%bc%e3%82%b9%20v1.6.0"><i class="fa fa-twitter fa-lg"></i>Twitter</a></li>
+    </ul>
+        
+
+<h1 id="リリース-v1-6-0">リリース v1.6.0</h1>
+
+<h2 id="バージョン">バージョン</h2>
+
+<ul>
+<li>rancher/server:v1.6.0</li>
+<li>rancher/agent:v1.2.2</li>
+<li>rancher/lb-service-proxy:v0.7.1</li>
+<li>rancher-v0.6.0</li>
+<li>rancher-compose-v0.12.5</li>
+</ul>
+
+<h2 id="対応しているdockerのバージョン">対応しているDockerのバージョン</h2>
+
+<ul>
+<li>Docker 1.10.3</li>
+<li>Docker 1.12.3-1.12.6</li>
+<li>Docker 1.13.1 (Kubenetesのサポートなし)</li>
+<li>Docker 17.03.0-ce(Kubenetesのサポートなし)</li>
+<li>Docker 17.03.0-ee(Kubenetesのサポートなし)</li>
+</ul>
+
+<h2 id="rancherサーバーのタグについて">Rancherサーバーのタグについて</h2>
+
+<p>Rancherサーバーには2種類のタグがあります。
+いずれのメジャーリリースタグにおいても、個々のバージョンに向けたドキュメントを提供します。</p>
+
+<ul>
+<li><code>rancher/server:latestタグ</code> 最新の開発中ビルドを提供するタグです。これらのビルドはCIの自動化フレームワークを使って検証済みです。これらのリリースは本番環境へのデプロイを意味していません。</li>
+<li><code>rancher/server:stableタグ</code> 最新のリリースビルドのタグです。本番環境にデプロイする際は本タグを利用することを推奨します。</li>
+</ul>
+
+<p><code>rc{n}</code>サフィックスのついたリリースを使わないようにしてください。これらの<code>rc</code>ビルドはRancherチームがテストを行うためのものです。</p>
+
+<h3 id="beta-v1-6-0-rancher-server-latest">Beta - v1.6.0 - <code>rancher/server:latest</code></h3>
+
+<h3 id="stable-v1-5-9-rancher-server-stable">Stable - v1.5.9 - <code>rancher/server:stable</code></h3>
+
+<h2 id="追加機能">追加機能</h2>
+
+<ul>
+<li><strong>HAProxyにおけるデータボリュームを経由したSSL証明書の読み込みサポート[<a href="https://github.com/rancher/rancher/issues/7520">#7520</a>]</strong> - Rancherで本バージョンからSSL証明書を含んだデータボリュームをHAProxyのLBサービスに設定できるようになりました。
+これによって定常的に変更される証明書をHAProxyにアップロードすることへの代替手段が提供されました。
+また、複数の証明書設定をHAProxyのLBサービスでサポートすることが可能になりました。</li>
+<li><strong>LDAP/ADにおける複数のグループに基づく検索のサポート[<a href="https://github.com/rancher/rancher/issues/8157">#8157</a>][<a href="https://github.com/rancher/rancher/issues/8122">#8112</a>]</strong> - 異なる検索ベース(search bases)を経由したユーザ、グループの検索できるようLDAPを設定することができるようになりました。</li>
+<li><strong>Rancher EBSボリュームのサポート[<a href="https://github.com/rancher/rancher/issues/8295">#8295</a>], [<a href="https://github.com/rancher/rancher/issues/8618">#8618</a>], [<a href="https://github.com/rancher/rancher/issues/7599">#7599</a>]</strong> - Rancher EBSボリュームがGAになりました。ホストにコンテナが移動される際、アベイラビリティゾーンを意識できるようRancherのスケジューラ機能が強化されました。EBSは各種ボリュームタイプやIOPS指定有無(<em>訳注:原文中ではIOSとなっていますがIOPSのtypoと思われます</em>)、暗号化の有無やksmkeyIdやスナップショットIDなどの追加オプションを用いた場合でも利用することが可能です。</li>
+<li><strong>Rancher secretのcomposeにおけるサポート[<a href="https://github.com/rancher/rancher/issues/8016">#8016</a>],[<a href="https://github.com/rancher/rancher/issues/8025">#8025</a>]</strong> - Rancher CLIでcomposeファイルを用いたsecretsの生成が可能になりました。過去のバージョンのrancher-compose CLIには本機能は存在しないことに留意してください。全ての新しい機能は新しいRancher CLIツールでしか開発されず、過去のバージョンのRancher CLIへの取り込みは行われません。</li>
+</ul>
+
+<h2 id="既知の主要なバグ">既知の主要なバグ</h2>
+
+<p>特にありません。</p>
+
+<h2 id="v1-5-9からの主要なバグの修正">v1.5.9からの主要なバグの修正</h2>
+
+<ul>
+<li>Fixed an issue where k8s certs were stale and causing k8s addons such as Dashboard UI to fail to launch [<a href="https://github.com/rancher/rancher/issues/8613">#8613</a>]</li>
+<li>Rancher now supports k8s daemon sets on hosts dedicated to orchestration and etcd [<a href="https://github.com/rancher/rancher/issues/8397">#8397</a>]</li>
+<li>Fixed an issue where large labels on stateful sets would cause k8s would cause Rancher DB to throw exceptions [<a href="https://github.com/rancher/rancher/issues/8168">#8168</a>]</li>
+<li>Fixed an issue where Centos 7.3 networking was not working [<a href="https://github.com/rancher/rancher/issues/6111">#6111</a>], [<a href="https://github.com/rancher/rancher/issues/8496">#8496</a>]</li>
+<li>Rancher now supports the ability to have SELinux enabled hosts for cattle and k8s with some <a href="http://docs.rancher.com/rancher/v1.6/en/installing-rancher/selinux/">additional kernel modules</a> [<a href="https://github.com/rancher/rancher/issues/8071">#8071</a>]</li>
+<li>Fixed an issue with LDAP/AD or OpenLDAP would no longer function if Rancher loses connection with the AD server [<a href="https://github.com/rancher/rancher/issues/8513">#8513</a>], [<a href="https://github.com/rancher/rancher/issues/8270">#8270</a>]</li>
+<li>Fixed an issue where alpine linux containers does not work with internal DNS on k8s [<a href="https://github.com/rancher/rancher/issues/8588">#8588</a>]</li>
+<li>Fixed an issue where services/containers are not properly failing over if all hosts become disconnected and new ones are added [<a href="https://github.com/rancher/rancher/issues/8416">#8416</a>]</li>
+<li>Fixed an issue where SSL certs in HAProxy were not being properly cleaned up [<a href="https://github.com/rancher/rancher/issues/8161">#8161</a>]</li>
+<li>Fixed an issue where custom LB backend configurations can corrupt the haproxy config if the backend does not have any servers available [<a href="https://github.com/rancher/rancher/issues/8424">#8424</a>]</li>
+<li>Rancher now supports self-signed certs for the Route53 external dns service [<a href="https://github.com/rancher/rancher/issues/8284">#8284</a>]</li>
+<li>Fixed an issue where a race condition during volume creation can cause it to fail. [<a href="https://github.com/rancher/rancher/issues/8357">#8357</a>]</li>
+<li>Fixed an issue where re-using the same volume name would cause services to fail to launch [<a href="https://github.com/rancher/rancher/issues/8607">#8607</a>]</li>
+<li>Fixed an issue where rancher-ebs volumes are not created as an empty volume [<a href="https://github.com/rancher/rancher/issues/8465">#8465</a>]</li>
+<li>Fixed an issue where hard anti-affinity rules are not being honored with sidekicks present [<a href="https://github.com/rancher/rancher/issues/8070">#8070</a>]</li>
+<li>Fixed an issue where the German language does not work for the delete modals in the UI [<a href="https://github.com/rancher/rancher/issues/8489">#8489</a>],[<a href="https://github.com/rancher/rancher/issues/8113">#8113</a>]</li>
+<li>Fixed an issue where the UI would not display the environment management UI if the Community and Rancher catalogs are disabled [<a href="https://github.com/rancher/rancher/issues/8461">#8461</a>]</li>
+<li>Fixed an issue where the UI would error when switching from the detail page of a lb service to a non-lb service [<a href="https://github.com/rancher/rancher/issues/8460">#8460</a>]</li>
+<li>Rancher now supports t2.large and t2.2xlarge in the aws add host screen [<a href="https://github.com/rancher/rancher/issues/8239">#8239</a>]</li>
+<li>Fixed an issue where a bad catalog URL would cause all catalogs to fail to display [<a href="https://github.com/rancher/rancher/issues/8030">#8030</a>]</li>
+<li>Fixed an issue where Rancher DNS does not properly randomized the list of IP assigned to it [<a href="https://github.com/rancher/rancher/issues/7990">#7990</a>]</li>
+<li>Rancher now supports Azure in Germany, China, and the US Government [<a href="https://github.com/rancher/rancher/issues/7964">#7964</a>]</li>
+<li>Fixed an issue where containers created via compose outside of Rancher does not show up as unmanaged containers in Rancher [<a href="https://github.com/rancher/rancher/issues/7941">#7941</a>],[<a href="https://github.com/rancher/rancher/issues/7916">#7916</a>]</li>
+<li>Fixed an issue where CPU/Memory resources are not freed up until the containers are purged [<a href="https://github.com/rancher/rancher/issues/7933">#7933</a>]</li>
+<li>Fixed an issue LDAP can fail due to a NullPointerException [<a href="https://github.com/rancher/rancher/issues/7824">#7824</a>]</li>
+<li>Fixed an issue where services could be stuck in &ldquo;stopping&rdquo; state while others could remain in &ldquo;running&rdquo; states when being removed [<a href="https://github.com/rancher/rancher/issues/7640">#7640</a>]</li>
+<li>Fixed an issue where you can change the scale of global services via the API [<a href="https://github.com/rancher/rancher/issues/7630">#7630</a>]</li>
+<li>Fixed an issue where jsession tokens are not being invalidated after they timeout or the user explicitly logs out [<a href="https://github.com/rancher/rancher/issues/7581">#7581</a>]</li>
+<li>Fixed an issue where upgrades of services would fail if you add a new scheduler rule to would force containers to be launched on a different host than original [<a href="https://github.com/rancher/rancher/issues/7380">#7380</a>]</li>
+<li>Fixed an issue where &ndash;pull does not pull the latest image from registry [<a href="https://github.com/rancher/rancher/issues/7209">#7209</a>]</li>
+<li>Fixed an issue where webproxy does not start if &ldquo;edns0&rdquo; or single-request-reopen&rdquo; are present in resolv.conf [<a href="https://github.com/rancher/rancher/issues/6487">#6487</a>]</li>
+<li>Rancher now supports the disabling of Custom Host option in Add Host screen in the UI [<a href="https://github.com/rancher/rancher/issues/5124">#5124</a>]</li>
+</ul>
+
+<h2 id="rancher-cli-http-docs-rancher-com-rancher-v1-6-en-cli-downloads"><a href="http://docs.rancher.com/rancher/v1.6/en/cli/">Rancher CLI</a> Downloads</h2>
+
+<p><a href="https://github.com/rancher/cli/releases/tag/v0.6.0">https://github.com/rancher/cli/releases/tag/v0.6.0</a></p>
+
+<h2 id="rancher-compose-http-docs-rancher-com-rancher-v1-6-en-cattle-rancher-compose-downloads"><a href="http://docs.rancher.com/rancher/v1.6/en/cattle/rancher-compose/">Rancher-Compose</a> Downloads</h2>
+
+<p><a href="https://github.com/rancher/rancher-compose/releases/tag/v0.12.5">https://github.com/rancher/rancher-compose/releases/tag/v0.12.5</a></p>
+
+        
+
+    </div>
+</div>
+
+                    
+
+                </div>
+                <div class="col-md-4">
+                                        <div class="row">
+    <div class="col-md-11 col-md-offset-1 card">
+        <h5>Search</h5>
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form">
+            <div class="input-group">
+                <input class="form-control" type="search" name="q" />
+                <span class="input-group-btn">
+                    <button class="btn btn-custom" type="submit"><span class="glyphicon glyphicon-search"></span></button>
+                </span>
+            </div>
+            <input type="hidden" name="q" value="site:https://www.rancher.jp/site/">
+        </form>
+    </div>
+</div>
+
+                    <div class="row">
+    <div class="col-md-11 col-md-offset-1 card">
+        <h5>Recent Posts</h5>
+        <ul class="list-unstyled posts-recent">
+            
+                <li><a href="https://www.rancher.jp/site/about/">About</a></li>
+            
+                <li><a href="https://www.rancher.jp/site/releasenote/v2.0.0/">リリース v2.0.0</a></li>
+            
+                <li><a href="https://www.rancher.jp/site/releasenote/v2.0.0-%E3%83%86%E3%82%AF%E3%83%8B%E3%82%AB%E3%83%AB%E3%83%97%E3%83%AC%E3%83%93%E3%83%A5%E3%83%BC/">リリース v2.0.0 テクニカルプレビュー</a></li>
+            
+                <li><a href="https://www.rancher.jp/site/releasenote/v1.6.8/">リリース v1.6.8</a></li>
+            
+                <li><a href="https://www.rancher.jp/site/releasenote/v1.6.6/">リリース v1.6.6</a></li>
+            
+        </ul>
+    </div>
+</div>
+
+                    <div class="row">
+    <div class="col-md-11 col-md-offset-1 card">
+        <h5>Join rancherjp on Slack.</h5>
+        <div class="sidebar-jointoslack">
+            
+                <a href="http://slack.rancher.jp/" target="_blank">
+            
+            <img  src="https://www.rancher.jp/site/images/jointoslack.png"></a>
+        </div></br>
+        <h5>SOCIAL Links</h5>
+            <ul class="list-inline social-media">
+        
+            <li><a target="_blank" href="https://twitter.com/rancherjp"><i class="fa fa-twitter fa-lg"></i></a></li>
+        
+        
+            <li><a target="_blank" href="https://www.facebook.com/rancherjp"><i class="fa fa-facebook fa-lg"></i></a></li>
+        
+        
+            <li><a target="_blank" href="http://slack.rancher.jp/"><i class="fa fa-slack fa-lg"></i></a></li>
+        
+    </ul>
+    </div>
+</div>
+
+                    
+    
+
+    
+        <div class="row">
+            <div class="col-md-11 col-md-offset-1 card">
+                <h5>categories</h5>
+                <ul class="list-unstyled posts-recent">
+                    
+                        <a href="https://www.rancher.jp/site/categories/releasenote" class="categories-link" style="font-size: 12px;">releasenote</a>
+                    
+                        <a href="https://www.rancher.jp/site/categories/docs" class="categories-link" style="font-size: 12px;">docs</a>
+                    
+                        <a href="https://www.rancher.jp/site/categories/event" class="categories-link" style="font-size: 12px;">event</a>
+                    
+                        <a href="https://www.rancher.jp/site/categories/meetup" class="categories-link" style="font-size: 12px;">meetup</a>
+                    
+                        <a href="https://www.rancher.jp/site/categories/qa" class="categories-link" style="font-size: 12px;">qa</a>
+                    
+                        <a href="https://www.rancher.jp/site/categories/traslated" class="categories-link" style="font-size: 12px;">traslated</a>
+                    
+                        <a href="https://www.rancher.jp/site/categories/workshop" class="categories-link" style="font-size: 12px;">workshop</a>
+                    
+                </ul>
+            </div>
+        </div>
+    
+
+    
+
+
+                    <div class="row">
+    <div class="col-md-11 col-md-offset-1 card">
+        <h5>Twitter Posts</h5>
+        <div class="sidebar-twitter">
+            <a class="twitter-timeline"  href="https://twitter.com/search?q=rancher%20%20-slime%20%20-jell%20%20-%E3%82%AE%E3%82%BF%E3%83%BC%20%20-from%3Arancher_r%20%20-to%3Arancher_r%20%20-%40rancher_r%20%20-from%3Arancher_matsu%20%20-to%3Arancher_matsu%20%20-%40rancher_matsu%20%20-from%3Aa_rancher%20%20-to%3Aa_rancher%20%20-%40a_rancher%20%20-from%3Ajsb_saisoku%20%20-to%3Ajsb_saisoku%20%20-%40jsb_saisoku%20%20-from%3AKEY_KYOTO%20%20-to%3AKEY_KYOTO%20%20-%40KEY_KYOTO%20%20-from%3AMyself2677%20%20-to%3AMyself2677%20%20-%40Myself2677%20%20-from%3AXRancher%20%20-to%3AXRancher%20%20-%40XRancher%20%20-from%3Aratoncitox4%20%20-to%3Aratoncitox4%20%20-%40ratoncitox4%20%20-from%3Aaco_station%20%20-to%3Aaco_station%20%20-%40aco_station%20%20lang%3Aja" data-widget-id="843459935266467840">rancher  -slime  -jell  -ギター  -from:rancher_r  -to:rancher_r  -@rancher_r  -from:rancher_matsu  -to:rancher_matsu  -@rancher_matsu  -from:a_rancher  -to:a_rancher  -@a_rancher  -from:jsb_saisoku  -to:jsb_saisoku  -@jsb_saisoku  -from:KEY_KYOTO  -to:KEY_KYOTO  -@KEY_KYOTO  -from:Myself2677  -to:Myself2677  -@Myself2677  -from:XRancher  -to:XRancher  -@XRancher  -from:ratoncitox4  -to:ratoncitox4  -@ratoncitox4  -from:aco_station  -to:aco_station  -@aco_station  lang:jaに関するツイート</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+        </div>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-xs-6">
+    <ul class="list-inline links">
+        
+    </ul>
+</div>
+
+            <div class="col-md-4 col-xs-6">
+    <ul class="list-inline social-media">
+        
+            <li><a target="_blank" href="https://twitter.com/rancherjp"><i class="fa fa-twitter fa-lg"></i></a></li>
+        
+        
+        
+            <li><a target="_blank" href="https://www.facebook.com/rancherjp"><i class="fa fa-facebook fa-lg"></i></a></li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+            <li><a target="_blank" href="http://slack.rancher.jp/"><i class="fa fa-slack fa-lg"></i></a></li>
+        
+    </ul>
+</div>
+
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <p>
+                    <p>Copyright © 2018 Rancher JP. All Rights Reserved.</P>
+                    <p>Powered by <a href="//gohugo.io">Hugo</a></p>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+        <div id="back-to-top" class="hidden">
+    <a href="#top" class="well well-sm" onclick="$('html,body').animate({scrollTop:0},'slow');return false;">
+        <i class="glyphicon glyphicon-chevron-up"></i> Back to Top
+    </a>
+</div>
+<script src="https://www.rancher.jp/site/js/jquery-2.2.1.min.js"></script>
+<script src="https://www.rancher.jp/site/js/bootstrap.min.js"></script>
+
+    
+
+
+    
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-90391346-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+
+
+
+    </body>
+</html>

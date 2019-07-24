@@ -1,0 +1,26 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: felicianotech/docker-hugo:0.47
+    working_directory: ~/project
+    steps:
+      - checkout
+      - add_ssh_keys:
+          fingerprints:
+            - "63:6f:a6:75:a1:ec:ae:ff:64:0e:b2:01:a2:1d:45:13"
+      - run:
+          name: "Run Hugo"
+          command: HUGO_ENV=production hugo -v --config config.toml -s ~/project -d docs
+      - run:
+          name: "Test Website"
+          command: htmlproofer ~/project/src/public --allow-hash-href --check-html --empty-alt-ignore
+      - run:
+          name: "Set GitHub information"
+          command: git config --global user.name ${GITHUB_USERNAME} && git config --global user.email ${GITHUB_EMAIL_ADDRESS}
+      - run:
+          name: "Deploy"
+          command: |
+            if [ "${CIRCLE_BRANCH}" == "master" ]; then
+              ./test-hugo.sh
+            fi

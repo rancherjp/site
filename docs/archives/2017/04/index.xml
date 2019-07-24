@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>2017/04 on Rancher JP</title>
+    <link>https://www.rancher.jp/site/archives/2017/04/</link>
+    <description>Recent content in 2017/04 on Rancher JP</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <copyright>© 2018 Rancher JP</copyright>
+    <lastBuildDate>Fri, 14 Apr 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://www.rancher.jp/site/archives/2017/04/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>オープンソースカンファレンス2017 Tokyo/Spring 出展</title>
+      <link>https://www.rancher.jp/site/content/2017/04/14/osc2017-spring/</link>
+      <pubDate>Fri, 14 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.rancher.jp/site/content/2017/04/14/osc2017-spring/</guid>
+      <description>オープンソースカンファレンス2017 Tokyo/Spring 出展 してきました。 はい、今日は 4月14日 になりますｗ イソガシクテ更新できませんでしたー たくさんの方に Rancher</description>
+    </item>
+    
+  </channel>
+</rss>

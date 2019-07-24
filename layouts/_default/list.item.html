@@ -1,4 +1,3 @@
-{{ range where .Data.Pages "Type" "post" }}
     <div class="row">
         <div class="col-md-12 content-card">
             <h1>{{ .Title }}</h1>
@@ -10,4 +9,3 @@
             <a class="btn btn-custom" href="{{ .Permalink }}" role="button">Read More</a>
         </div>
     </div>
-{{ end }}

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Rancher JP</title>
+    <link>https://www.rancher.jp/site/tags/</link>
+    <description>Recent content in Tags on Rancher JP</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <copyright>© 2018 Rancher JP</copyright>
+    <lastBuildDate>Tue, 04 Jun 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://www.rancher.jp/site/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Docs</title>
+      <link>https://www.rancher.jp/site/tags/docs/</link>
+      <pubDate>Tue, 04 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.rancher.jp/site/tags/docs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Event</title>
+      <link>https://www.rancher.jp/site/tags/event/</link>
+      <pubDate>Fri, 14 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.rancher.jp/site/tags/event/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Meetup</title>
+      <link>https://www.rancher.jp/site/tags/meetup/</link>
+      <pubDate>Wed, 11 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.rancher.jp/site/tags/meetup/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Qa</title>
+      <link>https://www.rancher.jp/site/tags/qa/</link>
+      <pubDate>Mon, 18 Jan 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.rancher.jp/site/tags/qa/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Releasenote</title>
+      <link>https://www.rancher.jp/site/tags/releasenote/</link>
+      <pubDate>Sat, 12 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.rancher.jp/site/tags/releasenote/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Traslated</title>
+      <link>https://www.rancher.jp/site/tags/traslated/</link>
+      <pubDate>Thu, 22 Dec 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.rancher.jp/site/tags/traslated/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Workshop</title>
+      <link>https://www.rancher.jp/site/tags/workshop/</link>
+      <pubDate>Thu, 27 Oct 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.rancher.jp/site/tags/workshop/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

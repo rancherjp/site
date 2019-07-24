@@ -4,8 +4,8 @@
             <div class="col-md-11 col-md-offset-1 card">
                 <h5>{{ $key | pluralize }}</h5>
                 <ul class="list-unstyled posts-recent">
-                    {{ range first 5 $value.ByCount }}
-                        <li><a href="{{ $.Site.BaseURL}}{{ $key | pluralize }}/{{ .Name | urlize }}">{{ .Name }}</a></li>
+                    {{ range first 8 $value.ByCount }}
+                        <a href="{{ $.Site.BaseURL}}{{ $key | pluralize }}/{{ .Name | urlize }}" class="categories-link" style="font-size: 12px;">{{ .Name }}</a>
                     {{ end }}
                 </ul>
             </div>

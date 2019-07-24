@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>2017/02 on Rancher JP</title>
+    <link>https://www.rancher.jp/site/archives/2017/02/</link>
+    <description>Recent content in 2017/02 on Rancher JP</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <copyright>© 2018 Rancher JP</copyright>
+    <lastBuildDate>Sun, 05 Feb 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://www.rancher.jp/site/archives/2017/02/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>リリース v1.4.0</title>
+      <link>https://www.rancher.jp/site/releasenote/v.1.4.0/</link>
+      <pubDate>Sun, 05 Feb 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.rancher.jp/site/releasenote/v.1.4.0/</guid>
+      <description>リリース v1.4.0 バージョン rancher/server:v1.4.0 rancher/agent:v1.2.0 rancher/lb-service-haproxy:v0.5.9 rancher-compose-v0.12.2 rancher-v0.4.1 対応している Docker のバージョン Docker 1.10.3 Docker 1.12.3-1.12.6 Kubernetes UI の変更 Kubernetesをメインのオーケストレーションエンジンにしてい</description>
+    </item>
+    
+  </channel>
+</rss>

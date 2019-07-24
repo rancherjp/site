@@ -1,0 +1,23 @@
+<div class="row">
+    <div class="col-md-11 col-md-offset-1 card">
+        <h5>Join rancherjp on Slack.</h5>
+        <div class="sidebar-jointoslack">
+            {{ with .Site.Social.slack }}
+                <a href="{{ . }}" target="_blank">
+            {{ end }}
+            <img  src="{{ .Site.BaseURL }}images/jointoslack.png"></a>
+        </div></br>
+        <h5>SOCIAL Links</h5>
+            <ul class="list-inline social-media">
+        {{ with .Site.Social.twitter }}
+            <li><a target="_blank" href="{{ . }}"><i class="fa fa-twitter fa-lg"></i></a></li>
+        {{ end }}
+        {{ with .Site.Social.facebook }}
+            <li><a target="_blank" href="{{ . }}"><i class="fa fa-facebook fa-lg"></i></a></li>
+        {{ end }}
+        {{ with .Site.Social.slack }}
+            <li><a target="_blank" href="{{ . }}"><i class="fa fa-slack fa-lg"></i></a></li>
+        {{ end }}
+    </ul>
+    </div>
+</div>

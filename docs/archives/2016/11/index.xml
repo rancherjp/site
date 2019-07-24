@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>2016/11 on Rancher JP</title>
+    <link>https://www.rancher.jp/site/archives/2016/11/</link>
+    <description>Recent content in 2016/11 on Rancher JP</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <copyright>© 2018 Rancher JP</copyright>
+    <lastBuildDate>Wed, 30 Nov 2016 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://www.rancher.jp/site/archives/2016/11/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>クイックスタートガイド</title>
+      <link>https://www.rancher.jp/site/docs/qsg/</link>
+      <pubDate>Wed, 30 Nov 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.rancher.jp/site/docs/qsg/</guid>
+      <description>クイック スタート ガイド このガイドでは、1台のLinuxサーバーに全てインストールして動く、最も簡単なRancherをインストールしてみます。</description>
+    </item>
+    
+  </channel>
+</rss>

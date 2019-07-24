@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="ja-jp">
+    <head>
+    
+        <meta name=”robots” content="noindex">
+    
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="Hugo 0.47.1" />
+    <title>リリース v1.2.1 - Rancher JP</title>
+    
+    
+    
+    <meta name="description" content="リリース v1.2.1" />
+    <meta name="keywords" content='releasenote' />
+    
+        <meta name="author" content="Rancher JP" />
+    
+    <link rel="icon" type="image/png" href="https://www.rancher.jp/site/favicon.ico" sizes="196x196" />
+    <link href="" rel="alternate" type="application/rss+xml" title="Rancher JP" />
+    <link rel="stylesheet" href="https://www.rancher.jp/site/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://www.rancher.jp/site/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://www.rancher.jp/site/css/phlat.css" />
+    </script>
+    <link rel="stylesheet" href="https://www.rancher.jp/site//css/highlightjs/dark.css">
+    <script src="https://www.rancher.jp/site//js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+        
+    
+    
+    <meta property="og:type" content="article">
+    <meta property="og:description" content="リリース v1.2.1">
+    <meta property="og:title" content="リリース v1.2.1 - Rancher JP">
+    <meta property="og:url" content="https://www.rancher.jp/site/releasenote/v.1.2.1/">
+    <meta property="og:image" content="https://www.rancher.jp/site/images/banner/rancherjp.png">
+    <meta property="og:site_name" content="Rancher JP">
+    <meta property="og:locale" content="ja_JP">
+    
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:description" content="リリース v1.2.1">
+    <meta name="twitter:title" content="リリース v1.2.1 - Rancher JP">
+    <meta name="twitter:url" content="https://www.rancher.jp/site/releasenote/v.1.2.1/">
+    <meta name="twitter:image" content="https://www.rancher.jp/site/images/banner/rancherjp.png">
+    <meta name="twitter:domain" content="www.rancher.jp">
+    <meta name="twitter:creator" content="@RancherJP">
+    <meta name="twitter:site" content="@RancherJP">
+    
+</head>
+
+    <body>
+        <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="https://www.rancher.jp/site/">Rancher JP</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/site/">
+                            Home
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/site/docs">
+                            Docs
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/site/study">
+                            Study
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/site/translated">
+                            Translated
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/site/event-list/">
+                            Event
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/site/qa">
+                            Q&amp;A
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/site/releasenote">
+                            Release Note
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/site/archives">
+                            Archives
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/site/about">
+                            About
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+</nav>
+
+        <div id="top" class="container">
+            <div class="row" id="content-main">
+                <div class="col-md-8">
+                    <div class="row">
+    <div class="col-md-12 content-card">
+        <h1>リリース v1.2.1</h1>
+            
+            <ul class="list-inline meta">
+                <li><i class="fa fa-calendar"></i>December 17, 2016</li>
+                <li><i class="fa fa-user"></i>Rancher JP</li>
+                
+                    
+                    <li>
+                        <i class="fa fa-folder"></i>
+                        
+                            <a href="https://www.rancher.jp/categories/releasenote">releasenote</a>
+                            
+                        
+                    </li>
+                
+            </ul>
+            
+            <ul class="list-inline share" style="margin-top: 15px; margin-left: 0px">
+        <li class="facebook-share"><a target="_blank" href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fwww.rancher.jp%2fsite%2freleasenote%2fv.1.2.1%2f"><i class="fa fa-facebook fa-lg"></i>Facebook</a></li>
+        <li class="googleplus-share"><a target="_blank" href="https://plus.google.com/share?url=https%3a%2f%2fwww.rancher.jp%2fsite%2freleasenote%2fv.1.2.1%2f"><i class="fa fa-google-plus fa-lg"></i>Google+</a></li>
+        <li class="twitter-share"><a target="_blank" href="https://twitter.com/share?url=https%3a%2f%2fwww.rancher.jp%2fsite%2freleasenote%2fv.1.2.1%2f&amp;text=%e3%83%aa%e3%83%aa%e3%83%bc%e3%82%b9%20v1.2.1"><i class="fa fa-twitter fa-lg"></i>Twitter</a></li>
+    </ul>
+        
+
+<h1 id="リリース-v1-2-1">リリース v1.2.1</h1>
+
+<h2 id="バージョン">バージョン</h2>
+
+<ul>
+<li>rancher/server:v1.2.1</li>
+<li>rancher/agent:v1.1.1</li>
+<li>rancher/lb-service-haproxy:v0.4.6</li>
+<li><a href="https://github.com/rancher/rancher-compose/releases/tag/v0.12.1">rancher-compose-v0.12.1</a></li>
+<li><a href="https://github.com/rancher/cli/releases/tag/v0.4.1">rancher-v0.4.1</a></li>
+</ul>
+
+<blockquote>
+<p><em>注意:</em> 新しい<a href="http://docs.rancher.com/rancher/v1.2/en/rancher-services/">infrastructure services</a>では、ロードバランサの機能を指定のHAProxyイメージに変更し、ネットワークエージェントが起動されなくなりました。 したがって、rancher/agent-instanceが必要なくなりました。</p>
+</blockquote>
+
+<h2 id="重要">重要!</h2>
+
+<p>Rancher は今後 AWS ELB をサポートせず、AWS ALB (Application Load Balancers) のみのサポートとなります。そのため、今後は ALB を利用するよう設定をアップデートしてください。</p>
+
+<h2 id="1-2-へのアップグレード方法">1.2 へのアップグレード方法</h2>
+
+<p>Rancher 1.2 ではネットワークの管理に関していくつか主要な変更が含まれます、特筆すべき点としては CNI プラグイン向けに IPSec ネットワークをリファクタリングした点とより柔軟な HAProxy 設定が可能になった新しい v2 LB サービスが挙げられます。これらの変更によりアップグレードプロセスではネットワークのダウンタイムが生じ、ネットワークの接続性を回復させるには各環境のアップグレードが必要になります。アップグレードプロセスは Rancher 自身のアップデートとそれに続く個別環境のアップデートに分けられるため現在ご利用のバージョンから適切にアップグレードするには以下の手順を参照ください:</p>
+
+<h3 id="rancher-サーバーをv1-1-4からアップグレード">Rancher サーバーをv1.1.4からアップグレード</h3>
+
+<p>必ずデータベースをバックアップしてください。Rancher 1.2.0へバージョンアップ後には、以前のバージョンに戻すことはできません。戻したい場合は、以前動いていたバージョン時点でのデータベースのスナップショットを利用するしかありません。データベースのバックアップを取ってから、ドキュメントに従ってアップグレードを開始してください。</p>
+
+<blockquote>
+<p><strong>注意:</strong> AWS セキュリティグループを利用している場合、必ずICMPをセキュリティグループで有効にしてください。</p>
+</blockquote>
+
+<h3 id="環境のアップグレード">環境のアップグレード</h3>
+
+<p>Rancherサーバーをアップグレードした後は、1.2環境に正常にアップグレードするまで、環境にアクセスできなくなります。1.2でネットワークとLBの変更される為、新しいネットワークコンポーネントに更新されて移行されるまでアップグレード処理中にネットワークが切断されます。アップデートが必要な環境ごとに<strong>Upgrade Now</strong>*画面を表示して、いつ更新するかを決めることができる便利な機能を提供しました。更新を実行するまで、コンテナは機能し続けますが、管理機能は許可されません。この時、コンテナの再作成（ヘルスチェック）によってこれらのコンテナが動かなくなる可能性があります。HA、DNSプログラミング、ヘルスチェックなど、Rancherの関与が必要な機能は、完了するまで正常に動作しない可能性があるため、環境をなるべく早くアップグレードすることを強くお勧めします。</p>
+
+<p>&ldquo;今すぐアップグレード&rdquo;をクリックすると、Rancherは環境のアップグレードを開始します。ご使用の環境の規模によっては最大10～20分かかる場合がありますので、しばらくお待ちください。<strong>Stacks</strong> - &gt; <strong>Infrastructure</strong>の下にあるすべてのスタックが<strong>active</strong>状態になっていたら、環境は正常に更新されています。</p>
+
+<p><em><strong>Kubernetes環境の方は、すべてのインフラストラクチャサービスが「アクティブ」状態になったら、既存のk8s v1.2.6スタックをv1.4.6にアップグレードしなければなりません。注意:k8sをアップグレードする際、既存のポッドを削除して再作成する可能性のある既知の問題があることに注意してください。ポッドがレプリケーションコントローラの一部でない場合は、再作成されません。 それに考慮して計画してください。このケースでもアップグレードプロセスは環境に応じて5～10分以上かかる場合があり、スタックがアクティブな状態になると完了します。</strong></em></p>
+
+<h3 id="アップグレードの既知の制限事項">アップグレードの既知の制限事項</h3>
+
+<ul>
+<li>Swarm環境のアップグレードはサポートされていません。DockerがDockerエンジンに移行することに関するDocker Swarmからの変更により、Swarmのサポートが最新のDocker 1.12 Swarmからになった為です。</li>
+<li>環境テンプレートオプションを表示するマイグレーション用フォルダのカタログエントリがいくつかあります。 これらのカタログ・エントリーは、古いエントリーへのロールバックをサポートしていません。 例えば、Kubernetesにすべての外部DNSエントリが含まれこれ以外にも同様のものがあります。</li>
+<li>v1ロードバランサからv2ロードバランサへのアップグレード中に、セレクタを使用するルールはアップグレードされません。 これらのルールは、環境のアップグレード後にロードバランサーに再度追加する必要があります。</li>
+<li>1.2からは、Rancherはcadvisorからの統計情報を取得せず、Dockerの統計情報から取得します。 これにより、Prometheusのようなcadvisorに依存する既存のカタログは、Dockerの統計情報から取得するように修正されるまで機能しなくなることに注意してください。</li>
+</ul>
+
+<h2 id="既知の問題">既知の問題</h2>
+
+<ul>
+<li>個々のコンテナ間リンクが正常に動作しない。この問題はコンテナのリンクのみが対象であり、サービスのリンクは正常に動作します。<a href="https://github.com/rancher/rancher/issues/6584">[#6584]</a></li>
+<li>Rancher サーバーにおいて自己証明書が正常に動作しない <a href="https://github.com/rancher/rancher/issues/6122">[#6122]</a></li>
+<li>先のリリースで UI から(docker-machine から)作成された AWS ホストが UI から削除した際に正常にクリーンアップされない <a href="https://github.com/rancher/rancher/issues/6750">[#6750]</a></li>
+</ul>
+
+<h2 id="v1-2-0からの主なバグ修正">v1.2.0からの主なバグ修正</h2>
+
+<ul>
+<li>boot2docker ホストで rancher/plugin-manager:v0.2.12にあった問題を修正、新しい rancher/network-manager:v0.2.13 ネットワークサービスがあります。ネットワークサービススタックで&rdquo;アップグレード利用可能&rdquo; がボタン表示されている場合は、アップグレードしてください。<a href="https://github.com/rancher/rancher/issues/6874">[#6874]</a></li>
+<li>docker がvar/lib/docker 以外の場所にインストールされていても動くように修正 <a href="https://github.com/rancher/rancher/issues/6897">[#6897]</a></li>
+<li>ipsec やvxlan もしくはインフラストラクチャーのネットワークサービスでデフォルトのdocker0 からdocker ブリッジを構成できるように修正しました。<a href="https://github.com/rancher/rancher/issues/6896">[#6896]</a></li>
+<li>UIが固まってしまう問題を修正 <a href="https://github.com/rancher/rancher/issues/6995">[#6995]</a></li>
+<li>Rancherがデータベースを適切にクリーニングしておらず、Rancher UIがロックアップしていないのを修正 [<a href="https://github.com/rancher/rancher/issues/6826">#6826</a>, <a href="https://github.com/rancher/rancher/issues/6978">#6978</a>, <a href="https://github.com/rancher/rancher/issues/6985">#6985</a> ]</li>
+<li>Rancherドメインを利用する前にRancherサービス検出がホストのパスを検索することができなかったのを修正 <a href="https://github.com/rancher/rancher/issues/7010">[#7010]</a></li>
+<li>ロードバランサーがホスト名を使って外部サービスをターゲットにできないのを修正 <a href="https://github.com/rancher/rancher/issues/2624">[#2624]</a></li>
+<li>停止中のコンテナのログを見るを修正 <a href="https://github.com/rancher/rancher/issues/6442">[#6442]</a></li>
+<li>HA構成でノードを見ることができないのを修正 <a href="https://github.com/rancher/rancher/issues/6814">[#6814]</a></li>
+<li>同じサービス名をターゲットとするロードバランサーからスタック名でエクスポートを修正 <a href="https://github.com/rancher/rancher/issues/6829">[#6829]</a></li>
+<li>UI上でロードバランサーにホストのIPアドレスを指定することができないのを修正 <a href="https://github.com/rancher/rancher/issues/6852">[#6852]</a></li>
+<li>コンテナが自分自身のホスト名にpingできないのを修正 <a href="https://github.com/rancher/rancher/issues/6855">[#6855]</a></li>
+<li>古いネットワークエージェントに関連しているテーブルによりCPU使用率が高くなるのを修正 <a href="https://github.com/rancher/rancher/issues/6857">[#6857]</a></li>
+<li>Rancher-commpose でロードバランサーが正しくRancherで作成されない問題を修正 [<a href="https://github.com/rancher/rancher/issues/6865">#6865</a>, <a href="https://github.com/rancher/rancher/issues/6920">#6920</a>]</li>
+<li>haproxyのカスタム設定がソートされないのを修正 <a href="https://github.com/rancher/rancher/issues/6888">[#6888]</a></li>
+<li>GCR(Google Container Registry)からdockerイメージをプルすることができないのを修正 <a href="https://github.com/rancher/rancher/issues/6916">[#6916]</a></li>
+<li>アップグレード後にロードバランサーのhaproxy設定が表示されない問題を修正 <a href="https://github.com/rancher/rancher/issues/6921">[#6921]</a></li>
+<li>volumes をキーとした変数が compose v2ファイルで置換されない問題を修正 <a href="https://github.com/rancher/rancher/issues/6936">[#6936]</a></li>
+<li>ホスト登録URLがhttpを受け付けないという問題を修正 <a href="https://github.com/rancher/rancher/issues/6957">[#6957]</a></li>
+<li>Rancherエージェントでproxyに関する環境変数が大文字と小文字が区別される問題を修正  <a href="https://github.com/rancher/rancher/issues/7019">[#7019]</a></li>
+<li>ロードバランサーのログが勢いよく増える問題を修正 <a href="https://github.com/rancher/rancher/issues/7028">[#7028]</a></li>
+</ul>
+
+        
+
+    </div>
+</div>
+
+                    
+
+                </div>
+                <div class="col-md-4">
+                                        <div class="row">
+    <div class="col-md-11 col-md-offset-1 card">
+        <h5>Search</h5>
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form">
+            <div class="input-group">
+                <input class="form-control" type="search" name="q" />
+                <span class="input-group-btn">
+                    <button class="btn btn-custom" type="submit"><span class="glyphicon glyphicon-search"></span></button>
+                </span>
+            </div>
+            <input type="hidden" name="q" value="site:https://www.rancher.jp/site/">
+        </form>
+    </div>
+</div>
+
+                    <div class="row">
+    <div class="col-md-11 col-md-offset-1 card">
+        <h5>Recent Posts</h5>
+        <ul class="list-unstyled posts-recent">
+            
+                <li><a href="https://www.rancher.jp/site/about/">About</a></li>
+            
+                <li><a href="https://www.rancher.jp/site/releasenote/v2.0.0/">リリース v2.0.0</a></li>
+            
+                <li><a href="https://www.rancher.jp/site/releasenote/v2.0.0-%E3%83%86%E3%82%AF%E3%83%8B%E3%82%AB%E3%83%AB%E3%83%97%E3%83%AC%E3%83%93%E3%83%A5%E3%83%BC/">リリース v2.0.0 テクニカルプレビュー</a></li>
+            
+                <li><a href="https://www.rancher.jp/site/releasenote/v1.6.8/">リリース v1.6.8</a></li>
+            
+                <li><a href="https://www.rancher.jp/site/releasenote/v1.6.6/">リリース v1.6.6</a></li>
+            
+        </ul>
+    </div>
+</div>
+
+                    <div class="row">
+    <div class="col-md-11 col-md-offset-1 card">
+        <h5>Join rancherjp on Slack.</h5>
+        <div class="sidebar-jointoslack">
+            
+                <a href="http://slack.rancher.jp/" target="_blank">
+            
+            <img  src="https://www.rancher.jp/site/images/jointoslack.png"></a>
+        </div></br>
+        <h5>SOCIAL Links</h5>
+            <ul class="list-inline social-media">
+        
+            <li><a target="_blank" href="https://twitter.com/rancherjp"><i class="fa fa-twitter fa-lg"></i></a></li>
+        
+        
+            <li><a target="_blank" href="https://www.facebook.com/rancherjp"><i class="fa fa-facebook fa-lg"></i></a></li>
+        
+        
+            <li><a target="_blank" href="http://slack.rancher.jp/"><i class="fa fa-slack fa-lg"></i></a></li>
+        
+    </ul>
+    </div>
+</div>
+
+                    
+    
+
+    
+        <div class="row">
+            <div class="col-md-11 col-md-offset-1 card">
+                <h5>categories</h5>
+                <ul class="list-unstyled posts-recent">
+                    
+                        <a href="https://www.rancher.jp/site/categories/releasenote" class="categories-link" style="font-size: 12px;">releasenote</a>
+                    
+                        <a href="https://www.rancher.jp/site/categories/docs" class="categories-link" style="font-size: 12px;">docs</a>
+                    
+                        <a href="https://www.rancher.jp/site/categories/event" class="categories-link" style="font-size: 12px;">event</a>
+                    
+                        <a href="https://www.rancher.jp/site/categories/meetup" class="categories-link" style="font-size: 12px;">meetup</a>
+                    
+                        <a href="https://www.rancher.jp/site/categories/qa" class="categories-link" style="font-size: 12px;">qa</a>
+                    
+                        <a href="https://www.rancher.jp/site/categories/traslated" class="categories-link" style="font-size: 12px;">traslated</a>
+                    
+                        <a href="https://www.rancher.jp/site/categories/workshop" class="categories-link" style="font-size: 12px;">workshop</a>
+                    
+                </ul>
+            </div>
+        </div>
+    
+
+    
+
+
+                    <div class="row">
+    <div class="col-md-11 col-md-offset-1 card">
+        <h5>Twitter Posts</h5>
+        <div class="sidebar-twitter">
+            <a class="twitter-timeline"  href="https://twitter.com/search?q=rancher%20%20-slime%20%20-jell%20%20-%E3%82%AE%E3%82%BF%E3%83%BC%20%20-from%3Arancher_r%20%20-to%3Arancher_r%20%20-%40rancher_r%20%20-from%3Arancher_matsu%20%20-to%3Arancher_matsu%20%20-%40rancher_matsu%20%20-from%3Aa_rancher%20%20-to%3Aa_rancher%20%20-%40a_rancher%20%20-from%3Ajsb_saisoku%20%20-to%3Ajsb_saisoku%20%20-%40jsb_saisoku%20%20-from%3AKEY_KYOTO%20%20-to%3AKEY_KYOTO%20%20-%40KEY_KYOTO%20%20-from%3AMyself2677%20%20-to%3AMyself2677%20%20-%40Myself2677%20%20-from%3AXRancher%20%20-to%3AXRancher%20%20-%40XRancher%20%20-from%3Aratoncitox4%20%20-to%3Aratoncitox4%20%20-%40ratoncitox4%20%20-from%3Aaco_station%20%20-to%3Aaco_station%20%20-%40aco_station%20%20lang%3Aja" data-widget-id="843459935266467840">rancher  -slime  -jell  -ギター  -from:rancher_r  -to:rancher_r  -@rancher_r  -from:rancher_matsu  -to:rancher_matsu  -@rancher_matsu  -from:a_rancher  -to:a_rancher  -@a_rancher  -from:jsb_saisoku  -to:jsb_saisoku  -@jsb_saisoku  -from:KEY_KYOTO  -to:KEY_KYOTO  -@KEY_KYOTO  -from:Myself2677  -to:Myself2677  -@Myself2677  -from:XRancher  -to:XRancher  -@XRancher  -from:ratoncitox4  -to:ratoncitox4  -@ratoncitox4  -from:aco_station  -to:aco_station  -@aco_station  lang:jaに関するツイート</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+        </div>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-xs-6">
+    <ul class="list-inline links">
+        
+    </ul>
+</div>
+
+            <div class="col-md-4 col-xs-6">
+    <ul class="list-inline social-media">
+        
+            <li><a target="_blank" href="https://twitter.com/rancherjp"><i class="fa fa-twitter fa-lg"></i></a></li>
+        
+        
+        
+            <li><a target="_blank" href="https://www.facebook.com/rancherjp"><i class="fa fa-facebook fa-lg"></i></a></li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+            <li><a target="_blank" href="http://slack.rancher.jp/"><i class="fa fa-slack fa-lg"></i></a></li>
+        
+    </ul>
+</div>
+
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <p>
+                    <p>Copyright © 2018 Rancher JP. All Rights Reserved.</P>
+                    <p>Powered by <a href="//gohugo.io">Hugo</a></p>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+        <div id="back-to-top" class="hidden">
+    <a href="#top" class="well well-sm" onclick="$('html,body').animate({scrollTop:0},'slow');return false;">
+        <i class="glyphicon glyphicon-chevron-up"></i> Back to Top
+    </a>
+</div>
+<script src="https://www.rancher.jp/site/js/jquery-2.2.1.min.js"></script>
+<script src="https://www.rancher.jp/site/js/bootstrap.min.js"></script>
+
+    
+
+
+    
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-90391346-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+
+
+
+    </body>
+</html>
