@@ -1,5 +1,6 @@
 # 変更
 
+* `Update`      content/page/about.md
 * `fix` Then the browser dos'nt read HTTP link of CSS Style.(#42 by @ynott)
 * `fix` circleci
 * `add` content/releasenote/release-v.2.0.0.md
