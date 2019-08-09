@@ -1,5 +1,5 @@
 ---
-date: "2019-07-23"
+date: "2019-08-07"
 title: "リリース v2.2.7"
 slug: "v2.2.7"
 author: "Rancher JP"
