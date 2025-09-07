@@ -1,0 +1,92 @@
+<title>{{ .Title }}</title>
+
+{{ with .Description -}}
+  <meta name="description" content="{{ . }}">
+{{ else -}}
+  {{ with .Summary | plainify -}}
+    <meta name="description" content="{{ . }}">
+  {{ else -}}
+    <meta name="description" content="{{ .Site.Params.description }}">
+  {{ end -}}
+{{ end -}}
+
+{{ if or (.Params.noindex) (eq .Kind "404") }}
+  <meta name="robots" content="noindex">
+{{ end }}
+
+<!-- canonical tag -->
+<link rel="canonical" href="{{ .Permalink | safeURL }}">
+
+<!-- Self-referential hreflang attributes -->
+<link rel="alternate" hreflang="{{ .Language.LanguageCode | default .Site.Language.Lang }}" href="{{ .Permalink | safeURL }}">
+
+<!-- Translated pages hreflang tags -->
+{{ if .IsTranslated -}}
+{{ range .Translations -}}
+<link rel="alternate" hreflang="{{ .Language.LanguageCode }}" href="{{ .Permalink | safeURL }}">
+{{ end -}}
+{{ end -}}
+
+<!-- X-default hreflang tag -->
+{{ if .IsTranslated -}}
+{{ range .AllTranslations -}}
+{{ if eq .Language.LanguageCode $.Sites.Default.Language.LanguageCode -}}
+<link rel="alternate" hreflang="x-default" href="{{ .Permalink | safeURL }}">
+{{ end -}}
+{{ end -}}
+{{ else -}}
+<link rel="alternate" hreflang="x-default" href="{{ .Permalink | safeURL }}">
+{{ end }}
+
+<!-- AlternativeOutputFormats -->
+{{ range .AlternativeOutputFormats -}}
+  <link rel="{{ .Rel }}" {{ printf "type=%q" .MediaType.Type | safeHTMLAttr }} href="{{ .Permalink | safeURL }}">
+{{ end -}}
+
+<!-- Removed "_internal/schema.html" as it generates invalid HTML. Using "head/schema-article.html" in ld+json instead. -->
+
+<!-- Removed "_internal/opengraph.html" as it generates invalid image links. Using "head/opengraph.html" and "head/facebook.html" instead. -->
+{{ partial "head/opengraph.html" . }}
+{{ partial "head/facebook-admin.html" . }}
+{{ partial "head/twitter.html" . }}
+
+<!-- will load JSON-LD Schemas in pages -->
+<!-- https://schema.org/docs/schemas.html -->
+{{ if .IsPage }}
+  <!-- Article structured data -->
+  {{- partial "head/schema-article.html" .  -}}
+{{ end }}
+
+{{ if .IsHome }}
+  <!-- WebSite structured data -->
+  {{ if .Site.Params.webSite }}
+    {{- partial "head/schema-website.html" .  -}}
+  {{ end }}
+  <!-- Organization structured data -->
+  {{ if .Site.Params.organization }}
+    {{- partial "head/schema-organization.html" .  -}}
+  {{ end }}
+  <!-- Local Business structured data -->
+  {{ if .Site.Params.localBusiness }}
+    {{- partial "head/schema-local-business.html" .  -}}
+  {{ end }}
+  <!-- Event structured data -->
+  {{ if .Site.Params.event -}}
+    {{- partial "head/schema-event.html" .  -}}
+  {{ end }}
+{{ end }}
+
+<!-- Product structured data -->
+{{ if .Params.product -}}
+  {{- partial "head/schema-product.html" .  -}}
+{{ end }}
+
+<!-- Software Application structured data -->
+{{ if .Params.softwareApplication -}}
+  {{- partial "head/schema-software-application.html" .  -}}
+{{ end }}
+
+<!-- FAQPage structured data -->
+{{ if .Params.faq -}}
+  {{- partial "head/schema-faq.html" .  -}}
+{{ end }}

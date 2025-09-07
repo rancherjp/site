@@ -1,0 +1,17 @@
+<div class="event-detail">
+  <h1>{{ .Title }}</h1>
+  {{ with .Params.date }}
+    <p><strong>開催日:</strong> {{ . | time.Format "2006-01-02 15:04" }}</p>
+  {{ end }}
+  {{ with .Params.description }}
+    <p>{{ . }}</p>
+  {{ end }}
+  <div class="event-content">
+    {{ .Content }}
+  </div>
+  {{ with .Params.youtube_url }}
+    <div class="event-youtube my-4">
+      <iframe width="560" height="315" src="{{ . }}" frameborder="0" allowfullscreen></iframe>
+    </div>
+  {{ end }}
+</div>

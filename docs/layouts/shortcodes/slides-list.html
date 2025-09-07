@@ -1,0 +1,29 @@
+{{/*
+  slides-list shortcode: content/slide配下のスライドを横3個以内でカード表示
+*/}}
+<div class="slides-list row">
+  {{ $slides := where .Site.RegularPages "Section" "slide" }}
+  {{ range $i, $slide := $slides }}
+    {{ if eq (mod $i 3) 0 }}
+      {{ if ne $i 0 }}</div>{{ end }}
+      <div class="row mb-4">
+    {{ end }}
+    <div class="col-md-4 mb-3">
+      <div class="card h-100">
+        <div class="card-body">
+          <h5 class="card-title">{{ $slide.Title }}</h5>
+          {{ with $slide.Params.slide_url }}
+            <div class="mb-2">
+              <iframe src="{{ . }}" frameborder="0" width="100%" height="200" allowfullscreen></iframe>
+            </div>
+          {{ end }}
+          <p class="card-subtitle text-muted">
+              by {{ $slide.Params.Author }}
+          </p>
+
+        </div>
+      </div>
+    </div>
+    {{ if eq (add $i 1) (len $slides) }}</div>{{ end }}
+  {{ end }}
+</div>

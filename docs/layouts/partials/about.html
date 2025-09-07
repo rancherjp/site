@@ -1,0 +1,13 @@
+{{ $about := .Site.GetPage "page" "about.jp" }}
+{{ if not $about }}
+  {{ range .Site.RegularPages }}
+    {{ if eq .File.BaseFileName "about" }}
+      {{ $about = . }}
+      {{ break }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+<div class="content">
+  {{ $about.Content }}
+</div>

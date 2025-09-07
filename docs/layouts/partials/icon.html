@@ -1,0 +1,13 @@
+{{ $icon := .Site.GetPage "page" "icon.jp" }}
+{{ if not $icon }}
+  {{ range .Site.RegularPages }}
+    {{ if eq .File.BaseFileName "icon" }}
+      {{ $icon = . }}
+      {{ break }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+<div class="content">
+  {{ $icon.Content }}
+</div>

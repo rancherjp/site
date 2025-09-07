@@ -1,0 +1,49 @@
+baseURL = 'https://rancher.jp/'
+title = "Rancher JP"
+author = "Katsuhiro Yamanaka"
+copyright = "Copyright © 2018 Rancher JP. All Rights Reserved."
+timeZone = 'Asia/Tokyo'
+
+# Multilingual
+defaultContentLanguage = "jp"
+defaultContentLanguageInSubdir = false
+
+theme = "hugo-bootstrap-theme"
+themesdir = "../.."
+
+disableHugoGeneratorInject = true
+enableRobotsTXT = true
+#enableGitInfo = true
+enableEmoji = true
+#sectionPagesMenu = "main"
+#googleAnalytics = "UA-1511XXXX-X"
+
+[frontmatter]
+  date = ["date", "publishDate", "lastmod"]
+  lastmod = ["lastmod", ":fileModTime", ":default"]
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+  series = 'series'
+  author = "authors"
+
+[sitemap]
+  changefreq = "weekly"
+  filename = "sitemap.xml"
+  priority = 0.5
+
+[permalinks]
+#  post = "/post/:title/"
+
+[module]
+  [module.hugoVersion]
+    extended = true
+    min = "0.99.1"
+    max = ""
+  [[module.mounts]]
+    source = "assets"
+    target = "assets"
+  [[module.mounts]]
+    source = "static"
+    target = "static"

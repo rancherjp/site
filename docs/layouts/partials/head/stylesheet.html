@@ -1,0 +1,15 @@
+{{- $sassOptions := dict "targetPath" "css/style.css" "enableSourceMap" true "outputStyle" "expanded" "precision" 6 -}}
+{{/*- $postcssOptions := dict "use" "autoprefixer" "noMap" true -*/}}
+
+{{ if eq hugo.Environment "production" -}}
+  {{- $sassOptions = merge $sassOptions (dict "outputStyle" "compressed") -}}
+{{- end -}}
+
+{{ $css := resources.Get "sass/main.scss" | toCSS $sassOptions -}}
+
+{{ if eq (hugo.Environment) "development" -}}
+  <link rel="stylesheet" href="{{ $css.RelPermalink | relURL }}" media="screen">
+{{ else -}}
+  {{ $secureCSS := $css | resources.Fingerprint "sha512" -}}
+  <link rel="stylesheet" href="{{ $secureCSS.RelPermalink }}" media="screen" integrity="{{ $secureCSS.Data.Integrity }}" crossorigin="anonymous">
+{{ end -}}

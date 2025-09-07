@@ -1,0 +1,6 @@
+[jp]
+  languageName = "Japanese"
+  languageCode = "jp-JA"
+  weight = 10
+  [jp.params]
+    languageISO = "JA"

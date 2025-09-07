@@ -1,0 +1,16 @@
+{{/*
+  Usage: {{< importmd path="slide/20250826/rancher_support.md" >}}
+  指定したMarkdownファイルの本文を埋め込みます。
+*/}}
+{{ $file := .Get "path" }}
+{{ with .Page.Site.GetPage (printf "/%s" $file) }}
+  <div class="imported-md">
+    <h2>{{ .Title }}</h2>
+    {{ with .Params.slide_url }}
+      <iframe src="{{ . }}" frameborder="0" width="710" height="420" allowfullscreen="true" style="margin:2em 0;"></iframe>
+    {{ end }}
+    {{ .Content }}
+  </div>
+{{ else }}
+  <div class="imported-md-error">指定ファイルが見つかりません: {{ $file }}</div>
+{{ end }}

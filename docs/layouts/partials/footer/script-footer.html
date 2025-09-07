@@ -1,0 +1,23 @@
+<!-- JavaScript and dependencies -->
+
+{{ $bootstrap := resources.Get "js/bootstrap/bootstrap.bundle.min.js" }}
+{{ $js := resources.Get "js/main.js" }}
+
+{{ if eq (hugo.Environment) "development" -}}
+  {{ if .Site.Params.options.bootStrapJs -}}
+    <script src="{{ $bootstrap.RelPermalink }}" defer></script>
+  {{ end -}}
+  {{ with $js }}
+    <script src="{{ .RelPermalink }}" defer></script>
+  {{ end -}}
+{{ else -}}  
+  {{ if .Site.Params.options.bootStrapJs -}}
+    {{ $bootstrap := $bootstrap | minify | fingerprint "sha512" -}}
+    <script src="{{ $bootstrap.RelPermalink }}" integrity="{{ $bootstrap.Data.Integrity }}" crossorigin="anonymous" defer></script>
+  {{ end -}}
+  {{ with $js }}
+    {{ $js := . | minify | fingerprint "sha512" -}}
+    <script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}" crossorigin="anonymous" defer></script>
+  {{ end }}
+  {{ partial "footer/facebook-pixel-light.html" . }}
+{{end}}

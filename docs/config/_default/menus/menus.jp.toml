@@ -1,0 +1,62 @@
+[[main]]
+identifier = "Home"
+name = "Home"
+url = ""
+weight = 10
+
+[[main]]
+identifier = "Events"
+name = "Events"
+url = "events"
+weight = 20
+title = "Rancher Meetups and Events"
+
+# コンテンツ検討後に有効化
+# [[main]]
+# identifier = "Docs"
+# name = "Docs"
+# url = "docs"
+# weight = 30
+# title = "Documents"
+
+[[main]]
+identifier = "Slides"
+name = "Slides"
+url = "slides"
+weight = 40
+title = "Slides"
+
+[[main]]
+identifier = "ReleaseNotes"
+name = "ReleaseNotes"
+url = "releasenotes"
+weight = 50
+title = "Official Release Notes"
+
+[[social]]
+  name = "X"
+  pre = "<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30'><use href='/images/icons8-x.svg'/></svg>"
+  url = "https://x.com/rancherjp"
+  weight = 10
+  title = "Contact on X"
+
+[[social]]
+  name = "Slack"
+  pre = "<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30'><use href='/images/icons8-slack.svg'/></svg>"
+  url = "https://join.slack.com/t/rancherjp/shared_invite/zt-9f26qf9c-7d30~xe4VRhmBioy32BfdQ"
+  weight = 20
+  title = "Contact on Slack"
+
+[[social]]
+  name = "Facebook"
+  pre = "<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30'><use href='/images/icons8-facebook.svg'/></svg>"
+  url = "https://www.facebook.com/rancherjp"
+  weight = 30
+  title = "Contact on Facebook"
+
+[[social]]
+  name = "Youtube"
+  pre = "<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30'><use href='/images/icons8-youtube.svg'/></svg>"
+  url = "https://www.youtube.com/@rancherjp3004"
+  weight = 40
+  title = "Visit on Youtube"

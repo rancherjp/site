@@ -1,0 +1,30 @@
+<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+    {{ range .Pages }}
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h4 class="card-title">
+                            <a class="stretched-link text-primary text-decoration-none" href="{{ .RelPermalink }}">
+                                {{ .Title }}
+                            </a>
+                        </h4>
+                        {{ if .Params.thumbnail }}
+                            <img class="img-fluid rounded p-2" src="{{ .Params.thumbnail }}" loading="lazy" alt="thumbnail for {{ .Title }}">
+                        {{ end }}
+
+                        <p class="card-text mt-3">
+                            {{ with .Params.description }}
+                                {{ . }}
+                            {{ else }}
+                                {{ .Summary | truncate 200 }}
+                            {{ end }}
+                        </p>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-muted">{{ .Date | time.Format ":date_long" }}</small>
+                    </div>
+                </div>
+    
+            </div>
+    {{ end }}
+</div>
