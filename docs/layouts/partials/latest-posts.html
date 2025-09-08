@@ -16,11 +16,7 @@
                         </p>
                     {{ end }}
                     <p class="card-text mt-3">
-                        {{ with .Params.description }}
-                            {{ . }}
-                        {{ else }}
-                            {{ .Summary | truncate 200 }}
-                        {{ end }}
+                        {{ .Summary | truncate 200 }}
                     </p>
                 </div>
                 <div class="card-footer">
