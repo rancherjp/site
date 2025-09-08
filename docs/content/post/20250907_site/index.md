@@ -2,9 +2,9 @@
 title: "RancherJP サイトリニューアル"
 date: 2025-09-07
 draft: false
-categories: ["site"]
-tags: ["site"]
-keywords: ["site"]
+#categories: ["site"]
+#tags: ["site"]
+#keywords: ["site"]
 authors: ["Katsuhiro Yamanaka"]
 ---
 

@@ -2,9 +2,9 @@
 title: "Rancher v2.12.1"
 date: 2025-08-29
 draft: false
-categories: ["Rancher Release Notes"]
-tags: ["rancher"]
-keywords: ["rancher"]
+#categories: ["Rancher Release Notes"]
+#tags: ["rancher"]
+#keywords: ["rancher"]
 authors: ["Katsuhiro Yamanaka"]
 ---
 
