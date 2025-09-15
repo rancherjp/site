@@ -1,0 +1,25 @@
+<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+    {{ range .Pages }}
+            <div class="col-md-4 mb-3">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h4 class="card-title">
+                            {{ .Title }}
+                        </h4>
+                        {{ with .Params.slide_url }}
+                            <div class="mb-2">
+                                <iframe src="{{ . }}" frameborder="0" width="100%" height="200" allowfullscreen></iframe>
+                            </div>
+                        {{ end }}
+                        {{ if .Params.thumbnail }}
+                            <img class="img-fluid rounded p-2" src="{{ .Params.thumbnail }}" loading="lazy" alt="thumbnail for {{ .Title }}">
+                        {{ end }}
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-muted">{{ .Date | time.Format ":date_long" }}</small>
+                    </div>
+                </div>
+    
+            </div>
+    {{ end }}
+</div>

@@ -1,11 +1,16 @@
 # Rancher JP Site Project
 
+## 利用レイアウト
+
+[Beautiful Hugo](https://themes.gohugo.io/themes/beautifulhugo/)
+
 ## ローカル実行
 
 hugo v0.148 or later
 
 ```bash
-hugo server -D --disableFastRender --gc --cleanDestinationDir --source docs
+go mod tidy
+hugo server -D --disableFastRender --gc --cleanDestinationDir
 ```
 
 ## スライドの追加

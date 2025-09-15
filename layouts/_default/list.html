@@ -1,0 +1,9 @@
+{{ define "main" }}
+    <div class="container py-3">
+        {{ if eq .Section "events" }}
+            {{ partial "events.html" . }}
+        {{ else if eq .Section "slides" }}
+            {{ partial "slides.html" . }}
+        {{ end }}
+    </div>
+{{ end }}
