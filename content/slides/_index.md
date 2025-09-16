@@ -4,3 +4,4 @@ description: "スライド一覧"
 draft: false
 ---
 
+{{< slides >}}
