@@ -20,7 +20,7 @@ pygmentsCodefencesGuessSyntax = true
 
 [Params]
 #  homeTitle = "Beautiful Hugo Theme" # Set a different text for the header on the home page
-  subtitle = "Build a beautiful and simple website in minutes"
+  subtitle = "Rancher 及び関連するコンテナ技術に関する情報発信サイト"
   mainSections = ["post","posts","event","events","slide","slides"]
   logo = "img/rancherjp.png" # Expecting square dimensions
   favicon = "img/favicon.ico"
