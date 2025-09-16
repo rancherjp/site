@@ -1,0 +1,18 @@
+<div class="row justify-content-center text-center">
+  {{ $products := where .Site.RegularPages "Section" "products" }}
+  {{ range $i, $product := $products }}
+    {{ if eq (mod $i 3) 0 }}
+      {{ if ne $i 0 }}</div>{{ end }}
+      <div class="row mb-4">
+    {{ end }}
+    <div class="col-md-4 col-lg-4 mb-3">
+        <a href="{{ $product.Params.product_url }}" target="_blank" rel="noopener noreferrer">
+            <svg xmlns='http://www.w3.org/2000/svg' width="15em" height="15em">
+                <use href="{{ $product.Params.image | relURL }}"/>
+            </svg>
+        </a>
+        <p>{{ $product.Params.description }}</p>
+    </div>
+    {{ if eq (add $i 1) (len $products) }}</div>{{ end }}
+  {{ end }}
+</div>

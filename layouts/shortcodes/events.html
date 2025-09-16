@@ -1,9 +1,9 @@
 {{/*
-  slides-list shortcode: content/slide配下のスライドを横3個以内でカード表示
+  events shortcode: content/events配下のイベントを横3個以内でカード表示
 */}}
 <div class="slides-list row">
-  {{ $slides := where .Site.RegularPages "Section" "events" }}
-  {{ range $i, $slide := $slides }}
+  {{ $events := where .Site.RegularPages "Section" "events" }}
+  {{ range $i, $event := $events }}
     {{ if eq (mod $i 3) 0 }}
       {{ if ne $i 0 }}</div>{{ end }}
       <div class="row mb-4">
@@ -31,6 +31,6 @@
         </div>
       </div>
     </div>
-    {{ if eq (add $i 1) (len $slides) }}</div>{{ end }}
+    {{ if eq (add $i 1) (len $events) }}</div>{{ end }}
   {{ end }}
 </div>
