@@ -3,6 +3,7 @@ title = "Rancher JP"
 author = "Katsuhiro Yamanaka"
 copyright = "Copyright © 2018 Rancher JP. All Rights Reserved."
 timeZone = 'Asia/Tokyo'
+defaultContentLanguage = "ja"
 
 theme = "github.com/halogenica/beautifulhugo"
 pygmentsStyle = "trac"
