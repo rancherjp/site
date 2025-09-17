@@ -5,18 +5,18 @@
 
 [[main]]
     name = "Events"
-    url = "events/"
+    url = "event/"
     weight = 2
 
 [[main]]
     identifier = "slides"
     name = "Slides"
-    url = "slides/"
+    url = "slide/"
     weight = 3
 
 [[main]]
     name = "ReleaseNotes"
-    url = "releasenotes/"
+    url = "releasenote/"
     weight = 4
 
 [[main]]

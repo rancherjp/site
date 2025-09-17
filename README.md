@@ -54,7 +54,7 @@ SlideのURL配下の手順で取得
 ### ファイルを作成
 
 ```bash
-docs/content/events/<YYYYMMDD>_meetup.md
+docs/content/event/<YYYYMMDD>_meetup.md
 ```
 
 ### ファイル内のフロントマターに日付、タイトル、説明文、Youtubeおよびサムネイル画像のURLを指定

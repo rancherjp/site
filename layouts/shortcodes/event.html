@@ -2,7 +2,7 @@
   events shortcode: content/events配下のイベントを横3個以内でカード表示
 */}}
 <div class="slides-list row">
-  {{ $events := where .Site.RegularPages "Section" "events" }}
+  {{ $events := where .Site.RegularPages "Section" "event" }}
   {{ range $i, $event := $events }}
     {{ if eq (mod $i 3) 0 }}
       {{ if ne $i 0 }}</div>{{ end }}

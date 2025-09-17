@@ -6,9 +6,9 @@ draft: false
 
 ### 新着
 
-{{< posts >}}
+{{< post >}}
 
-{{< products >}}
+{{< product >}}
 
 ### このページについて
 
