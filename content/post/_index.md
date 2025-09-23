@@ -1,5 +1,5 @@
 ---
-title: "投稿"
-description: "投稿"
+title: "Posts"
+description: "新着ニュース"
 draft: false
 ---

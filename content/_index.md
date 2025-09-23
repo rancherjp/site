@@ -4,8 +4,6 @@ description: "ホーム画面"
 draft: false
 ---
 
-### 新着
-
 {{< post >}}
 
 {{< product >}}

@@ -1,8 +1,9 @@
+<div class="post-contents-heading">新着ニュース</div>
+
 <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
 
     {{ range first 3 (where .Site.RegularPages.ByDate.Reverse "Section" "post" ) }}
-        <div class="col">
-
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 news-card-bg">
             <div class="card h-100">
                 <div class="card-body">
                     <h4 class="card-title">
