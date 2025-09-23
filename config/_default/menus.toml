@@ -16,7 +16,7 @@
 
 [[main]]
     name = "ReleaseNotes"
-    url = "releasenote/"
+    url = "page/releasenote/"
     weight = 4
 
 [[main]]

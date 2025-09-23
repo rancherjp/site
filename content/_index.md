@@ -30,4 +30,4 @@ draft: false
 
 ### Code of Conduct
 
-Rancher JP 行動規範については[こちら](./code-of-conduct)
+Rancher JP 行動規範については[こちら](./page/code-of-conduct)
