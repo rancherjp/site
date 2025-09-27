@@ -1,0 +1,72 @@
+.intro-header .page-heading .page-subheading,
+.intro-header .post-heading .post-subheading {
+  font-size: 27px;
+  line-height: 1.1;
+  display: block;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  margin: 10px 0 0;
+}
+@media only screen and (min-width: 768px) {
+  .intro-header {
+    margin-top: 130px;
+  }
+  .intro-header.big-img {
+    margin-top: 91px;  /* Full navbar is small navbar + 20px padding on each side when expanded */
+  }
+  .intro-header.big-img .page-heading,
+  .intro-header.big-img .post-heading  {
+    padding: 150px 0;
+  }
+  .intro-header .page-heading h1,
+  .intro-header .tags-heading h1,
+  .intro-header .categories-heading h1 {
+    margin-top: 20px;
+    font-size: 40px;
+  }
+  .intro-header .post-heading h1 {
+    font-size: 40px;
+  }
+  .intro-header.big-img .img-desc {
+    font-size: 14px;
+  }
+}
+.intro-header .page-heading h1,
+.intro-header .tags-heading h1,
+.intro-header .categories-heading h1 {
+  margin-top: 0;
+  font-size: 40px;
+}
+
+.post-contents-heading {
+  color: #404040;
+  font-size: 27px;
+  line-height: 1.1;
+  display: block;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  margin: 30px 20px;
+  text-align: center;
+}
+
+.news-card-bg {
+  background: rgba(201, 211, 248, 0.07);
+  border: none;
+  box-shadow: 0 2px 8px rgba(36,83,255,0.08);
+  position: relative;
+}
+
+.news-card-bg::after {
+  content: "";
+  position: absolute;
+  top: 5%;
+  left: 0;
+  width: 8px;
+  height: 90%;
+  background: rgba(36,83,255,0.25);
+  border-radius: 4px;
+}
+
+.news-card-bg .card-body {
+  margin: 10px 20px;
+}

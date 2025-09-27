@@ -1,0 +1,69 @@
+baseURL = 'https://rancher.jp/'
+title = "Rancher JP"
+author = "Katsuhiro Yamanaka"
+copyright = "Copyright © 2018 Rancher JP. All Rights Reserved."
+timeZone = 'Asia/Tokyo'
+defaultContentLanguage = "ja"
+
+theme = "github.com/halogenica/beautifulhugo"
+pygmentsStyle = "trac"
+pygmentsUseClasses = true
+pygmentsCodeFences = true
+pygmentsCodefencesGuessSyntax = true
+#pygmentsUseClassic = true
+#pygmentOptions = "linenos=inline"
+
+[Services]
+  [Services.Disqus]
+    # Shortname = "XXX"
+  [Services.googleAnalytics]
+    # id = "XXX"
+
+[Params]
+#  homeTitle = "Beautiful Hugo Theme" # Set a different text for the header on the home page
+  subtitle = "Rancher 及び関連するコンテナ技術に関する情報発信サイト"
+  mainSections = ["post","posts","event","events","slide","slides"]
+  logo = "img/rancherjp.png" # Expecting square dimensions
+  favicon = "img/favicon.ico"
+  dateFormat = "January 2, 2006"
+  commit = false
+  rss = true
+  comments = true
+  readingTime = true
+  wordCount = true
+  useHLJS = true
+  socialShare = true
+  delayDisqus = true
+  showRelatedPosts = true
+#  cusdisID = "XXX" # Get your App id from cusdis.com
+#  hideAuthor = true
+#  gcse = "012345678901234567b890:abcdefghijk" # Get your code from google.com/cse. Make sure to go to "Look and Feel" and change Layout to "Full Width" and Theme to "Classic"
+#  disclaimerText = "The opinions expressed herein are my own personal opinions and do not represent my employer’s view in any way."
+
+  custom_css = ["css/custom.css"]
+
+#[[Params.bigimg]]
+#  src = "img/triangle.jpg"
+#  desc = "Triangle"
+#[[Params.bigimg]]
+#  src = "img/sphere.jpg"
+#  desc = "Sphere"
+#  # position: see values of CSS background-position.
+#  position = "center top"
+#[[Params.bigimg]]
+#  src = "img/hexagon.jpg"
+#  desc = "Hexagon"
+
+[Params.author]
+  # Set only your "username" for default hosts and full URLs otherwise (e.g., "https://MyGitLab.org/username")
+  name = "Rancher JP"
+  website = "rancher.jp"
+  facebook = "rancherjp"
+  twitter = "rancherjp"
+  #linkedin = "rancherjp"
+  youtube = "@rancherjp3004" # or channel/channelname
+  slack = "rancherjp"
+
+
+[[module.imports]]
+  path = "github.com/halogenica/beautifulhugo"

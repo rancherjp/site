@@ -1,0 +1,20 @@
+{{ if le hugo.Version "0.124.0" }}
+	{{ errorf "Please use Hugo version 0.124.0 or higher!" }}
+{{ end }}
+
+<!DOCTYPE html>
+<html lang="{{ .Lang }}" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    {{ partial "head.html" . }}
+    <link rel="stylesheet" href="{{ "css/main_custom.css" | absURL }}" />
+  </head>
+  <body>
+    {{ partial "nav.html" . }}
+    <div class="mx-auto text-center">
+      {{ block "header" . }}{{ partial "header.html" . }}{{ end }}
+    </div>
+    {{ block "main" . }}{{ end }}
+    {{ partial "footer.html" . }}
+    {{ block "footer" . }}{{ end }}
+  </body>
+</html>

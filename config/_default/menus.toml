@@ -1,0 +1,25 @@
+[[main]]
+    name = "Home"
+    url = ""
+    weight = 1
+
+[[main]]
+    name = "Events"
+    url = "event/"
+    weight = 2
+
+[[main]]
+    identifier = "slides"
+    name = "Slides"
+    url = "slide/"
+    weight = 3
+
+[[main]]
+    name = "ReleaseNotes"
+    url = "page/releasenote/"
+    weight = 4
+
+[[main]]
+    name = "Tags"
+    url = "tags"
+    weight = 9

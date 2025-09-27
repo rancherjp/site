@@ -1,11 +1,16 @@
 # Rancher JP Site Project
 
+## 利用レイアウト
+
+[Beautiful Hugo](https://themes.gohugo.io/themes/beautifulhugo/)
+
 ## ローカル実行
 
 hugo v0.148 or later
 
 ```bash
-hugo server -D --disableFastRender --gc --cleanDestinationDir --source docs
+go mod tidy
+hugo server -D --disableFastRender --gc --cleanDestinationDir
 ```
 
 ## スライドの追加
@@ -49,7 +54,7 @@ SlideのURL配下の手順で取得
 ### ファイルを作成
 
 ```bash
-docs/content/events/<YYYYMMDD>_meetup.md
+docs/content/event/<YYYYMMDD>_meetup.md
 ```
 
 ### ファイル内のフロントマターに日付、タイトル、説明文、Youtubeおよびサムネイル画像のURLを指定
