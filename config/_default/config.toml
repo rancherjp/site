@@ -1,6 +1,6 @@
 baseURL = 'https://rancher.jp/'
 title = "Rancher JP"
-author = "Katsuhiro Yamanaka"
+author = "Rancher JP Community"
 copyright = "Copyright © 2018 Rancher JP. All Rights Reserved."
 timeZone = 'Asia/Tokyo'
 defaultContentLanguage = "ja"
@@ -35,12 +35,13 @@ pygmentsCodefencesGuessSyntax = true
   socialShare = true
   delayDisqus = true
   showRelatedPosts = true
+  custom_css = ["css/custom.css"]
+  countPerPage = 6 # リストページの1ページあたりの記事数
+
 #  cusdisID = "XXX" # Get your App id from cusdis.com
 #  hideAuthor = true
 #  gcse = "012345678901234567b890:abcdefghijk" # Get your code from google.com/cse. Make sure to go to "Look and Feel" and change Layout to "Full Width" and Theme to "Classic"
 #  disclaimerText = "The opinions expressed herein are my own personal opinions and do not represent my employer’s view in any way."
-
-  custom_css = ["css/custom.css"]
 
 #[[Params.bigimg]]
 #  src = "img/triangle.jpg"
