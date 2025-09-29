@@ -1,11 +1,106 @@
 {{ define "main" }}
   <div class="container" role="main">
-    <div class="row">
-      <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1">
-        {{ with .Content }}
-            {{.}}
+
+    {{/* イベント一覧 */}}
+    {{ if eq .Section "event" }}
+      {{ $pages := where .Site.RegularPages "Section" "event" }}
+      {{ $paginator := .Paginate $pages .Site.Params.countPerPage }}
+
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+        {{ range $paginator.Pages }}
+          <div class="col-xs-12 col-sm-6 col-md-4">
+            <div class="card h-100">
+              <div class="card-body">
+                <h4 class="card-title">
+                  <a class="stretched-link text-primary text-decoration-none" href="{{ .RelPermalink }}">{{ .Title }}</a>
+                </h4>
+                {{ if .Params.thumbnail }}
+                  <img class="img-fluid rounded p-2" src="{{ .Params.thumbnail }}" loading="lazy" alt="thumbnail for {{ .Title }}" style="height:180px;object-fit:cover;width:100%;">
+                {{ end }}
+                <p class="card-text mt-3">
+                  {{ with .Params.description }}{{ . | truncate 100 }}{{ else }}{{ .Summary | truncate 200 }}{{ end }}
+                </p>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted">{{ .Date | time.Format ":date_long" }}</small>
+              </div>
+            </div>
+          </div>
         {{ end }}
       </div>
-    </div>
+
+      {{ if or $paginator.HasPrev $paginator.HasNext }}
+        <nav aria-label="Page navigation">
+          <ul class="pager main-pager">
+            {{ if $paginator.HasPrev }}
+              <li class="previous">
+                <a href="{{ $paginator.Prev.URL }}">&larr; {{ i18n "newerPosts" }}</a>
+              </li>
+            {{ end }}
+            {{ if $paginator.HasNext }}
+              <li class="next">
+                <a href="{{ $paginator.Next.URL }}">{{ i18n "olderPosts" }} &rarr;</a>
+              </li>
+            {{ end }}
+          </ul>
+        </nav>
+      {{ end }}
+
+    {{/* スライド一覧 */}}
+    {{ else if eq .Section "slide" }}
+      {{ $pages := where .Site.RegularPages "Section" "slide" }}
+      {{ $paginator := .Paginate $pages .Site.Params.countPerPage }}
+
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+        {{ range $paginator.Pages }}
+          <div class="col-xs-12 col-sm-6 col-md-4">
+            <div class="card h-100">
+              <div class="card-body">
+                <h4 class="card-title">
+                  <a class="stretched-link text-primary text-decoration-none" href="{{ .RelPermalink }}">{{ .Title }}</a>
+                </h4>
+                {{ with .Params.slide_url }}
+                  <div class="mb-2">
+                    <iframe src="{{ . }}" frameborder="0" width="100%" height="200" allowfullscreen></iframe>
+                  </div>
+                {{ end }}
+                <p class="card-subtitle text-muted">
+                    by {{ .Params.Author }}
+                </p>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted">{{ .Date | time.Format ":date_long" }}</small>
+              </div>
+            </div>
+          </div>
+        {{ end }}
+      </div>
+
+      {{ if or $paginator.HasPrev $paginator.HasNext }}
+        <nav aria-label="Page navigation">
+          <ul class="pager main-pager">
+            {{ if $paginator.HasPrev }}
+              <li class="previous">
+                <a href="{{ $paginator.Prev.URL }}">&larr; {{ i18n "newerPosts" }}</a>
+              </li>
+            {{ end }}
+            {{ if $paginator.HasNext }}
+              <li class="next">
+                <a href="{{ $paginator.Next.URL }}">{{ i18n "olderPosts" }} &rarr;</a>
+              </li>
+            {{ end }}
+          </ul>
+        </nav>
+      {{ end }}
+
+    {{/* デフォルト */}}
+    {{ else }}
+      <div class="row">
+          <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1">
+            {{ with .Content }}{{ . }}{{ end }}
+          </div>
+      </div>
+    {{ end }}
+
   </div>
 {{ end }}
